@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>Dialog - API</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- -------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- -------------------------------- -->
+      <main id="container">
+        <!-- # TITLE # -->
+        <header>
+          <h1 class="api-title">Dialog</h1>
+          <p>다이얼로그 컨텐츠를 구성합니다.</p>
+        </header>
+
+        <!-- # CONTENT # -->
+        <div class="content api">
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [옵션] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2><a href="#options" class="anchor-title">#options</a></h2>
+          <div class="tbl-con2 mt-2" data-more-view>
+            <table class="table table--type1">
+              <caption></caption>
+              <colgroup>
+                <col width="200" />
+                <col width="200" />
+                <col width="300" />
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">OPTION</th>
+                  <th scope="col">TYPE</th>
+                  <th scope="col">DEFAULT</th>
+                  <th scope="col">DESCRIPTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">openClass</th>
+                  <td>string</td>
+                  <td>"open"</td>
+                  <td>다이얼로그 오픈 시 붙일 클래스 명</td>
+                </tr>
+                <tr>
+                  <th scope="row">closeClass</th>
+                  <td>string</td>
+                  <td>"close"</td>
+                  <td>다이얼로그 닫힘 시 붙일 클래스 명</td>
+                </tr>
+                <tr>
+                  <th scope="row">animate</th>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>애니메이션 여부</td>
+                </tr>
+                <tr>
+                  <th scope="row">destroy</th>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>다이얼로그 닫힘 시 삭제 여부</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="api-desc mt-5" style="font-weight: bold; color: #00264a">인스턴스 획득</p>
+          <p class="api-desc" style="color: #00264a">- 다이얼로그는 직접 초기화할 수 있지만 대게의 경우 트리거 <strong>data-dialog-trigger</strong> 를 통해서 클릭 시점에 자동으로 초기화합니다.</p>
+          <div class="codebox-wrap active">
+            <button class="code-open" type="button" disabled>🔍</button>
+            <div class="code-box">
+              <div class="code-swap">
+                <div class="code-swap-buttons">
+                  <button type="button" class="code-swap-button">Vanilla Js</button>
+                  <button type="button" class="code-swap-button">jQuery</button>
+                </div>
+                <pre class="code-view code-swap-inner">
+								<code class="language-javascript">
+								var element = document.querySelector("@selector");
+								var dialog = HitaiUI.Dialog.get(element);
+								// 다이얼로그가 초기화되어 있지 않다면 null을 반환합니다.
+								</code>
+							</pre>
+                <pre class="code-view code-swap-inner">
+								<code class="language-javascript">
+								var dialog = HitaiUI.Dialog.get($("@selector"), true);
+								</code>
+							</pre>
+              </div>
+            </div>
+          </div>
+          <p class="api-desc" style="font-weight: bold; color: #00264a">🟢<span>@selector </span><span class="code-badge">role="dialog"</span> 이 선언되어있는 엘리먼트 입니다.</p>
+
+          <h2 id="selector"><a href="#selector" class="anchor-title">#selector</a></h2>
+          <div class="api-box r-word">
+            <h3 class="api-title fs-code">data-dialog-trigger="@target"</h3>
+            <p class="api-desc">속성이 선언된 엘리먼트 클릭 시 <span class="code-badge">@target</span> 다이얼로그를 오픈합니다.</p>
+          </div>
+          <div class="api-box r-word">
+            <h3 class="api-title fs-code">data-dialog-close</h3>
+            <p class="api-desc">속성이 선언된 엘리먼트에 닫기 이벤트를 자동으로 바인딩합니다.</p>
+          </div>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메서드 목록] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="methods"><a href="#methods" class="anchor-title">#methods</a></h2>
+          <div class="api-box">
+            <h3 class="api-title fs-code">.open()</h3>
+            <p class="api-desc">다이얼로그를 오픈합니다.</p>
+          </div>
+          <div class="api-box">
+            <h3 class="api-title fs-code">.close()</h3>
+            <p class="api-desc">다이얼로그를 닫습니다.</p>
+          </div>
+          <div class="api-box">
+            <h3 class="api-title fs-code">.getElement()</h3>
+            <p class="api-desc">다이얼로그의 엘리먼트를 반환합니다.</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <pre class="code-view">
+                  <code class="language-javascript">
+                    var dialog1 = $('#uiDialog1');
+                    HitaiUI.Dialog.get(dialog1, true).getElement();
+                    // 해당 다이얼로그 엘리먼트 반환됨
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+          <div class="api-box">
+            <h3 class="api-title fs-code">.updateOption()</h3>
+            <p class="api-desc">다이얼로그의 옵션을 업데이트합니다.</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <pre class="code-view">
+                  <code class="language-javascript">
+                    var dialog1 = $('#uiDialog1');
+                    var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+                    dialogInstance.updateOption({ animate: false });
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+          <div class="api-box">
+            <h3 class="api-title fs-code">.destroy()</h3>
+            <p class="api-desc">다이얼로그를 삭제합니다.</p>
+            <p class="api-desc-wrn">이 메서드가 호출되면 엘리먼트까지 모두 삭제됩니다.</p>
+          </div>
+          <div class="api-box static">
+            <span class="static-badge">static</span>
+            <h3 class="api-title fs-code">HitaiUI.Dialog.trigger(event)</h3>
+            <p class="api-desc"><span class="code-badge ty2">document</span> 감시 트리거</p>
+            <!-- <p class="api-desc-wrn">이 메서드가 호출되어야만 <span class="code-badge ty2">data-dialog-trigger</span> 버튼 클릭 시 다이얼로그가 초기화됩니다.</p> -->
+          </div>
+          <div class="api-box static">
+            <span class="static-badge">static</span>
+            <h3 class="api-title fs-code">HitaiUI.Dialog.closeAll()</h3>
+            <p class="api-desc">화면에 열려있는 모든 다이얼로그를 닫습니다.</p>
+          </div>
+          <div class="api-box static">
+            <span class="static-badge">static</span>
+            <h3 class="api-title fs-code">HitaiUI.Dialog.get(element, initialize = false)</h3>
+            <p class="api-desc">다이얼로그의 인스턴스를 반환합니다.</p>
+            <p class="api-desc-check">initialize 값을 true로 호출하면 초기화되지 않은 대상을 초기화 후 인스턴스를 반환합니다.</p>
+          </div>
+          <div class="api-box static">
+            <span class="static-badge">static</span>
+            <h3 class="api-title fs-code">HitaiUI.Dialog.getInstances()</h3>
+            <p class="api-desc">현재 화면에 존재하는 다이얼로그의 모든 인스턴스를 반환합니다.</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <pre class="code-view">
+                  <code class="language-javascript">
+                  var instanceList = HitaiUI.Dialog.getInstances();
+                  // output [] or [Dialog, Dialog, Dialog]
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [이벤트 목록] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="events"><a href="#events" class="anchor-title">#events</a></h2>
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Dialog.EVENT.INIT</h3>
+            <p class="api-desc">다이얼로그가 초기화되면 트리거 됩니다.</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <div class="code-swap mt-2">
+                  <div class="code-swap-buttons">
+                    <button type="button" class="code-swap-button">Vanilla Js</button>
+                    <button type="button" class="code-swap-button">jQuery</button>
+                  </div>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										// event type string: "ui.dialog.init"
+										var element = document.querySelector('#dialog');
+										element.addEventListener(HitaiUI.Dialog.EVENT.INIT, function(event) {
+										var component = event.component; //component instance
+										});
+									</code>
+								</pre>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										// event type string: "ui.dialog.init"
+										var $element = $('#dialog');
+										$element.on(HitaiUI.Dialog.EVENT.INIT, function(event) {
+										var component = event.component; //component instance
+										});
+									</code>
+								</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Dialog.EVENT.OPEN</h3>
+            <p class="api-desc">다이얼로그가 열릴 때 트리거 됩니다.</p>
+
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <div class="code-swap mt-2">
+                  <div class="code-swap-buttons">
+                    <button type="button" class="code-swap-button">Vanilla Js</button>
+                    <button type="button" class="code-swap-button">jQuery</button>
+                  </div>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										// event type string: "ui.dialog.open"
+										var element = document.querySelector('#dialog');
+										element.addEventListener(HitaiUI.Dialog.EVENT.OPEN, function(event) {console.log('열릴 때 발생할 처리')});
+									</code>
+								</pre>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										// event type string: "ui.dialog.open"
+										var $element = $('#dialog');
+										$element.on(HitaiUI.Dialog.EVENT.OPEN, function(event) {console.log('열릴 때 발생할 처리')});
+									</code>
+								</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Dialog.EVENT.OPENED</h3>
+            <p class="api-desc">다이얼로그가 열린 후 트리거 됩니다.(애니메이션 종료 후 트리거)</p>
+          </div>
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Dialog.EVENT.CLOSE</h3>
+            <p class="api-desc">다이얼로그가 닫힐 때 트리거 됩니다.</p>
+          </div>
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Dialog.EVENT.CLOSED</h3>
+            <p class="api-desc">다이얼로그가 닫힌 후 트리거 됩니다.(애니메이션 종료 후 트리거).</p>
+          </div>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [여러가지 사용케이스] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="examples"><a href="#examples" class="anchor-title">#examples</a></h2>
+          <div class="api-box example">
+            <h3 class="api-ex-title">기본 다이얼로그</h3>
+            <p class="api-desc" style="margin-bottom: 20px">기본적인 다이얼로그 사용방법입니다.</p>
+            <button type="button" class="btn btn--dark" data-dialog-trigger="#uiDialog1" aria-haspopup="dialog">Open</button>
+
+            <div role="dialog" class="modal modal--w9" id="uiDialog1">
+              <div class="modal__overlay"></div>
+              <div class="modal__content">
+                <section>
+                  <!-- [HEADER] -->
+                  <header class="modal__header">
+                    <h1 class="modal__title">팝업제목</h1>
+                    <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+                  </header>
+                  <!-- [CONTENT] -->
+                  <div class="modal__body">
+                    <div style="height: 200px">컨텐츠</div>
+                  </div>
+                  <!-- [BTN] -->
+                  <div class="modal__footer">
+                    <button type="button" class="btn btn--lg btn--gray" data-dialog-close>취소</button>
+                    <button type="button" class="btn btn--lg btn--primary">확인</button>
+                  </div>
+                  <!-- [//] -->
+                </section>
+              </div>
+            </div>
+            <div class="codebox-wrap" style="margin-top: 20px">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <pre class="code-view">
+								<code class="language-javascript">
+								// 자동으로 초기화되기 때문에 따로 처리해야 할 코드 없습니다.
+								</code>
+							</pre>
+                <script type="text/plain" class="code-view language-html">
+                           			<!-- 오프너 버튼 -->
+                  <button type="button" class="btn-com1 c4" aria-haspopup="dialog" data-dialog-trigger="#uiDialog1">Open</button>
+                </script>
+                <script type="text/plain" class="code-view language-html">
+                  <!-- 다이얼로그 -->
+                     <div role="dialog" class="modal modal--w9" id="uiDialog1">
+                      <div class="modal__overlay"></div>
+                      <div class="modal__content">
+                        <section>
+                          <!-- [HEADER] -->
+                          <header class="modal__header">
+                            <h1 class="modal__title">팝업제목</h1>
+                            <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+                          </header>
+                          <!-- [CONTENT] -->
+                          <div class="modal__body">
+                            <div style="height: 200px">컨텐츠</div>
+                          </div>
+                          <!-- [BTN] -->
+                          <div class="modal__footer">
+                            <button type="button" class="btn btn--lg btn--gray" data-dialog-close>취소</button>
+                            <button type="button" class="btn btn--lg btn--primary">확인</button>
+                          </div>
+                          <!-- [//] -->
+                        </section>
+                      </div>
+                    </div>
+                </script>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            $('#uiDialog1').on(HitaiUI.Dialog.EVENT.CLOSED, function () {
+              console.log('HitaiUI.Dialog.EVENT.CLOSED');
+            });
+            // el.addEventListener(HitaiUI.Dialog.EVENT.OPENED, function callback() {
+            //         // 등록된 이벤트는 반드시 삭제
+            //         el.removeEventListener(HitaiUI.Dialog.EVENT.OPENED, callback);
+            //         HitaiUI.Alert(HitaiUI.Dialog.EVENT.OPENED + ' >> 이벤트 실행!');
+            //       });
+          </script>
+
+          <div class="api-box example">
+            <h3 class="api-ex-title">버튼 클릭 없이 직접 초기화하여 바로 오픈하는 방법</h3>
+            <p class="api-desc-check" style="margin-bottom: 20px"><span class="code-badge">data-dialog-trigger</span> 버튼을 사용하지 않고 다이얼로그를 오픈합니다.</p>
+            <button type="button" class="btn btn--dark" id="openTestBtn">Open</button>
+            <button type="button" class="btn btn--dark" id="openTestBtn2">Open(이벤트 사용)</button>
+            <div role="dialog" class="modal modal--w9" id="uiDialog2">
+              <div class="modal__overlay"></div>
+              <div class="modal__content">
+                <section>
+                  <!-- [HEADER] -->
+                  <header class="modal__header">
+                    <h1 class="modal__title">팝업제목</h1>
+                    <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+                  </header>
+                  <!-- [CONTENT] -->
+                  <div class="modal__body">
+                    <div style="height: 200px">컨텐츠</div>
+                  </div>
+                  <!-- [BTN] -->
+                  <div class="modal__footer">
+                    <button type="button" class="btn btn--lg btn--gray" data-dialog-close>취소</button>
+                    <button type="button" class="btn btn--lg btn--primary">확인</button>
+                  </div>
+                  <!-- [//] -->
+                </section>
+              </div>
+            </div>
+            <script>
+              document.addEventListener('UILoaded', function () {
+                $('#openTestBtn2').on('click', function () {
+                  // Open(이벤트 사용) button
+                  var el = document.querySelector('#uiDialog2');
+                  var dialog = HitaiUI.Dialog.get(el, true); // 다이얼로그 생성
+                  // console.log(dialog);
+                  // 닫힘 이벤트 등록 후 사용
+                  el.addEventListener(HitaiUI.Dialog.EVENT.OPENED, function callback() {
+                    // 등록된 이벤트는 반드시 삭제
+                    el.removeEventListener(HitaiUI.Dialog.EVENT.OPENED, callback);
+                    HitaiUI.Alert('Alert 입니다.', {
+                      'ui.dialog.closed': function () {
+                        console.log('>> 이벤트 실행!');
+                      },
+                    });
+                  });
+                  dialog.open();
+                });
+                $('#openTestBtn').on('click', function () {
+                  // Open button
+                  HitaiUI.Dialog.get(document.querySelector('#uiDialog2'), true).open();
+                });
+              });
+            </script>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <div class="code-swap mt-2">
+                  <div class="code-swap-buttons">
+                    <button type="button" class="code-swap-button">Vanilla Js</button>
+                    <button type="button" class="code-swap-button">jQuery</button>
+                  </div>
+                  <pre class="code-view code-swap-inner">
+                    <code class="language-javascript">
+                      //----------------------------------------------------------------------
+                      // Open button
+                      HitaiUI.Dialog.get(document.querySelector("#uiDialog2"), true).open();
+                      //----------------------------------------------------------------------
+  
+  
+                      //----------------------------------------------------------------------
+                      // Open(이벤트 사용) button
+                      var el = document.querySelector("#uiDialog2");
+                      var dialog = HitaiUI.Dialog.get(el, true); // 다이얼로그 생성
+                      // 닫힘 이벤트 등록 후 사용
+                      el.addEventListener(HitaiUI.Dialog.EVENT.CLOSED, function closed() {
+                        // 등록된 이벤트는 반드시 삭제
+                        el.removeEventListener(HitaiUI.Dialog.EVENT.CLOSED, closed);
+                          HitaiUI.Alert(HitaiUI.Dialog.EVENT.CLOSED + " &gt;&gt; 이벤트 실행!");
+                        });
+                      dialog.open();
+                      //----------------------------------------------------------------------
+  
+  
+                      //----------------------------------------------------------------------
+                      HitaiUI.Dialog.get(HitaiUI.Event.one(document.querySelector("#uiDialog2"), HitaiUI.Dialog.EVENT.CLOSED, function() {
+                        HitaiUI.Alert(HitaiUI.Dialog.EVENT.CLOSED + " &gt;&gt; 이벤트 실행!");
+                      }), true).open();
+                      //----------------------------------------------------------------------
+  
+                    </code>
+                  </pre>
+                  <pre class="code-view code-swap-inner">
+                    <code class="language-javascript">
+                      //----------------------------------------------------------------------
+                      // Open button
+                      HitaiUI.Dialog.get($("#popExample3"), true).open();
+                      //----------------------------------------------------------------------
+  
+  
+                      //----------------------------------------------------------------------
+                      // Open(이벤트 사용) button
+                      var $el = $("#popExample3");
+                      var dialog = HitaiUI.Dialog.get($el, true); // 다이얼로그 생성
+                      $el.one(HitaiUI.Dialog.EVENT.CLOSED, function() {
+                        HitaiUI.Alert(HitaiUI.Dialog.EVENT.CLOSED + " &gt;&gt; 이벤트 실행!");
+                      });
+                      dialog.open();
+                      //----------------------------------------------------------------------
+  
+  
+                      //----------------------------------------------------------------------
+                      HitaiUI.Dialog.get($("#popExample3").one(HitaiUI.Dialog.EVENT.CLOSED, function() {
+                        HitaiUI.Alert(HitaiUI.Dialog.EVENT.CLOSED + " &gt;&gt; 이벤트 실행!");
+                      }), true).open();
+                      //----------------------------------------------------------------------
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="api-box example">
+            <h3 class="api-ex-title" style="margin-bottom: 20px">다이얼로그 자체가 동적으로 그려지는 경우</h3>
+            <button type="button" class="btn btn--dark btn--sm" id="sample01" aria-haspopup="dialog">클릭 시 데이터 로딩 후 다이얼로그 생성</button>
+            <pre id="tempDyData">
+              <div role="dialog" class="modal modal--md">
+                <div class="modal__overlay"></div>
+                <div class="modal__content">
+                  <section>
+                    <!-- [HEADER] -->
+                    <header class="modal__header">
+                      <!-- <h1 class="modal__title">Poup Title</h1> -->
+                      <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+                    </header>
+                    <!-- [CONTENT] -->
+                    <div class="modal__body">
+                      <div class="area-temp1">컨텐츠</div>
+                    </div>
+                    <!-- [BTN] -->
+                    <div class="modal__footer">
+                      <button type="button" class="btn btn--lg btn--gray" data-dialog-close>취소</button>
+                      <button type="button" class="btn btn--lg btn--primary">확인</button>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </pre>
+            <script>
+              document.addEventListener('UILoaded', function () {
+                document.querySelector('#sample01').addEventListener('click', function () {
+                  const el = document.querySelector('#tempDyData [role="dialog"]').cloneNode(true);
+                  el.setAttribute('id', 'uiDialogDynamic');
+                  document.body.append(el);
+                  if (!HitaiUI.Dialog.getInstance(el)) {
+                    const modal2 = new HitaiUI.Dialog(el, { animate: false, destroy: true });
+                    modal2.open();
+                  } else {
+                    HitaiUI.Dialog.getInstance(el).open();
+                  }
+                });
+              });
+            </script>
+            <div class="codebox-wrap" style="margin-top: 20px">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <script type="text/plain" class="code-view language-js">
+                  document.addEventListener("UILoaded", function () {
+                    document.querySelector("#sample01").addEventListener("click", function () {
+                      const el = document.querySelector('#tempDyData [role="dialog"]').cloneNode(true);
+                      el.setAttribute("id", name);
+                      document.body.append(el);
+                      if (!HitaiUI.Dialog.getInstance(el)) {
+                        const modal2 = new HitaiUI.Dialog(el, { animation: false, destroy: true });
+                        modal2.open();
+                      } else {
+                        HitaiUI.Dialog.getInstance(el).open();
+                      }
+                    });
+                  });
+
+                  <pre id="tempDyData">
+                    <div role="dialog" class="modal modal--md">
+                      <div class="modal__overlay"></div>
+                      <div class="modal__content">
+                        <section>
+                          <!-- [HEADER] -->
+                          <header class="modal__header">
+                            <!-- <h1 class="modal__title">Poup Title</h1> -->
+                            <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+                          </header>
+                          <!-- [CONTENT] -->
+                          <div class="modal__body">
+                            <div class="area-temp1">컨텐츠</div>
+                          </div>
+                          <!-- [BTN] -->
+                          <div class="modal__footer">
+                            <button type="button" class="btn btn--lg btn--gray"data-dialog-close>취소</button>
+                            <button type="button" class="btn btn--lg btn--primary">확인</button>
+                          </div>
+                        </section>
+                      </div>
+                    </div>
+                  </pre>
+                </script>
+              </div>
+            </div>
+          </div>
+
+          <div class="api-box example">
+            <h3 class="api-ex-title">HitaiUI.Dialog.closeAll()</h3>
+            <p class="api-desc" style="margin-bottom: 20px">화면에 오픈되어있는 다이얼로그를 모두 닫습니다.</p>
+          </div>
+        </div>
+        <!-- # // # -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <footer id="footer">
+        <div></div>
+      </footer>
+      <!-- -------------------------------- -->
+    </div>
+  </body>
+</html>

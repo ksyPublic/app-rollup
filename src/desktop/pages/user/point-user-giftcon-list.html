@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>마이페이지 | 내 포인트 | 포인트 상품 신청 현황 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row">
+            <br /><br /><br />
+            <button type="button" class="btn btn--dark" data-dialog-trigger="#example" aria-haspopup="dialog">
+              <span>쿠폰 신청 현황</span>
+            </button>
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w5" id="example">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <button type="button" class="modal__btn-history" aria-label="뒤로가기">
+                <i class="icon icon--back" aria-hidden="true"></i>
+              </button>
+              <h1 class="modal__title">쿠폰 신청 현황</h1>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <div class="coupon-state">
+                <div class="coupon-state__item">
+                  <div class="coupon-state__img">
+                    <img src="http://placehold.it/120x120" />
+                  </div>
+                  <div class="coupon-state__info">
+                    <dl class="text-list">
+                      <dt class="text-list__title">베스킨라빈스 싱글레귤러 아이스크림</dt>
+                      <dd class="text-list__item">전화번호 : 010-**34-**78</dd>
+                      <dd class="text-list__item">교환포인트 : 4,500P</dd>
+                      <dd class="text-list__item">구매번호 : M2208312143538638902</dd>
+                      <dd class="text-list__item">신청일자 : 2023-03-10 21:43:55</dd>
+                      <dd class="text-list__item">유효기간 : 발행일로부터 100일</dd>
+                    </dl>
+                    <button type="button" class="btn btn--sm btn--light coupon-state__button">재발송</button>
+                  </div>
+                </div>
+
+                <div class="coupon-state__item">
+                  <div class="coupon-state__img">
+                    <img src="http://placehold.it/120x120" />
+                  </div>
+                  <div class="coupon-state__info">
+                    <dl class="text-list">
+                      <dt class="text-list__title">베스킨라빈스 싱글레귤러 아이스크림</dt>
+                      <dd class="text-list__item">전화번호 : 010-**34-**78</dd>
+                      <dd class="text-list__item">교환포인트 : 4,500P</dd>
+                      <dd class="text-list__item">구매번호 : M2208312143538638902</dd>
+                      <dd class="text-list__item">신청일자 : 2023-03-10 21:43:55</dd>
+                      <dd class="text-list__item">유효기간 : 발행일로부터 100일</dd>
+                    </dl>
+                    <button type="button" class="btn btn--sm btn--light coupon-state__button">재발송</button>
+                  </div>
+                </div>
+
+                <div class="coupon-state__item">
+                  <div class="coupon-state__img">
+                    <img src="http://placehold.it/120x120" />
+                  </div>
+                  <div class="coupon-state__info">
+                    <dl class="text-list">
+                      <dt class="text-list__title">베스킨라빈스 싱글레귤러 아이스크림</dt>
+                      <dd class="text-list__item">전화번호 : 010-**34-**78</dd>
+                      <dd class="text-list__item">교환포인트 : 4,500P</dd>
+                      <dd class="text-list__item">구매번호 : M2208312143538638902</dd>
+                      <dd class="text-list__item">신청일자 : 2023-03-10 21:43:55</dd>
+                      <dd class="text-list__item">유효기간 : 발행일로부터 100일</dd>
+                    </dl>
+                    <button type="button" class="btn btn--sm btn--light coupon-state__button">재발송</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- [BTN] -->
+
+            <!-- [//] -->
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+
+      <script>
+        document.addEventListener('UILoaded', function () {
+          var dialog = document.querySelector('#example');
+          // var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+          // dialogInstance.open();
+        });
+      </script>
+    </div>
+  </body>
+</html>

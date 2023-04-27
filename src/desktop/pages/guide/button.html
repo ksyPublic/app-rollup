@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>가이드 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+      <main id="container">
+        <header class="hide">
+          <h1>MARKUP GUIDE | BUTTON</h1>
+        </header>
+        <!-- # CONTENT # -->
+        <div class="content">
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메뉴이동] -->
+          <!-- ------------------------------------------------------------------ -->
+          <include src="./_include/nav.html"></include>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [일반버튼] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">일반버튼</h2>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .btn .btn--{type}</legend>
+
+            <button type="button" class="btn btn--primary">btn--primary</button>
+            <button type="button" class="btn btn--dark">btn--dark</button>
+            <button type="button" class="btn btn--gray">btn--gray</button>
+            <button type="button" class="btn btn--light">btn--light</button>
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .btn .btn--{size}</legend>
+
+            <button type="button" class="btn btn--primary btn--sm">btn--sm</button>
+            <button type="button" class="btn btn--dark btn--md">btn--md</button>
+            <button type="button" class="btn btn--gray btn--lg">btn--lg</button>
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형3 : .btn [disabled, readonly]</legend>
+
+            <button type="button" class="btn btn--primary btn--sm" disabled>btn--sm</button>
+            <button type="button" class="btn btn--dark btn--md" disabled>btn--md</button>
+            <button type="button" class="btn btn--gray btn--lg" disabled>btn--lg</button>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [일반버튼] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">라운드 버튼</h2>
+
+          <!-- 유형1 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode data-autocode>
+            <legend class="lagend">유형1 : .btn btn--round</legend>
+
+            <button type="button" class="btn btn--primary btn--round">btn--round</button>
+            <button type="button" class="btn btn--dark btn--round">btn--round</button>
+            <button type="button" class="btn btn--light btn--round">btn--round</button>
+
+            <hr class="guide-line1" />
+
+            <button type="button" class="btn btn--primary btn--round btn--sm">btn--round</button>
+            <button type="button" class="btn btn--dark btn--round btn--md">btn--round</button>
+            <button type="button" class="btn btn--light btn--round btn--lg">btn--round</button>
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .btn btn--round2</legend>
+            <a href="" class="btn btn--round2 btn--c1">최대<span class="text-primary-100">10,000원 할인쿠폰</span> 받기<i class="icon icon--download" aria-hidden="true"></i> </a>
+            <a href="" class="btn btn--round2 btn--c2">베스트 이용후기 이벤트<i class="icon icon--arrow" aria-hidden="true"></i> </a>
+            <a href="" class="btn btn--round2 btn--c3">스탬프 적립 이벤트<i class="icon icon--arrow" aria-hidden="true"></i> </a>
+          </fieldset>
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [버튼묶음] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">버튼묶음</h2>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .l-reserv__share</legend>
+            <div class="l-reserv__share">
+              <button type="button" class="l-reserv__anchor l-reserv__anchor--share">공유하기</button>
+              <button type="button" class="l-reserv__anchor l-reserv__anchor--like">좋아요</button>
+              <a href="" class="l-reserv__anchor l-reserv__anchor--map">지도보기</a>
+            </div>
+          </fieldset>
+          <!-- ---------
+            --------------------------------------------------------- -->
+          <!-- [서브버튼] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">아이콘 버튼</h2>
+
+          <!-- 유형1 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .btn .btn--icon</legend>
+
+            <button type="button" class="btn btn--icon">
+              <i class="icon icon--plus" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btn btn--icon">
+              <i class="icon icon--minus" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn--icon" aria-label="삭제">
+              <i class="icon icon--text-remove" aria-hidden="true"></i>
+            </button>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [서브버튼] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">텍스트 링크</h2>
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .text .text--link</legend>
+            <a href="" class="text text--link">
+              <em>포인트 할인</em>
+              <i class="icon icon--link" aria-hidden="true"></i>
+            </a>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [페이지네이션] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">Pagination</h2>
+
+          <!-- 유형1 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .pagination</legend>
+            <div class="pagination">
+              <a href="#" class="pagination--first">처음 페이지</a>
+              <a href="#" class="pagination--prev">이전 페이지</a>
+              <a href="#" aria-current="page">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">6</a>
+              <a href="#">7</a>
+              <a href="#">8</a>
+              <a href="#">9</a>
+              <a href="#">10</a>
+              <a href="#" class="pagination--next">다음 페이지</a>
+              <a href="#" class="pagination--last">마지막 페이지</a>
+            </div>
+          </fieldset>
+        </div>
+        <!-- # // # -->
+      </main>
+    </div>
+  </body>
+</html>

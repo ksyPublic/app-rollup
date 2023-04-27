@@ -1,0 +1,448 @@
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 100;
+  font-style: normal;
+  src: url('../fonts/SpoqaHanSansNeo-Thin.eot');
+  src: url('./fonts/SpoqaHanSansNeo-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/SpoqaHanSansNeo-Thin.woff') format('woff'), url('../fonts/SpoqaHanSansNeo-Thin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 300;
+  font-style: normal;
+  src: url('../fonts/SpoqaHanSansNeo-Light.eot');
+  src: url('./fonts/SpoqaHanSansNeo-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/SpoqaHanSansNeo-Light.woff') format('woff'), url('../fonts/SpoqaHanSansNeo-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/SpoqaHanSansNeo-Regular.eot');
+  src: url('./fonts/SpoqaHanSansNeo-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/SpoqaHanSansNeo-Regular.woff') format('woff'), url('../fonts/SpoqaHanSansNeo-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 500;
+  font-style: normal;
+  src: url('../fonts/SpoqaHanSansNeo-Medium.eot');
+  src: url('./fonts/SpoqaHanSansNeo-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/SpoqaHanSansNeo-Medium.woff') format('woff'), url('../fonts/SpoqaHanSansNeo-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/SpoqaHanSansNeo-Bold.eot');
+  src: url('../fonts/SpoqaHanSansNeo-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/SpoqaHanSansNeo-Bold.woff') format('woff'), url('../fonts/SpoqaHanSansNeo-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 100;
+  font-style: normal;
+  src: url('../fonts/Lexend-Thin.eot');
+  src: url('./fonts/Lexend-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/Lexend-Thin.woff') format('woff');
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/Lexend-Regular.eot');
+  src: url('./fonts/Lexend-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Lexend-Regular.woff') format('woff');
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 500;
+  font-style: normal;
+  src: url('../fonts/Lexend-Medium.eot');
+  src: url('./fonts/Lexend-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Lexend-Medium.woff') format('woff');
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/Lexend-Bold.eot');
+  src: url('../fonts/Lexend-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Lexend-Bold.woff') format('woff');
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+/* override */
+@font-face {
+  font-family: 'SpoqaHanSansNeo--override';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/SpoqaHanSansNeo-Regular.eot');
+  src: url('../fonts/SpoqaHanSansNeo-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/SpoqaHanSansNeo-Regular.woff') format('woff'), url('../fonts/SpoqaHanSansNeo-Regular.woff2') format('woff2');
+}
+/* --------------------------------------------------------------------------------
+      # COMMONET
+      # 초기화 및 LAYOUT
+  -----------------------------------------------------------------------------------
+      RESET
+  --------------------------------------------------------------------------------- */
+html,
+body,
+div,
+span,
+object,
+iframe,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main,
+summary,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+legend,
+input,
+label,
+button,
+textarea,
+select,
+textarea,
+input,
+data,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+time,
+mark,
+audio,
+video,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: top;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+html {
+  font-size: 62.5%;
+  // -webkit-overflow-scrollng: touch;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  line-height: 1.5;
+  color: color(dark, 100);
+  word-wrap: break-word;
+  word-break: normal;
+  word-break: keep-all;
+  // -ms-text-size-adjust: 100%;
+  -webkit-test-size-adjust: 100%;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+body,
+select,
+input,
+button,
+textarea,
+button,
+pre {
+  font-size: 1.6rem;
+  font-family: 'SpoqaHanSansNeo', 'Mulgun Gothic', -apple-system, BlinkMacSystemfont, AppleSDGothicNeo-Regular, sans-serif;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main,
+summary {
+  display: block;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+cite,
+em,
+dfn,
+address {
+  font-style: normal;
+}
+
+fieldset,
+iframe {
+  border: 0 none;
+}
+
+fieldset {
+  min-width: 0;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+img,
+fieldset,
+iframe {
+  border: 0 none;
+}
+
+/*img, */
+video,
+audio,
+object,
+embed,
+iframe {
+  max-width: 100%;
+}
+
+legend:not([class]),
+caption {
+  /*position:absolute;*/
+  overflow: hidden;
+  width: rem(1);
+  height: rem(1);
+  margin: rem(-1 0 0 -1);
+  font-size: rem(1);
+  opacity: 0;
+  white-space: nowrap;
+}
+
+legend:not([class]) {
+  position: absolute;
+}
+
+i,
+em,
+address {
+  font-style: normal;
+}
+
+input,
+select,
+textarea {
+  border: rem(1) solid #cfcfcf;
+  color: #121517;
+  border-radius: 0;
+  /*-webkit-appearance:none;-moz-appearance:none;appearance:none;*/
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border: 0 none;
+  &:disabled {
+    cursor: auto;
+  }
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+textarea {
+  border: rem(1) solid #dadada;
+  resize: vertical;
+}
+
+input[type='text']::-ms-clear,
+input[type='password']::-ms-clear,
+input[type='text']::-ms-reveal,
+input[type='password']::-ms-reveal {
+  display: none;
+}
+
+input[type='radio'],
+input[type='checkbox'],
+input[type='tel'],
+input[type='number'] {
+  border: 0 none;
+  vertical-align: middle;
+}
+
+input[type='number'] {
+  -moz-appearace: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  // -moz-appearance: textfield;
+}
+
+input[type='file']::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+input::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+table {
+  width: 100%;
+  empty-cells: show;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+table th {
+  font-weight: normal;
+}
+
+mark {
+  background: none;
+}
+
+sup {
+  vertical-align: top;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:hover {
+  text-decoration: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  background-color: transparent;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.hide {
+  overflow: hidden;
+  position: absolute;
+  left: rem(-1);
+  top: rem(-1);
+  width: rem(1);
+  height: rem(1);
+  opacity: 0;
+}
+
+.none {
+  display: none !important;
+  margin: 0 !important;
+}
+
+[role='button'] {
+  cursor: pointer;
+}
+
+body {
+  overflow-y: scroll;
+}

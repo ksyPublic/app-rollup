@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>마이페이지 | 내 포인트 | 개인정보 제3자 제공 동의 안내 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row">
+            <br /><br /><br />
+            <button type="button" class="btn btn--dark" data-dialog-trigger="#example" aria-haspopup="dialog">
+              <span>개인정보 제 3자 제공 동의</span>
+            </button>
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w5" id="example">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <button type="button" class="modal__btn-history" aria-label="뒤로가기">
+                <i class="icon icon--back" aria-hidden="true"></i>
+              </button>
+              <h1 class="modal__title">개인정보 제 3자 제공 동의</h1>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body" style="height: 1030px">
+              <div class="privacy-policy">
+                <p class="privacy-policy__subtext">
+                  기프티콘의 전송을 위해서는 사용자 휴대폰 번호의 제3자 제공 동의가 필요합니다. 사용자는 개인정보의 제3자 제공에 대해 동의를 거부할 권리가 있으며 별도의 불이익은 없습니다. 단, 동의를 거부할 경우 기프티콘 전송에 제한이 있습니다. 제공 내용은 아래와 같습니다.
+                  <br /><br />
+
+                  ①제공받는자 : (주)윈큐브마케팅(기프팅)<br />
+                  ②제공받는 자의 개인정보 이용목적 : 사용자가 신청한 종류의 모바일쿠폰(기프티콘) 발송<br />
+                  ③개인정보 제공항목 : 사용자의 휴대전화 번호<br />
+                  ④제공받는 자의 보유 및 이용기간 : 5년(국세기본법 제85조의3 근거)<br />
+                  ⑤귀하는 개인정보 제3자 제공에 대한 동의를 거부할 권리가 있습니다. 다만, 동의를 거부할 경우 모바일쿠폰(기프티콘) 발송이 되지 않습니다.
+                </p>
+              </div>
+            </div>
+            <!-- [BTN] -->
+
+            <!-- [//] -->
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+
+      <script>
+        document.addEventListener('UILoaded', function () {
+          var dialog = document.querySelector('#example');
+          // var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+          // dialogInstance.open();
+        });
+      </script>
+    </div>
+  </body>
+</html>

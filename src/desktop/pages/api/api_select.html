@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>Select - API</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- -------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- -------------------------------- -->
+      <main id="container">
+        <!-- # TITLE # -->
+        <header class="hide">
+          <h1>MARKUP GUIDE | FORM</h1>
+        </header>
+
+        <!-- # CONTENT # -->
+        <div class="content api">
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [옵션] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="options"><a href="#options" class="anchor-title">#options</a></h2>
+          <div class="tbl-con2 mt-2" data-more-view>
+            <table class="table table--type1">
+              <caption></caption>
+              <colgroup>
+                <col width="200" />
+                <col width="200" />
+                <col width="200" />
+                <col width="250" />
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">OPTION</th>
+                  <th scope="col">TYPE</th>
+                  <th scope="col">DEFAULT</th>
+                  <th scope="col">DATA ATTRIBUTE</th>
+                  <th scope="col">DESCRIPTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><em class="fs-code option">openClass</em></td>
+                  <td>string</td>
+                  <td>"active"</td>
+                  <td><span class="code-badge">data-select-open-class</span></td>
+                  <td>셀렉트 오픈 시 붙일 클래스 명</td>
+                </tr>
+                <tr>
+                  <td><em class="fs-code option">animate</em></td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td><span class="code-badge">data-select-animate</span></td>
+                  <td>애니메이션 여부</td>
+                </tr>
+                <tr>
+                  <td><em class="fs-code option">directionChange</em></td>
+                  <td>function</td>
+                  <td>null</td>
+                  <td></td>
+                  <td>셀렉트 오픈 시 오픈되어야 할 방향을 처리하는 hook 함수 입니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="api-desc mt-5" style="font-weight: bold; color: #00264a">인스턴스 획득</p>
+          <div class="codebox-wrap active">
+            <button class="code-open" type="button" disabled>🔍</button>
+            <div class="code-box">
+              <div class="code-swap">
+                <div class="code-swap-buttons">
+                  <button type="button" class="code-swap-button">Vanilla Js</button>
+                  <button type="button" class="code-swap-button">jQuery</button>
+                </div>
+                <pre class="code-view code-swap-inner">
+								<code class="language-javascript">
+								var element = document.querySelector("@selector");
+								var Select = HitaiUI.Select.get(element);
+								// 초기화되어 있지 않다면 null을 반환합니다.
+								</code>
+							</pre>
+                <pre class="code-view code-swap-inner">
+								<code class="language-javascript">
+								var Select = HitaiUI.Select.get($("@selector"));
+								</code>
+							</pre>
+              </div>
+            </div>
+          </div>
+          <p class="api-desc" style="font-weight: bold; color: #00264a">🟢 <span>@selector </span><span class="code-badge">data-select="select"</span> 이 선언되어있는 엘리먼트 입니다.</p>
+
+          <h2 id="selector"><a href="#selector" class="anchor-title">#selector</a></h2>
+          <div class="api-box r-word">
+            <h3 class="api-title fs-code">data-select="select"</h3>
+            <p class="api-desc">속성이 선언된 엘리먼트는 셀렉트박스 컴포넌트로 초기화됩니다.</p>
+          </div>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메서드 목록] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="methods"><a href="#methods" class="anchor-title">#methods</a></h2>
+          <div class="api-box">
+            <h3 class="api-title fs-code">.init()</h3>
+            <p class="api-desc">셀렉트박스를 초기화 합니다.</p>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">.disable(isDisable)</h3>
+            <p class="api-desc">셀렉트박스를 활성화/비활성화 처리합니다.</p>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">.value()</h3>
+            <p class="api-desc">선택된 아이템의의 value를 반환합니다.</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <div class="code-swap mt-2">
+                  <div class="code-swap-buttons">
+                    <button type="button" class="code-swap-button">Vanilla Js</button>
+                    <button type="button" class="code-swap-button">jQuery</button>
+                  </div>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										var Select = HitaiUI.Select.get(document.querySelector('#Select'));
+										Select.value();
+									</code>
+								</pre>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										HitaiUI.Select.get($("#Select")).value();
+									</code>
+								</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">.text()</h3>
+            <p class="api-desc">선택된 아이템의 textContent를 반환합니다.</p>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">.index()</h3>
+            <p class="api-desc">선택된 아이템의 index를 반환합니다.</p>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">.selectValue(value)</h3>
+            <p class="api-desc">value값을 통해 아이템을 선택합니다.</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <div class="code-swap mt-2">
+                  <div class="code-swap-buttons">
+                    <button type="button" class="code-swap-button">Vanilla Js</button>
+                    <button type="button" class="code-swap-button">jQuery</button>
+                  </div>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										var element = document.querySelector("#Select");
+										HitaiUI.Select.get(element).selectValue(1);
+									</code>
+								</pre>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										HitaiUI.Select.get($("#Select")).selectValue(1);
+									</code>
+								</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">.selectIndex(index)</h3>
+            <p class="api-desc">index값을 통해 아이템을 선택합니다.</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <div class="code-swap mt-2">
+                  <div class="code-swap-buttons">
+                    <button type="button" class="code-swap-button">Vanilla Js</button>
+                    <button type="button" class="code-swap-button">jQuery</button>
+                  </div>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										var element = document.querySelector("#Select");
+										HitaiUI.Select.get(element).selectIndex(0); // 0번째 선택
+									</code>
+								</pre>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										HitaiUI.Select.get($("#Select")).selectIndex(0); // 0번째 선택
+									</code>
+								</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="api-box">
+            <h3 class="api-title fs-code">.setDefault()</h3>
+            <p class="api-desc">셀렉트 박스를 초기화 상태로 만듭니다(선택 되지 않은 상태로).</p>
+          </div>
+
+          <div class="api-box static">
+            <span class="static-badge">static</span>
+            <h3 class="api-title fs-code">HitaiUI.Select.get(element, initialize = false)</h3>
+            <p class="api-desc">셀렉트박스의 인스턴스를 반환합니다.</p>
+            <p class="api-desc-check">initialize 값을 true로 호출하면 초기화되지 않은 대상을 초기화 후 인스턴스를 반환합니다.</p>
+          </div>
+
+          <div class="api-box static">
+            <span class="static-badge">static</span>
+            <h3 class="api-title fs-code">HitaiUI.Select.getInstances()</h3>
+            <p class="api-desc">현재 화면에 존재하는 셀렉트박스의 모든 인스턴스를 반환합니다.</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <pre class="code-view">
+								<code class="language-javascript">
+								var instanceList = HitaiUI.Select.getInstances();
+								// output [] or [Select, Select, Select]
+								</code>
+							</pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [멤버 목록] -->
+          <!-- ------------------------------------------------------------------ -->
+          <!-- <h2 id="member"><a href="#member" class="anchor-title">#member</a></h2>
+				<div class="api-box static">
+					<span class="static-badge">static</span>
+					<h3 class="api-title fs-code">Select.GLOBAL_OPTIONS</h3>
+					<p class="api-desc">셀렉트박스 옵션을 전역으로 설정합니다.</p>
+				</div>
+
+				<div class="api-box static">
+					<span class="static-badge">static</span>
+					<h3 class="api-title fs-code">Select.DATA_NAME</h3>
+					<p class="api-desc">data attribute prefix를 새로 선언합니다. 기본값: "select"</p>
+					<div class="codebox-wrap">
+						<button class="code-open" type="button">🔍</button>
+						<div class="code-box">
+							<pre class="code-view">
+								<code class="language-javascript">
+								Select.DATA_NAME = "abc";
+								// prefix를 새로 설정한 이름으로 사용할 수 있습니다.
+								// before -&gt; data-select-animate 등등..
+								// after -&gt; data-abc-animate
+								</code>
+							</pre>
+						</div>
+					</div>
+				</div> -->
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [이벤트 목록] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="events"><a href="#events" class="anchor-title">#events</a></h2>
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Select.EVENT.CHANGE</h3>
+            <p class="api-desc">셀렉트박스의 선택값이 변경될 때 트리거 됩니다.</p>
+            <div class="codebox-wrap active">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <div class="code-swap mt-2">
+                  <div class="code-swap-buttons">
+                    <button type="button" class="code-swap-button">Vanilla Js</button>
+                    <button type="button" class="code-swap-button">jQuery</button>
+                  </div>
+                  <pre class="code-view code-swap-inner">
+                    <code class="language-javascript">
+                      var element = document.querySelector("#select-box");
+                      var Select = HitaiUI.Select.get(element);
+                      element.addEventListener(HitaiUI.Select.EVENT.CHANGE, function() {
+                        Select.value();    // selected value
+                        Select.text();     // selected text
+                        Select.index();    // selected index
+                      });
+                    </code>
+								</pre>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										$("#select-box").on(HitaiUI.Select.EVENT.CHANGE, function() {
+											HitaiUI.Select.get($(this)).value();   // selected value
+											HitaiUI.Select.get($(this)).text();    // selected text
+											HitaiUI.Select.get($(this)).index();   // selected index
+										})
+									</code>
+								</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [여러가지 사용케이스] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="examples"><a href="#examples" class="anchor-title">#examples</a></h2>
+
+          <div class="api-box example">
+            <h3 class="api-ex-title">활성화, 비활성화 처리</h3>
+            <p class="api-desc" style="margin-bottom: 20px"></p>
+
+            <div class="select select--basic" data-select="select" id="disableExample">
+              <!-- // -->
+              <div role="button" class="select__btn" aria-expanded="false" data-select="btn" aria-disabled="false" tabindex="-1">
+                <div>필드명</div>
+                <div data-empty="기본형" data-select="text"></div>
+              </div>
+              <!-- // -->
+              <div class="select__list" data-select="list">
+                <div class="select__option" data-select="option">
+                  <button type="button" value="value1">선택 항목1</button>
+                  <button type="button" value="value2">선택 항목2</button>
+                  <button type="button" value="value3">선택 항목3</button>
+                  <button type="button" value="value4">선택 항목4</button>
+                  <button type="button" value="value5">선택 항목5</button>
+                </div>
+              </div>
+              <input type="hidden" name="select1_1" data-select="value" />
+            </div>
+            <div class="api-btns">
+              <button type="button" class="btn btn--primary btn--md" id="btnDisabled">.disable(true)</button>
+              <button type="button" class="btn btn--dark btn--md" id="btnEnabled">.disable(false)</button>
+            </div>
+            <br />
+            <div class="codebox-wrap active">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <script type="text/plain" class="code-view language-html">
+                  <div class="select select--basic" data-select="select" id="disableExample">
+                  	<!-- 셀렉트박스 비활성화 메서드로 처리하지않고 마크업으로 직접 처리하려면 -->
+                  	<!--
+                  		아래와 같이 aria-disabled="true" tabindex="-1" 속성을 추가하시면 됩니다.
+                  	 -->
+                  	<div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn" aria-disabled="true" tabindex="-1">
+                  		<div>필드명</div>
+                  		<div data-empty="기본형" data-select="text"></div>
+                  	</div>
+                  	<!-- // -->
+                  	<div class="select__list" data-select="list">
+                  		<div class="select__option" data-select="option">
+                  			<button type="button" value="value1">선택 항목1</button>
+                  			<button type="button" value="value2">선택 항목2</button>
+                  			<button type="button" value="value3">선택 항목3</button>
+                  			<button type="button" value="value4">선택 항목4</button>
+                  			<button type="button" value="value5">선택 항목5</button>
+                  		</div>
+                  	</div>
+                  	<input type="hidden" name="select1_1" data-select="value" />
+                  </div>
+                </script>
+                <pre class="code-view">
+								<code class="language-javascript">
+									var Select = HitaiUI.Select.get(("#disableExample"));
+									$("#btnDisabled").on("click", function () {
+										Select.disable(true);
+									});
+
+									$("#btnEnabled").on("click", function () {
+										Select.disable(false);
+									});
+								</code>
+							</pre>
+              </div>
+            </div>
+            <script>
+              document.addEventListener('UILoaded', function loaded() {
+                document.removeEventListener('UILoaded', loaded);
+
+                $('#btnDisabled').on('click', function () {
+                  HitaiUI.Select.get('#disableExample').disable(true);
+                });
+
+                $('#btnEnabled').on('click', function () {
+                  HitaiUI.Select.get('#disableExample').disable(false);
+                });
+
+                // var Select = HitaiUI.Select.get('#disableExample');
+
+                // $('#btnDisabled').on('click', function () {
+                //   Select.disable(true);
+                // });
+
+                // $('#btnEnabled').on('click', function () {
+                //   Select.disable(false);
+                // });
+              });
+            </script>
+          </div>
+
+          <div class="api-box example">
+            <h3 class="api-ex-title">상태가져오기 ( 데이터 받아오기 )</h3>
+            <p class="api-desc" style="margin-bottom: 20px"></p>
+            <div class="select select--basic" data-select="select" id="example1">
+              <!-- // -->
+              <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn">
+                <div>필드명</div>
+                <div data-empty="기본형" data-select="text"></div>
+              </div>
+              <!-- // -->
+              <div class="select__list" data-select="list">
+                <div class="select__option" data-select="option">
+                  <button type="button" value="value1">선택 항목1</button>
+                  <button type="button" value="value2">선택 항목2</button>
+                  <button type="button" value="value3">선택 항목3</button>
+                  <button type="button" value="value4">선택 항목4</button>
+                  <button type="button" value="value5">선택 항목5</button>
+                </div>
+              </div>
+              <input type="hidden" name="select1_1" data-select="value" />
+            </div>
+            <div class="api-btns">
+              <button type="button" class="btn btn--primary" id="btnGetValue">.value()</button>
+              <button type="button" class="btn btn--primary" id="btnGetIndex">.index()</button>
+              <button type="button" class="btn btn--primary" id="btnGetText">.text()</button>
+            </div>
+            <div class="codebox-wrap active">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <script type="text/plain" class="code-view language-html">
+                  <div class="select select--basic" data-select="select" id="example1">
+                    <!-- // -->
+                    <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn">
+                      <div>필드명</div>
+                      <div data-empty="기본형" data-select="text"></div>
+                    </div>
+                    <!-- // -->
+                    <div class="select__list" data-select="list">
+                      <div class="select__option" data-select="option">
+                      <button type="button" value="value1">선택 항목1</div>
+                      <button type="button" value="value2">선택 항목2</div>
+                      <button type="button" value="value3">선택 항목3</div>
+                      <button type="button" value="value4">선택 항목4</div>
+                      <button type="button" value="value5">선택 항목5</div>
+                      </div>
+                    </div>
+                    <input type="hidden" name="select1_1" data-select="value" />
+                  </div>
+                </script>
+                <pre class="code-view">
+								<code class="language-javascript">
+                  var selectElement = $("#example1");
+                  var Select = HitaiUI.Select.get(selectElement);
+
+                  // Select change event
+                  selectElement.on(HitaiUI.Select.EVENT.CHANGE, function (e) {
+                    var value = Select.value();
+                    var index = Select.index();
+                    var text = Select.text();
+                    alert(value + " ,  " + index + " , " + text);
+                  })
+								</code>
+							</pre>
+              </div>
+            </div>
+            <script>
+              document.addEventListener('UILoaded', function loaded() {
+                document.removeEventListener('UILoaded', loaded);
+                $('#example1').on(HitaiUI.Select.EVENT.CHANGE, function (e) {
+                  var value = HitaiUI.Select.get('#example1').value();
+                  var index = HitaiUI.Select.get('#example1').index();
+                  var text = HitaiUI.Select.get('#example1').text();
+                  alert(value + ' ,  ' + index + ' , ' + text);
+                });
+                $('#btnGetValue').on('click', function () {
+                  alert(HitaiUI.Select.get('#example1').value() || 'null');
+                });
+                $('#btnGetIndex').on('click', function () {
+                  alert(HitaiUI.Select.get('#example1').index());
+                });
+                $('#btnGetText').on('click', function () {
+                  alert(HitaiUI.Select.get('#example1').text() || 'null');
+                });
+              });
+            </script>
+          </div>
+
+          <div class="api-box example">
+            <h3 class="api-ex-title">상태변경하기 ( 데이터 셋팅하기 )</h3>
+            <p class="api-desc" style="margin-bottom: 20px"></p>
+            <div class="select select--basic" data-select="select" id="example2">
+              <!-- // -->
+              <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn">
+                <div>필드명</div>
+                <div data-empty="기본형" data-select="text"></div>
+              </div>
+              <!-- // -->
+              <div class="select__list" data-select="list">
+                <div class="select__option" data-select="option">
+                  <button type="button" value="value1">선택 항목1</button>
+                  <button type="button" value="value2">선택 항목2</button>
+                  <button type="button" value="value3">선택 항목3</button>
+                  <button type="button" value="value4">선택 항목4</button>
+                  <button type="button" value="value5">선택 항목5</button>
+                </div>
+              </div>
+              <input type="hidden" name="select1_1" data-select="value" />
+            </div>
+            <div class="api-btns">
+              <button type="button" class="btn btn--primary" id="btnSetValue">.selectValue("value3")</button>
+              <button type="button" class="btn btn--primary" id="btnSetIndex">.selectIndex(1)</button>
+              <button type="button" class="btn btn--primary" id="btnSetIndex2">.selectText("선택 항목5")</button>
+              <button type="button" class="btn btn--primary" id="btnSetInput">히든인풋에 데이터 직접 셋팅(value)</button>
+              <button type="button" class="btn btn--primary" id="btnSetInput2">히든인풋에 데이터 직접 셋팅(text)</button>
+              <p class="api-desc-check" style="margin-bottom: 20px"><span class="code-badge">data-select="value"</span> 인풋에 직접 value값을 넣으면 셀렉트박스 컴포넌트가 자동으로 업데이트 합니다.</p>
+              <p class="api-desc-wrn" style="margin-bottom: 20px">옵션 아이템에 태그가 포함되어있으면 <span class="code-badge">selectText</span> 메서드를 사용할 수 없습니다.</p>
+              <p class="api-desc-wrn" style="margin-bottom: 20px">옵션 아이템에 태그가 포함되어있으면 data-select="value" 히든 인풋의 text 값으로 업데이트할 수 없습니다.</p>
+            </div>
+
+            <div class="codebox-wrap active">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <script type="text/plain" class="code-view language-html">
+                  <div class="select select--basic" data-select="select" id="example2">
+                  	<!-- // -->
+                  	<div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn">
+                  		<div>필드명</div>
+                  		<div data-empty="기본형" data-select="text"></div>
+                  	</div>
+                  	<!-- // -->
+                  	<div class="select__list" data-select="list">
+                  		<div class="select__option" data-select="option">
+                  			<button type="button" value="value1">선택 항목1</button>
+                  			<button type="button" value="value2">선택 항목2</button>
+                  			<button type="button" value="value3">선택 항목3</button>
+                  			<button type="button" value="value4">선택 항목4</button>
+                  			<button type="button" value="value5">선택 항목5</button>
+                  		</div>
+                  	</div>
+                  	<input type="hidden" name="select1_1" data-select="value" />
+                  </div>
+                </script>
+
+                <pre class="code-view">
+								<code class="language-javascript">
+									var Select = HitaiUI.Select.get("#example2");
+
+									// .selectValue("value3")
+									$("#btnSetValue").on("click", function () {
+										Select.selectValue("value3");
+									});
+
+									// .selectIndex(1)
+									$("#btnSetIndex").on("click", function () {
+										Select.selectIndex(1);
+									});
+
+									//.selectText("선택 항목5")
+									$("#btnSetIndex2").on("click", function () {
+										HitaiUI.Select.get(("#example2")).selectText("선택 항목5");
+									});
+
+									// 히든인풋에 데이터 직접 셋팅 - value 값
+									$("#btnSetInput").on("click", function () {
+										$('#example2 [data-select="value"]').attr('value', "value4")
+									});
+
+									// 히든인풋에 데이터 직접 셋팅 - text 값
+									$("#btnSetInput").on("click", function () {
+										$('#example2 [data-select="value"]').attr('text', "선택 항목1")
+									});
+
+									// 셀렉트박스 비활성화
+									$("#btnDisabled").on("click", function () {
+										HitaiUI.Select.get(("#example2")).disable(true);
+									});
+
+									// 셀렉트박스 활성화
+									$("#btnEnabled").on("click", function () {
+										HitaiUI.Select.get(("#example2")).disable(false);
+									});
+
+								</code>
+							</pre>
+              </div>
+            </div>
+            <script>
+              document.addEventListener('UILoaded', function loaded() {
+                document.removeEventListener('UILoaded', loaded);
+                $('#btnSetValue').on('click', function () {
+                  HitaiUI.Select.get('#example2').selectValue('value3');
+                });
+
+                $('#btnSetIndex').on('click', function () {
+                  HitaiUI.Select.get('#example2').selectIndex(1);
+                });
+                $('#btnSetIndex2').on('click', function () {
+                  HitaiUI.Select.get('#example2').selectText('선택 항목5');
+                });
+
+                $('#btnSetInput').on('click', function () {
+                  $('#example2 [data-select="value"]').attr('value', 'value4');
+                });
+
+                $('#btnSetInput2').on('click', function () {
+                  $('#example2 [data-select="value"]').attr('text', '선택 항목1');
+                });
+              });
+            </script>
+          </div>
+
+          <div class="api-box example" id="defaultActive">
+            <h3 class="api-ex-title">초기값 설정</h3>
+            <p class="api-desc" style="margin-bottom: 20px">셀렉트박스의 초기값 설정하는 샘플입니다.</p>
+            <p class="api-desc-wrn" style="margin-bottom: 20px">옵션 아이템에 태그가 포함되어있으면 data-select="value" 히든 인풋의 text 값으로 업데이트할 수 없습니다.</p>
+            <div class="select select--basic" data-select="select">
+              <!-- // -->
+              <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn">
+                <div>필드명</div>
+                <div data-empty="그룹형" data-select="text"></div>
+              </div>
+              <!-- // -->
+              <div class="select__list" data-select="list">
+                <div class="select__option" data-select="option">
+                  <button type="button" value="1">선택 항목1</button>
+                  <button type="button" value="2">선택 항목2</button>
+                  <button type="button" value="3">선택 항목3</button>
+                  <button type="button" value="4">선택 항목4</button>
+                  <button type="button" value="5">선택 항목5</button>
+                  <button type="button" value="6">선택 항목6</button>
+                  <button type="button" value="7">선택 항목7</button>
+                  <button type="button" value="8">선택 항목8</button>
+                </div>
+              </div>
+              <input type="hidden" name="select1_5" data-select="value" text="선택 항목1" />
+            </div>
+
+            <div class="select select--basic" data-select="select">
+              <!-- // -->
+              <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn">
+                <div>필드명</div>
+                <div data-empty="컨텐츠형" data-select="text"></div>
+              </div>
+              <!-- // -->
+              <div class="select__list" data-select="list">
+                <div class="select__option" data-select="option">
+                  <button type="button" value="1">선택 항목1</button>
+                  <button type="button" value="2">선택 항목2</button>
+                  <button type="button" value="3">선택 항목3</button>
+                  <button type="button" value="4">선택 항목4</button>
+                  <button type="button" value="5">선택 항목5</button>
+                  <button type="button" value="6">선택 항목6</button>
+                  <button type="button" value="7">선택 항목7</button>
+                  <button type="button" value="8">선택 항목8</button>
+                </div>
+              </div>
+              <input type="hidden" name="select1_6" data-select="value" value="4" />
+            </div>
+
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <script type="text/plain" class="code-view language-html">
+                  <div class="select select--basic" data-select="select">
+                  	....
+                  	<!-- text값을 통하여 초기값 설정 -->
+                  	<input type="hidden" name="select1_5" data-select="value" text="선택 항목1" />
+                  </div>
+
+                  <div class="select select--basic " data-select="select">
+                  	...
+                  	<!-- value값을 통하여 초기값 설정 -->
+                  	<input type="hidden" name="select1_6" data-select="value" value="4" />
+                  </div>
+                </script>
+              </div>
+            </div>
+          </div>
+
+          <div class="api-box example">
+            <h3 class="api-ex-title">셀렉트박스 데이터 동적으로 셋팅</h3>
+            <p class="api-desc" style="margin-bottom: 20px">✅ 아래와 같이 Select 마크업이 정적으로 존재하고 [OPTION 아이템만] 동적으로 추가되는 경우에는 자동으로 처리됩니다.</p>
+
+            <div class="select select--basic" data-select="select" id="example3">
+              <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn">
+                <div>필드명</div>
+                <div data-empty="기본형" data-select="text"></div>
+              </div>
+              <div class="select__list" data-select="list">
+                <div class="select__option" data-select="option">
+                  <!-- <button type="button" value="value1">선택 항목1</div> -->
+                  <!-- 비어있는 상태 -->
+                </div>
+              </div>
+              <input type="hidden" name="select1_7" data-select="value" />
+            </div>
+            <br />
+            <button type="button" class="btn btn--dark" id="btn7">아이템 추가</button>
+            <br />
+            <br />
+            <div class="codebox-wrap active">
+              <button class="code-open" type="button" disabled>🔍</button>
+              <div class="code-box" id="excode1">
+                <script type="text/plain" class="code-view language-html">
+                  <div class="select select--basic" data-select="select" id="example3">
+                  	<div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn">
+                  	<div>필드명</div>
+                  	<div data-empty="기본형" data-select="text"></div>
+                  	</div>
+                  	<div class="select__list" data-select="list">
+                  	<div class="select__option" data-select="option">
+                  		<!-- <button type="button" value="value1">선택 항목1</button> -->
+                  		<!-- 비어있는 상태 -->
+                  	</div>
+                  	</div>
+                  	<input type="hidden" name="select1_7" data-select="value" />
+                  </div>
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- # // # -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <footer id="footer">
+        <div></div>
+      </footer>
+      <!-- -------------------------------- -->
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $('#select').on('change', function (e) {
+          console.log($(this).val(), e.target.value);
+        });
+
+        $('#aa').on('click', function (e) {
+          e.preventDefault();
+          HitaiUI.Select.get($('.t1')).selectValue(1);
+        });
+
+        $('.t1').on(HitaiUI.Select.EVENT.CHANGE, function (event) {
+          console.log(HitaiUI.Select.get($(this)).value());
+          console.log(HitaiUI.Select.get($(this)).text());
+          console.log(HitaiUI.Select.get($(this)).index());
+        });
+
+        $('#btn7').on('click', function () {
+          var options = '';
+          for (var i = 0; i < Math.round(Math.random() * 10) + 4; i++) {
+            options += '<button type="button" value="value' + i + '">선택항목' + i + '</button>\n';
+          }
+          $('#example3 [data-select="option"]').html(options);
+        });
+
+        $('#btn8').on('click', function () {
+          var s = '';
+          s += '<div class="select select--basic" data-select="select" id="example4">';
+          s += '  <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn">';
+          s += '    <div>필드명</div>';
+          s += '    <div data-empty="기본형" data-select="text"></div>';
+          s += '  </div>';
+          s += '  <div class="select__list" data-select="list">';
+          s += '    <div class="select__option" data-select="option">';
+          s += '     <button type="button" value="value1">선택 항목1</button>';
+          s += '     <button type="button" value="value2">선택 항목2</button>';
+          s += '     <button type="button" value="value3">선택 항목3</button>';
+          s += '     <button type="button" value="value4">선택 항목4</button>';
+          s += '     <button type="button" value="value5">선택 항목5</button>';
+          s += '    </div>';
+          s += '  </div>';
+          s += '  <input type="hidden" name="select1_8" data-select="value"/>';
+          s += '</div>';
+          $('#exampleholder').html(s);
+          console.log('@@@');
+          //UI.uiInit();
+        });
+      });
+    </script>
+  </body>
+</html>

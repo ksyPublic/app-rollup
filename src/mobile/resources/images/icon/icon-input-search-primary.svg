@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>1AEB0D99-9344-4480-B9BD-B50CA3DC9C2A</title>
+    <g id="COMPONENTS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="GNB" transform="translate(-701.000000, -633.000000)">
+            <g id="search" transform="translate(405.000000, 619.000000)">
+                <g id="ICON/BASIC/icon_search" transform="translate(296.000000, 14.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="36" height="36"></rect>
+                    <g id="icon_search" transform="translate(6.000000, 6.000000)" stroke="#FF5B2C" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                        <path d="M24,24 L17.7931034,17.7931034 M0,10.3448276 C0,4.63153655 4.63153655,0 10.3448276,0 C16.0581517,0 20.6896552,4.63153655 20.6896552,10.3448276 C20.6896552,16.0581517 16.0581517,20.6896552 10.3448276,20.6896552 C4.63153655,20.6896552 0,16.0581517 0,10.3448276 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

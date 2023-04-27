@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>BB0A5C5C-7CD7-44FE-B8DF-AA4177B87028</title>
+    <g id="HOME" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HOME/search" transform="translate(-38.000000, -739.000000)">
+            <g id="icon_subway" transform="translate(38.000000, 739.000000)">
+                <g id="Rectangle-2">
+                    <rect id="Rectangle" x="0" y="0" width="42" height="42"></rect>
+                </g>
+                <g id="Group-4" transform="translate(7.000000, 5.000000)" stroke="#222222">
+                    <polygon id="Path-3" stroke-width="2" points="0 5.91591617 0 26 29 26 29 5.91591617 14.8491271 3"></polygon>
+                    <rect id="Rectangle" stroke-width="2" x="6" y="11" width="17" height="5"></rect>
+                    <line x1="9.0772171" y1="0.5" x2="21.0772171" y2="0.5" id="Line" stroke-width="2"></line>
+                    <line x1="3.42857143" y1="32.5714286" x2="9" y2="27" id="Line-3" stroke-width="2" stroke-linecap="square"></line>
+                    <line x1="25" y1="32" x2="20" y2="27" id="Line-3-Copy" stroke-width="2" stroke-linecap="square"></line>
+                    <polyline id="Line-4" stroke-width="2" stroke-linecap="square" points="7 30 11.2433284 30 22 30"></polyline>
+                    <rect id="Rectangle" fill="#D8D8D8" x="14.5" y="1.5" width="1" height="1"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

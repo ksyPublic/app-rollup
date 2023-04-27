@@ -1,0 +1,207 @@
+//select
+.select {
+  $root: select;
+  position: relative;
+  z-index: 10;
+
+  &.expanded {
+    z-index: 20;
+  }
+
+  &__btn {
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: rem(6);
+      transition: all 0.2s ease;
+    }
+    &[aria-expanded='true'] {
+      border-color: color(primary, 100);
+      + .#{$root}__list {
+        display: block;
+      }
+    }
+
+    > div:first-child {
+      display: none;
+    }
+    > div[data-select='text'] {
+      height: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: color(dark, 200);
+      font-size: rem(13);
+      font-weight: bold;
+      &:empty {
+        &::before {
+          color: color(dark, 200);
+          opacity: 1;
+        }
+      }
+      &:before {
+        display: block;
+        width: 100%;
+        opacity: 0;
+        content: attr(data-empty);
+      }
+    }
+  }
+
+  &__list {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    min-width: 100%;
+    margin: 0;
+    background: #fff;
+  }
+
+  &__option {
+    background-color: $white;
+    overflow: auto;
+  }
+
+  &--basic {
+    .select__btn {
+      position: relative;
+      display: block;
+      padding: rem(0 40 0 16);
+      height: rem(44);
+      color: color(dark, 200);
+      line-height: rem(42);
+      overflow: hidden;
+      background-color: $white;
+      border-radius: rem(7);
+      border: rem(1) solid color(gray, 600);
+      transition: border-color 0.3s ease;
+      z-index: 100;
+
+      &:focus {
+        border: rem(1) solid color(primary, 100);
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: rem(15);
+        top: calc(50% - #{rem(11)});
+        width: rem(25);
+        height: rem(25);
+        background: url(#{$icon-url}/icon-select-arrow.png) no-repeat;
+        background-size: rem(25 25);
+      }
+
+      > div[data-select='text'] {
+        &:before {
+          margin: rem(0 0 -42);
+        }
+      }
+    }
+
+    .select__list {
+      top: calc(100% - #{rem(4)});
+    }
+
+    .select__option {
+      border: rem(1) solid color(gray, 600);
+      border-radius: rem(6);
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      button {
+        width: 100%;
+        display: block;
+        border-bottom: rem(1) solid color(gray, 600);
+        color: color(dark, 200);
+        font-size: rem(13);
+        padding: rem(0 16);
+        height: rem(44);
+        text-align: left;
+
+        &:first-child {
+          padding-top: rem(4);
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &--sort {
+    display: inline-block;
+    min-width: rem(77);
+
+    .select__btn {
+      position: relative;
+      display: block;
+      height: rem(18);
+      padding: rem(0 16 0 0);
+      line-height: rem(18);
+      color: color(dark, 600);
+      font-size: rem(10);
+      overflow: hidden;
+      background-color: $white;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 1px;
+        width: rem(11);
+        height: rem(9);
+        transform: translateY(-50%);
+        background: url(../images/icon/icon-sort.svg) no-repeat;
+        background-size: 100% auto;
+      }
+
+      > div[data-select='text'] {
+        text-align: right;
+        font-size: rem(10);
+        color: color(dark, 600);
+        font-weight: normal;
+        &:before {
+          margin: rem(0 0 -18);
+          color: color(dark, 600);
+        }
+      }
+    }
+
+    .select__list {
+      top: rem(27);
+      min-width: 100%;
+      border: 1px solid #222222;
+      padding: rem(4 14);
+      box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.24);
+    }
+
+    .select__option {
+      button {
+        width: 100%;
+        display: block;
+        padding: rem(10 0);
+        font-size: rem(13);
+        border: 0;
+        line-height: rem(16);
+        text-align: center;
+        color: #222222;
+        & + button {
+          border-top: 1px solid #eee;
+        }
+
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

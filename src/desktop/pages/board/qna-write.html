@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>마이페이지 | 친구초대 | 친구초대 코드 입력하기 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row">
+            <br /><br /><br />
+            <button type="button" class="btn btn--dark" data-dialog-trigger="#example" aria-haspopup="dialog">
+              <span>1:1 문의하기</span>
+            </button>
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w8" id="example">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <h1 class="modal__title">1:1 문의</h1>
+              <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <fieldset class="form form--type3">
+                <legend>1:1 문의</legend>
+                <div class="form-field">
+                  <label for="field1" class="form-field__label">문의유형</label>
+                  <div class="select select--basic w-100" data-select="select" id="basic">
+                    <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn" aria-disabled="false">
+                      <div>필드명</div>
+                      <div data-empty="기본형" data-select="text"></div>
+                    </div>
+                    <div class="select__list" data-select="list">
+                      <div class="select__option" data-select="option">
+                        <button type="button" value="value1">하이패스</button>
+                        <button type="button" value="value2">선택 항목2</button>
+                        <button type="button" value="value3">선택 항목3</button>
+                        <button type="button" value="value4">선택 항목4</button>
+                        <button type="button" value="value5">선택 항목5</button>
+                      </div>
+                    </div>
+                    <input type="hidden" name="select1_1" data-select="value" />
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label for="field1" class="form-field__label">내용</label>
+                  <div class="textarea-form">
+                    <textarea class="textarea" rows="11" placeholder="내용을 입력해 주세요(필수 -30자 이상)"></textarea>
+                  </div>
+                </div>
+              </fieldset>
+
+              <ul class="text-list text-list--bullet1">
+                <li class="text-list__item">문의 내용은 최대한 빠른 시일 내에 답변 드리겠습니다.</li>
+                <li class="text-list__item">제휴점 이용 문의 시 제휴점명을 남겨주시면 더 빠르고 정확한 상담이 가능합니다.</li>
+                <li class="text-list__item">
+                  문의 내용 작성 시 개인정보(연락처, 이메일)가 입력되지 않도록 주의<br />
+                  부탁드립니다.
+                </li>
+                <li class="text-list__item">제휴점 광고 문의는 1688-4522로 연락주시면 친절히 상담해 드립니다.</li>
+                <li class="text-list__item">하이타이 이용과 상담 없는 내용, 비속어 사용, 비방, 욕설 등의 부적절한 언어를 사용하시는 경우 담당자에 의해 예고없이 삭제될 수 있습니다.</li>
+              </ul>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--lg btn--primary">문의하기</button>
+            </div>
+            <!-- [//] -->
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+
+      <script>
+        document.addEventListener('UILoaded', function () {
+          var dialog = document.querySelector('#example');
+          // var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+          // dialogInstance.open();
+        });
+      </script>
+    </div>
+  </body>
+</html>

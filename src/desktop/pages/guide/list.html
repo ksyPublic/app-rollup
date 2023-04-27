@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>가이드 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+      <main id="container">
+        <header class="hide">
+          <h1>MARKUP GUIDE | TEXT</h1>
+        </header>
+        <!-- # CONTENT # -->
+        <div class="content">
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메뉴이동] -->
+          <!-- ------------------------------------------------------------------ -->
+          <include src="./_include/nav.html"></include>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [타이틀] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">리스트</h2>
+          <!-- 유형1 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .list-wrap .list-wrap--basic</legend>
+            <div class="list-wrap list-wrap--basic">
+              <div class="list-wrap__item">
+                <span class="list-wrap__tt"><b>예약코스</b></span>
+                <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+              </div>
+              <div class="list-wrap__item">
+                <span class="list-wrap__tt"><b>예약시간</b></span>
+                <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+              </div>
+              <div class="list-wrap__item">
+                <span class="list-wrap__tt"><b>결제금액</b></span>
+                <span class="list-wrap__ts">
+                  <b>30,000<em class="unit">원</em></b>
+                </span>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- 유형2------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .store-list .store-list--vertical</legend>
+            <div class="store-list store-list--vertical">
+              <ul>
+                <!-- 목록하나 -->
+                <li class="store-list__item">
+                  <a href="" class="store-list__anchor">
+                    <div class="store-list__img"><img src="" alt="구로디지털 하이타이 마사지" /></div>
+                    <div class="store-list__con">
+                      <!-- 할인정보 -->
+                      <div class="store-list__label">
+                        <em class="badges badges--sm badges--c1">타임할인</em>
+                        <em class="badges badges--sm badges--c2">스탬프</em>
+                        <em class="badges badges--sm badges--c3 badges--hipass"><span>하이패스</span></em>
+                        <em class="badges badges--sm badges--c4">이벤트</em>
+                      </div>
+                      <!-- 영업점명 -->
+                      <strong class="store-list__title">구로디지털 하이타이 마사지</strong>
+                      <!-- 영업점 정보 -->
+                      <div class="store-util">
+                        <span class="store-util__item"><span class="hide">평점</span><i class="icon icon--star" aria-hidden="true"></i><em class="store-util__text">9.3(30)</em></span>
+                        <span class="store-util__item"><span class="hide">좋아요</span><i class="icon icon--like" aria-hidden="true"></i><em class="store-util__text">3758</em></span>
+                        <span class="store-util__item"><span class="hide">거리</span><i class="icon icon--distance" aria-hidden="true"></i><em class="store-util__text">375m</em></span>
+                      </div>
+                      <!-- 영업점 가격정보 -->
+                      <div class="store-list__info">
+                        <ul class="info-price">
+                          <!-- // -->
+                          <li class="info-price__item">
+                            <em class="info-price__title">타이 관리 - 60분</em>
+                            <div class="info-price__con">
+                              <span class="info-price__text1"><span class="hide">기존가</span>000,000<span class="info-price__unit">원</span></span>
+                              <span class="info-price__text2">
+                                <span class="hide">할인가</span><em>50%</em>
+                                <strong class="text-sub-100">000,000<span class="info-price__unit">원</span></strong>
+                              </span>
+                            </div>
+                          </li>
+                          <!-- // -->
+                          <li class="info-price__item">
+                            <em class="info-price__title">건식스포츠관리 - 60분</em>
+                            <div class="info-price__con">
+                              <span class="info-price__text1"><span class="hide">기존가</span>000,000<span class="info-price__unit">원</span></span>
+                              <span class="info-price__text2">
+                                <span class="hide">할인가</span><em>50%</em>
+                                <strong>000,000<span class="info-price__unit">원</span></strong>
+                              </span>
+                            </div>
+                          </li>
+                          <!-- // -->
+                        </ul>
+                      </div>
+                      <!-- 영업점 위치 -->
+                      <div class="store-list__text">구로디지털단지역 3번출구 도보3분 거리내에 위치</div>
+                    </div>
+                  </a>
+                </li>
+                <!-- // -->
+              </ul>
+            </div>
+          </fieldset>
+
+          <!-- 유형2------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .store-list .store-list--card</legend>
+            <div class="store-list store-list--card">
+              <ul>
+                <!-- 목록하나 -->
+                <li class="store-list__item">
+                  <a href="" class="store-list__anchor">
+                    <div class="store-list__img"><img src="" alt="구로디지털 하이타이 마사지" /></div>
+                    <div class="store-list__con">
+                      <!-- 할인정보 -->
+                      <div class="store-list__label">
+                        <em class="badges badges--sm badges--c1">타임할인</em>
+                        <em class="badges badges--sm badges--c2">스탬프</em>
+                        <em class="badges badges--sm badges--c3 badges--hipass"><span>하이패스</span></em>
+                        <em class="badges badges--sm badges--c4">이벤트</em>
+                      </div>
+                      <!-- 영업점명 -->
+                      <strong class="store-list__title">구로디지털 하이타이 마사지</strong>
+                      <!-- 영업점 정보 -->
+                      <div class="store-util">
+                        <span class="store-util__item"><span class="hide">평점</span><i class="icon icon--star" aria-hidden="true"></i><em class="store-util__text">9.3(30)</em></span>
+                        <span class="store-util__item"><span class="hide">좋아요</span><i class="icon icon--like" aria-hidden="true"></i><em class="store-util__text">3758</em></span>
+                        <span class="store-util__item"><span class="hide">거리</span><i class="icon icon--distance" aria-hidden="true"></i><em class="store-util__text">375m</em></span>
+                      </div>
+                      <!-- 영업점 가격정보 -->
+                      <div class="store-list__info">
+                        <ul class="info-price">
+                          <!-- // -->
+                          <li class="info-price__item">
+                            <em class="info-price__title">타이 관리 - 60분</em>
+                            <div class="info-price__con">
+                              <span class="info-price__text1"><span class="hide">기존가</span>000,000<span class="info-price__unit">원</span></span>
+                              <span class="info-price__text2">
+                                <span class="hide">할인가</span><em>50%</em>
+                                <strong class="text-sub-100">000,000<span class="info-price__unit">원</span></strong>
+                              </span>
+                            </div>
+                          </li>
+                          <!-- // -->
+                          <li class="info-price__item">
+                            <em class="info-price__title">건식스포츠관리 - 60분</em>
+                            <div class="info-price__con">
+                              <span class="info-price__text1"><span class="hide">기존가</span>000,000<span class="info-price__unit">원</span></span>
+                              <span class="info-price__text2">
+                                <span class="hide">할인가</span><em>50%</em>
+                                <strong>000,000<span class="info-price__unit">원</span></strong>
+                              </span>
+                            </div>
+                          </li>
+                          <!-- // -->
+                        </ul>
+                      </div>
+                      <!-- 영업점 위치 -->
+                      <div class="store-list__text">구로디지털단지역 3번출구 도보3분 거리내에 위치</div>
+                    </div>
+                  </a>
+                </li>
+                <!-- // -->
+              </ul>
+            </div>
+          </fieldset>
+        </div>
+        <!-- # // # -->
+      </main>
+    </div>
+  </body>
+</html>

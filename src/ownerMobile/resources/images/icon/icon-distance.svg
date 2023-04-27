@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="17px" viewBox="0 0 16 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>EBA27AE5-C928-4A91-BDA8-59FEEED537F6</title>
+    <g id="REGION" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="REGION/result_list_-ver2" transform="translate(-255.000000, -2416.000000)">
+            <g id="Group-6" transform="translate(40.000000, 1921.000000)">
+                <g id="ICON/BASIC/icon_pin" transform="translate(215.000000, 495.616622)">
+                    <rect id="Rectangle-Copy-20" x="0" y="0" width="16" height="16.0857909"></rect>
+                    <path d="M8,0.779155496 C11.18144,0.779155496 14,3.44856476 14,6.84599473 C14,10.4118104 8.9396085,14.1822967 8.11342213,14.7741241 L8.02917152,14.8339009 C8.00999584,14.8473496 8,14.8542225 8,14.8542225 C8,14.8542225 7.99000416,14.8473496 7.97082848,14.8339009 L7.88657787,14.7741241 C7.0603915,14.1822967 2,10.4118104 2,6.84599473 C2,3.44856476 4.81856,0.779155496 8,0.779155496 Z M8,3.9339119 C6.40896,3.9339119 5.12,5.23723075 5.12,6.84599473 C5.12,8.45475871 6.40896,9.75807756 8,9.75807756 C9.59104,9.75807756 10.88,8.45475871 10.88,6.84599473 C10.88,5.23723075 9.59104,3.9339119 8,3.9339119 Z" id="icon_pin" stroke="#FF5B2C" stroke-width="1.5" fill="#FF5B2C" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

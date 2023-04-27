@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>B23B8AE6-677D-4CF4-887F-862C87F019E2</title>
+    <g id="REGION" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="REGION/subway" transform="translate(-260.000000, -341.000000)">
+            <g id="icon" transform="translate(260.000000, 341.000000)">
+                <circle id="Oval" fill="#FFCBBA" cx="16" cy="16" r="16"></circle>
+                <polygon id="Star" fill="#FFFFFF" points="16 21.0526316 10.0602753 24.1753296 11.1946618 17.561349 6.38932362 12.877302 13.0301377 11.9123352 16 5.89473684 18.9698623 11.9123352 25.6106764 12.877302 20.8053382 17.561349 21.9397247 24.1753296"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

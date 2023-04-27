@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>신고하기 | 제휴점 상세 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row">
+            <div class="review">
+              <div class="review__list">
+                <!-- 후기하나 -->
+                <div class="review__item">
+                  <div class="review__con">
+                    <!-- .icon-user--user1 ~ .icon-user--user4 -->
+                    <strong class="review__user"><i class="icon icon-user icon-user--user1"></i>아프로맨</strong>
+                    <div class="review__info">
+                      <span class="review__num"><span style="width: 100%"></span><em class="hide">별점 10.0</em></span>
+                      <span class="review__course">2022.12.28 / 타이관리 60분 코스</span>
+                    </div>
+                    <p>자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 가중 중요한 마사지 실력도 주변 마사지샵들보다 단연 최고네요. 마사지 끝나고 이것 저것 챙겨 주시는게 많아서 너무 좋았어요.</p>
+                  </div>
+                  <div class="review__con review__con--reply">
+                    <strong class="review__user">제휴점 답변</strong>
+                    <p>안녕하세요. 안프로맨님. 고객님의 소중한 리뷰 너무 감사드립니다.만족스런 이용이 되신것 같아 저희가 더 뿌듯 하네요.좋으셨던 부분은 더욱 신경쓰고, 부족한 부분은 꾸준히 개선하여 최고의 청담타이마사지가 되겠습니다.</p>
+                  </div>
+                  <!-- 메뉴 -->
+                  <div data-autoset="menu" class="review__menu">
+                    <button type="button" class="btn btn--menu" data-menu="btn"><span>메뉴열기</span></button>
+                    <div data-menu="con">
+                      <div>
+                        <button type="button" data-dialog-trigger="#uiReviewGuide" aria-haspopup="dialog">신고하기</button>
+                        <button type="button">작성자 차단</button>
+                        <button type="button">삭제하기</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w11" id="uiReviewGuide">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <h1 class="modal__title">신고하기</h1>
+              <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <div class="label label--md label--vertical mt-3">
+                <div class="label__item">
+                  <label><input type="radio" name="radioA" /><span>허위사실 작성 후기</span></label>
+                </div>
+                <div class="label__item">
+                  <label><input type="radio" name="radioA" /><span>욕설, 비방, 비속어 포함 후기</span></label>
+                </div>
+                <div class="label__item">
+                  <label><input type="radio" name="radioA" /><span>개인정보 유출 위험 후기</span></label>
+                </div>
+                <div class="label__item">
+                  <label><input type="radio" name="radioA" /><span>음란, 유해성 후기</span></label>
+                </div>
+                <div class="label__item">
+                  <label><input type="radio" name="radioA" /><span>기타</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--lg btn--gray" data-dialog-close>취소</button>
+              <button type="button" class="btn btn--lg btn--dark">신고하기</button>
+            </div>
+            <!-- [//] -->
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+
+      <script>
+        document.addEventListener('UILoaded', function () {
+          var dialog = document.querySelector('#uiReviewGuide');
+          var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+          dialogInstance.open();
+        });
+      </script>
+    </div>
+  </body>
+</html>

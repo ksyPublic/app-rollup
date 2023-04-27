@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>내 예약 | 하이패스 과거 예약 목록 탭 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # SKIP # -->
+      <!-- ---------------------------------------------------------- -->
+      <div class="nav-skip"><a href="#container">본문바로가기</a></div>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row">
+            <!-- ## TAB ## -->
+            <div class="tabs tabs--type1" data-autoset="tab" id="tab">
+              <ul role="tablist" class="tabs__list">
+                <li class="tabs__item">
+                  <a href="#uiTabPanel1" role="tab">진행중 <em>(3)</em></a>
+                </li>
+                <li class="tabs__item">
+                  <a href="#uiTabPanel2" aria-selected="true" role="tab">과거예약 내역<em>(3)</em></a>
+                </li>
+              </ul>
+              <!-- TABPANEL -->
+              <div role="tabpanel" id="uiTabPanel1" class="tabs__panel" aria-label="탭1">
+                <!-- #데이터 없을시 노출 
+                <div class="mes-result mes-result--nodata">
+                  <p>진행중인 예약이 없습니다.</p>
+                </div>
+                // -->
+                <div class="grid grid--basic" data-layout="masonry" data-layout-item=".grid-col">
+                  <span class="hide">진행중인 상품목록</span>
+                  <div class="grid-col grid-col--border">
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c6">예약신청</em>
+                      <p class="grid-tt">구로디지털 아레나 스파 & 프리미엄 스웨디시 깔깔거리점</p>
+                      <p class="grid-ts">서울 구로구 디지털로32길 디지털타워빌란드 1차 2F</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c7">예약확정</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c8">관리중</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">서울 구로구 디지털로32길 디지털타워 1차 2F</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                        <div class="grid-btn">
+                          <button class="btn btn--primary btn--sm btn--round">이용 후기 작성</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c7">예약확정</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c7">예약확정</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c7">예약확정</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c6">예약신청</em>
+                      <p class="grid-tt">구로디지털 아레나 스파 & 프리미엄 스웨디시 깔깔거리점</p>
+                      <p class="grid-ts">서울 구로구 디지털로32길 디지털타워빌란드 1차 2F</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c7">예약확정</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c8">관리중</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">서울 구로구 디지털로32길 디지털타워 1차 2F</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                        <div class="grid-btn">
+                          <button type="button" class="btn btn--primary btn--sm btn--round">이용 후기 작성</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c7">예약확정</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c7">예약확정</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c7">예약확정</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pagination">
+                  <a href="#" class="pagination--first">처음 페이지</a>
+                  <a href="#" class="pagination--prev" tabindex="-1" aria-disabled="true">이전 페이지</a>
+                  <a href="#" aria-current="page">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#">6</a>
+                  <a href="#">7</a>
+                  <a href="#">8</a>
+                  <a href="#">9</a>
+                  <a href="#">10</a>
+                  <a href="#" class="pagination--next">다음 페이지</a>
+                  <a href="#" class="pagination--last">마지막 페이지</a>
+                </div>
+              </div>
+              <div role="tabpanel" id="uiTabPanel2" class="tabs__panel is-active" aria-label="탭2">
+                <!-- #데이터 없을시 노출 
+                <div class="mes-result mes-result--nodata">
+                  <p>과거예약 내역이 없습니다.</p>
+                </div>
+                // -->
+                <div class="c-title c-title-group">
+                  <div class="c-title__rt">
+                    <button type="button" class="btn btn--text">전체삭제</button>
+                  </div>
+                </div>
+                <div class="grid grid--basic" data-layout="masonry" data-layout-item=".grid-col" id="example">
+                  <span class="hide">이전예약 상품목록</span>
+                  <div class="grid-col grid-col--border">
+                    <button type="button" class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--remove" aria-hidden="true"></i>
+                    </button>
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c9">이용완료</em>
+                      <p class="grid-tt">구로디지털 아레나 스파 & 프리미엄 스웨디시 깔깔거리점</p>
+                      <p class="grid-ts">서울 구로구 디지털로32길 디지털타워빌란드 1차 2F</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <button type="button" class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--remove" aria-hidden="true"></i>
+                    </button>
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c9">이용완료</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <button type="button" class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--remove" aria-hidden="true"></i>
+                    </button>
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c10">예약취소</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">서울 구로구 디지털로32길 디지털타워 1차 2F</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                        <div class="grid-btn">
+                          <button class="btn btn--primary btn--sm btn--round">이용 후기 작성</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <button type="button" class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--remove" aria-hidden="true"></i>
+                    </button>
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c9">이용완료</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <button type="button" class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--remove" aria-hidden="true"></i>
+                    </button>
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c9">이용완료</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <button type="button" class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--remove" aria-hidden="true"></i>
+                    </button>
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c9">이용완료</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <button type="button" class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--remove" aria-hidden="true"></i>
+                    </button>
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c10">예약취소</em>
+                      <p class="grid-tt">구로디지털 아레나 스파 & 프리미엄 스웨디시 깔깔거리점</p>
+                      <p class="grid-ts">서울 구로구 디지털로32길 디지털타워빌란드 1차 2F</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <button type="button" class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--remove" aria-hidden="true"></i>
+                    </button>
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c9">이용완료</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <button type="button" class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--remove" aria-hidden="true"></i>
+                    </button>
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c10">예약취소</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">서울 구로구 디지털로32길 디지털타워 1차 2F</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                        <div class="grid-btn">
+                          <button type="button" class="btn btn--primary btn--sm btn--round">이용 후기 작성</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <button type="button" class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--remove" aria-hidden="true"></i>
+                    </button>
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c9">이용완료</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <button type="button" class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--remove" aria-hidden="true"></i>
+                    </button>
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c9">이용완료</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col grid-col--border">
+                    <button type="button" class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--remove" aria-hidden="true"></i>
+                    </button>
+                    <div class="grid-thumnail">
+                      <img src="http://placehold.it/400x160" />
+                    </div>
+                    <div class="grid-con">
+                      <em class="badges badges--lg badges--c9">이용완료</em>
+                      <p class="grid-tt">구로디지털 코코스웨디시&아로마</p>
+                      <p class="grid-ts">경기 부천시 상동 548-6 강산타운701호</p>
+                    </div>
+                    <div class="grid-foot">
+                      <div class="list-wrap list-wrap--sm list-wrap--basic">
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약코스</b></span>
+                          <span class="list-wrap__ts">발 + 전신 + 등아로마 관리 - 120분</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>예약시간</b></span>
+                          <span class="list-wrap__ts">2023.07.26(화) 오후 01:00</span>
+                        </div>
+                        <div class="list-wrap__item">
+                          <span class="list-wrap__tt"><b>결제금액</b></span>
+                          <span class="list-wrap__ts">
+                            <b>30,000<em class="unit">원</em></b>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pagination">
+                  <a href="#" class="pagination--first">처음 페이지</a>
+                  <a href="#" class="pagination--prev" tabindex="-1" aria-disabled="true">이전 페이지</a>
+                  <a href="#" aria-current="page">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#">6</a>
+                  <a href="#">7</a>
+                  <a href="#">8</a>
+                  <a href="#">9</a>
+                  <a href="#">10</a>
+                  <a href="#" class="pagination--next">다음 페이지</a>
+                  <a href="#" class="pagination--last">마지막 페이지</a>
+                </div>
+              </div>
+              <!-- // -->
+            </div>
+            <!-- ## // ## -->
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/inquery.html"></include>
+      <!-- -------------------------------- -->
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+    </div>
+    <script>
+      function exampleRemove(target, match) {
+        [].forEach.call(masonry, function (mas) {
+          var currentID = mas.element.getAttribute('id');
+          if (!currentID) return;
+          if (currentID === match) {
+            mas.remove(target.parentElement);
+            mas.layout();
+          }
+        });
+      }
+
+      document.addEventListener('UILoaded', function () {
+        var tabElement = document.getElementById('tab');
+        tabElement.addEventListener(HitaiUI.Tab.EVENT.CHANGED, function () {
+          HitaiUI.initialize();
+        });
+
+        var removeElement = document.querySelectorAll('[aria-label="삭제"]');
+        [].forEach.call(removeElement, function (item) {
+          item.addEventListener('click', function (event) {
+            var target = event.target.closest('button');
+            var getId = event.target.closest('#example').getAttribute('id');
+            if (target) {
+              exampleRemove(target, getId);
+            }
+          });
+        });
+
+        HitaiUI.Tab.get($('#tab')).select(1);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+[data-autoset='openner'] {
+  .expand:not(.expanded) {
+    display: none;
+  }
+  .expanding {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  [data-menu='con'].expanded {
+    display: flex;
+  }
+  // 삭제하지마세요!! // data-motion 속성에 영향받지 않고 애니메이션은 없는 컨텐츠
+}
+
+.dropdown {
+  $root: dropdown;
+
+  &-menu {
+    display: flex;
+    &.expand {
+      display: none;
+    }
+  }
+
+  .dropdown__btn {
+    display: block;
+    width: 100%;
+
+    &[aria-expanded='true'],
+    &.is-active {
+      font-weight: bold;
+      color: color(dark, 100);
+
+      em {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__wrap {
+    position: absolute;
+
+    z-index: 10;
+    background-color: white;
+
+    font-size: rem(18);
+    border: rem(1) solid color(dark, 100);
+    max-height: rem(690);
+  }
+
+  &__list {
+    max-width: rem(127);
+    padding: rem(22 0);
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scrollbar-default;
+    .dropdown__btn {
+      text-align: left;
+      padding-left: rem(42);
+      width: rem(127);
+      height: rem(60);
+      font-size: rem(18);
+      color: color(gray, 200);
+    }
+
+    &--center {
+      .dropdown__btn {
+        padding-left: rem(2);
+        text-align: center;
+      }
+    }
+  }
+
+  &__item {
+    max-width: rem(252);
+    padding: rem(37 0);
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: block;
+    border-left: 1px solid #e3e3e3;
+    @include scrollbar-default;
+  }
+
+  &__title {
+    padding-left: rem(25);
+    display: flex;
+    align-items: center;
+
+    > strong {
+      margin-left: rem(10);
+      letter-spacing: rem(-0.42);
+    }
+  }
+
+  &__item {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+
+    .dropdown__btn {
+      &:first-child {
+        margin-top: rem(10);
+      }
+      text-align: left;
+      padding-left: rem(25);
+      width: rem(250);
+      height: rem(60);
+      font-size: rem(18);
+      letter-spacing: rem(-0.5);
+
+      color: color(gray, 200);
+      &[aria-expanded='true'] {
+        font-weight: bold;
+      }
+    }
+  }
+}

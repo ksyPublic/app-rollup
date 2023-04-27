@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>가이드 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+      <main id="container">
+        <header class="hide">
+          <h1>MARKUP GUIDE | BUTTON</h1>
+        </header>
+        <!-- # CONTENT # -->
+        <div class="content">
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메뉴이동] -->
+          <!-- ------------------------------------------------------------------ -->
+          <include src="./_include/nav.html"></include>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [일반버튼] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">일반버튼</h2>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .btn .btn--{type}</legend>
+
+            <button type="button" class="btn btn--primary">btn--primary</button>
+            <button type="button" class="btn btn--dark">btn--dark</button>
+            <button type="button" class="btn btn--gray">btn--gray</button>
+            <button type="button" class="btn btn--light">btn--light</button>
+            <button type="button" class="btn btn--yellow">btn--yellow</button>
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .btn .btn--{size}</legend>
+
+            <button type="button" class="btn btn--primary btn--sm">btn--sm</button>
+            <button type="button" class="btn btn--primary btn--xsm">btn--xsm</button>
+            <button type="button" class="btn btn--dark btn--md">btn--md</button>
+            <button type="button" class="btn btn--dark btn--xmd">btn--xmd</button>
+            <button type="button" class="btn btn--gray btn--lg">btn--lg</button>
+            <button type="button" class="btn btn--gray btn--xlg">btn--xlg</button>
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형3 : .btn [disabled, readonly]</legend>
+            <button type="button" class="btn btn--primary btn--sm" disabled>btn--sm</button>
+            <button type="button" class="btn btn--primary btn--xsm" disabled>btn--xsm</button>
+            <button type="button" class="btn btn--dark btn--md" disabled>btn--md</button>
+            <button type="button" class="btn btn--dark btn--xmd" disabled>btn--xmd</button>
+            <button type="button" class="btn btn--gray btn--lg" disabled>btn--lg</button>
+            <button type="button" class="btn btn--gray btn--xlg" disabled>btn--xlg</button>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [일반버튼] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">라운드 버튼</h2>
+
+          <!-- 유형1 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .btn btn--round</legend>
+
+            <button type="button" class="btn btn--primary btn--sm btn--round">btn--sm</button>
+            <button type="button" class="btn btn--primary btn--xsm btn--round">btn--xsm</button>
+            <button type="button" class="btn btn--dark btn--md btn--round">btn--md</button>
+            <button type="button" class="btn btn--dark btn--xmd btn--round">btn--xmd</button>
+            <button type="button" class="btn btn--gray btn--lg btn--round">btn--lg</button>
+            <button type="button" class="btn btn--gray btn--xlg btn--round">btn--xlg</button>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [라운드 없는 버튼] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">라운드 없는 버튼</h2>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .btn btn--brn</legend>
+
+            <button type="button" class="btn btn--primary btn--sm btn--brn">btn--sm</button>
+            <button type="button" class="btn btn--primary btn--xsm btn--brn">btn--xsm</button>
+            <button type="button" class="btn btn--dark btn--md btn--brn">btn--md</button>
+            <button type="button" class="btn btn--dark btn--xmd btn--brn">btn--xmd</button>
+            <button type="button" class="btn btn--gray btn--lg btn--brn">btn--lg</button>
+            <button type="button" class="btn btn--gray btn--xlg btn--brn">btn--xlg</button>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [서브버튼] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">아이콘 버튼</h2>
+
+          <!-- 유형1 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .btn .btn--icon</legend>
+
+            <div class="w-100 bg-primary-200">
+              <!-- 배경색이 있을시 아이콘 모음 -->
+              <button type="button" class="btn btn--icon">
+                <i class="icon icon--noti" aria-hidden="true"></i>
+              </button>
+
+              <button type="button" class="btn btn--icon">
+                <i class="icon icon--noti" aria-hidden="true"></i>
+                <em class="icon icon--new">new</em>
+              </button>
+
+              <button type="button" class="btn btn--icon">
+                <i class="icon icon--noti-black" aria-hidden="true"></i>
+                <em class="icon icon--new">new</em>
+              </button>
+
+              <button type="button" class="btn btn--icon">
+                <i class="icon icon--setting-black" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <button type="button" class="btn btn--icon">
+              <i class="icon icon--noti-primary" aria-hidden="true"></i>
+              <em class="icon icon--new">new</em>
+            </button>
+
+            <button type="button" class="btn btn--icon">
+              <i class="icon icon--home" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" class="btn btn--icon" aria-labe="삭제">
+              <i class="icon icon--delete-black" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" class="btn btn--icon" aria-labe="삭제">
+              <i class="icon icon--delete-gray" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" class="btn btn--icon">
+              <i class="icon icon--basic-map" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" class="btn btn--icon">
+              <i class="icon icon--remove" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" class="btn btn--icon">
+              <i class="icon icon--basic-share" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" class="btn btn--icon">
+              <i class="icon icon--search" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" class="btn btn--icon btn--filter">
+              <i class="icon icon--filter" aria-hidden="true"></i>
+              <span class="num" aria-hidden="true"></span>
+            </button>
+
+            <button type="button" class="btn btn--icon btn--filter is-active">
+              <i class="icon icon--filter" aria-hidden="true"></i>
+              <span class="num">14</span>
+            </button>
+          </fieldset>
+          <!-- ------------------------------------------------------------------ -->
+
+          <!-- 유형2 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .btn .btn--with</legend>
+
+            <button type="button" class="btn btn--with btn--lg btn--dark w-100">
+              <i class="icon icon--apple" aria-hidden="true"></i>
+              <span><b>Apple</b>&nbsp;로그인</span>
+            </button>
+
+            <button type="button" class="btn btn--with btn--lg btn--yellow w-100">
+              <i class="icon icon--kakao" aria-hidden="true"></i>
+              <span><b>카카오톡</b>&nbsp;로그인</span>
+            </button>
+
+            <button type="button" class="btn btn--with btn--lg btn--light w-100">
+              <i class="icon icon--google" aria-hidden="true"></i>
+              <span><b>Google</b>&nbsp;로그인</span>
+            </button>
+
+            <button type="button" class="btn btn--with btn--lg btn--primary w-100">
+              <i class="icon icon--mail" aria-hidden="true"></i>
+              <span><b>이메일</b>&nbsp;로그인</span>
+            </button>
+
+            <br />
+            <br />
+
+            <button type="button" class="btn btn--with btn--yellow w-100">
+              <i class="icon icon--kakao" aria-hidden="true"></i>
+              <span><b>카카오톡</b>으로 공유하기</span>
+            </button>
+
+            <button type="button" class="btn btn--with btn--lightdarken w-100">
+              <i class="icon icon--message" aria-hidden="true"></i>
+              <span><b>문자메시지</b>로 공유하기</span>
+            </button>
+
+            <button type="button" class="btn btn--with btn--primary w-100">
+              <i class="icon icon--point-white" aria-hidden="true"></i>
+              <span>5,000 사용하기</span>
+            </button>
+
+            <button type="button" class="btn btn--with btn--light w-100">
+              <i class="icon icon--location" aria-hidden="true"></i>
+              <span class="text-dark-200">현 위치로 재검색</span>
+            </button>
+
+            <button type="button" class="btn btn--with btn--light w-100">
+              <i class="icon icon--map-black" aria-hidden="true"></i>
+              <span class="text-dark-200">지도로 위치지정</span>
+            </button>
+
+            <!-- 백그라운드 색상이 없는 경우 -->
+            <button type="button" class="btn btn--with btn--bgn w-100">
+              <span class="text-dark-200"><b>1688-4522</b> 전화 문의하기</span>
+            </button>
+            <!-- // -->
+
+            <br />
+            <br />
+
+            <button type="button" class="btn btn--with btn--xmd btn--dark">
+              <i class="icon icon--map-white" aria-hidden="true"></i>
+              <span>지도</span>
+            </button>
+
+            <button type="button" class="btn btn--with btn--xmd btn--primary">
+              <i class="icon icon--hipass" aria-hidden="true"></i>
+              <span>예약</span>
+            </button>
+
+            <button type="button" class="btn btn--with btn--ssm btn--graydarken">
+              <span>AD</span>
+              <i class="icon icon--info-gray" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" class="btn btn--with btn--ssm btn--light">
+              <span>AD</span>
+              <i class="icon icon--info-light" aria-hidden="true"></i>
+            </button>
+          </fieldset>
+          <!-- ------------------------------------------------------------------ -->
+
+          <!-- 유형3 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형3 : .btn .btn--count</legend>
+            <button type="button" class="btn btn--count">
+              <span class="btn__info"><em>1</em>/<em>4</em></span>
+            </button>
+            <button type="button" class="btn btn--count btn--play">
+              <i class="icon icon--play" aria-hidden="true"></i>
+              <span class="btn__info"><em>1</em>/<em>4</em></span>
+            </button>
+            <button type="button" class="btn btn--count btn--stop">
+              <i class="icon icon--stop" aria-hidden="true"></i>
+              <span class="btn__info"><em>1</em>/<em>4</em></span>
+            </button>
+            <div class="count">
+              <button type="button" class="btn btn--icon">
+                <i class="icon icon--minus" aria-hidden="true"></i>
+              </button>
+              <span class="count__number">0</span>
+              <button type="button" class="btn btn--icon">
+                <i class="icon icon--plus" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="count">
+              <button type="button" class="btn btn--icon">
+                <i class="icon icon--minus" aria-hidden="true"></i>
+              </button>
+              <span class="count__number is-focus">0</span>
+              <button type="button" class="btn btn--icon">
+                <i class="icon icon--plus" aria-hidden="true"></i>
+              </button>
+            </div>
+          </fieldset>
+          <!-- ------------------------------------------------------------------ -->
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [텍스트 버튼] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">텍스트 버튼</h2>
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .btn .btn--text</legend>
+
+            <a href="#none" class="btn btn--text">
+              <em>자세히 보기</em>
+            </a>
+            <br />
+
+            <a href="#none" class="btn btn--text btn--text-under">
+              <em>자세히 보기</em>
+            </a>
+            <br />
+
+            <a href="#none" class="btn btn--text btn--text-under">
+              <em>고객센터 바로가기</em>
+            </a>
+            <br />
+
+            <a href="#none" class="btn btn--text">
+              <em class="text-dark-200">더 보기</em>
+              <i class="icon icon--more" aria-hidden="true"></i>
+            </a>
+            <br />
+
+            <a href="#none" class="btn btn--text">
+              <em>서울시 구로구 구로동</em>
+              <i class="icon icon--map-gray" aria-hidden="true"></i>
+            </a>
+            <br />
+
+            <a href="#none" class="btn btn--text btn--text-sm">
+              <em>포인트 할인</em>
+              <i class="icon icon--text-arrow" aria-hidden="true"></i>
+            </a>
+
+            <a href="#none" class="btn btn--text btn--text-sm">
+              <em class="text-dark-900">포인트 정책</em>
+              <i class="icon icon--info-light-md" aria-hidden="true"></i>
+            </a>
+
+            <br />
+            <br />
+
+            <a role="button" class="btn btn--text btn--text-md">
+              <i class="icon icon--shop" aria-hidden="true"></i>
+              <em>리얼타이</em>
+            </a>
+            <br />
+
+            <a role="button" class="btn btn--text btn--text-md">
+              <i class="icon icon--pin" aria-hidden="true"></i>
+              <em>청담</em>
+            </a>
+            <br />
+
+            <a role="button" class="btn btn--text btn--text-md">
+              <i class="icon icon--subway" aria-hidden="true"></i>
+              <em>가산역</em>
+            </a>
+            <br />
+            <br />
+
+            <div>
+              <ul>
+                <li>
+                  <a role="button" class="btn btn--text btn--text-lg">
+                    <i class="icon icon--mypage-hipass" aria-hidden="true"></i>
+                    <em>하이패스(내 예약)</em>
+                    <em class="icon icon--new">new</em>
+                  </a>
+                </li>
+                <li>
+                  <a role="button" class="btn btn--text btn--text-lg">
+                    <i class="icon icon--mypage-event" aria-hidden="true"></i>
+                    <em>이벤트</em>
+                  </a>
+                </li>
+                <li>
+                  <a role="button" class="btn btn--text btn--text-lg">
+                    <i class="icon icon--mypage-shop" aria-hidden="true"></i>
+                    <em>내 제휴점</em>
+                  </a>
+                </li>
+                <li>
+                  <a role="button" class="btn btn--text btn--text-lg">
+                    <i class="icon icon--mypage-stamp" aria-hidden="true"></i>
+                    <em>내 스탬프</em>
+                  </a>
+                </li>
+                <li>
+                  <a role="button" class="btn btn--text btn--text-lg">
+                    <i class="icon icon--mypage-review" aria-hidden="true"></i>
+                    <em>나의 이용후기</em>
+                  </a>
+                </li>
+                <li>
+                  <a role="button" class="btn btn--text btn--text-lg">
+                    <i class="icon icon--mypage-friend" aria-hidden="true"></i>
+                    <em>친구 초대</em>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [버튼 묶음] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">버튼 묶음</h2>
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .btn-area .btn-col</legend>
+
+            <!-- btn이 3개인 유형 -->
+            <div class="btn-area btn-col3">
+              <button type="button" class="btn btn--icon">
+                <i class="icon icon--basic-map" aria-hidden="true"></i>
+              </button>
+              <button type="button" class="btn btn--xmd btn--primary">전화걸기</button>
+              <button type="button" class="btn btn--with btn--xmd btn--primary">
+                <i class="icon icon--hipass" aria-hidden="true"></i>
+                <span>예약</span>
+              </button>
+            </div>
+            <!-- // -->
+
+            <!-- btn이 2개인 유형 -->
+            <div class="btn-area btn-col2">
+              <button type="button" class="btn btn--xmd btn--gray w-30">취소</button>
+              <button type="button" class="btn btn--xmd btn--primary">전화걸기</button>
+            </div>
+            <!-- btn이 2개인 유형 -->
+            <div class="btn-area btn-col2">
+              <button type="button" class="btn btn--xmd btn--gray">취소</button>
+              <button type="button" class="btn btn--xmd btn--primary">전화걸기</button>
+            </div>
+            <!-- // -->
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [버튼 묶음] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">버튼 묶음</h2>
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .btn-area .btn-row</legend>
+
+            <div class="btn-area btn-row">
+              <button type="button" class="btn btn--with btn--light">
+                <i class="icon icon--location" aria-hidden="true"></i>
+                <span class="text-dark-200">현 위치로 재검색</span>
+              </button>
+              <button type="button" class="btn btn--with btn--light">
+                <i class="icon icon--map-black" aria-hidden="true"></i>
+                <span class="text-dark-200">지도로 위치지정</span>
+              </button>
+            </div>
+            <!-- // -->
+          </fieldset>
+        </div>
+        <!-- # // # -->
+      </main>
+    </div>
+  </body>
+</html>

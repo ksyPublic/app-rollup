@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>팝업 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <div class="content">
+          <div class="l-row">
+            <br /><br />
+            <button type="button" class="btn btn--primary btn--sm" data-dialog-trigger="#uiDialog2" aria-haspopup="dialog">기본 Dialog(타이틀없는경우) 모달사이즈 .modal--w1</button>
+            <br /><br />
+            <button type="button" class="btn btn--primary btn--sm" data-dialog-trigger="#uiDialog1" aria-haspopup="dialog">기본 Dialog(타이틀있는경우) 모달사이즈 .modal--w2</button>
+            <br /><br />
+            <!-- <button type="button" class="btn btn--primary btn--sm" data-dialog-trigger="#uiDialog1" aria-haspopup="dialog">이벤트 Dialog</button> -->
+            <br /><br />
+            <!-- <button type="button" class="btn btn--dark btn--sm" data-dialog-trigger="#uiAlert" aria-haspopup="dialog">Alert</button> -->
+          </div>
+        </div>
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w1" id="uiDialog1">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <h1 class="modal__title">Poup Title</h1>
+              <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <button type="button" class="btn btn--primary btn--sm" data-dialog-trigger="#uiDialog2" aria-haspopup="dialog">기본 Dialog</button>
+              <div class="area-temp1">컨텐츠</div>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--lg btn--primary">확인</button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div role="dialog" class="modal modal--w2" id="uiDialog2">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <!-- <h1 class="modal__title">Poup Title</h1> -->
+              <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <div class="area-temp1">컨텐츠</div>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--lg btn--gray" data-dialog-close>취소</button>
+              <button type="button" class="btn btn--lg btn--primary">확인</button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+
+      <script>
+        document.addEventListener('UILoaded', function () {
+          var dialog = $('#uiDialog1');
+          var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+          dialogInstance.open();
+        });
+      </script>
+    </div>
+  </body>
+</html>

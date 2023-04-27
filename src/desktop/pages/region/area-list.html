@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>지역별 제휴점 목록 | 지역 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # SKIP # -->
+      <!-- ---------------------------------------------------------- -->
+      <div class="nav-skip"><a href="#container">본문바로가기</a></div>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <!-- ## 검색 ## -->
+          <div class="l-search">
+            <div class="l-row">
+              <!-- 위치검색 -->
+              <div class="l-search__dropdown">
+                <button type="button" class="btn btn--lg btn--text" id="openBtn" aria-controls="menu">
+                  <span><em data-value="list">서울시</em> / <em data-value="item">강남·서초</em></span>
+                  <i class="icon icon--dropdown" aria-hidden="true"></i>
+                </button>
+              </div>
+              <!-- DROPDWON : 지역별/역주변 -->
+              <div class="dropdown-menu expand" id="menu">
+                <div class="dropdown" data-autoset="openner" id="dropdown1">
+                  <button type="button" class="btn btn--tab" data-menu="btn">지역별</button>
+
+                  <div class="dropdown__wrap expand" data-menu="con">
+                    <div class="dropdown__list">
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list1"><em>서울시</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list2"><em>경기도</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list3"><em>부산시</em></button>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list1">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">서울</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>강남·서초</em></button>
+                        <button type="button" class="dropdown__btn"><em>송파·강동</em></button>
+                        <button type="button" class="dropdown__btn"><em>관악·동작</em></button>
+                        <button type="button" class="dropdown__btn"><em>영등포·구로·금천</em></button>
+                        <button type="button" class="dropdown__btn"><em>강서·양천</em></button>
+                        <button type="button" class="dropdown__btn"><em>서대문·마포·은평</em></button>
+                        <button type="button" class="dropdown__btn"><em>강북·도봉·노원·성북</em></button>
+                        <button type="button" class="dropdown__btn"><em>광진·성동·중랑·동대문</em></button>
+                        <button type="button" class="dropdown__btn"><em>종로·종구·용산</em></button>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list2">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">경기</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                        <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                        <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                        <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                        <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                        <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                        <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                        <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list3">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">부산</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>북구</em></button>
+                        <button type="button" class="dropdown__btn"><em>사하구</em></button>
+                        <button type="button" class="dropdown__btn"><em>부산진구</em></button>
+                        <button type="button" class="dropdown__btn"><em>해운대구</em></button>
+                        <button type="button" class="dropdown__btn"><em>수영구</em></button>
+                        <button type="button" class="dropdown__btn"><em>남구</em></button>
+                        <button type="button" class="dropdown__btn"><em>동구</em></button>
+                        <button type="button" class="dropdown__btn"><em>서구</em></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown" data-autoset="openner" data-offset="0, 60" id="dropdown2">
+                  <button type="button" class="btn btn--tab" data-menu="btn">역주변</button>
+
+                  <div class="dropdown__wrap expand" data-menu="con">
+                    <div class="dropdown__list dropdown__list--center">
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list1"><em>1호선</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list2"><em>2호선</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list3"><em>3호선</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list4"><em>4호선</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list5"><em>5호선</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list6"><em>6호선</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list7"><em>7호선</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list8"><em>8호선</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list9"><em>9호선</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list10"><em>9호선</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list11"><em>인천1</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list12"><em>인천2</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list13"><em>경의중앙</em></button>
+                      <button type="button" class="dropdown__btn" aria-controls="dropdown_list14"><em>경의중앙</em></button>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list1">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">1호선</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>가능역</em></button>
+                        <button type="button" class="dropdown__btn"><em>가산디지털단지역</em></button>
+                        <button type="button" class="dropdown__btn"><em>간석역</em></button>
+                        <button type="button" class="dropdown__btn"><em>개봉역</em></button>
+                        <button type="button" class="dropdown__btn"><em>관악역</em></button>
+                        <button type="button" class="dropdown__btn"><em>광명역</em></button>
+                        <button type="button" class="dropdown__btn"><em>구로역</em></button>
+                        <button type="button" class="dropdown__btn"><em>구일역</em></button>
+                        <button type="button" class="dropdown__btn"><em>군포역</em></button>
+                        <button type="button" class="dropdown__btn"><em>금정구청역</em></button>
+                        <button type="button" class="dropdown__btn"><em>광운대역</em></button>
+                        <button type="button" class="dropdown__btn"><em>광운대역</em></button>
+                        <button type="button" class="dropdown__btn"><em>광운대역</em></button>
+                        <button type="button" class="dropdown__btn"><em>광운대역</em></button>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list2">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">2호선</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list3">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">3호선</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>북구</em></button>
+                        <button type="button" class="dropdown__btn"><em>사하구</em></button>
+                        <button type="button" class="dropdown__btn"><em>부산진구</em></button>
+                        <button type="button" class="dropdown__btn"><em>해운대구</em></button>
+                        <button type="button" class="dropdown__btn"><em>수영구</em></button>
+                        <button type="button" class="dropdown__btn"><em>남구</em></button>
+                        <button type="button" class="dropdown__btn"><em>동구</em></button>
+                        <button type="button" class="dropdown__btn"><em>서구</em></button>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list4">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">3호선</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list5">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">3호선</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list6">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">3호선</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list7">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">3호선</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list8">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">3호선</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list9">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">3호선</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list10">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">3호선</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list11">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">3호선</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list12">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">3호선</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                      </div>
+                    </div>
+
+                    <div class="dropdown__item" id="dropdown_list13">
+                      <div class="dropdown__title">
+                        <i class="icon icon--favor" aria-hidden="true"></i>
+                        <strong><em class="text-primary-100" data-value="title">3호선</em> 추천 제휴점</strong>
+                      </div>
+                      <div class="dropdown__group" data-item="btn">
+                        <button type="button" class="dropdown__btn"><em>데이터역</em></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 검색조건 -->
+              <div class="l-search__form">
+                <div class="l-search__label label label--round">
+                  <label><input type="checkbox" /><span>하이패스</span></label>
+                  <label><input type="checkbox" checked /><span>할인쿠폰</span></label>
+                  <label><input type="checkbox" /><span>타임할인</span></label>
+                  <label><input type="checkbox" /><span>스탬프</span></label>
+                  <label><input type="checkbox" /><span>이벤트</span></label>
+                </div>
+                <button type="button" class="l-search__btn">
+                  <i class="icon icon--filter" aria-hidden="true"></i>
+                  <span>필터검색</span>
+                </button>
+                <button type="button" class="l-search__btn is-active">
+                  <i class="icon icon--filter" aria-hidden="true"></i>
+                  <span>필터검색</span>
+                  <em class="l-search__number">14</em>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ## 추천 제휴점 ## -->
+          <div class="l-row">
+            <!-- # 타이틀영역 # -->
+            <div class="heading-wrap">
+              <h2 class="heading heading--1"><strong>서울</strong> 추천 제휴점</h2>
+              <!-- 정렬 -->
+              <div class="select select--sort side" data-select="select" id="uiSort">
+                <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn">
+                  <div>정렬</div>
+                  <div data-empty="정렬" data-select="text"></div>
+                </div>
+                <!-- // -->
+                <div class="select__list" data-select="list">
+                  <div class="select__option" data-select="option">
+                    <button type="button" value="value1">거리순</button>
+                    <button type="button" value="value2">할인순</button>
+                    <button type="button" value="value3">후기순</button>
+                    <button type="button" value="value4">예약순</button>
+                  </div>
+                </div>
+                <input type="hidden" name="select1_1" data-select="value" />
+              </div>
+            </div>
+
+            <!-- # 목록 # -->
+            <div class="store-list store-list--vertical">
+              <ul class="store-list__inner">
+                <!-- 목록하나 -->
+                <li class="store-list__item">
+                  <a href="" class="store-list__anchor">
+                    <div class="store-list__img"><img src="http://placehold.it/500x320" alt="구로디지털 하이타이 마사지" /></div>
+                    <div class="store-list__con">
+                      <!-- 할인정보 -->
+                      <div class="store-list__label">
+                        <em class="badges badges--sm badges--c1">타임할인</em>
+                        <em class="badges badges--sm badges--c2">스탬프</em>
+                        <em class="badges badges--sm badges--c3 badges--hipass"><span>하이패스</span></em>
+                        <em class="badges badges--sm badges--c4">이벤트</em>
+                      </div>
+                      <!-- 영업점명 -->
+                      <strong class="store-list__title">구로디지털 하이타이 마사지</strong>
+                      <!-- 영업점 정보 -->
+                      <div class="store-util">
+                        <span class="store-util__item"><span class="hide">평점</span><i class="icon icon--star" aria-hidden="true"></i><em class="store-util__text">9.3(30)</em></span>
+                        <span class="store-util__item"><span class="hide">좋아요</span><i class="icon icon--like" aria-hidden="true"></i><em class="store-util__text">3758</em></span>
+                        <span class="store-util__item"><span class="hide">거리</span><i class="icon icon--distance" aria-hidden="true"></i><em class="store-util__text">375m</em></span>
+                      </div>
+                      <!-- 영업점 가격정보 -->
+                      <div class="store-list__info">
+                        <ul class="info-price">
+                          <!-- // -->
+                          <li class="info-price__item">
+                            <em class="info-price__title">타이 관리 - 60분</em>
+                            <div class="info-price__con">
+                              <span class="info-price__text1"><span class="hide">기존가</span>000,000<span class="info-price__unit">원</span></span>
+                              <span class="info-price__text2">
+                                <span class="hide">할인가</span><em>50%</em>
+                                <strong class="text-sub-100">000,000<span class="info-price__unit">원</span></strong>
+                              </span>
+                            </div>
+                          </li>
+                          <!-- // -->
+                          <li class="info-price__item">
+                            <em class="info-price__title">건식스포츠관리 - 60분</em>
+                            <div class="info-price__con">
+                              <span class="info-price__text1"><span class="hide">기존가</span>000,000<span class="info-price__unit">원</span></span>
+                              <span class="info-price__text2">
+                                <span class="hide">할인가</span><em>50%</em>
+                                <strong>000,000<span class="info-price__unit">원</span></strong>
+                              </span>
+                            </div>
+                          </li>
+                          <!-- // -->
+                        </ul>
+                      </div>
+                      <!-- 영업점 위치 -->
+                      <div class="store-list__text">구로디지털단지역 3번출구 도보3분 거리내에 위치</div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 목록하나 -->
+                <li class="store-list__item">
+                  <a href="" class="store-list__anchor">
+                    <div class="store-list__img"><img src="http://placehold.it/500x320" alt="구로디지털 하이타이 마사지" /></div>
+                    <div class="store-list__con">
+                      <!-- 할인정보 -->
+                      <div class="store-list__label">
+                        <em class="badges badges--sm badges--c1">타임할인</em>
+                        <em class="badges badges--sm badges--c2">스탬프</em>
+                      </div>
+                      <!-- 영업점명 -->
+                      <strong class="store-list__title">구로디지털 하이타이 마사지 구로 디지털 하이타이 마사지 하이타이 마사지구로디지털 하이타이 마사지 구로 디지털 하이타이 마사지 하이타이 마사지</strong>
+                      <!-- 영업점 정보 -->
+                      <div class="store-util">
+                        <span class="store-util__item"><span class="hide">평점</span><i class="icon icon--star" aria-hidden="true"></i><em class="store-util__text">9.3(30)</em></span>
+                        <span class="store-util__item"><span class="hide">좋아요</span><i class="icon icon--like" aria-hidden="true"></i><em class="store-util__text">3758</em></span>
+                        <span class="store-util__item"><span class="hide">거리</span><i class="icon icon--distance" aria-hidden="true"></i><em class="store-util__text">375m</em></span>
+                      </div>
+                      <!-- 영업점 가격정보 -->
+                      <div class="store-list__info">
+                        <ul class="info-price">
+                          <!-- // -->
+                          <li class="info-price__item">
+                            <em class="info-price__title">타이 관리 - 60분</em>
+                            <div class="info-price__con">
+                              <span class="info-price__text1"><span class="hide">기존가</span>000,000<span class="info-price__unit">원</span></span>
+                              <span class="info-price__text2">
+                                <span class="hide">할인가</span><em>50%</em>
+                                <strong class="text-sub-100">000,000<span class="info-price__unit">원</span></strong>
+                              </span>
+                            </div>
+                          </li>
+                          <!-- // -->
+                          <li class="info-price__item">
+                            <em class="info-price__title">건식스포츠관리 - 60분</em>
+                            <div class="info-price__con">
+                              <span class="info-price__text1"><span class="hide">기존가</span>000,000<span class="info-price__unit">원</span></span>
+                              <span class="info-price__text2">
+                                <span class="hide">할인가</span><em>50%</em>
+                                <strong class="text-sub-100">000,000<span class="info-price__unit">원</span></strong>
+                              </span>
+                            </div>
+                          </li>
+                          <!-- // -->
+                        </ul>
+                      </div>
+                      <!-- 영업점 위치 -->
+                      <div class="store-list__text">구로디지털단지역 3번출구 도보3분 거리내에 위치</div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 목록하나 -->
+                <li class="store-list__item">
+                  <a href="" class="store-list__anchor">
+                    <div class="store-list__img"><img src="http://placehold.it/500x320" alt="구로디지털 하이타이 마사지" /></div>
+                    <div class="store-list__con">
+                      <!-- 할인정보 -->
+                      <div class="store-list__label"></div>
+                      <!-- 영업점명 -->
+                      <strong class="store-list__title">구로디지털 하이타이 마사지 구로 디지털 하이타이 마사지 하이타이 마사지</strong>
+                      <!-- 영업점 정보 -->
+                      <div class="store-util">
+                        <span class="store-util__item"><span class="hide">평점</span><i class="icon icon--star" aria-hidden="true"></i><em class="store-util__text">9.3(30)</em></span>
+                        <span class="store-util__item"><span class="hide">좋아요</span><i class="icon icon--like" aria-hidden="true"></i><em class="store-util__text">3758</em></span>
+                        <span class="store-util__item"><span class="hide">거리</span><i class="icon icon--distance" aria-hidden="true"></i><em class="store-util__text">375m</em></span>
+                      </div>
+                      <!-- 영업점 가격정보 -->
+                      <div class="store-list__info">
+                        <ul class="info-price">
+                          <!-- // -->
+                          <li class="info-price__item">
+                            <em class="info-price__title">타이 관리 - 60분</em>
+                            <div class="info-price__con">
+                              <span class="info-price__text1"><span class="hide">기존가</span>000,000<span class="info-price__unit">원</span></span>
+                              <span class="info-price__text2">
+                                <span class="hide">할인가</span><em>50%</em>
+                                <strong>000,000<span class="info-price__unit">원</span></strong>
+                              </span>
+                            </div>
+                          </li>
+                          <!-- // -->
+                          <li class="info-price__item">
+                            <em class="info-price__title">건식스포츠관리 - 60분</em>
+                            <div class="info-price__con">
+                              <span class="info-price__text1"><span class="hide">기존가</span>000,000<span class="info-price__unit">원</span></span>
+                              <span class="info-price__text2">
+                                <span class="hide">할인가</span><em>50%</em>
+                                <strong>000,000<span class="info-price__unit">원</span></strong>
+                              </span>
+                            </div>
+                          </li>
+                          <!-- // -->
+                        </ul>
+                      </div>
+                      <!-- 영업점 위치 -->
+                      <div class="store-list__text">구로디지털단지역 3번출구 도보3분 거리내에 위치</div>
+                    </div>
+                  </a>
+                </li>
+                <!-- // -->
+              </ul>
+            </div>
+
+            <!-- # pagination # -->
+            <div class="pagination">
+              <a href="#" class="pagination--first">처음 페이지</a>
+              <a href="#" class="pagination--prev">이전 페이지</a>
+              <a href="#" aria-current="page">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">6</a>
+              <a href="#">7</a>
+              <a href="#">8</a>
+              <a href="#">9</a>
+              <a href="#">10</a>
+              <a href="#" class="pagination--next">다음 페이지</a>
+              <a href="#" class="pagination--last">마지막 페이지</a>
+            </div>
+            <!--# // # -->
+          </div>
+          <!-- ## // ## -->
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # 공지사항/자주묻는질문 # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/inquery.html"></include>
+      <!-- -------------------------------- -->
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+    </div>
+    <script>
+      document.addEventListener('UILoaded', function () {
+        var element = document.querySelector('#dropdown1');
+        var element2 = document.querySelector('#dropdown2');
+        HitaiUI.BoxOpenner.get(element).updateOption({ setValue: true, focuserble: false });
+
+        openBtn.addEventListener('click', function () {
+          var getID = this.getAttribute('aria-controls');
+          var openMenu = document.querySelector('#' + getID);
+          if (openMenu.classList.contains('expand')) {
+            openMenu.classList.remove('expand');
+            HitaiUI.BoxOpenner.get(element).open(this);
+          }
+        });
+
+        document.addEventListener(HitaiUI.BoxOpenner.EVENT.ALL, function (event) {
+          var component = event.component;
+          var eventType = event.eventType;
+          component._isToggle = false;
+
+          var openner = component._options.selector.openner;
+          var openClass = component._options.openClass;
+
+          switch (eventType) {
+            case 'closed.ui.boxopenner':
+              [].forEach.call([element, element2], function (item) {
+                if (item.closest('#menu')) {
+                  var parent = item.closest('#menu');
+                  if (!parent.classList.contains('expand')) {
+                    parent.classList.add('expand');
+                  }
+                }
+              });
+              break;
+
+            case 'opend.ui.boxopenner':
+              [].forEach.call([element, element2], function (item) {
+                if (item.classList.contains(openClass)) {
+                  if (item.closest('#menu')) {
+                    var parent = item.closest('#menu');
+                    if (parent.classList.contains('expand')) {
+                      parent.classList.remove('expand');
+                    }
+                  }
+                }
+              });
+
+              break;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

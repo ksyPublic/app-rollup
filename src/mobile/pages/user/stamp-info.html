@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>내 정보 | 내 스탬프 | 스탬프 상세 조회 - hitai</title>
+    <include src="../_include/head.html"></include>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header">
+        <!-- BACK BUTTON -->
+        <button type="button" class="header__back btn btn--icon">
+          <span class="hide">뒤로가기</span>
+          <i class="icon icon--back" aria-hidden="true"></i>
+        </button>
+        <!-- TITLE -->
+        <h1 class="header__title">내 스탬프</h1>
+      </header>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <div class="content">
+          <div class="l-row">
+            <!-- // -->
+            <div class="stamp-event">
+              <h3 class="stamp__title">구로디지털 시암타이</h3>
+              <h4 class="stamp__subtext">서울 구로구 디지털로32길 디지털타워빌란드 1차 2F</h4>
+              <div class="stamp">
+                <div class="stamp__info">
+                  <em class="stamp__sub">적립 스탬프</em>
+                  <span class="stamp__date">발행일 2023.01.01</span>
+                </div>
+                <div class="stamp__box">
+                  <div class="stamp__mark"><span>1</span><em class="stamp__complete">적립완료</em></div>
+                  <div class="stamp__mark"><span>2</span></div>
+                  <div class="stamp__mark"><span>3</span></div>
+                  <div class="stamp__mark"><span>4</span></div>
+                  <div class="stamp__mark"><span>5</span></div>
+                  <div class="stamp__mark"><span>6</span></div>
+                  <div class="stamp__mark"><span>7</span></div>
+                  <div class="stamp__mark"><span>8</span></div>
+                  <div class="stamp__mark"><span>9</span></div>
+                  <div class="stamp__mark"><span>무료이용권</span></div>
+                </div>
+              </div>
+            </div>
+            <!-- // -->
+            <div class="info-box info-box--type2">
+              <dl class="text-list text-list--bullet1">
+                <dt class="text-list__title">스탬프 적립 안내 및 혜택</dt>
+                <dd class="text-list__item"><strong>구로디지털 시암타이</strong>에서 제공하는 코스 1회(1인기준) 이용시 1개의 스탬프를 적립해 드립니다.</dd>
+                <dd class="text-list__item">스탬프를 모두 적립하시면 <strong>‘타이 60분 1인 무료이용권’</strong>을 발행해 드립니다.</dd>
+                <dd class="text-list__item">발행한 스탬프는 유효기간은 <strong>발행일로부터 6개월</strong>(~ 2023.07.21) 입니다.</dd>
+                <dd class="text-list__item">유효기간 경과 시 스탬프는 자동 소멸됩니다.</dd>
+                <dd class="text-list__item">제휴점의 사정에 따라 예고 없이 스탬프 적립이 종료 또는 취소될 수 있습니다.</dd>
+                <dd class="text-list__item">스탬프 적립 및 사용에 대한 의무와 책임은 제휴점(서비스 제공자)에게 있습니다.</dd>
+              </dl>
+            </div>
+            <!-- // -->
+            <div class="accordion accordion--type3" data-autoset="accordion">
+              <div class="accordion__head">
+                <button type="button" class="accordion__btn" id="acc-header1" aria-controls="acc-content1" aria-expanded="true"></button>
+                <div class="accordion__text">
+                  <span>완료 스탬프<em>(2)</em></span>
+                  <span class="icon icon--new">new</span>
+                </div>
+              </div>
+              <div class="accordion__content" id="acc-content1" aria-labelledby="acc-header1">
+                <div class="stamp-card">
+                  <div class="stamp-card__item">
+                    <div class="stamp-card__img">
+                      <img src="../../resources/images/com/img-stamp-mini.png" alt="스탬프" />
+                    </div>
+                    <div class="stamp-card__description">
+                      <div class="stamp-card__text">스탬프 적립이 완료되었습니다.</div>
+                      <div class="stamp-card__date">적립 완료일:<b>2022.08.01</b></div>
+                    </div>
+                    <button class="stamp-card__btn btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--delete-gray" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div class="stamp-card__item">
+                    <div class="stamp-card__img">
+                      <img src="../../resources/images/com/img-stamp-mini.png" alt="스탬프" />
+                    </div>
+                    <div class="stamp-card__description">
+                      <div class="stamp-card__text">스탬프 적립이 완료되었습니다.</div>
+                      <div class="stamp-card__date">적립 완료일:<b>2022.08.01</b></div>
+                    </div>
+                    <button class="stamp-card__btn btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--delete-gray" aria-hidden="true"></i>
+                    </button>
+                  </div>
+
+                  <ul class="text-list text-list--bullet1">
+                    <li class="text-list__item">완료 스탬프는<b>‘타이 60분 1인 무료이용권’으로 자동 발행</b>됩니다.</li>
+                    <li class="text-list__item">무료이용권은 <b>내정보 > 내쿠폰 에서 확인</b>하실 수 있습니다.</li>
+                    <li class="text-list__item">완료일로부터 6개월이 지난 내역은 자동 삭제됩니다.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- // -->
+          </div>
+        </div>
+      </main>
+      <!-- ---------------------------------------------------------- -->
+    </div>
+  </body>
+</html>

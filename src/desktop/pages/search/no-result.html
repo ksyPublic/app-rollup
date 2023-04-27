@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>검색(결과없음) - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # SKIP # -->
+      <!-- ---------------------------------------------------------- -->
+      <div class="nav-skip"><a href="#container">본문바로가기</a></div>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row">
+            <!-- 검색  -->
+            <div class="search-box">
+              <div class="search-box__input">
+                <input type="text" placeholder="" class="input" />
+                <button type="button" class="btn">
+                  <span class="hide">검색</span>
+                  <i class="icon icon--search-lg" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="search-box__recommend">
+                <div class="label label--round">
+                  <label>
+                    <input type="radio" name="searchRadio" />
+                    <span>타이마사지</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="searchRadio" />
+                    <span>중국마사지</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="searchRadio" />
+                    <span>한국마사지</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="searchRadio" />
+                    <span>아로마마사지</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="searchRadio" />
+                    <span>스웨디시</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="searchRadio" />
+                    <span>로미로미</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="searchRadio" />
+                    <span>베트남마사지</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="searchRadio" />
+                    <span>로션테라피</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="searchRadio" />
+                    <span>베트남마사지</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="searchRadio" />
+                    <span>로션테라피</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <!-- 검색결과 -->
+            <div class="mes-result mes-result--nodata">
+              <p>검색 결과가 없습니다.</p>
+            </div>
+            <!--  추천/최근검색어 -->
+            <div class="search-word">
+              <div>
+                <em class="search-word__title">추천 검색어</em>
+                <ul class="search-word__list search-word__list--recommend">
+                  <li class="search-word__item">
+                    <a href="" class="search-word__anchor"><i class="icon icon--place" aria-hidden="true"></i>리얼타이</a>
+                  </li>
+                  <li class="search-word__item">
+                    <a href="" class="search-word__anchor"><i class="icon icon--place" aria-hidden="true"></i>청담힐링타이</a>
+                  </li>
+                  <li class="search-word__item">
+                    <a href="" class="search-word__anchor"><i class="icon icon--region" aria-hidden="true"></i>청담</a>
+                  </li>
+                  <li class="search-word__item">
+                    <a href="" class="search-word__anchor"><i class="icon icon--region" aria-hidden="true"></i>구로디지털</a>
+                  </li>
+                  <li class="search-word__item">
+                    <a href="" class="search-word__anchor"><i class="icon icon--station" aria-hidden="true"></i>리얼타이</a>
+                  </li>
+                  <li class="search-word__item">
+                    <a href="" class="search-word__anchor"><i class="icon icon--station" aria-hidden="true"></i>리얼타이</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- 최근검색어 -->
+              <div>
+                <em class="search-word__title">최근 검색어</em>
+                <span class="search-word__side">
+                  <button type="button" class="btn btn--text btn--text-under">전체삭제</button>
+                </span>
+                <ul class="search-word__list">
+                  <li class="search-word__item">
+                    <a href="" class="search-word__anchor">리얼타이</a>
+                    <button class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--text-remove" aria-hidden="true"></i>
+                    </button>
+                  </li>
+                  <li class="search-word__item">
+                    <a href="" class="search-word__anchor">청담힐링타이</a>
+                    <button class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--text-remove" aria-hidden="true"></i>
+                    </button>
+                  </li>
+                  <li class="search-word__item">
+                    <a href="" class="search-word__anchor">청담</a>
+                    <button class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--text-remove" aria-hidden="true"></i>
+                    </button>
+                  </li>
+                  <li class="search-word__item">
+                    <a href="" class="search-word__anchor">구로디지털</a>
+                    <button class="btn btn--icon" aria-label="삭제">
+                      <i class="icon icon--text-remove" aria-hidden="true"></i>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- // -->
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # 공지사항/자주묻는질문 # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/inquery.html"></include>
+      <!-- -------------------------------- -->
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+    </div>
+  </body>
+</html>

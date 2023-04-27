@@ -1,0 +1,59 @@
+@function color($color, $shade: 'base', $map: $colors) {
+  @if (map-has-key($map, $color)) {
+    $value: map-get($map, $color);
+    @if type-of($value) == color {
+      @return $value;
+    }
+    @if type-of($value) == map and map-has-key($value, $shade) {
+      @return map-get($value, $shade);
+    }
+  }
+  @return null;
+}
+
+//px to rem
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $font-base) {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) {
+    $value: 0;
+  } // Turn 0rem into 0
+  @return $value;
+}
+
+@function rem($values, $base-value: $font-base) {
+  $max: length($values);
+  @if $max == 1 {
+    @return convert-to-rem(nth($values, 1), $base-value);
+  }
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}
+
+// contast accessibility
+//
+// Content from https://github.com/jhogue/automated-a11y-sass
+//
+
+// @function strip-unit($value)
+// @param {number with unit} $value
+@function strip-unit($value) {
+  @return ($value / ($value * 0 + 1));
+}
+
+// 키 앞에 'n'을 붙이고 값을 음수로
+@function negativify-map($map) {
+  $result: ();
+  @each $key, $value in $map {
+    @if $key != 0 {
+      $result: map-merge($result, ('n' + $key: (-$value)));
+    }
+  }
+  @return $result;
+}

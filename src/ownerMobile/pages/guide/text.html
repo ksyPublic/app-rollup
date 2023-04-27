@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>가이드 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+      <main id="container">
+        <header class="hide">
+          <h1>MARKUP GUIDE | TEXT</h1>
+        </header>
+        <!-- # CONTENT # -->
+        <div class="content">
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메뉴이동] -->
+          <!-- ------------------------------------------------------------------ -->
+          <include src="./_include/nav.html"></include>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [타이틀] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">타이틀</h2>
+          <!-- 유형1 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .heading .heading--1 (16px)</legend>
+            <h4 class="heading heading--1">타이틀 <span class="heading__sub">서브타이틀</span></h4>
+          </fieldset>
+
+          <!-- 유형2------------------------------------------------------------- -->
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .heading .heading--2 .heading--line (15px)</legend>
+            <h4 class="heading heading--2">타이틀</h4>
+            <hr class="guide-line2" />
+            <h4 class="heading heading--2 heading--line">타이틀</h4>
+          </fieldset>
+
+          <!-- 유형3------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형3 : .heading .heading--3 (14px)</legend>
+            <h4 class="heading heading--3">타이틀</h4>
+          </fieldset>
+
+          <!-- 유형3------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형3 : .heading .heading--4 (13px)</legend>
+            <h4 class="heading heading--4">타이틀</h4>
+          </fieldset>
+
+          <!-- 유형4------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형4 : .heading .heading--5 (12px)</legend>
+            <h4 class="heading heading--5">타이틀</h4>
+          </fieldset>
+
+          <!-- 유형5------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형5 : .heading .heading--subtitle (12px)</legend>
+            <div class="heading heading--subtitle">
+              <em class="heading__copy">오전</em>
+              <span class="heading__text">타임할인 진행중 (오후 1시 ~ 오후 5시)</span>
+            </div>
+          </fieldset>
+
+          <!-- 유형6------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형6 : .heading heading--subtitle:only-child (11px)</legend>
+            <div class="heading heading--subtitle">
+              <span class="heading__text">타임할인 진행중 (오후 1시 ~ 오후 5시)</span>
+            </div>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [기본] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">기본</h2>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .text</legend>
+            <!-- 기본 사이즈 14px -->
+            <p class="text">하이타이하이타이하이타이</p>
+            <!-- 기본 사이즈 11px -->
+            <p class="text text--sm">하이타이하이타이하이타이</p>
+            <!-- 기본 사이즈 12px -->
+            <p class="text text--xsm">하이타이하이타이하이타이</p>
+            <!-- 기본 사이즈 13px -->
+            <p class="text text--md">하이타이하이타이하이타이</p>
+            <!-- 기본 사이즈 14px -->
+            <p class="text text--xmd">하이타이하이타이하이타이</p>
+            <!-- 기본 사이즈 15px -->
+            <p class="text text--lg">하이타이하이타이하이타이</p>
+            <!-- 기본 사이즈 16px -->
+            <p class="text text--xlg">하이타이하이타이하이타이</p>
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .text text--unit</legend>
+            <span class="text text--sm text--unit">30,000<em>원</em></span>
+            <span class="text text--md text--unit">60,000<em>원</em></span>
+            <span class="text text--lg text--unit">90,000<em>원</em></span>
+            <hr class="guide-line2" />
+            <!-- 텍스트 강조 type 1 -->
+            <span class="text text--sm text--unit text-primary-100">30,000<em>원</em></span>
+            <span class="text text--md text--unit text-primary-100">60,000<em>원</em></span>
+            <span class="text text--lg text--unit text-primary-100">90,000<em>원</em></span>
+            <!-- // -->
+            <hr class="guide-line2" />
+            <!-- 텍스트 강조 type 2 -->
+            <span class="text text--sm text--unit text-sub-100">30,000<em>원</em></span>
+            <span class="text text--md text--unit text-sub-100">60,000<em>원</em></span>
+            <span class="text text--lg text--unit text-sub-100">90,000<em>원</em></span>
+            <!-- // -->
+
+            <hr class="guide-line2" />
+            <!-- 굵기 -->
+            <strong class="text text--sm text--unit">30,000<em>원</em></strong>
+            <strong class="text text--md text--unit text-primary-100">60,000<em>원</em></strong>
+            <strong class="text text--lg text--unit text-sub-100">90,000<em>원</em></strong>
+            <!-- // -->
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형3 : .text text--lit</legend>
+            <span class="text text--sm text--unit text--lit">30,000<em>원</em></span>
+            <span class="text text--md text--unit text--lit">60,000<em>원</em></span>
+            <span class="text text--lg text--unit text--lit">90,000<em>원</em></span>
+            <hr class="guide-line2" />
+
+            <!-- 굵기 -->
+            <strong class="text text--sm text--unit text--lit">30,000<em>원</em></strong>
+            <strong class="text text--md text--unit text-primary-100 text--lit">60,000<em>원</em></strong>
+            <strong class="text text--lg text--unit text-sub-100 text--lit">90,000<em>원</em></strong>
+            <!-- // -->
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형4 : .text text--path</legend>
+            <span class="text text--xsm text--path">손마사지 15분</span>
+            <hr class="guide-line2" />
+
+            <span class="text text--xsm text--path">손마사지 15분</span>
+            <p class="text text--sm text--unit">
+              <b>90,000<em>원</em></b>
+            </p>
+
+            <!-- // -->
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [컬러] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">강조문구 컬러</h2>
+          <!-- 유형1 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .text-color{number}</legend>
+            <p class="text">하이타이하이타이 <strong class="text-primary-100">하이타이 강조문구</strong></p>
+            <p class="text">하이타이하이타이 <strong class="text-sub-100">하이타이 강조문구</strong></p>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [리스트 유형] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">리스트 유형</h2>
+          <!-- [유형1] -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .text-list</legend>
+            <ul class="text-list text-list--sm">
+              <li class="text-list__item">하이타이 <strong>하이타이</strong> 하이타이 하이타이</li>
+              <li class="text-list__item">하이타이 <em>하이타이</em> 하이타이 하이타이</li>
+              <li class="text-list__item">하이타이 <a href="#" class="link-t1">하이타이</a> 하이타이 하이타이</li>
+            </ul>
+            <hr class="guide-line2" />
+            <ul class="text-list">
+              <li class="text-list__item">하이타이 <strong>하이타이</strong> 하이타이 하이타이</li>
+              <li class="text-list__item">하이타이 <em>하이타이</em> 하이타이 하이타이</li>
+              <li class="text-list__item">하이타이 <a href="#" class="link-t1">하이타이</a> 하이타이 하이타이</li>
+            </ul>
+            <hr class="guide-line2" />
+            <dl class="text-list">
+              <dt class="text-list__title">하이타이</dt>
+              <dd class="text-list__item">하이타이 <strong>하이타이</strong> 하이타이 하이타이</dd>
+              <dd class="text-list__item">하이타이 <em>하이타이</em> 하이타이 하이타이</dd>
+              <dd class="text-list__item">하이타이 <a href="#" class="ddnk-t1">하이타이</a> 하이타이 하이타이</dd>
+            </dl>
+            <hr class="guide-line2" />
+            <dl class="text-list text-list--md">
+              <dt class="text-list__title">하이타이</dt>
+              <dd class="text-list__item">하이타이 <strong>하이타이</strong> 하이타이 하이타이</dd>
+              <dd class="text-list__item">하이타이 <em>하이타이</em> 하이타이 하이타이</dd>
+              <dd class="text-list__item">하이타이 <a href="#" class="ddnk-t1">하이타이</a> 하이타이 하이타이</dd>
+            </dl>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [리스트 + 불릿유형] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">리스트 + 불릿 유형</h2>
+          <!-- [유형1] -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .text-list .text-list--bullet1</legend>
+            <ul class="text-list text-list--bullet1">
+              <li class="text-list__item">하이타이 <strong>하이타이</strong> 하이타이 하이타이</li>
+              <li class="text-list__item">하이타이 <em>하이타이</em> 하이타이 하이타이</li>
+              <li class="text-list__item">하이타이 <a href="#" class="link-t1">하이타이</a> 하이타이 하이타이</li>
+            </ul>
+            <hr class="guide-line2" />
+            <dl class="text-list text-list--bullet1">
+              <dt class="text-list__title">하이타이</dt>
+              <dd class="text-list__item">하이타이 <strong>하이타이</strong> 하이타이 하이타이</dd>
+              <dd class="text-list__item">하이타이 <em>하이타이</em> 하이타이 하이타이</dd>
+              <dd class="text-list__item">하이타이 <a href="#" class="ddnk-t1">하이타이</a> 하이타이 하이타이</dd>
+            </dl>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [리스트 + 정보형] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">리스트 정보형</h2>
+          <!-- [유형1] -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .text-info</legend>
+            <div class="text-info">
+              <h2 class="text-info__title">이용 코스</h2>
+              <div class="text-info__description">
+                <div class="text-info__item">
+                  <ul>
+                    <li>
+                      <span class="text text--xsm">타이관리-60분 (1건)</span>
+                      <span class="text text--xsm text--unit">30,000<em>원</em></span>
+                    </li>
+                    <li class="text-info__depth">
+                      <span class="text text--xsm text--path">손마사지 15분</span>
+                      <span class="text text--xsm text--unit">10,000<em>원</em></span>
+                    </li>
+                    <li class="text-info__depth">
+                      <span class="text text--xsm text--path">발마사지 15분</span>
+                      <span class="text text--xsm text--unit">10,000<em>원</em></span>
+                    </li>
+                    <li>
+                      <span class="text text--xsm">아로마 관리-60분 (1건)</span>
+                      <span class="text text--xsm text--unit">30,000<em>원</em></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="divider divider--dash" aria-hidden="true"></div>
+
+                <div class="text-info__foot">
+                  <ul>
+                    <li>
+                      <strong class="text text--xsm">이용요금 <em>(3건)</em></strong>
+                      <strong class="text text--xsm text--unit">100,000<em>원</em></strong>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <hr class="guide-line2" />
+
+            <div class="text-info">
+              <h2 class="text-info__title">할인 정보</h2>
+              <div class="text-info__description">
+                <div class="text-info__item">
+                  <ul>
+                    <li>
+                      <span class="text text--xsm">첫 결제할인</span>
+                      <span class="text text--xsm text--unit">5,000<em>원</em></span>
+                    </li>
+                    <li>
+                      <span class="text text--xsm text-sub-100">타임 할인</span>
+                      <span class="text text--xsm text--unit text-sub-100">3,000<em>원</em></span>
+                    </li>
+                    <li class="text-info__link">
+                      <a href="#none" class="text text--xsm">
+                        <em>쿠폰 할인</em>
+                        <i class="icon icon--text-arrow" aria-hidden="true"></i>
+                      </a>
+                      <span class="text text--xsm text--unit">3,000<em>원</em></span>
+                    </li>
+                    <li class="text-info__link">
+                      <a href="#none" class="text text--xsm">
+                        <em>포인트 할인</em>
+                        <i class="icon icon--text-arrow" aria-hidden="true"></i>
+                      </a>
+                      <span class="text text--xsm text--unit">30,000<em>P</em></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <hr class="guide-line2" />
+
+            <div class="text-info">
+              <div class="text-info__title">예약 코스 / 결제금액</div>
+              <div class="text-info__description">
+                <div class="text-info__item">
+                  <ul>
+                    <li>
+                      <span class="text text--xsm">타이관리-60분 (1건)</span>
+                      <span class="text text--xsm text--unit">30,000<em>원</em> </span>
+                    </li>
+                    <li>
+                      <span class="text text--xsm">타이관리-90분 (1건)</span>
+                      <span class="text text--xsm text--unit">30,000<em>원</em> </span>
+                    </li>
+                    <li>
+                      <span class="text text--xsm">아로마 관리-60분 (1건)</span>
+                      <span class="text text--xsm text--unit">30,000<em>원</em> </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="divider divider--dash" aria-hidden="true"></div>
+
+                <div class="text-info__item">
+                  <ul>
+                    <li>
+                      <span class="text text--xsm">이용금액</span>
+                      <span class="text text--xsm text--unit">100,000<em>원</em> </span>
+                    </li>
+                    <!-- accordion readonly -->
+                    <li>
+                      <div class="accordion accordion--type2" style="pointer-events: none">
+                        <div class="accordion__head">
+                          <button type="button" class="accordion__btn" id="acc-header1" aria-controls="acc-content1" aria-expanded="true"></button>
+                          <div class="accordion__title">
+                            <div class="accordion__info">
+                              <em class="text text--xsm">할인금액</em>
+                            </div>
+                            <div class="accordion__price">
+                              <span class="text text--xsm text--unit text-red-100">-11,000<em>원</em> </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion__content expand" id="acc-content1" aria-labelledby="acc-header1">
+                          <div class="text-info__item">
+                            <ul>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">첫 결제할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em> </span>
+                              </li>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">타임할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em> </span>
+                              </li>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">쿠폰할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em> </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- // -->
+                    <li>
+                      <span class="text text--xsm">포인트 사용</span>
+                      <span class="text text--xsm text--unit text-red-100">-5,000<em>P</em> </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="divider divider--dash" aria-hidden="true"></div>
+                <div class="text-info__foot">
+                  <ul>
+                    <li>
+                      <span class="text text--xsm">결제금액</span>
+                      <strong class="text text--lg text--unit">84,000<em class="ft-400">원</em> </strong>
+                    </li>
+                    <li>
+                      <span class="text text--xsm">결제정보</span>
+                      <span class="text text--xsm text-dark-900 text-right">
+                        비씨카드(910025******) 일시불
+                        <br />
+                        2022.02.20 20:36:56
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- [유형2] -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .text-info .text-info--type2</legend>
+
+            <div class="text-info text-info--type2">
+              <div class="text-info__title">예약 정보</div>
+              <div class="text-info__description">
+                <div class="text-info__item">
+                  <ul>
+                    <li>
+                      <span class="text text--xsm text-dark-900">제휴점</span>
+                      <strong class="text text--xsm">구로디지털 청담타이마사지</strong>
+                    </li>
+                    <li>
+                      <span class="text text--xsm text-dark-900">예약일시</span>
+                      <strong class="text text--xsm">2023. 07. 26(화) 오후 01:00</strong>
+                    </li>
+                    <li>
+                      <span class="text text--xsm text-dark-900">예약자명</span>
+                      <strong class="text text--xsm">홍길동</strong>
+                    </li>
+                    <li>
+                      <span class="text text--xsm text-dark-900">연락처</span>
+                      <span class="text text--xsm">010-1234-1234</span>
+                    </li>
+                    <li>
+                      <span class="text text--xsm text-dark-900">요청사항</span>
+                      <span class="text text--xsm">어깨가 많이 뭉쳐있어요. 어깨를 중점적으로 관리 받았스면 좋겠구요. 압이 약한것 보다 아플 정도로 쎈걸 좋아합니다. 할 수 있는한 최대치로 부탁드립니다.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- [유형3]-->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형3 : .text-info .text-info--type3</legend>
+
+            <div class="text-info text-info--type3">
+              <div class="text-info__title">
+                <h2 class="text text--lg"><b>첫 결제할인</b></h2>
+                <strong class="text text--unit">84,000<em>원</em></strong>
+              </div>
+              <div class="text-info__description">
+                <div class="text-info__item">
+                  <ul>
+                    <li>
+                      <span class="text text--xsm">이용금액</span>
+                      <span class="text text--xsm text--unit">100,000<em>원</em></span>
+                    </li>
+                    <li>
+                      <div class="accordion accordion--type2" data-autoset="accordion">
+                        <div class="accordion__head">
+                          <button type="button" class="accordion__btn" id="acc-header1" aria-controls="acc-content1" aria-expanded="false"></button>
+                          <div class="accordion__title">
+                            <div class="accordion__info">
+                              <em class="text text--xsm">할인금액</em>
+                              <i class="icon icon--acc-arrow2" aria-hidden="true"></i>
+                            </div>
+                            <div class="accordion__price">
+                              <span class="text text--xsm text--unit text-red-100">-11,000<em>원</em></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion__content expand" id="acc-content1" aria-labelledby="acc-header1">
+                          <div class="text-info__item">
+                            <ul>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">첫 결제할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                              </li>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">타임할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                              </li>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">쿠폰할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="text text--xsm">포인트 사용</span>
+                      <span class="text text--xsm text--unit text-red-100">-5,000<em>P</em></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-info text-info--dark text-info--type3">
+              <div class="text-info__title">
+                <h2 class="text text--lg"><b>첫 결제할인</b></h2>
+                <strong class="text text--unit">84,000<em>원</em></strong>
+              </div>
+              <div class="text-info__description">
+                <div class="text-info__item">
+                  <ul>
+                    <li>
+                      <span class="text text--xsm">이용금액</span>
+                      <span class="text text--xsm text--unit">100,000<em>원</em></span>
+                    </li>
+                    <li>
+                      <div class="accordion accordion--type2" data-autoset="accordion">
+                        <div class="accordion__head">
+                          <button type="button" class="accordion__btn" id="acc-header2" aria-controls="acc-content2" aria-expanded="false"></button>
+                          <div class="accordion__title">
+                            <div class="accordion__info">
+                              <em class="text text--xsm">할인금액</em>
+                              <i class="icon icon--acc-arrow2" aria-hidden="true"></i>
+                            </div>
+                            <div class="accordion__price">
+                              <span class="text text--xsm text--unit text-red-100">-11,000<em>원</em></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion__content expand" id="acc-content2" aria-labelledby="acc-header2">
+                          <div class="text-info__item">
+                            <ul>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">첫 결제할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                              </li>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">타임할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                              </li>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">쿠폰할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="text text--xsm">포인트 사용</span>
+                      <span class="text text--xsm text--unit text-red-100">-5,000<em>P</em></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메시지문구] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">메시지문구</h2>
+          <!-- 유형1 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .mes-text</legend>
+            <p class="mes-text">카카오톡(으)로 가입한 계정이 있습니다.<br />해당 SNS로 로그인해 주세요.</p>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [결과문구] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">결과문구</h2>
+          <!-- 유형1 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .mes-result</legend>
+            <div class="mes-result">
+              <p><strong>32</strong>개의 좋아요 제휴점</p>
+            </div>
+          </fieldset>
+
+          <!-- 유형2 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .mes-result .mes-result--nodata</legend>
+            <div class="mes-result mes-result--nodata">
+              <p>진행중인 예약이 없습니다.</p>
+            </div>
+          </fieldset>
+
+          <!-- 유형3 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형3 : .mes-result .mes-result--confirm</legend>
+            <div class="mes-result mes-result--confirm">
+              <p>‘구로디지털 청담타이마사지’ 이용 내역을 <br />확인해 주세요.</p>
+            </div>
+            <div class="mes-result mes-result--confirm">
+              <p>지번, 도로명, 건물명에 대해 검색이 가능합니다.</p>
+              <p>(예 : 디지털로 242, 국립중앙박물관, 삼성동 25)</p>
+            </div>
+          </fieldset>
+
+          <!-- 유형3 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형3 : .mes-result .mes-result--complete</legend>
+            <div class="mes-result mes-result--complete">
+              <p>예약 신청이 완료되었습니다.</p>
+              <p>제휴점에서 예약이 확정되면 앱 알림으로<br />알려 드립니다.</p>
+            </div>
+            <div class="mes-result mes-result--complete mes-result--lg">
+              <p>안전하게 로그아웃 되었습니다.</p>
+              <p>하이타이 이용에 감사드립니다.</p>
+            </div>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [Badges] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">Badges</h2>
+          <!-- [유형1] -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .badges</legend>
+            <em class="badges badges--sm badges--c1">타임할인</em>
+            <em class="badges badges--sm badges--c2">스탬프</em>
+            <em class="badges badges--sm badges--c3 badges--hipass"><span>하이패스</span></em>
+            <em class="badges badges--sm badges--c4">이벤트</em>
+            <em class="badges badges--sm badges--c5">타임할인</em>
+            <em class="badges badges--sm badges--c6">예약신청</em>
+            <em class="badges badges--sm badges--c7">예약확정</em>
+            <em class="badges badges--sm badges--c8">관리중</em>
+            <em class="badges badges--sm badges--c9">이용완료</em>
+            <em class="badges badges--sm badges--c10">예약취소</em>
+
+            <hr class="guide-line2" />
+            <em class="badges badges--lg badges--c1">예약신청</em>
+            <em class="badges badges--lg badges--c2">예약확정</em>
+            <em class="badges badges--lg badges--c3 badges--hipass"><span>하이패스</span></em>
+            <em class="badges badges--lg badges--c4">이용완료</em>
+            <em class="badges badges--lg badges--c5">예약취소</em>
+            <em class="badges badges--lg badges--c6">예약신청</em>
+            <em class="badges badges--lg badges--c7">예약확정</em>
+            <em class="badges badges--lg badges--c8">관리중</em>
+            <em class="badges badges--lg badges--c9">이용완료</em>
+            <em class="badges badges--lg badges--c10">예약취소</em>
+          </fieldset>
+        </div>
+        <!-- # // # -->
+      </main>
+    </div>
+  </body>
+</html>

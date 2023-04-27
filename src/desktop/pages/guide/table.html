@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>가이드 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+      <main id="container">
+        <header class="hide">
+          <h1>MARKUP GUIDE | TABLE</h1>
+        </header>
+        <!-- # CONTENT # -->
+        <div class="content">
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메뉴이동] -->
+          <!-- ------------------------------------------------------------------ -->
+          <include src="./_include/nav.html"></include>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [기본 테이블] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">기본 테이블</h2>
+
+          <!-- [유형1] ---------------------------------------------------------- -->
+          <h3 class="tit-guide2">유형1</h3>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">기본 : .table .table--type1</legend>
+
+            <div class="table table--type1">
+              <table>
+                <caption>
+                  테이블제목
+                </caption>
+                <colgroup>
+                  <col span="4" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">THEAD TH</th>
+                    <th scope="col">THEAD TH</th>
+                    <th scope="col">THEAD TH</th>
+                    <th scope="col">THEAD TH</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TBODY TD</td>
+                    <td>TBODY TD</td>
+                    <td>TBODY TD</td>
+                    <td>TBODY TD</td>
+                  </tr>
+                  <tr>
+                    <td>기본중앙정렬</td>
+                    <td class="text-left">중앙정렬 .text-left</td>
+                    <td class="text-right">우측정렬 .text-right</td>
+                    <td class="text-center">좌측정렬 .text-center</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <br />
+            <br />
+            <!-- 사이즈가 고정인 형태 -->
+            <div class="table table--type1 table--fixed">
+              <table>
+                <caption>
+                  테이블제목
+                </caption>
+                <colgroup>
+                  <col span="4" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">THEAD TH</th>
+                    <th scope="col">THEAD TH</th>
+                    <th scope="col">THEAD TH</th>
+                    <th scope="col">THEAD TH</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>긴글입력시 긴글입력시 긴글입력시 긴글입력시 긴글입력시</td>
+                    <td>TBODY TD</td>
+                    <td>TBODY TD</td>
+                    <td>TBODY TD</td>
+                  </tr>
+                  <tr>
+                    <td>기본중앙정렬</td>
+                    <td class="text-left">중앙정렬 .text-left</td>
+                    <td class="text-right">우측정렬 .text-right</td>
+                    <td class="text-center">좌측정렬 .text-center</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- // -->
+          </fieldset>
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [유형2] ---------------------------------------------------------- -->
+          <h3 class="tit-guide2">유형2</h3>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">기본 : .table .table--type2</legend>
+
+            <div class="table table--type2">
+              <table>
+                <caption>
+                  테이블제목
+                </caption>
+                <colgroup>
+                  <col span="4" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">TBODY TH</th>
+                    <td>TBODY TD</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">TBODY TH</th>
+                    <td>TBODY TD</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </fieldset>
+          <!-- ------------------------------------------------------------------ -->
+
+          <!-- [유형3] ---------------------------------------------------------- -->
+          <h2 class="tit-guide1">테이블 내부 리스트 형태</h2>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">기본 : .table .table--type1 .pay</legend>
+
+            <div class="table table--type1 table--bd-none">
+              <table>
+                <colgroup>
+                  <col width="60%" />
+                  <col width="25%" />
+                  <col width="15%" />
+                </colgroup>
+
+                <caption>
+                  예약 상세 정보
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">예약제휴점/예약코스</th>
+                    <th scope="col">예약시간</th>
+                    <th scope="col">결제금액</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="pay">
+                    <td class="pay__com">
+                      <div class="pay__com-thumnail">
+                        <img src="http://placehold.it/220x150" />
+                      </div>
+                      <div class="pay__com-info">
+                        <em class="badges badges--lg badges--c6">예약신청</em>
+                        <p class="pay__com-name">
+                          <b>구로디지털 청담타이마사지</b>
+                        </p>
+                        <p class="pay__com-text">서울 구로구 디지털로32길 디지털타워빌란드 1차 2F</p>
+                        <div class="pay__com-btn">
+                          <button type="button" class="btn btn--dark btn--sm">제휴점 상세</button>
+                          <button type="button" class="btn btn--dark btn--sm">제휴점 위치</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="text-5">2023.07.26(화) 오후 01:00</span>
+                    </td>
+                    <td>
+                      <b class="text-5">27,000<em class="unit">원</em> </b>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">기본 : .table .table--type1 .pay.pay--t2</legend>
+            <div class="table table--type1 table--bd-none">
+              <table>
+                <colgroup>
+                  <col width="60%" />
+                  <col width="25%" />
+                  <col width="15%" />
+                </colgroup>
+                <caption>
+                  하이패스(내 예약현황)정보
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">예약제휴점/예약코스</th>
+                    <th scope="col">예약시간</th>
+                    <th scope="col">결제금액</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="pay pay--t2">
+                    <td class="pay__com">
+                      <a href="#none">
+                        <div class="pay__com-thumnail">
+                          <img src="http://placehold.it/150x100" />
+                        </div>
+                        <div class="pay__com-info">
+                          <em class="badges badges--lg badges--c6">예약신청</em>
+                          <p class="pay__com-name">
+                            <b>구로디지털 코코스웨디시&amp;아로마</b>
+                          </p>
+                          <p class="pay__com-text">타이관리 - 60분 (1건) 외</p>
+                        </div>
+                      </a>
+                    </td>
+                    <td>
+                      <span class="text-4">2023.07.26(화) 오후 01:00</span>
+                    </td>
+                    <td>
+                      <b class="text-4">30,000<em class="unit">원</em> </b>
+                    </td>
+                  </tr>
+                  <tr class="pay pay--t2">
+                    <td class="pay__com">
+                      <a href="#none">
+                        <div class="pay__com-thumnail">
+                          <img src="http://placehold.it/150x100" />
+                        </div>
+                        <div class="pay__com-info">
+                          <em class="badges badges--lg badges--c8">관리중</em>
+                          <p class="pay__com-name">
+                            <b>구로디지털 코코스웨디시&amp;아로마</b>
+                          </p>
+                          <p class="pay__com-text">타이관리 - 60분 (1건) 외</p>
+                        </div>
+                      </a>
+                    </td>
+                    <td>
+                      <span class="text-4">2023.07.26(화) 오후 01:00</span>
+                    </td>
+                    <td>
+                      <b class="text-4">50,000<em class="unit">원</em> </b>
+                    </td>
+                  </tr>
+                  <tr class="pay pay--t2">
+                    <td class="pay__com">
+                      <a href="#none">
+                        <div class="pay__com-thumnail">
+                          <img src="http://placehold.it/150x100" />
+                        </div>
+                        <div class="pay__com-info">
+                          <em class="badges badges--lg badges--c7">예약확정</em>
+                          <p class="pay__com-name">
+                            <b>구로디지털 하이타이</b>
+                          </p>
+                          <p class="pay__com-text">타이관리 - 60분 (1건) 외</p>
+                        </div>
+                      </a>
+                    </td>
+                    <td>
+                      <span class="text-4">2023.07.26(화) 오후 01:00</span>
+                    </td>
+                    <td>
+                      <b class="text-4">28,000<em class="unit">원</em> </b>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+        </div>
+        <!-- # // # -->
+      </main>
+    </div>
+  </body>
+</html>

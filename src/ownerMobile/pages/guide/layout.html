@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>가이드 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <style>
+      .docs-layout #navBar {
+        position: relative;
+      }
+    </style>
+    <div id="wrapper" class="docs-layout">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <div class="content">
+          <div class="tabs tabs--type1" data-autoset="tab">
+            <!-- TAB -->
+            <ul role="tablist" class="tabs__list">
+              <li class="tabs__item">
+                <a role="tab" href="#uiTabPanel1" aria-selected="true">Header</a>
+              </li>
+              <li class="tabs__item">
+                <a role="tab" href="#uiTabPanel2">Footer</a>
+              </li>
+
+              <li class="tabs__item">
+                <a role="tab" href="#uiTabPanel3">Navigation</a>
+              </li>
+            </ul>
+            <!-- TABPANEL -->
+            <div role="tabpanel" id="uiTabPanel1" class="tabs__panel is-active">              
+
+              
+              <!-- 메인 헤더-->
+              <h2 class="tit-guide1">메인 헤더</h2>
+              <h3 class="tit-guide2">홈 메인</h3>
+              <fieldset class="guide" data-autocode>
+                <legend class="lagend">.header 홈</legend>
+                <header id="header" class="header header__main" data-bar="main">
+                  <!-- TITLE -->
+                  <h1 class="header__title">
+                    <a href="#none">
+                      <img src="../../resources/images/com/img-logo-owner-header.png" alt="하이타이 사장님">
+                    </a>
+                  </h1>
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--noti-black" aria-hidden="true"></i>
+                      <em class="icon icon--new">new</em>
+                    </button>
+
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--setting-black" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </header>
+              </fieldset>
+
+              <h3 class="tit-guide2">하이패스 메인</h3>
+              <fieldset class="guide" data-autocode>
+                <legend class="lagend">.header 하이패스</legend>
+                <header id="header" class="header header__hipass" data-bar="main">
+                  <!-- TITLE -->
+                  <div class="header__group">    
+                    <div class="header__top">
+                      <h1 class="header__title">하이패스하이패스하이패스하이패스하이패스하이패스</h1>
+                      <button type="button" class="btn btn--icon">
+                        <i class="icon icon--arrow-sm-down" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <div class="header__bottom">일반광고 중</div>
+                  </div>
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--noti-black" aria-hidden="true"></i>
+                      <em class="icon icon--new">new</em>
+                    </button>
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--setting-black" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </header>
+              </fieldset>
+
+              <!-- 기본 헤더-->
+              <h2 class="tit-guide1">기본 헤더</h2>
+              <h3 class="tit-guide2">유형1</h3>
+              <fieldset class="guide" data-autocode>
+                <legend class="lagend">.header 기본형</legend>
+
+                <header id="header" class="header">
+                  <!-- BACK BUTTON -->
+                  <button type="button" class="header__back btn btn--icon">
+                    <span class="hide">뒤로가기</span>
+                    <i class="icon icon--back" aria-hidden="true"></i>
+                  </button>
+                  <!-- TITLE -->
+                  <h1 class="header__title">타이틀</h1>
+                </header>
+              </fieldset>
+         
+
+             
+
+             
+            
+            </div>
+
+            <div role="tabpanel" id="uiTabPanel2" class="tabs__panel">
+              <!-- 기본 헤더-->
+              <h2 class="tit-guide1">기본 푸터</h2>
+
+              <!-- [유형1] -->
+              <h3 class="tit-guide2">유형1</h3>
+
+              <fieldset class="guide" data-autocode>
+                <legend class="lagend">.footer</legend>
+
+                <!-- -------------------------------- -->
+                <!-- # FOOTER # -->
+                <!-- -------------------------------- -->
+                <include src="../_include/footer.html"></include>
+                <!-- -------------------------------- -->
+              </fieldset>
+            </div>
+
+            <div role="tabpanel" id="uiTabPanel3" class="tabs__panel">
+              <!-- 기본 네비게이션-->
+              <h2 class="tit-guide1">기본 네비게이션</h2>
+
+              <!-- [유형1] -->
+              <h3 class="tit-guide2">유형1</h3>
+
+              <fieldset class="guide" data-autocode>
+                <legend class="lagend">.navi</legend>
+
+                <!-- -------------------------------- -->
+                <!-- # NAVIGATION # -->
+                <!-- -------------------------------- -->
+                <include src="../_include/navBar.html"></include>
+                <!-- -------------------------------- -->
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

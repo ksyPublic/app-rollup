@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>내 예약 | 예약취소 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # SKIP # -->
+      <!-- ---------------------------------------------------------- -->
+      <div class="nav-skip"><a href="#container">본문바로가기</a></div>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <div class="l-row">
+          <a role="button" class="text text--link" data-dialog-trigger="#uiCancel" aria-haspopup="dialog">예약취소</a>
+        </div>
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w3 animate" id="uiCancel">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <h1 class="modal__title">예약 취소</h1>
+              <p class="modal__sub">취소 사유를 선택해 주세요.</p>
+              <button type="button" class="modal__btn-close" data-dialog-close="">팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <div class="label label--md label--vertical">
+                <div class="label__item">
+                  <label><input type="checkbox" /><span>단순변심</span></label>
+                </div>
+                <div class="label__item">
+                  <label><input type="checkbox" /><span>시간대 잘못 예약</span></label>
+                </div>
+                <div class="label__item">
+                  <label><input type="checkbox" /><span>제휴점 예약 불가</span></label>
+                </div>
+                <div class="label__item">
+                  <label><input type="checkbox" /><span>기타 사유</span></label>
+                </div>
+              </div>
+
+              <textarea class="textarea mt-4" rows="5" title="" placeholder="기타 사유일 경우, 상세 내용을 입력해 주세요."></textarea>
+
+              <ul class="text-list mt-5">
+                <li class="text-list__item">예약 3시간 이전 취소 - 100% 환불</li>
+                <li class="text-list__item">예약 3시간 이내 취소 - 90% 환불</li>
+                <li class="text-list__item">예약 1시간 이내 취소 - 0% 환불</li>
+              </ul>
+
+              <div class="label label--md">
+                <label><input type="checkbox" /><span>예약 취소 정책 확인</span></label>
+              </div>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--lg btn--dark">예약 취소</button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/inquery.html"></include>
+      <!-- -------------------------------- -->
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+    </div>
+
+    <script>
+      document.addEventListener('UILoaded', function () {
+        var dialog = document.querySelector('#uiCancel');
+        var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+        dialogInstance.open();
+      });
+    </script>
+  </body>
+</html>

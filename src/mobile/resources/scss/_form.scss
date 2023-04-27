@@ -1,0 +1,291 @@
+//base
+.form {
+  $root: form;
+  .#{$root}-field {
+    @include clearfix;
+    > .text {
+      display: block;
+    }
+    > .text + .input,
+    > .text + .textarea-form,
+    > .text + .input-wrap,
+    > .text + .select {
+      margin-top: rem(10);
+    }
+
+    + .#{$root}-field {
+      margin-top: rem(25);
+    }
+
+    .btn-area {
+      display: flex;
+      justify-content: center;
+      padding: rem(0);
+      height: rem(72);
+      .btn {
+        margin-right: rem(13);
+        font-size: rem(12);
+        &:last-child {
+          margin-right: rem(0);
+        }
+      }
+    }
+
+    .select {
+      width: 100%;
+      margin-top: rem(8);
+    }
+
+    .label label {
+      // margin-top: rem(8);
+    }
+
+    .text {
+      // margin: rem(0 28 0 0);
+      font-weight: bold;
+    }
+
+    &--row {
+      display: flex;
+      align-items: center;
+      .text {
+        flex: none;
+      }
+    }
+  }
+
+  .#{$root}-field__column {
+    vertical-align: top;
+    line-height: 1;
+    margin-top: rem(8);
+    margin-right: rem(-15);
+    @include clearfix;
+
+    .select {
+      width: calc(50% - #{rem(15)});
+      margin-right: rem(15);
+      float: left;
+    }
+    .label {
+      width: 100%;
+      margin-right: rem(-15);
+    }
+    .label label {
+      margin-top: rem(17);
+      width: calc(50% - #{rem(15)});
+      float: left;
+    }
+  }
+
+  &-info {
+    $root: form-info;
+
+    @at-root .text-info {
+      + .#{$root} {
+        margin-top: rem(30);
+      }
+    }
+    &-field {
+      margin-top: rem(15);
+      > .btn--text {
+        display: flex;
+        line-height: rem(9);
+
+        align-items: center;
+        justify-content: space-between;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &--review {
+    margin: rem(20 0 0);
+    & ~ .label {
+      margin: rem(28 0 25);
+    }
+  }
+  &--qna {
+    position: relative;
+    padding: rem(20 0 0);
+    margin: rem(0 0 25);
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: rem(-20);
+      right: rem(-20);
+      height: 1px;
+      background: #ddd;
+    }
+  }
+}
+
+//search-form
+.search-form {
+  $root: search-form;
+  height: rem(44);
+  position: relative;
+  width: 100%;
+
+  &__input {
+    width: inherit;
+    height: 100%;
+    border-radius: rem(4);
+    border: rem(1) solid color(gray, 600);
+    padding: rem(0 12 0 42);
+    font-size: rem(13);
+    color: color(gray, 700);
+    background-color: $white;
+    outline: 0;
+    transition: all 0.2s ease;
+
+    &:focus {
+      border-color: color(primary, 100);
+      font-weight: bold;
+      font-size: rem(14);
+      color: color(dark, 200);
+    }
+
+    &::placeholder {
+      color: color(dark, 900);
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: rem(9);
+    left: rem(12);
+  }
+
+  &--type2 {
+    height: rem(32);
+    position: relative;
+    width: 100%;
+
+    .#{$root}__input {
+      width: inherit;
+      height: 100%;
+      border-radius: rem(4);
+      padding: rem(0 40 0 15);
+      font-size: rem(12);
+      background-color: $white;
+      outline: 0;
+      transition: all 0.2s ease;
+
+      &:focus {
+        border-color: inherit;
+        font-weight: bold;
+      }
+    }
+
+    .#{$root}__button {
+      position: absolute;
+      top: rem(4);
+      right: rem(12);
+      left: auto;
+    }
+
+    &.#{$root}--primary {
+      .#{$root}__input {
+        border: rem(2) solid color(primary, 100);
+        color: color(primary, 100);
+
+        &::placeholder {
+          color: color(primary, 100);
+        }
+      }
+    }
+
+    &.#{$root}--white {
+      .#{$root}__input {
+        border: rem(2) solid $white;
+        color: $white;
+        background-color: transparent;
+
+        &::placeholder {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+//point
+.point {
+  &-form {
+    display: flex;
+    align-items: center;
+  }
+
+  &-area {
+    width: 100%;
+    position: relative;
+    .input {
+      padding-left: rem(36);
+      color: color(primary, 100) !important;
+      font-size: rem(14);
+      font-weight: bold;
+    }
+    .icon {
+      position: absolute;
+      left: rem(12);
+      top: calc(50% - #{rem(8)});
+    }
+
+    + .btn {
+      margin-left: rem(7);
+      min-width: rem(90);
+    }
+  }
+}
+
+//form count
+.form-count {
+  $root: form-count;
+  background-color: $white;
+  border-radius: rem(4);
+  border: rem(1) solid color(gray, 700);
+  overflow: hidden;
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(20 18 18 21);
+    border-bottom: rem(1) solid color(gray, 100);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__text {
+    display: block;
+    line-height: rem(14);
+    font-size: rem(12);
+    margin-top: rem(7);
+  }
+
+  &__price {
+    margin-top: rem(4);
+  }
+
+  &__depth {
+    background-color: color(white, 500);
+    padding: rem(24 18 18 21);
+    border-bottom: rem(1) solid color(gray, 100);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+    .#{$root}__list {
+      border-bottom: 0;
+      padding: 0;
+
+      + .#{$root}__list {
+        margin-top: rem(20);
+      }
+    }
+  }
+}

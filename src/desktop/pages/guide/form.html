@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>가이드 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+      <main id="container">
+        <header class="hide">
+          <h1>MARKUP GUIDE | FORM</h1>
+        </header>
+        <!-- # CONTENT # -->
+        <div class="content">
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [옵션] -->
+          <!-- ------------------------------------------------------------------ -->
+          <include src="./_include/nav.html"></include>
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [공통] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">공통</h2>
+          <!-- 대체텍스트 -->
+          <fieldset class="guide">
+            <legend class="lagend">대체텍스트 : [title] / [placeholder]</legend>
+            <div class="txt-guide1">
+              <ul>
+                <li>폼객체에 대한 대체텍스트는 title 속성을 기본원칙으로 함</li>
+                <li>placeholder 의 경우 스크린리더에서 음성지원되지 않는 경우가 있으므로, title 및 aria-describedby 속성으로 해당정보를 함께 제공</li>
+              </ul>
+            </div>
+            <div class="ex-section">
+              <script type="text/plain" class="code-view language-html">
+                <input type="text" class="text" title="대체텍스트" placeholder="입력힌트"/>
+              </script>
+            </div>
+          </fieldset>
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [INPUT FIELD] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">INPUT FIELD</h2>
+          <!-- [유형1] ---------------------------------------------------------- -->
+          <!-- # 기본형 # -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">기본형 : .input</legend>
+            <input type="text" class="input" placeholder="입력힌트" />
+            <input type="password" class="input" placeholder="입력힌트" />
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">input + button : .input-wrap .input-wrap--type1</legend>
+            <div class="input-wrap input-wrap--type1">
+              <input type="text" class="input" placeholder="휴대폰 번호를 입력해 주세요." />
+              <button type="button" class="btn btn--primary">인증번호 발송</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">input + input + .. (동일너비) : .input-wrap .input-wrap--type2</legend>
+            <div class="input-wrap input-wrap--type2">
+              <input type="text" class="input" placeholder="휴대폰 번호를 입력해 주세요." />
+              <input type="text" class="input" placeholder="휴대폰 번호를 입력해 주세요." />
+            </div>
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">패스워드형(가리기/숨기기) : .input-wrap .input-wrap--password</legend>
+            <div class="input-wrap input-wrap--password">
+              <input type="password" id="field2" class="input" placeholder="비밀번호(최소 8자 이상)" />
+              <button type="button" class="icon icon--eye" data-toggle-btn="">비밀번호보기</button>
+            </div>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [CHECK / RADIO] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">CHECK / RADIO</h2>
+          <!-- 암묵적 label -->
+          <div class="txt-guide1">
+            <ul>
+              <li>명시적 label : label[for] 의 경우 개발/운영상 작업공수로 인하여 title 대체(요구사항반영)</li>
+              <li>암묵적 label : input[type="reaio"], input[type="checkbox"] 의 경우 UI 디자인 및 접근성을 위하여 예외적으로 암묵적 label 사용을 허용</li>
+              <li>접근성 심사업체에 따라 암묵적 label을 허용하지 않을경우 공통스크립트에서 공통처리</li>
+            </ul>
+          </div>
+          <!-- # 유형1 # -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .label</legend>
+            <div class="label">
+              <label><input type="checkbox" /><span>Default</span></label>
+              <label><input type="checkbox" checked /><span>Checked</span></label>
+              <label><input type="checkbox" disabled /><span>Disabled</span></label>
+              <label><input type="checkbox" disabled checked /><span>Disabled + Checked</span></label>
+            </div>
+            <hr class="guide-line2" />
+            <div class="label">
+              <label><input type="radio" name="radio1_1" /><span>Default</span></label>
+              <label><input type="radio" name="radio1_1" checked /> <span>Checked</span></label>
+              <label><input type="radio" name="radio1_2" disabled /><span>Disabled</span></label>
+              <label><input type="radio" name="radio1_2" disabled checked /><span>Disabled + Checked</span></label>
+            </div>
+          </fieldset>
+
+          <!-- # 블럭형 # -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 블럭형 : .label .label--vertical</legend>
+            <div class="label label--md label--vertical mt-3">
+              <div class="label__item">
+                <label><input type="radio" name="radioA" /><span>허위사실 작성 후기</span></label>
+              </div>
+              <div class="label__item">
+                <label><input type="radio" name="radioA" /><span>욕설, 비방, 비속어 포함 후기</span></label>
+              </div>
+              <div class="label__item">
+                <label><input type="radio" name="radioA" /><span>개인정보 유출 위험 후기</span></label>
+              </div>
+              <div class="label__item">
+                <label><input type="radio" name="radioA" /><span>음란, 유해성 후기</span></label>
+              </div>
+              <div class="label__item">
+                <label><input type="radio" name="radioA" /><span>기타</span></label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- # 유형2 # -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .label--simple</legend>
+            <div class="label label--simple">
+              <label><input type="checkbox" /><span>Default</span></label>
+              <label><input type="checkbox" checked /><span>Checked</span></label>
+              <label><input type="checkbox" disabled /><span>Disabled</span></label>
+              <label><input type="checkbox" disabled checked /><span>Disabled + Checked</span></label>
+            </div>
+            <hr class="guide-line2" />
+            <div class="label label--simple">
+              <label class="label--sub1 label--ti"><input type="radio" name="radio6_1" /><span>Default</span></label>
+              <label class="label--sub1 label--ti"><input type="radio" name="radio6_1" checked /> <span>Checked</span></label>
+              <label class="label--sub1 label--ti"><input type="radio" name="radio6_2" disabled /><span>Disabled</span></label>
+              <label class="label--sub1 label--ti"><input type="radio" name="radio6_2" disabled checked /><span>Disabled + Checked</span></label>
+            </div>
+          </fieldset>
+
+          <!-- # 유형3 # -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형3 : .label--md</legend>
+            <div class="label label--md">
+              <label><input type="checkbox" /><span>Default</span></label>
+              <label><input type="checkbox" checked /><span>Checked</span></label>
+              <label><input type="checkbox" disabled /><span>Disabled</span></label>
+              <label><input type="checkbox" disabled checked /><span>Disabled + Checked</span></label>
+            </div>
+            <hr class="guide-line2" />
+            <div class="label label--md">
+              <label><input type="radio" name="radio2_1" /><span>Default</span></label>
+              <label><input type="radio" name="radio2_1" checked /> <span>Checked</span></label>
+              <label><input type="radio" name="radio2_2" disabled /><span>Disabled</span></label>
+              <label><input type="radio" name="radio2_2" disabled checked /><span>Disabled + Checked</span></label>
+            </div>
+          </fieldset>
+
+          <!-- # 유형4 # -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형4 : .label--round</legend>
+            <div class="label label--round">
+              <label><input type="checkbox" /><span>Default</span></label>
+              <label><input type="checkbox" checked /><span>Checked</span></label>
+              <label><input type="checkbox" disabled /><span>Disabled</span></label>
+              <label><input type="checkbox" disabled checked /><span>Disabled + Checked</span></label>
+            </div>
+            <hr class="guide-line2" />
+            <div class="label label--round">
+              <label><input type="radio" name="radio3_1" /><span>Default</span></label>
+              <label><input type="radio" name="radio3_1" checked /> <span>Checked</span></label>
+              <label><input type="radio" name="radio3_2" disabled /><span>Disabled</span></label>
+              <label><input type="radio" name="radio3_2" disabled checked /><span>Disabled + Checked</span></label>
+            </div>
+          </fieldset>
+
+          <!-- # 유형5 # -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형5 : .label--btn label--{colors}</legend>
+            <div class="label label--btn">
+              <label><input type="checkbox" /><span>Default</span></label>
+              <label><input type="checkbox" checked /><span>Checked</span></label>
+              <label><input type="checkbox" disabled /><span>Disabled</span></label>
+              <label><input type="checkbox" disabled checked /><span>Disabled + Checked</span></label>
+            </div>
+            <hr class="guide-line2" />
+            <div class="label label--btn">
+              <label class="label--sub1"><input type="radio" name="radio4_1" /><span>Default</span></label>
+              <label class="label--sub1"><input type="radio" name="radio4_1" checked /> <span>Checked</span></label>
+              <label class="label--sub1"><input type="radio" name="radio4_2" disabled /><span>Disabled</span></label>
+              <label class="label--sub1"><input type="radio" name="radio4_2" disabled checked /><span>Disabled + Checked</span></label>
+            </div>
+
+            <hr class="guide-line2" />
+            <div class="label label--btn">
+              <label class="label--dark"><input type="radio" name="radio5_1" /><span>Default</span></label>
+              <label class="label--dark"><input type="radio" name="radio5_1" checked /> <span>Checked</span></label>
+              <label class="label--dark"><input type="radio" name="radio5_2" disabled /><span>Disabled</span></label>
+              <label class="label--dark"><input type="radio" name="radio5_2" disabled checked /><span>Disabled + Checked</span></label>
+            </div>
+          </fieldset>
+
+          <!-- # 유형6 # -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형6 : .label--btn label--ti</legend>
+            <div class="label label--btn">
+              <label class="label--ti"><input type="checkbox" /><span>Default</span></label>
+              <label class="label--ti"><input type="checkbox" checked /><span>Checked</span></label>
+              <label class="label--ti"><input type="checkbox" disabled /><span>Disabled</span></label>
+              <label class="label--ti"><input type="checkbox" disabled checked /><span>Disabled + Checked</span></label>
+            </div>
+            <hr class="guide-line2" />
+            <div class="label label--btn">
+              <label class="label--sub1 label--ti"><input type="radio" name="radio6_1" /><span>Default</span></label>
+              <label class="label--sub1 label--ti"><input type="radio" name="radio6_1" checked /> <span>Checked</span></label>
+              <label class="label--sub1 label--ti"><input type="radio" name="radio6_2" disabled /><span>Disabled</span></label>
+              <label class="label--sub1 label--ti"><input type="radio" name="radio6_2" disabled checked /><span>Disabled + Checked</span></label>
+            </div>
+
+            <hr class="guide-line2" />
+            <div class="label label--btn">
+              <label class="label--dark label--ti"><input type="radio" name="radio7_1" /><span>Default</span></label>
+              <label class="label--dark label--ti"><input type="radio" name="radio7_1" checked /> <span>Checked</span></label>
+              <label class="label--dark label--ti"><input type="radio" name="radio7_2" disabled /><span>Disabled</span></label>
+              <label class="label--dark label--ti"><input type="radio" name="radio7_2" disabled checked /><span>Disabled + Checked</span></label>
+            </div>
+          </fieldset>
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [SELECT] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">SELECT</h2>
+          <!-- [기본형] -->
+          <h3 class="tit-guide2">기본형</h3>
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">.select</legend>
+            <div class="select select--basic" data-select="select" id="basic">
+              <!-- 셀렉트박스 비활성화 메서드로 처리하지않고 마크업으로 직접 처리하려면 -->
+              <!--
+              아래와 같이 aria-disabled="true" tabindex="-1" 속성을 추가하시면 됩니다.
+             -->
+              <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn" aria-disabled="false" tabindex="-1">
+                <div>필드명</div>
+                <div data-empty="기본형" data-select="text"></div>
+              </div>
+              <!-- // -->
+              <div class="select__list" data-select="list">
+                <div class="select__option" data-select="option">
+                  <button type="button" value="value1">선택 항목1</button>
+                  <button type="button" value="value2">선택 항목2</button>
+                  <button type="button" value="value3">선택 항목3</button>
+                  <button type="button" value="value4">선택 항목4</button>
+                  <button type="button" value="value5">선택 항목5</button>
+                </div>
+              </div>
+              <input type="hidden" name="select1_1" data-select="value" />
+            </div>
+          </fieldset>
+          <!-- ------------------------------------------------------------------ -->
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [TEXTAREA] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">TEXTAREA</h2>
+          <!-- [기본형] -->
+          <h3 class="tit-guide2">기본형</h3>
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">.textarea</legend>
+            <br />
+            <textarea rows="5" class="textarea" title="" placeholder="입력해 주세요"></textarea>
+            <br />
+            <div class="textarea-form">
+              <span class="textarea__side">0/2,000자</span>
+              <textarea rows="5" class="textarea" title="" placeholder="입력해 주세요"></textarea>
+            </div>
+          </fieldset>
+          <!-- ------------------------------------------------------------------ -->
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [search-form] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">SEARCH</h2>
+          <!-- [기본형] -->
+          <h3 class="tit-guide2">기본형</h3>
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">.search-form</legend>
+            <div class="search-form">
+              <input type="text" class="search-form__input" value="input" />
+              <button type="button" class="search-form__button">
+                <i class="icon icon--search" aria-hidden="true"></i>
+              </button>
+            </div>
+          </fieldset>
+          <!-- ------------------------------------------------------------------ -->
+        </div>
+        <!-- # // # -->
+      </main>
+    </div>
+  </body>
+</html>

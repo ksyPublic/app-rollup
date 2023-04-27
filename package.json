@@ -1,19 +1,38 @@
 {
   "name": "app-rollup",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:p": "cross-env NODE_ENV=development PLAT_FORM=desktop rollup --config @config/dev.js -w",
+    "dev:m": "cross-env NODE_ENV=development PLAT_FORM=mobile rollup --config @config/dev.js -w",
+    "dev:op": "cross-env NODE_ENV=development PLAT_FORM=ownerDesktop rollup --config @config/dev.js -w",
+    "dev:om": "cross-env NODE_ENV=development PLAT_FORM=ownerMobile rollup --config @config/dev.js -w",
+    "build:p": "cross-env NODE_ENV=production PLAT_FORM=desktop rollup --config @config/prod.js",
+    "build:m": "cross-env NODE_ENV=production PLAT_FORM=mobile rollup --config @config/prod.js",
+    "build:op": "cross-env NODE_ENV=production PLAT_FORM=ownerDesktop rollup --config @config/prod.js",
+    "build:om": "cross-env NODE_ENV=production PLAT_FORM=ownerMobile rollup --config @config/prod.js",
+    "build:p:js": "cross-env NODE_ENV=production PLAT_FORM=desktop rollup --config @config/prod.js",
+    "build:m:js:": "cross-env NODE_ENV=production PLAT_FORM=mobile rollup --config @config/prod.js",
+    "build:op:js": "cross-env NODE_ENV=production PLAT_FORM=ownerDesktop rollup --config @config/prod.js",
+    "build:om:js:": "cross-env NODE_ENV=production PLAT_FORM=ownerMobile rollup --config @config/prod.js",
+    "build:p:css": "cross-env NODE_ENV=production PLAT_FORM=desktop rollup --config @config/prod.js",
+    "build:m:css": "cross-env NODE_ENV=production PLAT_FORM=mobile rollup --config @config/prod.js",
+    "build:op:css": "cross-env NODE_ENV=production PLAT_FORM=ownerDesktop rollup --config @config/prod.js",
+    "build:om:css": "cross-env NODE_ENV=production PLAT_FORM=ownerMobile rollup --config @config/prod.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ksyPublic/app-rollup.git"
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "core-js": "^3.30.1",
+    "cross-env": "^7.0.3",
+    "masonry-layout": "^4.2.2",
+    "node-sass": "^8.0.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-scss": "^4.0.0"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ksyPublic/app-rollup/issues"
-  },
-  "homepage": "https://github.com/ksyPublic/app-rollup#readme"
+  "dependencies": {}
 }

@@ -1,0 +1,322 @@
+/* --------------------------------------------------------------------------------
+      LAYOUT
+  --------------------------------------------------------------------------------- */
+#wrapper {
+  width: 100%;
+  min-width: rem(320);
+}
+
+#header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: rem(60);
+  width: 100%;
+  background: $white;
+  z-index: 50;
+}
+
+.header {
+  position: relative;
+  padding: rem(18 20);
+  $root: header;
+  &[data-bar='main'] {
+    .#{$root}__title {
+      text-align: left;
+      padding: rem(0);
+      font-size: rem(14);
+      @include text-truncate;
+      > .icon--near {
+        top: rem(2);
+        position: relative;
+        margin-right: rem(2);
+      }
+    }
+  }
+  &__back {
+    position: absolute;
+    top: rem(18);
+    left: rem(20);
+    width: rem(24);
+    height: rem(24);
+    display: inline-block;
+  }
+  &__title {
+    overflow: hidden;
+    padding: rem(0 60);
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: rem(24);
+  }
+  &__main {
+    img {
+      width: rem(141);
+      height: rem(19);
+    }
+  }
+  &__group {
+    position: relative;
+    padding-left: rem(28);
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) ;
+      left: 0;
+      width: rem(21);
+      height: rem(21);
+      background: url(#{$icon-url}icon-building-color.png) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+  &__top {
+    display: flex;
+    min-width: 0;
+    padding: 0 6rem 0 0;
+    .header__title {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .btn {
+      flex-shrink: 0;
+    }
+  }
+  &__bottom {
+    font-size: rem(10);
+    color: #666;
+  }
+  &__side {
+    position: absolute;
+    top: rem(18);
+    right: rem(20);
+    display: flex;
+    .btn--icon ~ .label--like {
+      margin: rem(0 0 0 10);
+    }
+
+    .btn--icon ~ .btn--icon {
+      margin: rem(0 0 0 10);
+    }
+
+    .btn--text {
+      top: rem(4);
+      position: relative;
+    }
+  }
+}
+
+.header__hipass {
+  padding: rem(15 20);
+}
+
+#navBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: rem(72);
+  z-index: 10;
+  background: $white;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar {
+  display: flex;
+  &__item {
+    flex: 1;
+    &:nth-child(1) .nav-bar__anchor {
+      &::before {
+        background-image: url('../images/icon/icon-nav-home-off.svg');
+      }
+      &[aria-current='page']::before {
+        background-image: url('../images/icon/icon-nav-home-on.svg');
+      }
+    }
+    &:nth-child(2) .nav-bar__anchor {
+      &::before {
+        background-image: url('../images/icon/icon-nav-hipass-off.svg');
+      }
+      &[aria-current='page']::before {
+        background-image: url('../images/icon/icon-nav-hipass-on.svg');
+      }
+    }
+    &:nth-child(3) .nav-bar__anchor {
+      &::before {
+        background-image: url('../images/icon/icon-nav-calculator-off.svg');
+      }
+      &[aria-current='page']::before {
+        background-image: url('../images/icon/icon-nav-calculator-on.svg');
+      }
+    }
+    &:nth-child(4) .nav-bar__anchor {
+      &::before {
+        background-image: url('../images/icon/icon-nav-stamp-off.svg');
+      }
+      &[aria-current='page']::before {
+        background-image: url('../images/icon/icon-nav-stamp-on.svg');
+      }
+    }
+    &:nth-child(5) .nav-bar__anchor {
+      &::before {
+        background-image: url('../images/icon/icon-nav-store-off.svg');
+      }
+      &[aria-current='page']::before {
+        background-image: url('../images/icon/icon-nav-store-on.svg');
+      }
+    }
+  }
+  &__anchor {
+    position: relative;
+    display: block;
+    position: relative;
+    padding: rem(44 10 0);
+    text-align: center;
+    font-size: rem(10);
+    line-height: 1;
+    color: color(dark, 200);
+    font-weight: 500;
+    &::before {
+      content: '';
+      position: absolute;
+      top: rem(12);
+      left: 50%;
+      transform: translateX(-50%);
+      width: rem(24);
+      height: rem(24);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+    }
+    &[aria-current='page'] {
+      color: color(primary, 100);
+    }
+    .icon--new {
+      position: absolute;
+      top: rem(12);
+      left: 50%;
+      transform: translateX(-50%);
+      width: rem(24);
+      padding: rem(0 0 0 24);
+      margin: 0;
+      &::before {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}
+
+#container {
+  .content {
+    position: relative;
+    padding: rem(0 0 120);
+  }
+}
+
+#footer {
+  padding: rem(33 20);
+  font-size: rem(10);
+  color: #666;
+  background: #efefef;
+  strong {
+    color: #222;
+  }
+}
+
+.footer {
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    height: rem(80);
+  }
+  &-logo {
+    display: inline-block;
+    width: rem(141);
+    height: rem(19);
+    background: url('../images/com/img-logo-owner-footer.png') no-repeat 0 0;
+    background-size: 100% auto;
+  }
+  &-link {
+    display: flex;
+    flex-wrap: wrap;
+    margin: rem(22 0 0 0);
+    li {
+     width: 50%;
+     a {
+      font-size: rem(12);
+      line-height: rem(24);
+     }
+    }
+  }
+  &-list {
+    margin: rem(24 0 0 0);
+  }  
+  &-text {
+    margin: rem(12 0 0);
+  }
+  &-outlink {
+    display: flex;
+    margin: rem(22 0 0);
+    border: rem(1) solid #ddd;   
+    .item {
+      width: 50%;
+      padding: rem(13 14);
+      &:last-child {
+        border-left: rem(1) solid #ddd;
+      }
+      .title {
+        font-size: rem(11);
+        margin: rem(0 0 8);
+      }
+      a {
+        display: inline-block;
+      }
+      .icon--playstore {
+        margin: rem(2.5 15.5 0 0);
+      }
+    }
+  }
+}
+
+.l-row {
+  padding: rem(0 20);
+  &--lg {
+    padding: 0;
+  }
+
+  > .text-info:first-child {
+    margin-top: rem(12);
+  }
+
+  > .coupon-form:first-child {
+    margin-top: rem(10);
+  }
+}
+
+[data-page-scroll] {
+  overflow: hidden;
+}
+
+[data-scroll-x] {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  .l-row & {
+    margin-left: rem(-20);
+    margin-right: rem(-20);
+    padding-left: rem(20);
+    padding-right: rem(20);
+    width: calc(100% + #{rem(40)});
+  }
+}
+
+[data-scroll-y] {
+  overflow-x: hidden;
+  overflow-y: auto;
+}

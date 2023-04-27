@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>이벤트 팝업 | 홈 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row">
+            <br />
+            <button type="button" class="btn btn--dark btn--md" data-dialog-trigger="#uiEvent1" aria-haspopup="dialog">이벤트팝업</button>
+            <button type="button" class="btn btn--dark btn--md" data-dialog-trigger="#uiEvent2" aria-haspopup="dialog">이벤트팝업</button>
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w1 modal--event" id="uiEvent1">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <div class="event-img">
+                <img src="http://placehold.it/380x580" alt="" />
+              </div>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--lg btn--light">오늘 하루 보지 않기</button>
+              <button type="button" class="btn btn--lg btn--light" data-dialog-close>닫기</button>
+            </div>
+            <!-- [//] -->
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w2 modal--event" id="uiEvent2">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <div class="event-img">
+                <img src="http://placehold.it/420x280" alt="" />
+              </div>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--lg btn--light">오늘 하루 보지 않기</button>
+              <button type="button" class="btn btn--lg btn--light" data-dialog-close>닫기</button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+
+      <script>
+        document.addEventListener('UILoaded', function () {
+          var dialog1 = document.querySelector('#uiEvent1');
+          var dialog2 = document.querySelector('#uiEvent2');
+          var dialogInstance1 = HitaiUI.Dialog.get(dialog1, true);
+          dialogInstance1.open();
+          var dialogInstance2 = HitaiUI.Dialog.get(dialog2, true);
+          // dialogInstance2.open();
+        });
+      </script>
+    </div>
+  </body>
+</html>

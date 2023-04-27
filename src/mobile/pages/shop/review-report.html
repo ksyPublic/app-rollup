@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>이용후기 신고 팝업 | 제휴점 상세 | 내주변 - hitai</title>
+    <include src="../_include/head.html"></include>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header">
+        <!-- BACK BUTTON -->
+        <button type="button" class="header__back btn btn--icon">
+          <span class="hide">뒤로가기</span>
+          <i class="icon icon--back" aria-hidden="true"></i>
+        </button>
+        <!-- TITLE -->
+        <h1 class="header__title"></h1>
+      </header>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- CONTENT -->
+        <div class="content">
+          <div class="l-row">
+            <br /><br /><br />
+            <button type="button" class="btn btn--dark btn--md" data-dialog-trigger="#uiReport" aria-haspopup="dialog">신고하기</button>
+            <button type="button" class="btn btn--dark btn--md" id="uiConfirm">신고확인컨펌</button>
+            <button type="button" class="btn btn--dark btn--md" id="uiAlert">신고접수확인얼럿</button>
+          </div>
+        </div>
+        <!-- // -->
+      </main>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- ---------------------------------------------------------- -->
+      <div role="dialog" class="modal modal--center" id="uiReport">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <h1 class="modal__title">신고하기</h1>
+              <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <fieldset>
+                <legend>신고하기</legend>
+                <div class="label label--vertical mt-3">
+                  <div class="label__item">
+                    <label><input type="radio" name="radioA" /><span>허위사실 작성 후기</span></label>
+                  </div>
+                  <div class="label__item">
+                    <label><input type="radio" name="radioA" /><span>욕설, 비방, 비속어 포함 후기</span></label>
+                  </div>
+                  <div class="label__item">
+                    <label><input type="radio" name="radioA" /><span>개인정보 유출 위험 후기</span></label>
+                  </div>
+                  <div class="label__item">
+                    <label><input type="radio" name="radioA" /><span>음란, 유해성 후기</span></label>
+                  </div>
+                  <div class="label__item">
+                    <label><input type="radio" name="radioA" /><span>기타</span></label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--lg btn--gray" data-dialog-close>취소</button>
+              <button type="button" class="btn btn--lg btn--dark" id="tezt">신고하기</button>
+            </div>
+            <!-- [//] -->
+          </section>
+        </div>
+      </div>
+      <!-- ---------------------------------------------------------- -->
+    </div>
+    <script>
+      document.addEventListener('UILoaded', function () {
+        var dialog = document.querySelector('#uiReport');
+        var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+        dialogInstance.open();
+
+        document.querySelector('#uiConfirm').addEventListener('click', function () {
+          var uiConfirm = new HitaiUI.Confirm('신고하시겠습니까?', function () {
+            // 확인버튼 클릭후
+            this.close();
+          });
+        });
+
+        // Alert
+        document.querySelector('#uiAlert').addEventListener('click', function () {
+          var uiAlert = new HitaiUI.Alert('신고가 접수되었습니다. 후기작성 정책 위배 여부를 확인하여 결과에 따라 수정, 삭제 조취 하겠습니다.');
+        });
+      });
+    </script>
+  </body>
+</html>

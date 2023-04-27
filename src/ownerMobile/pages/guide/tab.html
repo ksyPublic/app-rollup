@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>가이드 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+      <main id="container">
+        <header class="hide">
+          <h1>MARKUP GUIDE | TAB</h1>
+        </header>
+        <!-- # CONTENT # -->
+        <div class="content">
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메뉴이동] -->
+          <!-- ------------------------------------------------------------------ -->
+          <include src="./_include/nav.html"></include>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [TAB] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">TAB</h2>
+
+          <h3 class="tit-guide3">마크업구조 : 탭형</h3>
+          <div class="ex-section">
+            <script type="text/plain" class="code-view language-html">
+              <!-- TAB -->
+              <div class="tabs tabs--type1 tabs--small" data-autoset="tab">
+                <ul role="tablist" class="tabs__list">
+                  <li class="tabs__item"><a role="tab" href="#uiTabPanel1" aria-selected="true">탭1</a></li>
+                  <li class="tabs__item"><a role="tab" href="#uiTabPanel2">탭2</a></li>
+                  <li class="tabs__item"><a role="tab" href="#uiTabPanel3">탭3<em class="icon icon--new">new</em></a></li>
+                </ul>
+                <!-- TABPANEL -->
+                <div role="tabpanel" id="uiTabPanel1" class="tabs__panel is-active">탭1</div>
+                <div role="tabpanel" id="uiTabPanel2" class="tabs__panel">탭2</div>
+                <div role="tabpanel" id="uiTabPanel3" class="tabs__panel">탭3</div>
+              </div>
+            </script>
+          </div>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [네비게이션형 탭1] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h3 class="tit-guide2">네비게이션형 탭1</h3>
+
+          <!-- [타입1] ---------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">타입1 : .tabs .tabs--type1</legend>
+            <div class="tabs tabs--type1" data-autoset="tab">
+              <!-- TAB -->
+              <ul role="tablist" class="tabs__list">
+                <li class="tabs__item"><a role="tab" href="#uiTabPanel1" aria-selected="true">탭1</a></li>
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanel2">탭2<em class="icon icon--new">new</em></a>
+                </li>
+              </ul>
+              <!-- TABPANEL -->
+              <div role="tabpanel" id="uiTabPanel1" class="tabs__panel is-active">탭내용1</div>
+              <div role="tabpanel" id="uiTabPanel2" class="tabs__panel">탭내용2</div>
+            </div>
+          </fieldset>
+
+          <!-- [타입2] ---------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">타입2 : .tabs .tabs--type2</legend>
+            <div class="tabs tabs--type2" data-autoset="tab">
+              <!-- TAB -->
+              <ul role="tablist" class="tabs__list">
+                <li class="tabs__item"><a role="tab" href="#uiTabPanel3" aria-selected="true">탭1</a></li>
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanel4">탭2<em class="icon icon--new">new</em></a>
+                </li>
+              </ul>
+              <!-- TABPANEL -->
+              <div role="tabpanel" id="uiTabPanel3" class="tabs__panel is-active">탭내용1</div>
+              <div role="tabpanel" id="uiTabPanel4" class="tabs__panel">탭내용2</div>
+            </div>
+          </fieldset>
+
+          <!-- [타입] ---------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">tab 안에 tab</legend>
+            <div class="tabs tabs--type1" data-autoset="tab">
+              <!-- TAB -->
+              <ul role="tablist" class="tabs__list">
+                <li class="tabs__item"><a role="tab" href="#uiTabPanel5" aria-selected="true">탭1</a></li>
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanel6">탭2<em class="icon icon--new">new</em></a>
+                </li>
+              </ul>
+              <!-- TABPANEL -->
+              <div role="tabpanel" id="uiTabPanel5" class="tabs__panel is-active">
+                <div class="tabs tabs--type2" data-autoset="tab">
+                  <!-- TAB -->
+                  <ul role="tablist" class="tabs__list">
+                    <li class="tabs__item"><a role="tab" href="#uiTabPanel7" aria-selected="true">탭1</a></li>
+                    <li class="tabs__item">
+                      <a role="tab" href="#uiTabPanel8">탭2<em class="icon icon--new">new</em></a>
+                    </li>
+                  </ul>
+                  <!-- TABPANEL -->
+                  <div role="tabpanel" id="uiTabPanel7" class="tabs__panel is-active">탭내용1</div>
+                  <div role="tabpanel" id="uiTabPanel8" class="tabs__panel">탭내용2</div>
+                </div>
+              </div>
+              <div role="tabpanel" id="uiTabPanel6" class="tabs__panel">탭내용2</div>
+            </div>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [스텝] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h3 class="tit-guide2">스텝</h3>
+
+          <!-- [기본] ---------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">기본 : .step .step--basic</legend>
+            <div class="step step--basic">
+              <ol class="step__list">
+                <li class="step__item" aria-current="step"><span class="hide">1단계 약관동의</span></li>
+                <li class="step__item"><span class="hide">2단계 휴대폰 인증</span></li>
+                <li class="step__item"><span class="hide">3단계 회원정보 입력</span></li>
+              </ol>
+            </div>
+          </fieldset>
+          <br />
+
+          <!-- <fieldset class="guide" data-autocode>
+            <legend class="legend">유형2 : .step .step--md</legend>
+            <div class="step step--md">
+              <ol class="step__list">
+                <li class="step__item" aria-current="step">
+                  <span class="hide">1단계 예약신청</span>
+                  <em>예약신청</em>
+                </li>
+                <li class="step__item">
+                  <span class="hide">2단계 예약확정</span>
+                  <em>예약확정</em>
+                </li>
+                <li class="step__item">
+                  <span class="hide">3단계 관리중</span>
+                  <em>관리중</em>
+                </li>
+                <li class="step__item">
+                  <span class="hide">4단계 이용완료</span>
+                  <em>이용완료</em>
+                </li>
+              </ol>
+            </div>
+            <br />
+            <br />
+            <br />
+          </fieldset> -->
+
+          <!-- ------------------------------------------------------------------ -->
+        </div>
+        <!-- # // # -->
+      </main>
+    </div>
+  </body>
+</html>

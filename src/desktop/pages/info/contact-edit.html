@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>제휴점 문의 | 하이타이 소개 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row">
+            <button type="button" class="btn btn--primary btn--lg" data-dialog-trigger="#uiPartnership" aria-haspopup="dialog">제휴점 문의</button>
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w8" id="uiPartnership">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <h1 class="modal__title">제휴점 문의</h1>
+              <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <fieldset class="form form--type3">
+                <legend>제휴점문의</legend>
+                <div class="form-field">
+                  <label for="field1" class="form-field__label">업체명</label>
+                  <input type="text" id="field1" class="input" placeholder="업체명을 입력해 주세요.(필수)" />
+                </div>
+                <!-- // -->
+                <div class="form-field">
+                  <label class="form-field__label">주소</label>
+                  <div class="input-wrap input-wrap--type2">
+                    <div class="select select--basic" data-select="select" id="uiSelect1">
+                      <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn">
+                        <div>시/도</div>
+                        <div data-empty="시/도" data-select="text"></div>
+                      </div>
+                      <!-- // -->
+                      <div class="select__list" data-select="list">
+                        <div class="select__option" data-select="option">
+                          <button type="button" value="value1">시/도1</button>
+                          <button type="button" value="value2">시/도2</button>
+                          <button type="button" value="value3">시/도3</button>
+                          <button type="button" value="value4">시/도4</button>
+                        </div>
+                      </div>
+                      <input type="hidden" name="select1_1" data-select="value" />
+                    </div>
+                    <!-- // -->
+                    <div class="select select--basic" data-select="select" id="uiSelect2">
+                      <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn">
+                        <div>구/군</div>
+                        <div data-empty="구/군" data-select="text"></div>
+                      </div>
+                      <!-- // -->
+                      <div class="select__list" data-select="list">
+                        <div class="select__option" data-select="option">
+                          <button type="button" value="value1">구/군1</button>
+                          <button type="button" value="value2">구/군2</button>
+                          <button type="button" value="value3">구/군3</button>
+                          <button type="button" value="value4">구/군4</button>
+                        </div>
+                      </div>
+                      <input type="hidden" name="select1_1" data-select="value" />
+                    </div>
+                  </div>
+                  <div class="input-wrap">
+                    <input type="text" class="input" placeholder="상세 주소를 입력해 주세요.(선택)" />
+                  </div>
+                </div>
+                <!-- // -->
+                <div class="form-field">
+                  <label for="field2" class="form-field__label">담당자명</label>
+                  <input type="text" id="field2" class="input" placeholder="담당자명을 입력해 주세요.(필수)" />
+                </div>
+                <!-- // -->
+                <div class="form-field">
+                  <label for="field3" class="form-field__label">연락처</label>
+                  <textarea rows="5" id="field3" class="textarea" placeholder="연락처를 입력해 주세요.(필수)"></textarea>
+                </div>
+                <!-- // -->
+                <div class="form-field">
+                  <label for="field4" class="form-field__label">문의내용</label>
+                  <textarea rows="5" id="field4" class="textarea" placeholder="문의내용을 입력해 주세요.(필수)"></textarea>
+                </div>
+                <!-- // -->
+              </fieldset>
+
+              <!-- 개인정보동의 -->
+              <div class="label-link">
+                <div class="label label--simple">
+                  <label>
+                    <input type="checkbox" />
+                    <span>개인정보 수집 및 이용동의 (필수)</span>
+                  </label>
+                </div>
+                <a href="" class="text text--link">
+                  <em>개인정보 수집 및 이용동의 (필수)</em>
+                  <i class="icon icon--link" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--lg btn--primary">문의하기</button>
+            </div>
+            <!-- [//] -->
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+
+      <script>
+        document.addEventListener('UILoaded', function () {
+          var dialog = document.querySelector('#uiPartnership');
+          var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+          dialogInstance.open();
+        });
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,358 @@
+.icon {
+  $root: icon;
+  display: inline-block;
+  vertical-align: top;
+
+  &--plus {
+    width: rem(48);
+    height: rem(48);
+    background: url(#{$icon-url}icon-plus.png) no-repeat;
+  }
+
+  &--minus {
+    width: rem(48);
+    height: rem(48);
+    background: url(#{$icon-url}icon-minus.png) no-repeat;
+  }
+
+  &--dropdown {
+    width: rem(29);
+    height: rem(29);
+    background: url(#{$icon-url}icon-dropdown.png) no-repeat;
+  }
+
+  &--search {
+    width: rem(30);
+    height: rem(30);
+    background: url(#{$icon-url}icon-search.png) no-repeat;
+  }
+
+  &--search-lg {
+    width: rem(42);
+    height: rem(42);
+    background: url(#{$icon-url}icon-search-lg.png) no-repeat;
+  }
+
+  &--alarm {
+    width: rem(32);
+    height: rem(32);
+    background: url(#{$icon-url}icon-alarm.png) no-repeat;
+  }
+
+  &--mypage {
+    width: rem(32);
+    height: rem(32);
+    background: url(#{$icon-url}icon-mypage.png) no-repeat;
+  }
+
+  &--new {
+    width: rem(5);
+    height: rem(5);
+    border-radius: 50%;
+    background: color(primary, 100);
+    font-size: rem(1);
+    overflow: hidden;
+    padding: rem(0 0 0 5);
+  }
+
+  &--sch {
+    width: rem(28);
+    height: rem(28);
+    background: url(#{$icon-url}icon-sch.png) no-repeat;
+  }
+
+  &--user {
+    position: relative;
+    width: rem(28);
+    height: rem(28);
+    background: url(#{$icon-url}icon-user.png) no-repeat;
+  }
+
+  &--favor {
+    width: rem(21);
+    height: rem(20);
+    background: url(#{$icon-url}icon-favor.png) no-repeat;
+    background-size: rem(21) rem(20);
+  }
+
+  &--hipass {
+    width: rem(124);
+    height: rem(30);
+    background: url(#{$icon-url}icon-hipass.png) no-repeat;
+  }
+
+  &--like {
+    width: 15px;
+    height: 15px;
+    background: url(#{$icon-url}icon-like.png) no-repeat;
+  }
+
+  &--star {
+    width: 15px;
+    height: 15px;
+    background: url(#{$icon-url}icon-star.png) no-repeat;
+  }
+
+  &--distance {
+    width: 15px;
+    height: 15px;
+    background: url(#{$icon-url}icon-pin.png) no-repeat;
+  }
+
+  &--filter {
+    width: 32px;
+    height: 32px;
+    background: url(#{$icon-url}icon-filter.png) no-repeat;
+  }
+
+  &--time {
+    width: rem(28);
+    height: rem(28);
+    background: url(#{$icon-url}icon-time.png) no-repeat;
+  }
+
+  &--near {
+    width: rem(28);
+    height: rem(28);
+    background: url(#{$icon-url}icon-near-black.png) no-repeat;
+  }
+
+  &--inquery-arrow {
+    width: rem(33);
+    height: rem(11);
+    background: url(#{$icon-url}icon-inquery-arrow.png) no-repeat;
+    &2 {
+      width: rem(33);
+      height: rem(11);
+      background: url(#{$icon-url}icon-inquery-arrow2.png) no-repeat;
+    }
+  }
+
+  &--course {
+    width: rem(28);
+    height: rem(28);
+    background: url(#{$icon-url}icon-course.png) no-repeat;
+  }
+
+  &--map {
+    width: rem(26);
+    height: rem(25);
+    background: url(#{$icon-url}icon-map.png) no-repeat;
+  }
+
+  &--link {
+    width: rem(20);
+    height: rem(20);
+    background: url(#{$icon-url}icon-text-link.png) no-repeat;
+    &-md {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-text-link-md.png) no-repeat;
+    }
+  }
+
+  &--link2 {
+    width: rem(20);
+    height: rem(20);
+    background: url(#{$icon-url}icon-text-link2.png) no-repeat;
+  }
+
+  &--accordion-arrow1 {
+    width: rem(21);
+    height: rem(21);
+    background: url(#{$icon-url}icon-acc-arrow1.png) no-repeat;
+  }
+
+  &--point {
+    width: rem(24);
+    height: rem(24);
+    background: url(#{$icon-url}icon-point-primary.png) no-repeat;
+
+    &-white {
+      position: relative;
+      top: rem(2);
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-point-white.png) no-repeat;
+    }
+
+    &-dark {
+      width: rem(28);
+      height: rem(28);
+      background: url(#{$icon-url}icon-point-dark.png) no-repeat;
+    }
+  }
+
+  &--coupon {
+    &-dark {
+      width: rem(28);
+      height: rem(28);
+      background: url(#{$icon-url}icon-coupon-dark.png) no-repeat;
+    }
+  }
+
+  &--path {
+    top: rem(6);
+    margin-right: rem(6);
+    position: relative;
+    width: rem(7);
+    height: rem(7);
+    background: url(#{$icon-url}icon-path.png) no-repeat;
+  }
+
+  &--remove {
+    width: rem(50);
+    height: rem(50);
+    background: $white url(#{$icon-url}icon-remove.png) no-repeat;
+    background-size: rem(50) rem(50);
+  }
+
+  &--arrow {
+    width: rem(28);
+    height: rem(28);
+    background: url(#{$icon-url}icon-arrow.png) no-repeat;
+  }
+  &--download {
+    width: rem(28);
+    height: rem(28);
+    background: url(#{$icon-url}icon-download.png) no-repeat;
+    &-gray {
+      width: rem(36);
+      height: rem(36);
+      background: url(#{$icon-url}icon-download-gray.png) no-repeat;
+    }
+  }
+  &--success {
+    width: rem(36);
+    height: rem(36);
+    background: url(#{$icon-url}icon-success.png) no-repeat;
+  }
+  &--hipass-white {
+    width: rem(114);
+    height: rem(42);
+    background: url(#{$icon-url}icon-hipass-white.png) no-repeat;
+  }
+
+  &.icon-user {
+    display: inline-block;
+    width: rem(36);
+    height: rem(36);
+    &--user1 {
+      background: url('../images/icon/icon-user1.png') no-repeat;
+
+      &-lg {
+        width: rem(80);
+        height: rem(80);
+        background: url('../images/icon/icon-user1-lg.png') no-repeat;
+        background-size: rem(80) rem(80);
+      }
+    }
+    &--user2 {
+      background: url('../images/icon/icon-user2.png') no-repeat;
+    }
+    &--user3 {
+      background: url('../images/icon/icon-user3.png') no-repeat;
+    }
+    &--user4 {
+      background: url('../images/icon/icon-user4.png') no-repeat;
+    }
+  }
+
+  &--back {
+    width: rem(36);
+    height: rem(36);
+    background: url(#{$icon-url}icon-back.png) no-repeat;
+  }
+
+  &--list {
+    width: rem(24);
+    height: rem(24);
+    background: url(#{$icon-url}icon-list.png) no-repeat;
+  }
+
+  &--info {
+    &-sm {
+      width: rem(15);
+      height: rem(15);
+      background: url(#{$icon-url}icon-info-sm.png) no-repeat;
+    }
+  }
+
+  &--s {
+    &-event {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-snb-event.png) no-repeat;
+    }
+
+    &-invite {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-snb-event.png) no-repeat;
+    }
+
+    &-reserv {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-snb-reserv.png) no-repeat;
+    }
+
+    &-review {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-snb-review.png) no-repeat;
+    }
+
+    &-shop {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-snb-shop.png) no-repeat;
+    }
+
+    &-stamp {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-snb-stamp.png) no-repeat;
+    }
+  }
+
+  &--apple-dark {
+    width: rem(24);
+    height: rem(24);
+    background: url(#{$icon-url}icon-apple-dark.png) no-repeat;
+  }
+
+  &--delete {
+    width: rem(40);
+    height: rem(40);
+    background: url(#{$icon-url}icon-delete.png) no-repeat;
+  }
+
+  &--stamp {
+    width: rem(28);
+    height: rem(28);
+    background: url(#{$icon-url}icon-stamp.png) no-repeat;
+  }
+
+  &--place {
+    width: rem(24);
+    height: rem(24);
+    background: url('../images/icon/icon-place.png') 50% 50% no-repeat;
+  }
+  &--region {
+    width: rem(24);
+    height: rem(24);
+    background: url('../images/icon/icon-region.png') 50% 50% no-repeat;
+  }
+  &--station {
+    width: rem(24);
+    height: rem(24);
+    background: url('../images/icon/icon-station.png') 50% 50% no-repeat;
+  }
+
+  &--text-remove {
+    width: rem(24);
+    height: rem(24);
+    background: url('../images/icon/icon-text-remove.png') no-repeat;
+  }
+}

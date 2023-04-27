@@ -1,0 +1,230 @@
+.grid {
+  $root: grid;
+
+  &--line {
+    border-top: rem(2) solid color(dark, 100);
+    &.grid > .store-list--card {
+      margin-top: rem(40);
+      > ul {
+        margin: 0;
+        display: block;
+      }
+    }
+  }
+
+  &-col4 {
+    @include clearfix;
+    margin-right: rem(-40);
+
+    .#{$root}-col {
+      width: calc(25% - #{rem(40)});
+      margin-right: rem(40);
+      float: left;
+    }
+  }
+
+  &-col3 {
+    @include clearfix;
+  }
+
+  &-col2 {
+    margin-right: rem(-30);
+    margin-bottom: rem(-40);
+    @include clearfix;
+    .#{$root}-col {
+      width: calc(50% - #{rem(30)});
+      margin-right: rem(30);
+      margin-bottom: rem(40);
+      float: left;
+    }
+  }
+
+  &--basic {
+    margin-top: rem(50);
+    margin-right: rem(-40);
+    margin-bottom: rem(-40);
+    //   font-size: 0;
+    @include clearfix;
+
+    .btn--icon {
+      right: rem(-1);
+      top: rem(-1);
+      position: absolute;
+    }
+    .#{$root}-col {
+      font-size: rem(16);
+      width: calc(33.33% - #{rem(40)});
+      float: left;
+      margin-right: rem(40);
+      margin-bottom: rem(40);
+    }
+
+    .#{$root}-thumnail {
+      height: rem(160);
+      overflow: hidden;
+    }
+    .#{$root}-thumnail img {
+      max-width: 100%;
+    }
+
+    .#{$root}-con {
+      padding: rem(30);
+      border-bottom: rem(1) solid color(gray, 1200);
+    }
+
+    .#{$root}-foot {
+      padding: rem(30);
+    }
+
+    .#{$root}-tt {
+      margin-top: rem(14);
+      font-size: rem(20);
+      // letter-spacing: rem(-0.91);
+      font-weight: bold;
+    }
+
+    .#{$root}-ts {
+      margin-top: rem(20);
+      line-height: rem(26);
+    }
+
+    .#{$root}-btn {
+      margin-top: rem(30);
+      button:only-child {
+        width: 100%;
+      }
+    }
+  }
+
+  &--bx {
+    @include clearfix;
+    display: flex;
+    .#{$root}-head {
+      height: rem(75);
+      padding: rem(0 30);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: rem(1) solid color(gray, 1200);
+      .unit {
+        font-size: rem(16);
+        font-weight: normal;
+      }
+    }
+    .#{$root}-con {
+      padding: rem(30 30);
+    }
+
+    .#{$root}-col {
+      width: calc(33.33%);
+      float: left;
+      border: 0;
+      border-right: rem(1) solid color(gray, 1200);
+      border-bottom: rem(1) solid color(gray, 1200);
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    border-top: rem(2) solid color(dark, 100);
+
+    //
+    @at-root .heading {
+      + .#{$root}--bx {
+        margin-top: rem(20);
+      }
+    }
+  }
+
+  @at-root .c-title {
+    + .#{$root}--basic {
+      margin-top: 0;
+    }
+  }
+
+  &-col--border {
+    border: rem(1) solid color(gray, 400);
+  }
+
+  &__col {
+    position: relative;
+  }
+
+  @at-root {
+    .grid > .store-list--card {
+      @include clearfix;
+
+      ul {
+        margin: 0;
+        @include clearfix;
+      }
+      $root: store-list;
+      margin: rem(0 -60 -80 0);
+      .#{$root}__item {
+        position: relative;
+        border: 0;
+        margin: 0;
+        width: rem(290);
+        margin-right: rem(60);
+        margin-bottom: rem(80);
+        float: left;
+        overflow: hidden;
+        height: auto;
+
+        .btn {
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: 1;
+        }
+      }
+
+      .#{$root}__img {
+        width: rem(290);
+        height: rem(200);
+      }
+
+      .#{$root}__con {
+        padding: 0;
+        margin-top: rem(20);
+        height: auto;
+      }
+
+      .#{$root}__anchor {
+        height: auto;
+      }
+
+      .#{$root}__title {
+        font-size: rem(20);
+        line-height: rem(30);
+      }
+
+      .#{$root}__info {
+        margin-top: rem(35);
+        position: relative;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+      }
+
+      .info-price__text1 {
+        font-size: rem(20);
+        line-height: rem(20);
+      }
+
+      .info-price__text2 {
+        font-size: rem(20);
+        line-height: rem(20);
+        margin-left: rem(10);
+      }
+
+      .info-price__unit {
+        font-size: rem(16);
+        line-height: rem(22);
+      }
+
+      // .store-list__item
+    }
+  }
+}

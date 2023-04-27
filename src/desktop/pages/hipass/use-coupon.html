@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>하이패스 | 할인쿠폰 사용하기 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # SKIP # -->
+      <!-- ---------------------------------------------------------- -->
+      <div class="nav-skip"><a href="#container">본문바로가기</a></div>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <div class="content">
+          <div class="l-row">
+            <br />
+            <div class="pay__info-col">
+              <a role="button" class="text text--link" title="쿠폰 사용하기" data-dialog-trigger="#uiCouponSale" aria-haspopup="dialog">
+                <em>쿠폰 할인</em>
+                <i class="icon icon--link" aria-hidden="true"></i>
+              </a>
+              <span class="pay__info-price">30,000<span class="pay__info-unit text-4">P</span></span>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w7 animate" id="uiCouponSale">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <h1 class="modal__title">쿠폰 할인</h1>
+              <button type="button" class="modal__btn-close" data-dialog-close="">팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <div class="use-coupon">
+                <div class="use-coupon__head">
+                  <strong class="use-coupon__info">사용 가능한 <em class="text-primary-100">2</em>개의 쿠폰</strong>
+                  <button type="button" class="btn btn--dark btn--sm">쿠폰 받기</button>
+                </div>
+                <div class="use-coupon__content">
+                  <div class="coupon-form">
+                    <div class="label">
+                      <label class="coupon__label" for="coupon1">
+                        <input type="radio" id="coupon1" name="coupon1" />
+                        <!-- 2023-04-21 수정 -->
+                        <span aria-hidden="true"></span>
+                        <!-- // -->
+                        <div class="coupon__item">
+                          <div class="coupon__description">
+                            <div class="coupon__amount">
+                              <span class="hide">할인가</span>
+                              <span class="coupon__price">10,000</span>
+                              <span class="coupon__unit">원<em>할인</em></span>
+                            </div>
+                            <div class="coupon__text">
+                              <div class="coupon__title">신규가입 할인 쿠폰 (10만원 이상 결제 시 사용 가능)</div>
+                              <div class="coupon__detail">사용처: 할인쿠폰 사용 가능 제휴점</div>
+                            </div>
+                          </div>
+                          <div class="coupon__bottom">
+                            <div class="coupon__foot">
+                              <div class="coupon__validity">
+                                <span class="hide">유효기간</span>
+                                <span class="coupon__validity-date">22.12.25 ~ 23.01.31</span>
+                                (사용기한이 22일 남았습니다.)
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                      <label class="coupon__label" for="coupon2">
+                        <input type="radio" id="coupon2" name="coupon1" />
+                        <!-- 2023-04-21 수정 -->
+                        <span aria-hidden="true"></span>
+                        <!-- // -->
+                        <div class="coupon__item">
+                          <div class="coupon__description">
+                            <div class="coupon__amount">
+                              <span class="hide">할인가</span>
+                              <span class="coupon__price">10,000</span>
+                              <span class="coupon__unit">원<em>할인</em></span>
+                            </div>
+                            <div class="coupon__text">
+                              <div class="coupon__title">신규가입 할인 쿠폰 (10만원 이상 결제 시 사용 가능)</div>
+                              <div class="coupon__detail">사용처: 할인쿠폰 사용 가능 제휴점</div>
+                            </div>
+                          </div>
+                          <div class="coupon__bottom">
+                            <div class="coupon__foot">
+                              <div class="coupon__validity">
+                                <span class="hide">유효기간</span>
+                                <span class="coupon__validity-date">22.12.25 ~ 23.01.31</span>
+                                (사용기한이 22일 남았습니다.)
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+
+                      <label class="coupon__label coupon--none" for="coupon3">
+                        <input type="radio" id="coupon3" name="coupon1" />
+                        <span>적용안함</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <dl class="text-list text-list--bullet1">
+                    <dt class="text-list__title">쿠폰 사용 안내</dt>
+                    <dd class="text-list__item">사용 가능한 할인 쿠폰만 보여집니다.</dd>
+                    <dd class="text-list__item">할인 쿠폰은 중복 사용할 수 없습니다.</dd>
+                    <dd class="text-list__item">내정보 > 내 쿠폰 에서 보유한 모든 쿠폰을 확인 할 수 있습니다.</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--lg btn--primary">
+                <span class="text-5"><em>5,000</em> 사용하기</span>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/inquery.html"></include>
+      <!-- -------------------------------- -->
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+    </div>
+
+    <script>
+      document.addEventListener('UILoaded', function () {
+        var dialog = document.querySelector('#uiCouponSale');
+        var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+        dialogInstance.open();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>가이드 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <style>
+      .docs-layout #navBar {
+        position: relative;
+      }
+    </style>
+    <div id="wrapper" class="docs-layout">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <div class="content">
+          <div class="tabs tabs--type1" data-autoset="tab">
+            <!-- TAB -->
+            <ul role="tablist" class="tabs__list">
+              <li class="tabs__item">
+                <a role="tab" href="#uiTabPanel1" aria-selected="true">Header</a>
+              </li>
+              <li class="tabs__item">
+                <a role="tab" href="#uiTabPanel2">Footer</a>
+              </li>
+
+              <li class="tabs__item">
+                <a role="tab" href="#uiTabPanel3">Navigation</a>
+              </li>
+            </ul>
+            <!-- TABPANEL -->
+            <div role="tabpanel" id="uiTabPanel1" class="tabs__panel is-active">
+              <!-- 기본 헤더-->
+              <h2 class="tit-guide1">기본 헤더</h2>
+
+              <!-- [유형1] -->
+              <h3 class="tit-guide2">유형1</h3>
+
+              <fieldset class="guide" data-autocode>
+                <legend class="lagend">.header 기본형</legend>
+
+                <header id="header" class="header">
+                  <!-- BACK BUTTON -->
+                  <button type="button" class="header__back btn btn--icon">
+                    <span class="hide">뒤로가기</span>
+                    <i class="icon icon--back" aria-hidden="true"></i>
+                  </button>
+                  <!-- TITLE -->
+                  <h1 class="header__title">타이틀</h1>
+                </header>
+              </fieldset>
+
+              <fieldset class="guide" data-autocode>
+                <legend class="lagend">.header 멀티형</legend>
+                <!-- 쉐어 + 좋아요 버튼 -->
+                <header id="header" class="header">
+                  <!-- BACK BUTTON -->
+                  <button type="button" class="header__back btn btn--icon">
+                    <span class="hide">뒤로가기</span>
+                    <i class="icon icon--back" aria-hidden="true"></i>
+                  </button>
+                  <!-- TITLE -->
+                  <h1 class="header__title">타이틀</h1>
+
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--icon">
+                      <span class="hide">공유하기</span>
+                      <i class="icon icon--basic-share" aria-hidden="true"></i>
+                    </button>
+                    <div class="label label--like">
+                      <label>
+                        <input type="checkbox" name="" id="" />
+                        <span>좋아요</span>
+                      </label>
+                    </div>
+                  </div>
+                </header>
+                <!-- // -->
+
+                <!-- 전체삭제 버튼 -->
+                <header id="header" class="header">
+                  <!-- BACK BUTTON -->
+                  <button type="button" class="header__back btn btn--icon">
+                    <span class="hide">뒤로가기</span>
+                    <i class="icon icon--back" aria-hidden="true"></i>
+                  </button>
+                  <!-- TITLE -->
+                  <h1 class="header__title">타이틀</h1>
+
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--text btn--xsm btn--text-under">전체삭제</button>
+                  </div>
+                </header>
+                <!-- // -->
+
+                <!-- 사용안내 버튼 -->
+                <header id="header" class="header">
+                  <!-- BACK BUTTON -->
+                  <button type="button" class="header__back btn btn--icon">
+                    <span class="hide">뒤로가기</span>
+                    <i class="icon icon--back" aria-hidden="true"></i>
+                  </button>
+                  <!-- TITLE -->
+                  <h1 class="header__title">타이틀</h1>
+
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--text btn--xsm">사용안내</button>
+                  </div>
+                </header>
+                <!-- // -->
+
+                <!-- 사용안내 버튼 -->
+                <header id="header" class="header">
+                  <!-- BACK BUTTON -->
+                  <button type="button" class="header__back btn btn--icon">
+                    <span class="hide">뒤로가기</span>
+                    <i class="icon icon--back" aria-hidden="true"></i>
+                  </button>
+                  <!-- TITLE -->
+                  <h1 class="header__title">타이틀</h1>
+
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--text btn--xsm">1:1문의</button>
+                  </div>
+                </header>
+                <!-- // -->
+
+                <!-- 문의하기 버튼 -->
+                <header id="header" class="header">
+                  <!-- BACK BUTTON -->
+                  <button type="button" class="header__back btn btn--icon">
+                    <span class="hide">뒤로가기</span>
+                    <i class="icon icon--back" aria-hidden="true"></i>
+                  </button>
+                  <!-- TITLE -->
+                  <h1 class="header__title">타이틀</h1>
+
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--text btn--xsm">문의하기</button>
+                  </div>
+                </header>
+                <!-- // -->
+
+                <!-- 검색 -->
+                <header id="header" class="header">
+                  <!-- BACK BUTTON -->
+                  <button type="button" class="header__back btn btn--icon">
+                    <span class="hide">뒤로가기</span>
+                    <i class="icon icon--back" aria-hidden="true"></i>
+                  </button>
+                  <!-- TITLE -->
+                  <h1 class="header__title">타이틀</h1>
+
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--search" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </header>
+                <!-- // -->
+
+                <!-- 필터 기본형  -->
+                <header id="header" class="header">
+                  <!-- BACK BUTTON -->
+                  <button type="button" class="header__back btn btn--icon">
+                    <span class="hide">뒤로가기</span>
+                    <i class="icon icon--back" aria-hidden="true"></i>
+                  </button>
+                  <!-- TITLE -->
+                  <h1 class="header__title">타이틀</h1>
+
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--filter" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </header>
+                <!-- // -->
+
+                <!-- 필터 noti형  -->
+                <header id="header" class="header">
+                  <!-- BACK BUTTON -->
+                  <button type="button" class="header__back btn btn--icon">
+                    <span class="hide">뒤로가기</span>
+                    <i class="icon icon--back" aria-hidden="true"></i>
+                  </button>
+                  <!-- TITLE -->
+                  <h1 class="header__title">타이틀</h1>
+
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--icon btn--filter is-active">
+                      <i class="icon icon--filter" aria-hidden="true"></i>
+                      <span class="num">14</span>
+                    </button>
+                  </div>
+                </header>
+                <!-- // -->
+              </fieldset>
+
+              <fieldset class="guide" data-autocode>
+                <legend class="lagend">.header 싱글형</legend>
+                <header id="header" class="header">
+                  <!-- TITLE -->
+                  <h1 class="header__title">타이틀</h1>
+
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--search" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </header>
+              </fieldset>
+
+              <fieldset class="guide" data-autocode>
+                <legend class="lagend">.header 색상형</legend>
+                <header id="header" class="header bg-primary-100">
+                  <!-- TITLE -->
+                  <h1 class="header__title">타이틀</h1>
+
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--noti-black" aria-hidden="true"></i>
+                      <em class="icon icon--new">new</em>
+                    </button>
+
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--setting-black" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </header>
+              </fieldset>
+
+              <fieldset class="guide" data-autocode>
+                <legend class="lagend">.header 아이콘형</legend>
+                <header id="header" class="header">
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--home" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </header>
+              </fieldset>
+
+              <h2 class="tit-guide1">커스텀 헤더</h2>
+
+              <h3 class="tit-guide2">유형1</h3>
+
+              <fieldset class="guide" data-autocode>
+                <legend class="lagend">.header data-bar="map"</legend>
+                <header id="header" class="header" data-bar="map">
+                  <!-- TITLE -->
+                  <h1 class="header__title">
+                    <i class="icon icon--near" aria-hidden="true"></i>
+                    서울시 구로구 디지털로21
+                  </h1>
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--filter" aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--search" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </header>
+
+                <!-- 필터 noti형 -->
+                <header id="header" class="header" data-bar="map">
+                  <!-- TITLE -->
+                  <h1 class="header__title">
+                    <i class="icon icon--near" aria-hidden="true"></i>
+                    서울시 구로구 디지털로21
+                  </h1>
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <!-- SIDE -->
+                    <button type="button" class="btn btn--icon btn--filter is-active">
+                      <i class="icon icon--filter" aria-hidden="true"></i>
+                      <span class="num">14</span>
+                    </button>
+
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--search" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </header>
+                <!-- // -->
+              </fieldset>
+
+              <h3 class="tit-guide2">유형2</h3>
+
+              <fieldset class="guide" data-autocode>
+                <legend class="lagend">.header data-bar="search"</legend>
+
+                <!-- primary -->
+                <header id="header" class="header" data-bar="search">
+                  <!-- TITLE -->
+                  <h1 class="header__title">
+                    <a href="#none" class="header__title__logo">
+                      <img src="../../resources/images/com/img-logo.png" />
+                    </a>
+                  </h1>
+
+                  <div class="search-form search-form--type2 search-form--primary">
+                    <input type="text" class="search-form__input" placeholder="주소를 검색해 보세요." />
+                    <button type="button" class="search-form__button">
+                      <i class="icon icon--search-primary" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--noti-primary" aria-hidden="true"></i>
+                      <em class="icon icon--new">new</em>
+                    </button>
+                  </div>
+                </header>
+                <!-- // -->
+
+                <header id="header" class="header bg-primary-100" data-bar="search">
+                  <!-- TITLE -->
+                  <h1 class="header__title">
+                    <a href="#none" class="header__title__logo">
+                      <img src="../../resources/images/com/img-logo-white.png" />
+                    </a>
+                  </h1>
+
+                  <div class="search-form search-form--type2 search-form--white">
+                    <input type="text" class="search-form__input" placeholder="주소를 검색해 보세요." />
+                    <button type="button" class="search-form__button">
+                      <i class="icon icon--search-white" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <!-- SIDE -->
+                  <div class="header__side">
+                    <button type="button" class="btn btn--icon">
+                      <i class="icon icon--noti" aria-hidden="true"></i>
+                      <em class="icon icon--new">new</em>
+                    </button>
+                  </div>
+                </header>
+              </fieldset>
+            </div>
+            <div role="tabpanel" id="uiTabPanel2" class="tabs__panel">
+              <!-- 기본 헤더-->
+              <h2 class="tit-guide1">기본 푸터</h2>
+
+              <!-- [유형1] -->
+              <h3 class="tit-guide2">유형1</h3>
+
+              <fieldset class="guide" data-autocode>
+                <legend class="lagend">.footer</legend>
+
+                <!-- -------------------------------- -->
+                <!-- # FOOTER # -->
+                <!-- -------------------------------- -->
+                <include src="../_include/footer.html"></include>
+                <!-- -------------------------------- -->
+              </fieldset>
+            </div>
+
+            <div role="tabpanel" id="uiTabPanel3" class="tabs__panel">
+              <!-- 기본 네비게이션-->
+              <h2 class="tit-guide1">기본 네비게이션</h2>
+
+              <!-- [유형1] -->
+              <h3 class="tit-guide2">유형1</h3>
+
+              <fieldset class="guide" data-autocode>
+                <legend class="lagend">.navi</legend>
+
+                <!-- -------------------------------- -->
+                <!-- # NAVIGATION # -->
+                <!-- -------------------------------- -->
+                <include src="../_include/navBar.html"></include>
+                <!-- -------------------------------- -->
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

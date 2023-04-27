@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>가이드 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+      <main id="container">
+        <header class="hide">
+          <h1>MARKUP GUIDE | TEXT</h1>
+        </header>
+        <!-- # CONTENT # -->
+        <div class="content">
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메뉴이동] -->
+          <!-- ------------------------------------------------------------------ -->
+          <include src="./_include/nav.html"></include>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [타이틀] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">타이틀</h2>
+          <!-- 유형1 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .heading .heading--1 (32px)</legend>
+            <h4 class="heading heading--1">타이틀 <span class="heading__sub">서브타이틀</span></h4>
+          </fieldset>
+
+          <!-- 유형2------------------------------------------------------------- -->
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .heading .heading--2 .heading--line (28px)</legend>
+            <h4 class="heading heading--2">타이틀</h4>
+            <hr class="guide-line2" />
+            <h4 class="heading heading--2 heading--line">타이틀</h4>
+          </fieldset>
+
+          <!-- 유형3------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .heading .heading--3 (24px)</legend>
+            <h4 class="heading heading--3">타이틀</h4>
+          </fieldset>
+
+          <!-- 유형4------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .heading .heading--4 (20px)</legend>
+            <h4 class="heading heading--4">타이틀</h4>
+          </fieldset>
+
+          <!-- 유형5------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .heading .heading--5 (16px)</legend>
+            <h4 class="heading heading--5">타이틀</h4>
+          </fieldset>
+
+          <h2 class="tit-guide1">컨텐츠 제작시 타이틀</h2>
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .c-title (height:90px, font-size:20px)</legend>
+            <div class="c-title">
+              <i class="icon icon--sch" aria-hidden="true"></i>
+              <em>2.25(오늘)</em>
+            </div>
+            <div class="c-title">
+              <i class="icon icon--time" aria-hidden="true"></i>
+              <em>오후&nbsp;12:30</em>
+            </div>
+            <div class="c-title">
+              <i class="icon icon--course" aria-hidden="true"></i>
+              <em>코스&nbsp;선택</em>
+            </div>
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .c-title c-title-sub(height:24px, font-size:16px)</legend>
+            <div class="c-title c-title-sub">
+              <em>오후</em>
+            </div>
+            <div class="c-title c-title-sub">
+              <em>오전</em>
+            </div>
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형3 : .c-title c-title-group(height:90px, font-size:20px)</legend>
+            <div class="c-title c-title-group">
+              <div class="c-title__rt">
+                <button type="button" class="btn btn--text">전체삭제</button>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형4 : .c-title c-title-group (font-size:{util}px)</legend>
+            <div class="c-title c-title-group jc-between">
+              <div class="c-title__lt">
+                <em class="text-5">타이틀 20px</em>
+              </div>
+              <div class="c-title__rt">
+                <button type="button" class="btn btn--text btn--text-under">더보기</button>
+              </div>
+            </div>
+
+            <div class="c-title c-title-group jc-between">
+              <div class="c-title__lt">
+                <em class="text-6">타이틀 22px</em>
+              </div>
+              <div class="c-title__rt">
+                <button type="button" class="btn btn--text btn--text-under">더보기</button>
+              </div>
+            </div>
+
+            <div class="c-title c-title-group jc-between">
+              <div class="c-title__lt">
+                <em class="text-7">타이틀 24px</em>
+              </div>
+              <div class="c-title__rt">
+                <button type="button" class="btn btn--text btn--text-under">더보기</button>
+              </div>
+            </div>
+
+            <div class="c-title c-title-group jc-between">
+              <div class="c-title__lt">
+                <em class="text-8">타이틀 26px</em>
+              </div>
+              <div class="c-title__rt">
+                <button type="button" class="btn btn--text btn--text-under">더보기</button>
+              </div>
+            </div>
+
+            <div class="c-title c-title-group jc-between">
+              <div class="c-title__lt">
+                <em class="text-9">타이틀 28px</em>
+              </div>
+              <div class="c-title__rt">
+                <button type="button" class="btn btn--text btn--text-under">더보기</button>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형5 : .c-title c-title-group c-title--t2 (margin-bottom:18px, font-size:{util}px)</legend>
+            <div class="c-title c-title-group c-title--t2 jc-between">
+              <div class="c-title__lt">
+                <em class="text-6">타이틀 하단 여백</em>
+              </div>
+              <div class="c-title__rt">
+                <button type="button" class="btn btn--text btn--text-under">더보기</button>
+              </div>
+            </div>
+
+            <div class="c-title c-title-group c-title--t2 jc-between">
+              <div class="c-title__lt">
+                <em class="text-7">타이틀 하단 여백</em>
+              </div>
+              <div class="c-title__rt">
+                <button type="button" class="btn btn--text btn--text-under">더보기</button>
+              </div>
+            </div>
+
+            <div class="c-title c-title-group c-title--t2 jc-between">
+              <div class="c-title__lt">
+                <em class="text-8">타이틀 하단 여백</em>
+              </div>
+              <div class="c-title__rt">
+                <button type="button" class="btn btn--text btn--text-under">더보기</button>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [기본] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">기본</h2>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .text .text--md</legend>
+            <p class="text">하이타이하이타이하이타이</p>
+            <p class="text text--md">하이타이에서는 리얼 후기 등록을 원칙으로 하고 있습니다. 실제 이용하셨음에도 불구하고 이용 후기 작성에 제한이 있으시면 아래 내용을 확인해 주세요.</p>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [컬러] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">강조문구 컬러</h2>
+          <!-- 유형1 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .text-color{number}</legend>
+            <p>하이타이하이타이 <strong class="text-primary-100">하이타이 강조문구</strong></p>
+            <p>하이타이하이타이 <strong class="text-sub-100">하이타이 강조문구</strong></p>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [블릿유형] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">블릿유형</h2>
+          <!-- [유형1] -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .text-list</legend>
+            <ul class="text-list">
+              <li class="text-list__item">하이타이 <strong>하이타이</strong> 하이타이 하이타이</li>
+              <li class="text-list__item">하이타이 <em>하이타이</em> 하이타이 하이타이</li>
+              <li class="text-list__item">하이타이 <a href="#" class="link-t1">하이타이</a> 하이타이 하이타이</li>
+            </ul>
+            <hr class="guide-line2" />
+            <dl class="text-list">
+              <dt class="text-list__title">하이타이</dt>
+              <dd class="text-list__item">하이타이 <strong>하이타이</strong> 하이타이 하이타이</dd>
+              <dd class="text-list__item">하이타이 <em>하이타이</em> 하이타이 하이타이</dd>
+              <dd class="text-list__item">하이타이 <a href="#" class="ddnk-t1">하이타이</a> 하이타이 하이타이</dd>
+            </dl>
+          </fieldset>
+          <!-- [유형1] -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .text-list .text-list--bullet1</legend>
+            <ul class="text-list text-list--bullet1">
+              <li class="text-list__item">하이타이 <strong>하이타이</strong> 하이타이 하이타이</li>
+              <li class="text-list__item">하이타이 <em>하이타이</em> 하이타이 하이타이</li>
+              <li class="text-list__item">하이타이 <a href="#" class="link-t1">하이타이</a> 하이타이 하이타이</li>
+            </ul>
+            <hr class="guide-line2" />
+            <dl class="text-list text-list--bullet1">
+              <dt class="text-list__title">하이타이</dt>
+              <dd class="text-list__item">하이타이 <strong>하이타이</strong> 하이타이 하이타이</dd>
+              <dd class="text-list__item">하이타이 <em>하이타이</em> 하이타이 하이타이</dd>
+              <dd class="text-list__item">하이타이 <a href="#" class="ddnk-t1">하이타이</a> 하이타이 하이타이</dd>
+            </dl>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메시지문구] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">메시지문구</h2>
+          <!-- 유형1 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .mes-text</legend>
+            <p class="mes-text">카카오톡(으)로 가입한 계정이 있습니다.<br />해당 SNS로 로그인해 주세요.</p>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [결과문구] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">결과문구</h2>
+          <!-- 유형1 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .mes-result</legend>
+            <div class="mes-result">
+              <p><strong>‘구로’</strong>검색 결과가 <strong>236</strong>건 있습니다.</p>
+            </div>
+          </fieldset>
+
+          <!-- 유형2 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형2 : .mes-result .mes-result--nodata</legend>
+            <div class="mes-result mes-result--nodata">
+              <p>진행중인 예약이 없습니다.</p>
+            </div>
+          </fieldset>
+
+          <!-- 유형3 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형3 : .mes-result .mes-result--confirm</legend>
+            <div class="mes-result mes-result--confirm">
+              <p>
+                ‘구로디지털 청담타이마사지’ <br />
+                이용 내역을 확인해 주세요.
+              </p>
+            </div>
+          </fieldset>
+
+          <!-- 유형3 ------------------------------------------------------------- -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형3 : .mes-result .mes-result--confirm</legend>
+            <div class="mes-result mes-result--complete">
+              <p>예약 신청이 완료되었습니다.</p>
+              <p>제휴점에서 예약이 확정되면 앱 알림으로 알려 드립니다.</p>
+            </div>
+          </fieldset>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [Badges] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">Badges</h2>
+          <!-- [유형1] -->
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .badges</legend>
+            <em class="badges badges--sm badges--c1">타임할인</em>
+            <em class="badges badges--sm badges--c2">스탬프</em>
+            <em class="badges badges--sm badges--c3 badges--hipass"><span>하이패스</span></em>
+            <em class="badges badges--sm badges--c4">이벤트</em>
+            <em class="badges badges--sm badges--c5">타임할인</em>
+            <em class="badges badges--sm badges--c6">예약신청</em>
+            <em class="badges badges--sm badges--c7">예약확정</em>
+            <em class="badges badges--sm badges--c8">관리중</em>
+            <em class="badges badges--sm badges--c9">이용완료</em>
+            <em class="badges badges--sm badges--c10">예약취소</em>
+
+            <hr class="guide-line2" />
+            <em class="badges badges--lg badges--c1">예약신청</em>
+            <em class="badges badges--lg badges--c2">예약확정</em>
+            <em class="badges badges--lg badges--c3">관리중</em>
+            <em class="badges badges--lg badges--c4">이용완료</em>
+            <em class="badges badges--lg badges--c5">예약취소</em>
+            <em class="badges badges--lg badges--c6">예약신청</em>
+            <em class="badges badges--lg badges--c7">예약확정</em>
+            <em class="badges badges--lg badges--c8">관리중</em>
+            <em class="badges badges--lg badges--c9">이용완료</em>
+            <em class="badges badges--lg badges--c10">예약취소</em>
+          </fieldset>
+        </div>
+        <!-- # // # -->
+      </main>
+    </div>
+  </body>
+</html>

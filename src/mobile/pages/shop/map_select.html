@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>지도선택팝업 | 제휴점 | 내주변 - hitai</title>
+    <include src="../_include/head.html"></include>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header">
+        <!-- BACK BUTTON -->
+        <button type="button" class="header__back btn btn--icon">
+          <span class="hide">뒤로가기</span>
+          <i class="icon icon--back" aria-hidden="true"></i>
+        </button>
+        <!-- TITLE -->
+        <h1 class="header__title"></h1>
+      </header>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- CONTENT -->
+        <div class="content">
+          <div class="l-row">
+            <br /><br /><br />
+            <button type="button" data-dialog-trigger="#uiMySpot" aria-haspopup="dialog">
+              <span> 지도선택팝업</span>
+            </button>
+          </div>
+        </div>
+        <!-- // -->
+      </main>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- ---------------------------------------------------------- -->
+      <div role="dialog" class="modal modal--bottom" id="uiMySpot">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <div class="btn-area btn-row">
+                <button type="button" class="btn btn--with btn--light">
+                  <span class="text-dark-200">카카오 내비</span>
+                </button>
+                <button type="button" class="btn btn--with btn--light">
+                  <span class="text-dark-200">지도보기</span>
+                </button>
+                <button type="button" class="btn btn--with btn--light">
+                  <span class="text-dark-200">주소복사</span>
+                </button>
+              </div>
+            </div>
+            <!-- [//] -->
+          </section>
+        </div>
+      </div>
+      <!-- ---------------------------------------------------------- -->
+    </div>
+    <script>
+      document.addEventListener('UILoaded', function () {
+        var dialog = document.querySelector('#uiMySpot');
+        var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+        dialogInstance.open();
+      });
+    </script>
+  </body>
+</html>

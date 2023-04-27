@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>회원정보입력 | 회원가입 - hitai</title>
+    <include src="../_include/head.html"></include>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header">
+        <!-- BACK BUTTON -->
+        <button type="button" class="header__back btn btn--icon">
+          <span class="hide">뒤로가기</span>
+          <i class="icon icon--back" aria-hidden="true"></i>
+        </button>
+        <!-- TITLE -->
+        <h1 class="header__title">회원가입</h1>
+      </header>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- CONTENT -->
+        <div class="content">
+          <div class="l-row">
+            <div class="account">
+              <!-- STEP -->
+              <div class="step step--basic">
+                <ol class="step__list">
+                  <li class="step__item">
+                    <span class="hide">1단계 약관동의</span>
+                  </li>
+                  <li class="step__item">
+                    <span class="hide">2단계 휴대폰 인증</span>
+                  </li>
+                  <li class="step__item" aria-current="step">
+                    <span class="hide">3단계 회원정보 입력</span>
+                  </li>
+                </ol>
+              </div>
+              <!-- TITLE -->
+              <div class="account__title">
+                <h2 class="heading heading--5">회원정보 입력</h2>
+                <p>아래 정보를 입력해 주세요.</p>
+              </div>
+              <!-- FORM -->
+              <fieldset class="form">
+                <legend>회원정보입력</legend>
+                <div class="form-field">
+                  <label class="text text--ssm" for="field1">아이디(이메일)</label>
+                  <input type="text" id="field1" class="input input--xmd" placeholder="hitai@example.com" />
+                  <span class="text-validation">이메일 주소를 입력해 주세요.</span>
+                </div>
+                <div class="form-field">
+                  <label class="text text--ssm" for="field2">비밀번호</label>
+                  <div class="input-wrap input-wrap--password">
+                    <input type="password" id="field2" class="input input--xmd" placeholder="비밀번호(최소 8자 이상)" />
+                    <button type="button" class="icon icon--eye" data-toggle-btn>비밀번호보기</button>
+                  </div>
+                  <span class="text-validation">비밀번호는 8자리 이상 20자리 이하로<br />영문/숫자/특수문자를 조합해서 설정해 주세요.</span>
+                </div>
+                <div class="form-field">
+                  <label class="text text--ssm" for="field3">비밀번호 확인</label>
+                  <div class="input-wrap input-wrap--password">
+                    <input type="password" id="field3" class="input input--xmd" placeholder="비밀번호 다시 입력" />
+                    <button type="button" class="icon icon--eye" data-toggle-btn>비밀번호보기</button>
+                  </div>
+                  <span class="text-validation">비밀번호가 일치하지 않습니다.</span>
+                </div>
+              </fieldset>
+              <!-- BUTTON -->
+              <div class="account__btn">
+                <button type="button" class="btn btn--primary btn--xmd">회원가입</button>
+              </div>
+              <!-- // -->
+            </div>
+          </div>
+        </div>
+        <!-- // -->
+      </main>
+      <!-- ---------------------------------------------------------- -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>마이페이지 | 마이페이지 조회 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # SKIP # -->
+      <!-- ---------------------------------------------------------- -->
+      <div class="nav-skip"><a href="#container">본문바로가기</a></div>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-my" data-skeloder>
+            <span class="hide">마이페이지</span>
+            <!-- # 로그아웃 시 -->
+            <!-- <div class="l-my__wrap">
+              <div class="l-my__log">
+                <a class="l-my__log-tt" href="#none"><b>로그인/회원가입하기</b></a>
+                <p class="l-my__log-st">
+                  회원가입시 <span>1,000<em class="unit">P</em></span>
+                  즉시 적립
+                </p>
+              </div>
+              <div class="l-my__box l-my__point">
+                <div class="l-my__box-t2">
+                  <i class="icon icon--point-dark" aria-hidden="true"></i>
+                  <p class="l-my__point-tt">
+                    <b>내 포인트</b>
+                    <i role="button" class="icon icon--info-sm" aria-hidden="true"></i>
+                  </p>
+                  <p class="l-my__point-st">
+                    소멸예정&nbsp;<span class="l-my__point-num">0<em class="unit">P</em></span>
+                  </p>
+                </div>
+                <p class="l-my__num">0<em class="unit">P</em></p>
+              </div>
+              <div class="l-my__box l-my__coupon">
+                <div class="l-my__box-t2">
+                  <i class="icon icon--coupon-dark" aria-hidden="true"></i>
+                  <p class="l-my__coupon-tt"><b>내 쿠폰</b></p>
+                </div>
+                <p class="l-my__num">0<em class="unit">장</em></p>
+              </div>
+            </div> -->
+            <!-- # -->
+            <!-- # 로그인 시 -->
+            <div class="l-my__wrap">
+              <div class="l-my__log">
+                <div class="l-my__profile">
+                  <button type="button" class="btn btn--icon" aria-label="프로필 변경 버튼">
+                    <i class="icon icon-user--user1-lg" aria-hidden="true"></i>
+                    <i class="icon icon--apple-dark" aria-hidden="true"></i>
+                  </button>
+                  <div class="l-my__profile-con">
+                    <p class="l-my__profile-text1">앗살람 알라이쿰 사와디캅님 반갑습니다!</p>
+                    <a class="l-my__profile-anchor" href="#none">Apple 계정 로그인</a>
+                  </div>
+                </div>
+              </div>
+              <div class="l-my__box l-my__point">
+                <div class="l-my__box-t2">
+                  <i class="icon icon--point-dark" aria-hidden="true"></i>
+                  <p class="l-my__point-tt">
+                    <b>내 포인트</b>
+                    <i role="button" class="icon icon--info-sm" aria-hidden="true"></i>
+                  </p>
+                  <p class="l-my__point-st">
+                    소멸예정&nbsp;<span class="l-my__point-num">320<em class="unit">P</em></span>
+                    <span class="l-my__date">(2023.12.31)</span>
+                  </p>
+                </div>
+                <p class="l-my__num">30,000<em class="unit">P</em></p>
+              </div>
+              <div class="l-my__box l-my__coupon">
+                <div class="l-my__box-t2">
+                  <i class="icon icon--coupon-dark" aria-hidden="true"></i>
+                  <p class="l-my__coupon-tt"><b>내 쿠폰</b></p>
+                </div>
+                <p class="l-my__num">3<em class="unit">장</em></p>
+              </div>
+            </div>
+            <!-- # -->
+          </div>
+          <div class="l-row">
+            <div class="l-box l-box--flex">
+              <div class="l-box__group-t2 l-box__group-lt">
+                <!-- #서브 컨텐츠 메뉴 -->
+                <div class="snb" data-skeloder>
+                  <ul>
+                    <li>
+                      <a href="#none"><i class="icon icon--s-reserv" aria-hidden="true"></i>하이패스(내 예약)</a>
+                      <ul>
+                        <li>
+                          <a href="#none">진행중<em class="num">(3)</em></a>
+                        </li>
+                        <li>
+                          <a href="#none">과거예약 내역<em class="num">(3)</em></a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#none"> <i class="icon icon--s-shop" aria-hidden="true"></i>내 제휴점</a>
+                      <ul>
+                        <li>
+                          <a href="#none">좋아요 제휴점</a>
+                        </li>
+                        <li>
+                          <a href="#none">최근 본 제휴점</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#none"><i class="icon icon--s-event" aria-hidden="true"></i>이벤트</a>
+                    </li>
+                    <li>
+                      <a href="#none"><i class="icon icon--s-stamp" aria-hidden="true"></i>내 스탬프</a>
+                    </li>
+                    <li>
+                      <a href="#none"><i class="icon icon--s-review" aria-hidden="true"></i>내 이용후기</a>
+                    </li>
+                    <li>
+                      <a href="#none"><i class="icon icon--s-invite" aria-hidden="true"></i>친구초대</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- #-->
+
+                <!-- # 퀵 메뉴 -->
+                <div class="q-menu">
+                  <ul>
+                    <li>
+                      <a href="#none">공지사항</a>
+                    </li>
+                    <li>
+                      <a href="#none">이용안내 FAQ</a>
+                    </li>
+                    <li>
+                      <a href="#none">내 정보 수정</a>
+                    </li>
+                    <li>
+                      <a href="#none">약관 및 정책</a>
+                    </li>
+                    <li>
+                      <a href="#none">제휴점 관리자 페이지</a>
+                    </li>
+                    <li>
+                      <a href="#none">로그아웃</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- # -->
+              </div>
+              <div class="l-box__group-t2 l-box__group-rt">
+                <!-- # 하이패스 내 예약 현황-->
+                <div class="c-title c-title-group c-title--t2 jc-between">
+                  <div class="c-title__lt">
+                    <h2 class="text-6"><b>하이패스 (내 예약현황)</b></h2>
+                  </div>
+                  <div class="c-title__rt">
+                    <button type="button" class="btn btn--text btn--text-under">더보기</button>
+                  </div>
+                </div>
+                <table class="table table--type1 table--bd-none">
+                  <colgroup>
+                    <col width="60%" />
+                    <col width="25%" />
+                    <col width="15%" />
+                  </colgroup>
+                  <caption>
+                    하이패스(내 예약현황)정보
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">예약제휴점/예약코스</th>
+                      <th scope="col">예약시간</th>
+                      <th scope="col">결제금액</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="pay pay--t2">
+                      <td class="pay__com">
+                        <a href="#none">
+                          <div class="pay__com-thumnail">
+                            <img src="http://placehold.it/150x100" />
+                          </div>
+                          <div class="pay__com-info">
+                            <em class="badges badges--lg badges--c6">예약신청</em>
+                            <p class="pay__com-name">
+                              <b>구로디지털 코코스웨디시&아로마</b>
+                            </p>
+                            <p class="pay__com-text">타이관리 - 60분 (1건) 외</p>
+                          </div>
+                        </a>
+                      </td>
+                      <td>
+                        <span class="text-4">2023.07.26(화) 오후 01:00</span>
+                      </td>
+                      <td>
+                        <b class="text-4">30,000<em class="unit">원</em> </b>
+                      </td>
+                    </tr>
+                    <tr class="pay pay--t2">
+                      <td class="pay__com">
+                        <a href="#none">
+                          <div class="pay__com-thumnail">
+                            <img src="http://placehold.it/150x100" />
+                          </div>
+                          <div class="pay__com-info">
+                            <em class="badges badges--lg badges--c8">관리중</em>
+                            <p class="pay__com-name">
+                              <b>구로디지털 코코스웨디시&아로마</b>
+                            </p>
+                            <p class="pay__com-text">타이관리 - 60분 (1건) 외</p>
+                          </div>
+                        </a>
+                      </td>
+                      <td>
+                        <span class="text-4">2023.07.26(화) 오후 01:00</span>
+                      </td>
+                      <td>
+                        <b class="text-4">50,000<em class="unit">원</em> </b>
+                      </td>
+                    </tr>
+                    <tr class="pay pay--t2">
+                      <td class="pay__com">
+                        <a href="#none">
+                          <div class="pay__com-thumnail">
+                            <img src="http://placehold.it/150x100" />
+                          </div>
+                          <div class="pay__com-info">
+                            <em class="badges badges--lg badges--c7">예약확정</em>
+                            <p class="pay__com-name">
+                              <b>구로디지털 하이타이</b>
+                            </p>
+                            <p class="pay__com-text">타이관리 - 60분 (1건) 외</p>
+                          </div>
+                        </a>
+                      </td>
+                      <td>
+                        <span class="text-4">2023.07.26(화) 오후 01:00</span>
+                      </td>
+                      <td>
+                        <b class="text-4">28,000<em class="unit">원</em> </b>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- # -->
+
+                <!-- # 좋아요 제휴점 -->
+                <div class="c-title c-title-group c-title--t2 jc-between">
+                  <div class="c-title__lt">
+                    <h2 class="text-6"><b>좋아요 제휴점</b></h2>
+                  </div>
+                  <div class="c-title__rt">
+                    <button type="button" class="btn btn--text btn--text-under">더보기</button>
+                  </div>
+                </div>
+                <div class="grid grid--line">
+                  <div class="store-list store-list--card">
+                    <ul class="store-list__inner">
+                      <!-- 목록하나 -->
+                      <li class="store-list__item">
+                        <a href="" class="store-list__anchor">
+                          <div class="store-list__img">
+                            <img src="http://placehold.it/290x200" alt="구로디지털 하이타이 마사지" />
+                          </div>
+                          <div class="store-list__con">
+                            <!-- 할인정보 -->
+                            <div class="store-list__label">
+                              <em class="badges badges--sm badges--c2">스탬프</em>
+                            </div>
+                            <!-- 영업점명 -->
+                            <strong class="store-list__title">구로디지털 하이타이 마사지 구로디지털 하이타이 마사지</strong>
+                            <!-- 영업점 정보 -->
+                            <div class="store-util">
+                              <span class="store-util__item">
+                                <span class="hide">평점</span>
+                                <i class="icon icon--star" aria-hidden="true"></i>
+                                <em class="store-util__text">9.3(30)</em>
+                              </span>
+                              <span class="store-util__item">
+                                <span class="hide">좋아요</span>
+                                <i class="icon icon--like" aria-hidden="true"></i>
+                                <em class="store-util__text">3758</em>
+                              </span>
+                              <span class="store-util__item">
+                                <span class="hide">거리</span>
+                                <i class="icon icon--distance" aria-hidden="true"></i>
+                                <em class="store-util__text">375m</em>
+                              </span>
+                            </div>
+                            <!-- 영업점 가격정보 -->
+                            <div class="store-list__info">
+                              <ul class="info-price">
+                                <!-- // -->
+                                <li class="info-price__item">
+                                  <em class="info-price__title">타이 관리 - 60분</em>
+                                  <div class="info-price__con">
+                                    <span class="info-price__text1"> <span class="hide">기존가</span>000,000<span class="info-price__unit">원</span> </span>
+                                    <span class="info-price__text2">
+                                      <span class="hide">할인가</span>
+                                      <em>50%</em>
+                                      <strong class="text-dark-100">000,000<span class="info-price__unit">원</span> </strong>
+                                    </span>
+                                  </div>
+                                </li>
+                                <!-- // -->
+                                <li class="info-price__item">
+                                  <em class="info-price__title">건식스포츠관리 - 60분</em>
+                                  <div class="info-price__con">
+                                    <span class="info-price__text1"> <span class="hide">기존가</span>000,000<span class="info-price__unit">원</span> </span>
+                                    <span class="info-price__text2">
+                                      <span class="hide">할인가</span>
+                                      <em>50%</em>
+                                      <strong>000,000<span class="info-price__unit">원</span> </strong>
+                                    </span>
+                                  </div>
+                                </li>
+                                <!-- // -->
+                              </ul>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- // -->
+                      <!-- 목록 둘 -->
+                      <li class="store-list__item">
+                        <a href="" class="store-list__anchor">
+                          <div class="store-list__img">
+                            <img src="http://placehold.it/290x200" alt="구로디지털 하이타이 마사지" />
+                          </div>
+                          <div class="store-list__con">
+                            <!-- 할인정보 -->
+                            <div class="store-list__label">
+                              <em class="badges badges--sm badges--c3 badges--hipass">
+                                <span>하이패스</span>
+                              </em>
+                            </div>
+                            <!-- 영업점명 -->
+                            <strong class="store-list__title">구로디지털 하이타이 마사지</strong>
+                            <!-- 영업점 정보 -->
+                            <div class="store-util">
+                              <span class="store-util__item">
+                                <span class="hide">평점</span>
+                                <i class="icon icon--star" aria-hidden="true"></i>
+                                <em class="store-util__text">9.3(30)</em>
+                              </span>
+                              <span class="store-util__item">
+                                <span class="hide">좋아요</span>
+                                <i class="icon icon--like" aria-hidden="true"></i>
+                                <em class="store-util__text">3758</em>
+                              </span>
+                              <span class="store-util__item">
+                                <span class="hide">거리</span>
+                                <i class="icon icon--distance" aria-hidden="true"></i>
+                                <em class="store-util__text">375m</em>
+                              </span>
+                            </div>
+                            <!-- 영업점 가격정보 -->
+                            <div class="store-list__info">
+                              <ul class="info-price">
+                                <!-- // -->
+                                <li class="info-price__item">
+                                  <em class="info-price__title">타이 관리 - 60분</em>
+                                  <div class="info-price__con">
+                                    <span class="info-price__text1"> <span class="hide">기존가</span>000,000<span class="info-price__unit">원</span> </span>
+                                    <span class="info-price__text2">
+                                      <span class="hide">할인가</span>
+                                      <em>50%</em>
+                                      <strong class="text-dark-100">000,000<span class="info-price__unit">원</span> </strong>
+                                    </span>
+                                  </div>
+                                </li>
+                                <!-- // -->
+                                <li class="info-price__item">
+                                  <em class="info-price__title">건식스포츠관리 - 60분</em>
+                                  <div class="info-price__con">
+                                    <span class="info-price__text1"> <span class="hide">기존가</span>000,000<span class="info-price__unit">원</span> </span>
+                                    <span class="info-price__text2">
+                                      <span class="hide">할인가</span>
+                                      <em>50%</em>
+                                      <strong>000,000<span class="info-price__unit">원</span> </strong>
+                                    </span>
+                                  </div>
+                                </li>
+                                <!-- // -->
+                              </ul>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- // -->
+                      <!-- 목록 셋 -->
+                      <li class="store-list__item">
+                        <a href="" class="store-list__anchor">
+                          <div class="store-list__img">
+                            <img src="http://placehold.it/290x200" alt="구로디지털 하이타이 마사지" />
+                          </div>
+                          <div class="store-list__con">
+                            <!-- 할인정보 -->
+                            <div class="store-list__label">
+                              <em class="badges badges--sm badges--c3 badges--hipass">
+                                <span>하이패스</span>
+                              </em>
+                            </div>
+                            <!-- 영업점명 -->
+                            <strong class="store-list__title">구로디지털 하이타이 마사지</strong>
+                            <!-- 영업점 정보 -->
+                            <div class="store-util">
+                              <span class="store-util__item">
+                                <span class="hide">평점</span>
+                                <i class="icon icon--star" aria-hidden="true"></i>
+                                <em class="store-util__text">9.3(30)</em>
+                              </span>
+                              <span class="store-util__item">
+                                <span class="hide">좋아요</span>
+                                <i class="icon icon--like" aria-hidden="true"></i>
+                                <em class="store-util__text">3758</em>
+                              </span>
+                              <span class="store-util__item">
+                                <span class="hide">거리</span>
+                                <i class="icon icon--distance" aria-hidden="true"></i>
+                                <em class="store-util__text">375m</em>
+                              </span>
+                            </div>
+                            <!-- 영업점 가격정보 -->
+                            <div class="store-list__info">
+                              <ul class="info-price">
+                                <!-- // -->
+                                <li class="info-price__item">
+                                  <em class="info-price__title">타이 관리 - 60분</em>
+                                  <div class="info-price__con">
+                                    <span class="info-price__text1"> <span class="hide">기존가</span>000,000<span class="info-price__unit">원</span> </span>
+                                    <span class="info-price__text2">
+                                      <span class="hide">할인가</span>
+                                      <em>50%</em>
+                                      <strong class="text-dark-100">000,000<span class="info-price__unit">원</span> </strong>
+                                    </span>
+                                  </div>
+                                </li>
+                                <!-- // -->
+                                <li class="info-price__item">
+                                  <em class="info-price__title">건식스포츠관리 - 60분</em>
+                                  <div class="info-price__con">
+                                    <span class="info-price__text1"> <span class="hide">기존가</span>000,000<span class="info-price__unit">원</span> </span>
+                                    <span class="info-price__text2">
+                                      <span class="hide">할인가</span>
+                                      <em>50%</em>
+                                      <strong>000,000<span class="info-price__unit">원</span> </strong>
+                                    </span>
+                                  </div>
+                                </li>
+                                <!-- // -->
+                              </ul>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- // -->
+                    </ul>
+                  </div>
+                </div>
+                <!-- # -->
+
+                <!-- # 진행중 이벤트 -->
+                <div class="c-title c-title-group c-title--t2 jc-between">
+                  <div class="c-title__lt">
+                    <h2 class="text-6"><b>진행중 이벤트</b></h2>
+                  </div>
+                  <div class="c-title__rt">
+                    <button type="button" class="btn btn--text btn--text-under">더보기</button>
+                  </div>
+                </div>
+
+                <div class="l-box">
+                  <div class="event-list">
+                    <ul>
+                      <li class="event-list__item">
+                        <a href="#none">
+                          <div class="event-list__thumnail">
+                            <img src="http://placehold.it/470x235" />
+                          </div>
+                          <div class="event-list__con">
+                            <strong class="event-list__title">첫결제, 5천원 할인쿠폰증정</strong>
+                            <p class="event-list__text1">2022.12.27 ~ 하이패스 런칭시까지</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="event-list__item">
+                        <a href="#none">
+                          <div class="event-list__thumnail">
+                            <img src="http://placehold.it/470x235" />
+                          </div>
+                          <div class="event-list__con">
+                            <strong class="event-list__title">하이타이 회원 누구나, 5만원 할인 쿠폰팩 증정</strong>
+                            <p class="event-list__text1">2022.12.27 ~ 하이패스 런칭시까지</p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- # -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/inquery.html"></include>
+      <!-- -------------------------------- -->
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+    </div>
+  </body>
+</html>

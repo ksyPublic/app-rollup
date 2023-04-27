@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>지역별 선택 화면시(시도/구군) | 지역 - hitai</title>
+    <include src="../_include/head.html"></include>
+  </head>
+
+  <body data-page-scroll="false">
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header">
+        <!-- BACK BUTTON -->
+        <button type="button" class="header__back btn btn--icon">
+          <span class="hide">뒤로가기</span>
+          <i class="icon icon--back" aria-hidden="true"></i>
+        </button>
+        <!-- TITLE -->
+        <h1 class="header__title">지역</h1>
+        <!-- SIDE -->
+        <div class="header__side">
+          <button type="button" class="btn btn--icon">
+            <i class="icon icon--search" aria-hidden="true"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- CONTENT -->
+        <div class="content">
+          <div class="l-region">
+            <div class="tabs tabs--type1" data-autoset="tab">
+              <!-- TAB -->
+              <ul role="tablist" class="tabs__list">
+                <li class="tabs__item"><a role="tab" href="#uiTabRegion" aria-selected="true">지역별</a></li>
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabStation">역주변</a>
+                </li>
+              </ul>
+              <!-- TABPANEL DEPTH1 : 지역별 -->
+              <div role="tabpanel" id="uiTabRegion" class="tabs__panel is-active">
+                <div class="tabs tabs--region" data-autoset="tab">
+                  <!-- TAB -->
+                  <ul role="tablist" class="tabs__list">
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-1" aria-selected="true">서울</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-2">경기</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-3">인천</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-4">강원</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-5">대전</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-6">충북</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-7">충남/세종</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-8">부산</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-9">경남</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-10">대구</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-11">경북</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-12">광주</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-13">전남</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-14">전주/전북</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabRegion1-15">제주</a></li>
+                  </ul>
+                  <!-- TABPANEL : 지역별(서울) -->
+                  <div role="tabpanel" id="uiTabRegion1-1" class="tabs__panel is-active">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">서울</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                  <!-- TABPANEL : 지역별(경기) -->
+                  <div role="tabpanel" id="uiTabRegion1-2" class="tabs__panel">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">경기</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                  <!-- TABPANEL : 지역별(인천) -->
+                  <div role="tabpanel" id="uiTabRegion1-3" class="tabs__panel">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">인천</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                  <!-- TABPANEL : 지역별(강원) -->
+                  <div role="tabpanel" id="uiTabRegion1-4" class="tabs__panel">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">강원</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                  <!-- TABPANEL : 지역별(대전) -->
+                  <div role="tabpanel" id="uiTabRegion1-5" class="tabs__panel">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">대전</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                  <!-- TABPANEL : 지역별(충북) -->
+                  <div role="tabpanel" id="uiTabRegion1-6" class="tabs__panel">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">충북</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                  <!-- TABPANEL : 지역별(충남/세종) -->
+                  <div role="tabpanel" id="uiTabRegion1-7" class="tabs__panel">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">충남/세종</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                  <!-- TABPANEL : 지역별(부산) -->
+                  <div role="tabpanel" id="uiTabRegion1-8" class="tabs__panel">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">부산</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                  <!-- TABPANEL : 지역별(경남) -->
+                  <div role="tabpanel" id="uiTabRegion1-9" class="tabs__panel">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">경남</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                  <!-- TABPANEL : 지역별(대구) -->
+                  <div role="tabpanel" id="uiTabRegion1-10" class="tabs__panel">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">대구</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                  <!-- TABPANEL : 지역별(경북) -->
+                  <div role="tabpanel" id="uiTabRegion1-11" class="tabs__panel">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">경북</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                  <!-- TABPANEL : 지역별(광주) -->
+                  <div role="tabpanel" id="uiTabRegion1-12" class="tabs__panel">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">광주</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                  <!-- TABPANEL : 지역별(전남) -->
+                  <div role="tabpanel" id="uiTabRegion1-13" class="tabs__panel">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">전남</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                  <!-- TABPANEL : 지역별(전주/전북) -->
+                  <div role="tabpanel" id="uiTabRegion1-14" class="tabs__panel">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">전주/전북</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                  <!-- TABPANEL : 지역별(제주) -->
+                  <div role="tabpanel" id="uiTabRegion1-15" class="tabs__panel">
+                    <ul class="list-group">
+                      <li class="list-group__item">
+                        <a href="#none" class="list-group__anchor"><em class="list-group__info">제주</em> 추천 제휴점</a>
+                      </li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">강남 · 서초</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">송파 · 강동</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">관악 · 동작</a></li>
+                      <li class="list-group__item"><a href="#none" class="list-group__anchor">영등포 · 구로 · 금천</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TABPANEL DEPTH1 : 역주변 -->
+              <div role="tabpanel" id="uiTabStation" class="tabs__panel station">
+                <div class="tabs tabs--type2" data-autoset="tab">
+                  <!-- TAB -->
+                  <ul role="tablist" class="tabs__list">
+                    <li class="tabs__item"><a role="tab" href="#uiTabStation1-1" aria-selected="true">수도권</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabStation1-2">부산</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabStation1-3">대구</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabStation1-4">대전</a></li>
+                    <li class="tabs__item"><a role="tab" href="#uiTabStation1-5">광주</a></li>
+                  </ul>
+                  <!-- TABPANEL DEPTH2 : 수도권 -->
+                  <div role="tabpanel" id="uiTabStation1-1" class="tabs__panel is-active">
+                    <div class="tabs tabs--region" data-autoset="tab">
+                      <!-- TAB -->
+                      <div role="tablist" class="tabs__list">
+                        <ul>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation2-1" aria-selected="true">1호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation2-2">2호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation2-3">3호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation2-4">4호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation2-5">5호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation2-6">6호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation2-7">7호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation2-8">8호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation2-9">9호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation2-10">인천1</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation2-11">인천2</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation2-12">경춘</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation2-13">경의중앙</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation2-14">수인분당</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 1호선 -->
+                      <div role="tabpanel" id="uiTabStation2-1" class="tabs__panel is-active">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">1호선</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가능역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가산디지털단지역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">간석역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">개봉역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">관악역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 2호선 -->
+                      <div role="tabpanel" id="uiTabStation2-2" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">2호선</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가능역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가산디지털단지역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">간석역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">개봉역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">관악역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 3호선 -->
+                      <div role="tabpanel" id="uiTabStation2-3" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">3호선</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가능역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가산디지털단지역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">간석역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">개봉역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">관악역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 4호선 -->
+                      <div role="tabpanel" id="uiTabStation2-4" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">4호선</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가능역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가산디지털단지역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">간석역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">개봉역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">관악역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 5호선 -->
+                      <div role="tabpanel" id="uiTabStation2-5" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">5호선</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가능역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가산디지털단지역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">간석역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">개봉역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">관악역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 6호선 -->
+                      <div role="tabpanel" id="uiTabStation2-6" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">6호선</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가능역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가산디지털단지역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">간석역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">개봉역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">관악역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 7호선 -->
+                      <div role="tabpanel" id="uiTabStation2-7" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">7호선</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가능역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가산디지털단지역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">간석역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">개봉역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">관악역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 8호선 -->
+                      <div role="tabpanel" id="uiTabStation2-8" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">8호선</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가능역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가산디지털단지역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">간석역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">개봉역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">관악역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 9호선 -->
+                      <div role="tabpanel" id="uiTabStation2-9" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">9호선</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가능역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가산디지털단지역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">간석역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">개봉역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">관악역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 인천1 -->
+                      <div role="tabpanel" id="uiTabStation2-10" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">인천1</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가능역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가산디지털단지역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">간석역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">개봉역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">관악역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 인천2 -->
+                      <div role="tabpanel" id="uiTabStation2-11" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">인천2</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가능역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가산디지털단지역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">간석역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">개봉역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">관악역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 경춘 -->
+                      <div role="tabpanel" id="uiTabStation2-12" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">경춘</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가능역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가산디지털단지역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">간석역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">개봉역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">관악역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 경의중앙 -->
+                      <div role="tabpanel" id="uiTabStation2-13" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">경의중앙</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가능역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가산디지털단지역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">간석역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">개봉역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">관악역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 수인분당 -->
+                      <div role="tabpanel" id="uiTabStation2-14" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">수인분당</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가능역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">가산디지털단지역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">간석역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">개봉역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">관악역</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">구로역</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- TABPANEL DEPTH2 : 부산 -->
+                  <div role="tabpanel" id="uiTabStation1-2" class="tabs__panel">
+                    <div class="tabs tabs--region" data-autoset="tab">
+                      <!-- TAB -->
+                      <div role="tablist" class="tabs__list">
+                        <ul>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation3-1" aria-selected="true">1호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation3-2">2호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation3-3">3호선</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 1호선 -->
+                      <div role="tabpanel" id="uiTabStation3-1" class="tabs__panel is-active">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">1호선</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 2호선 -->
+                      <div role="tabpanel" id="uiTabStation3-2" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">2호선</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 3호선 -->
+                      <div role="tabpanel" id="uiTabStation3-3" class="tabs__panel">
+                        <ul class="list-group">
+                          <li class="list-group__item">
+                            <a href="#none" class="list-group__anchor"><em class="list-group__info">3호선</em> 추천 제휴점</a>
+                          </li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                          <li class="list-group__item"><a href="#none" class="list-group__anchor">부산</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- TABPANEL DEPTH2 : 대구 -->
+                  <div role="tabpanel" id="uiTabStation1-3" class="tabs__panel">
+                    <div class="tabs tabs--region" data-autoset="tab">
+                      <!-- TAB -->
+                      <div role="tablist" class="tabs__list">
+                        <ul>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation4-1" aria-selected="true">1호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation4-2">2호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation4-3">3호선</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 1호선 -->
+                      <div role="tabpanel" id="uiTabStation4-1" class="tabs__panel is-active">
+                        <div>
+                          <ul class="list-group">
+                            <li class="list-group__item">
+                              <a href="#none" class="list-group__anchor"><em class="list-group__info">1호선</em> 추천 제휴점</a>
+                            </li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 2호선 -->
+                      <div role="tabpanel" id="uiTabStation4-2" class="tabs__panel">
+                        <div>
+                          <ul class="list-group">
+                            <li class="list-group__item">
+                              <a href="#none" class="list-group__anchor"><em class="list-group__info">2호선</em> 추천 제휴점</a>
+                            </li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 3호선 -->
+                      <div role="tabpanel" id="uiTabStation4-3" class="tabs__panel">
+                        <div>
+                          <ul class="list-group">
+                            <li class="list-group__item">
+                              <a href="#none" class="list-group__anchor"><em class="list-group__info">3호선</em> 추천 제휴점</a>
+                            </li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대구</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- TABPANEL DEPTH2 : 대전 -->
+                  <div role="tabpanel" id="uiTabStation1-4" class="tabs__panel">
+                    <div class="tabs tabs--region" data-autoset="tab">
+                      <!-- TAB -->
+                      <div role="tablist" class="tabs__list">
+                        <ul>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation5-1" aria-selected="true">1호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation5-2">2호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation5-3">3호선</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 1호선 -->
+                      <div role="tabpanel" id="uiTabStation5-1" class="tabs__panel is-active">
+                        <div>
+                          <ul class="list-group">
+                            <li class="list-group__item">
+                              <a href="#none" class="list-group__anchor"><em class="list-group__info">1호선</em> 추천 제휴점</a>
+                            </li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 2호선 -->
+                      <div role="tabpanel" id="uiTabStation5-2" class="tabs__panel">
+                        <div>
+                          <ul class="list-group">
+                            <li class="list-group__item">
+                              <a href="#none" class="list-group__anchor"><em class="list-group__info">2호선</em> 추천 제휴점</a>
+                            </li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 3호선 -->
+                      <div role="tabpanel" id="uiTabStation5-3" class="tabs__panel">
+                        <div>
+                          <ul class="list-group">
+                            <li class="list-group__item">
+                              <a href="#none" class="list-group__anchor"><em class="list-group__info">3호선</em> 추천 제휴점</a>
+                            </li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">대전</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- // -->
+                    </div>
+                  </div>
+                  <!-- TABPANEL DEPTH2 : 광주 -->
+                  <div role="tabpanel" id="uiTabStation1-5" class="tabs__panel">
+                    <div class="tabs tabs--region" data-autoset="tab">
+                      <!-- TAB -->
+                      <div role="tablist" class="tabs__list">
+                        <ul>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation6-1" aria-selected="true">1호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation6-2">2호선</a></li>
+                          <li class="tabs__item"><a role="tab" href="#uiTabStation6-3">3호선</a></li>
+                        </ul>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 1호선 -->
+                      <div role="tabpanel" id="uiTabStation6-1" class="tabs__panel is-active">
+                        <div>
+                          <ul class="list-group">
+                            <li class="list-group__item">
+                              <a href="#none" class="list-group__anchor"><em class="list-group__info">1호선</em> 추천 제휴점</a>
+                            </li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 2호선 -->
+                      <div role="tabpanel" id="uiTabStation6-2" class="tabs__panel">
+                        <div>
+                          <ul class="list-group">
+                            <li class="list-group__item">
+                              <a href="#none" class="list-group__anchor"><em class="list-group__info">2호선</em> 추천 제휴점</a>
+                            </li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- TABPANEL DEPTH3 : 3호선 -->
+                      <div role="tabpanel" id="uiTabStation6-3" class="tabs__panel">
+                        <div>
+                          <ul class="list-group">
+                            <li class="list-group__item">
+                              <a href="#none" class="list-group__anchor"><em class="list-group__info">3호선</em> 추천 제휴점</a>
+                            </li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                            <li class="list-group__item"><a href="#none" class="list-group__anchor">광주</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- // -->
+                    </div>
+                  </div>
+                  <!-- // -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // -->
+      </main>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # NAV BAR # -->
+      <!-- ---------------------------------------------------------- -->
+      <nav id="navBar">
+        <ul class="nav-bar">
+          <li class="nav-bar__item">
+            <a href="#none" class="nav-bar__anchor">홈</a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="#none" class="nav-bar__anchor" aria-current="page">지역</a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="#none" class="nav-bar__anchor">내주변</a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="#none" class="nav-bar__anchor">내예약<em class="icon icon--new">new</em> </a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="#none" class="nav-bar__anchor">내정보<em class="icon icon--new">new</em> </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- ---------------------------------------------------------- -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>하이타이 메뉴 | 홈 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row">
+            <br />
+            <button type="button" class="btn btn--dark btn--md" data-dialog-trigger="#uiMenu" aria-haspopup="dialog">하이타이메뉴</button>
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w10" id="uiMenu">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <!-- 하이타이MENU -->
+              <div class="category">
+                <em class="category__title">하이타이 메뉴</em>
+                <ul class="category__list category__list--icon">
+                  <li class="category__icon category__icon--icon1"><a href="">타이</a></li>
+                  <li class="category__icon category__icon--icon2"><a href="">중국</a></li>
+                  <li class="category__icon category__icon--icon3"><a href="">한국</a></li>
+                  <li class="category__icon category__icon--icon4"><a href="">베트남</a></li>
+                  <li class="category__icon category__icon--icon5"><a href="">아로마</a></li>
+                  <li class="category__icon category__icon--icon6"><a href="">스포츠</a></li>
+                  <li class="category__icon category__icon--icon7"><a href="">스웨디시</a></li>
+                  <li class="category__icon category__icon--icon8"><a href="">로미로미</a></li>
+                  <li class="category__icon category__icon--icon9"><a href="">로션테라피</a></li>
+                  <li class="category__icon category__icon--icon10"><a href="">건식마사지</a></li>
+                  <li class="category__icon category__icon--icon11"><a href="">발마사지</a></li>
+                </ul>
+              </div>
+              <!-- 추천MENU -->
+              <div class="category">
+                <em class="category__title">추천 메뉴</em>
+                <ul class="category__list">
+                  <li class="category__item"><a href="">내 주변 + 태국마사지 + 하이패스</a></li>
+                  <li class="category__item"><a href="">부산 해운대역 근처 + 태국마사지</a></li>
+                  <li class="category__item"><a href="">홍대역근처 + 태국마사지 + 할인쿠폰</a></li>
+                  <li class="category__item"><a href="">아로마 마사지 + 하이패스</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- [//] -->
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+
+      <script>
+        document.addEventListener('UILoaded', function () {
+          var dialog = document.querySelector('#uiMenu');
+          var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+          // dialogInstance.updateOption({ animate: false });
+          dialogInstance.open();
+        });
+      </script>
+    </div>
+  </body>
+</html>

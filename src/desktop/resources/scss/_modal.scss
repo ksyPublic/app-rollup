@@ -1,0 +1,449 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  &__overlay {
+    // display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    section {
+      width: rem(380);
+      background: $white;
+      position: relative;
+      max-height: 90vh;
+      // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      max-height: 90vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      display: flex;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-direction: column;
+    }
+  }
+
+  &__header {
+    min-height: rem(54);
+    padding: rem(34 60 30 60);
+    flex: none;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(22);
+    text-align: center;
+  }
+
+  &__sub {
+    margin: rem(16 0 -30 0);
+    padding: rem(0 0 30);
+    // color: #666;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  &__body {
+    position: relative;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: rem(0 40 0);
+    @include scrollbar-default;
+  }
+
+  &__inner {
+    padding: rem(0 0 30);
+  }
+
+  &__footer {
+    overflow: hidden;
+    height: rem(65);
+    flex: none;
+    display: flex;
+    .btn--lg {
+      flex: 0 1 50%;
+      min-width: 50%;
+      border-radius: 0;
+      border: 0;
+      height: rem(65);
+      & + .btn--lg {
+        border-left: 1px solid #ccc;
+      }
+      &:only-child {
+        flex: 0 1 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &__btn-history {
+    position: absolute;
+    top: rem(20);
+    left: rem(20);
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: rem(20);
+    right: rem(20);
+    width: rem(36);
+    height: rem(36);
+    overflow: hidden;
+    padding: rem(0 0 0 36);
+    z-index: 1;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: rem(2);
+      height: rem(24);
+      top: rem(6);
+      left: rem(17);
+      background: color(dark, 100);
+    }
+    &::before {
+      transform: rotate(-45deg);
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+  &.open {
+    display: block;
+  }
+  &.close {
+    display: block;
+  }
+
+  // 모달 사이즈 ( 380 420 510 525 540 560 580 600 640 680 1120)
+  &--w1 {
+    .modal__content section {
+      width: rem(380);
+    }
+  }
+
+  &--w2 {
+    .modal__content section {
+      width: rem(420);
+    }
+  }
+
+  &--w3 {
+    .modal__content section {
+      width: rem(510);
+    }
+  }
+
+  &--w4 {
+    .modal__content section {
+      width: rem(525);
+    }
+  }
+
+  &--w5 {
+    .modal__content section {
+      width: rem(540);
+    }
+  }
+
+  &--w6 {
+    .modal__content section {
+      width: rem(560);
+    }
+  }
+
+  &--w7 {
+    .modal__content section {
+      width: rem(580);
+    }
+  }
+
+  &--w8 {
+    .modal__content section {
+      width: rem(600);
+    }
+  }
+
+  &--w9 {
+    .modal__content section {
+      width: rem(640);
+    }
+  }
+
+  &--w10 {
+    .modal__content section {
+      width: rem(680);
+    }
+  }
+
+  &--w11 {
+    .modal__content section {
+      width: rem(400);
+    }
+  }
+
+  &--w12 {
+    .modal__content section {
+      width: rem(1120);
+    }
+  }
+
+  &--alert {
+    .modal__content section {
+      width: rem(400);
+      .modal__body {
+        padding: rem(50 30 30);
+        text-align: center;
+        .alert-mes {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          min-height: rem(100);
+          line-height: rem(26);
+          font-size: rem(18);
+        }
+      }
+    }
+  }
+
+  &--event {
+    .modal__header {
+      padding: 0;
+      min-height: auto;
+    }
+    .modal__body {
+      padding: 0;
+    }
+  }
+
+  &--aside {
+    .modal__content {
+      display: block;
+      section {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: rem(480);
+        height: 100vh;
+        max-height: 100vh;
+      }
+    }
+    .modal__header {
+      height: rem(80);
+      padding: rem(20 60 20 40);
+      background: color(primary, 100);
+    }
+    .modal__title {
+      text-align: left;
+      color: $white;
+      font-weight: 500;
+    }
+    .modal__btn-close {
+      top: rem(20);
+      &::before,
+      &::after {
+        background: $white;
+      }
+    }
+    .modal__body {
+      height: calc(100vh - 80px);
+      padding: rem(30 40);
+    }
+  }
+}
+
+.modal {
+  &:not(.modal--aside) {
+    &.animate {
+      &.open {
+        .modal__content section {
+          animation-duration: 0.4s;
+          animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+          animation-name: defaultIn;
+        }
+        .modal__overlay {
+          animation-duration: 0.4s;
+          animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+          animation-name: fadeIn;
+        }
+      }
+      &.close {
+        .modal__content section {
+          animation-duration: 0.4s;
+          animation-timing-function: cubic-bezier(0.36, 0, 0.66, -0.56);
+          animation-name: defaultOut;
+        }
+        .modal__overlay {
+          animation-duration: 0.4s;
+          animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+          animation-name: fadeOut;
+        }
+      }
+    }
+  }
+  &--aside {
+    &.animate {
+      &.open {
+        display: block;
+        section {
+          animation-duration: 0.4s;
+          animation-timing-function: easing('ease');
+          animation-name: dialog-sidein;
+        }
+        .modal__overlay {
+          animation-duration: 0.4s;
+          animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+          animation-name: fadeIn;
+        }
+      }
+      &.close {
+        display: block;
+        section {
+          animation-duration: 0.4s;
+          animation-timing-function: easing('ease');
+          animation-name: dialog-sideout;
+        }
+        .modal__overlay {
+          animation-duration: 0.4s;
+          animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+          animation-name: fadeOut;
+        }
+      }
+    }
+  }
+
+  &:not(.modal--alert):not(.modal--event) {
+    .modal__body::after {
+      content: '';
+      display: block;
+      height: rem(40);
+    }
+  }
+}
+
+// 이벤트 팝업
+.modal--event {
+  .event-img {
+    img {
+      vertical-align: top;
+    }
+  }
+  .modal__footer {
+    .btn--lg {
+      padding: rem(0 20);
+      font-size: rem(16);
+    }
+  }
+}
+
+/* 다이얼로그(modal, alert, confirm) 기본 인 아웃 */
+@keyframes defaultIn {
+  from {
+    transform: translateY(-5%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* 다이얼로그(modal, alert, confirm) 기본 인 아웃 */
+@keyframes defaultOut {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.fadeIn {
+  // display: none;
+  animation-duration: 0.4s;
+  background: rgba(0, 0, 0, 0.6);
+  animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+  animation-name: fadeIn;
+}
+
+.fadeOut {
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+  animation-name: fadeOut;
+}
+
+// 애니메이션 : 사이드 다이얼로그 등장
+@keyframes dialog-sidein {
+  from {
+    transform: translateX(350px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+// 애니메이션 : 사이드 다이얼로그 아웃
+@keyframes dialog-sideout {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(350px);
+    opacity: 0;
+  }
+}
+
+.area-temp1 {
+  position: relative;
+  height: 50vh;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 4rem;
+  line-height: 50vh;
+  color: $white;
+  text-align: center;
+}

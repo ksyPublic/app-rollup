@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>내 정보 | 내정보 | 내 정보 수정 - hitai</title>
+    <include src="../_include/head.html"></include>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header bg-brown-200">
+        <!-- BACK BUTTON -->
+        <button type="button" class="header__back btn btn--icon">
+          <span class="hide">뒤로가기</span>
+          <i class="icon icon--back" aria-hidden="true"></i>
+        </button>
+        <!-- TITLE -->
+        <h1 class="header__title">내 정보</h1>
+      </header>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <div class="content">
+          <div class="mypage mypage--selection">
+            <div class="mypage__info">
+              <div class="mypage__profile">
+                <div class="mypage__img">
+                  <a class="mypage__anchor" href="#none" title="프로필">
+                    <i class="icon icon--edit" aria-hidden="true"></i>
+                    <img src="../../resources/images/content/random-profile-12.png" />
+                    <i class="icon icon--apple-sm" aria-hidden="true"></i>
+                    <!-- <i class="icon icon--kakao-sm" aria-hidden="true"></i> -->
+                    <!-- <i class="icon icon--mail-sm" aria-hidden="true"></i> -->
+                  </a>
+                </div>
+                <div class="mypage__user">
+                  <span class="mypage__nickname">호앙오앙호앙오앙호앙오앙</span>
+                  <em>님! <br />반갑습니다. </em>
+
+                  <a href="#none" class="mypage__link">Apple 계정 로그인</a>
+                  <div class="mypage__user-number">
+                    <p>회원번호 : <span>2357920</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="mypage-form">
+              <div class="label-group">
+                <fieldset>
+                  <legend>정보 수정 입력</legend>
+                  <div class="form">
+                    <div class="form-field">
+                      <label class="text text--ssm" for="field1">아이디(이메일)</label>
+                      <input type="text" class="input input--xmd" id="field1" title="아이디(이메일) 입력" placeholder="이메일 주소를 입력해 주세요." />
+                    </div>
+                    <div class="form-field">
+                      <label class="text text--ssm" for="field2">닉네임</label>
+                      <input type="text" class="input input--xmd" id="field2" title="닉네임을 입력해주세요." value="호앙호앙호앙호앙호앙호앙" readonly />
+                    </div>
+                    <div class="form-field">
+                      <label class="text text--ssm" for="field3">생일</label>
+                      <input type="text" id="datepicker" class="input input--xmd" id="field3" value="1995.01.16" readonly />
+                    </div>
+                    <div class="form-field">
+                      <label class="text text--ssm">성별</label>
+                      <div class="form-field__column">
+                        <div class="label">
+                          <label><input type="radio" name="rd1" /><span>남성</span></label>
+                          <label><input type="radio" name="rd1" /><span>여성</span></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-field">
+                      <label class="text text--ssm">관심지역</label>
+                      <div class="form-field__column">
+                        <div class="select select--basic" data-select="select" id="basic">
+                          <!-- 셀렉트박스 비활성화 메서드로 처리하지않고 마크업으로 직접 처리하려면 -->
+                          <!--
+                            아래와 같이 aria-disabled="true" tabindex="-1" 속성을 추가하시면 됩니다.
+                           -->
+                          <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn" aria-disabled="false" tabindex="-1">
+                            <div>필드명</div>
+                            <div data-empty="기본형" data-select="text"></div>
+                          </div>
+                          <!-- // -->
+                          <div class="select__list" data-select="list">
+                            <div class="select__option" data-select="option">
+                              <button type="button" value="value1">서울</button>
+                              <button type="button" value="value2">선택 항목2</button>
+                              <button type="button" value="value3">선택 항목3</button>
+                              <button type="button" value="value4">선택 항목4</button>
+                              <button type="button" value="value5">선택 항목5</button>
+                            </div>
+                          </div>
+                          <input type="hidden" name="select1_1" data-select="value" />
+                        </div>
+
+                        <div class="select select--basic" data-select="select" id="basic">
+                          <!-- 셀렉트박스 비활성화 메서드로 처리하지않고 마크업으로 직접 처리하려면 -->
+                          <!--
+                              아래와 같이 aria-disabled="true" tabindex="-1" 속성을 추가하시면 됩니다.
+                             -->
+                          <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn" aria-disabled="false" tabindex="-1">
+                            <div>필드명</div>
+                            <div data-empty="기본형" data-select="text"></div>
+                          </div>
+                          <!-- // -->
+                          <div class="select__list" data-select="list">
+                            <div class="select__option" data-select="option">
+                              <button type="button" value="value1">동작구</button>
+                              <button type="button" value="value2">선택 항목2</button>
+                              <button type="button" value="value3">선택 항목3</button>
+                              <button type="button" value="value4">선택 항목4</button>
+                              <button type="button" value="value5">선택 항목5</button>
+                            </div>
+                          </div>
+                          <input type="hidden" name="select1_1" data-select="value" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-field">
+                      <button type="button" class="btn btn--xmd btn--dark w-100">정보 수정</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="label-group">
+                <fieldset>
+                  <legend>비밀번호 변경</legend>
+                  <div class="form">
+                    <div class="form-field">
+                      <label class="text text--ssm" for="field4">신규 비밀번호</label>
+                      <div class="input-wrap input-wrap--password">
+                        <input type="password" id="field4" class="input input--xmd" placeholder="신규 비밀번호(최소 8자 이상)" />
+                        <button type="button" class="icon icon--eye" data-toggle-btn="">비밀번호보기</button>
+                      </div>
+                    </div>
+                    <div class="form-field">
+                      <label class="text text--ssm" for="field5">신규 비밀번호 확인</label>
+                      <div class="input-wrap input-wrap--password">
+                        <input type="password" id="field5" class="input input--xmd" placeholder="신규 비밀번호 다시 입력" />
+                        <button type="button" class="icon icon--eye" data-toggle-btn="">비밀번호보기</button>
+                      </div>
+                    </div>
+                    <div class="form-field">
+                      <button type="button" class="btn btn--xmd btn--dark w-100">비밀번호 변경</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="label-group">
+                <fieldset>
+                  <legend>휴대전화 번호 수정</legend>
+                  <div class="form">
+                    <div class="form-field">
+                      <label class="text d-flex ai-center jc-between text--ssm">
+                        휴대전화 번호 수정 / 본인인증
+                        <strong class="text text--xmd">010-1234-1234</strong>
+                      </label>
+                      <div class="input-wrap input-wrap--type1">
+                        <input type="text" class="input input--md" placeholder="휴대폰 번호를 입력해 주세요." />
+                        <button type="button" class="btn btn--xmd btn--primary">인증번호 발송</button>
+                      </div>
+                      <div class="input-wrap input-wrap--type1">
+                        <input type="text" class="input input--md" placeholder="인증 번호를 입력해 주세요." />
+                      </div>
+                    </div>
+
+                    <div class="form-field">
+                      <ul class="text-list text-list--bullet1">
+                        <li class="text-list__item">하이타이에서 제공하는 서비스 이용 시 3자 무단 사용을 방지하기 위해 본인인증이 필요합니다.</li>
+                        <li class="text-list__item">본인 인증은 최초 한 번만 하시면 됩니다.</li>
+                        <li class="text-list__item">인증받으신 전화번호는 암호화되어 안전하게 저장되고, 본인 인증 이외 의 다른 목적으로 절대 사용하지 않습니다.</li>
+                      </ul>
+                    </div>
+
+                    <div class="form-field">
+                      <button type="button" class="btn btn--xmd btn--dark w-100">휴대전화 번호 수정</button>
+                    </div>
+
+                    <div class="form-field">
+                      <div class="btn-area">
+                        <a href="#none" class="btn btn--text btn--text-under">
+                          <em>로그아웃</em>
+                        </a>
+                        <a href="#none" class="btn btn--text btn--text-under">
+                          <em>회원탈퇴</em>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- ---------------------------------------------------------- -->
+    </div>
+    <script>
+      $(function () {
+        $('#datepicker').datepicker({
+          format: 'mm-dd-yyyy',
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>마이페이지 | 내 포인트 | 포인트 사용하기 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row">
+            <br /><br /><br />
+            <button type="button" class="btn btn--dark" data-dialog-trigger="#example" aria-haspopup="dialog">
+              <span>포인트 사용</span>
+            </button>
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w5" id="example">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <h1 class="modal__title">포인트 사용</h1>
+              <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <div class="product-detail__item">
+                <div class="product-detail__img">
+                  <img src="http://placehold.it/274x274" alt="상품이미지" />
+                </div>
+                <div class="product-detail__description">베스킨라빈스 싱글레귤러 아이스크림</div>
+              </div>
+              <div class="info-box">
+                <dl class="text-list text-list--bullet1">
+                  <dt class="text-list__title">꼭 확인해 주세요.</dt>
+                  <dd class="text-list__item">포인트를 사용하여 상품 교환 신청하시면 인증받으신 휴대전화로 기프 티콘 문자가 전송됩니다.</dd>
+                  <dd class="text-list__item">
+                    휴대전화 미인증인 경우 휴대전화 인증을 받아 주세요.<br />
+                    (내정보 > 내정보 수정 > 휴대전화 인증)
+                  </dd>
+                  <dd class="text-list__item">전송된 기프티콘은 취소할 수 없습니다.(포인트 환원 불가)</dd>
+                  <dd class="text-list__item">기프티콘 사용은 기프티콘 서비스사의 정책에 따릅니다.<br />(사용처, 사용기간 만료 등)</dd>
+                  <dd class="text-list__item">기프티콘 전송을 위해서 제3자 개인정보 제공 동의가 필요합니다.</dd>
+                  <dd class="text-list__item">신청하신 기프티콘이 품절이거나 업체에서 제공되지 않으면 포인트가 환불 처리됩니다.</dd>
+                  <dd class="text-list__item">상기 이미지는 실제 제품과 다를 수 있습니다.</dd>
+                </dl>
+              </div>
+              <div class="label-link">
+                <div class="label label--md label--simple">
+                  <label>
+                    <input type="checkbox" />
+                    <span>개인정보 제 3자 제공 동의</span>
+                  </label>
+                </div>
+                <a href="" class="text text--link">
+                  <em>개인정보 제 3자 제공 동의</em>
+                  <i class="icon icon--link" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--lg btn--primary">6,000<em>P</em>&nbsp;교환하기</button>
+            </div>
+            <!-- [//] -->
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+
+      <script>
+        document.addEventListener('UILoaded', function () {
+          var dialog = document.querySelector('#example');
+          // var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+          // dialogInstance.open();
+        });
+      </script>
+    </div>
+  </body>
+</html>

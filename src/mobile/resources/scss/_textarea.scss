@@ -1,0 +1,50 @@
+//textarea
+.textarea {
+  @at-root .modal {
+    .textarea textarea {
+      font-size: rem(11);
+      padding: rem(15);
+      border-radius: rem(4);
+    }
+  }
+  &-form {
+    display: block;
+    width: 100%;
+    $root: textarea;
+    @include clearfix;
+  }
+  &__side {
+    float: right;
+    color: #999;
+    font-size: rem(10);
+    line-height: rem(15);
+    margin: rem(-21 0 0 0);
+  }
+  display: block;
+  border: rem(1) solid color(gray, 700);
+  outline: 0;
+  border-radius: rem(4);
+  background-color: $white;
+  width: 100%;
+  //   min-height: rem(154);
+  color: color(dark, 200);
+  font-size: rem(13);
+  padding: rem(14);
+  transition: border-color 0.3s ease;
+  line-height: rem(14);
+  resize: none;
+
+  &:focus {
+    border-color: color(primary, 100);
+    color: color(dark, 200);
+  }
+
+  &::placeholder {
+    color: color(dark, 900);
+  }
+
+  &--gray {
+    background-color: color(gray, 800);
+    font-size: rem(14);
+  }
+}

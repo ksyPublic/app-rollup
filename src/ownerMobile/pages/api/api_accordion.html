@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>ACCORDION - API</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- -------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- -------------------------------- -->
+      <main id="container">
+        <!-- # TITLE # -->
+        <header>
+          <h1 class="api-title">Accordion</h1>
+          <p>아코디언 컨텐츠를 구성합니다.</p>
+        </header>
+
+        <!-- # CONTENT # -->
+        <div class="content api">
+          <h2><a href="#options" class="anchor-title">#options</a></h2>
+          <div class="tbl-con2 mt-2" data-more-view>
+            <table class="table table--type1">
+              <caption></caption>
+              <colgroup>
+                <col width="200" />
+                <col width="200" />
+                <col width="200" />
+                <col width="300" />
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">OPTION</th>
+                  <th scope="col">TYPE</th>
+                  <th scope="col">DEFAULT</th>
+                  <th scope="col">DATA ATTRIBUTE</th>
+                  <th scope="col">DESCRIPTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><em class="fs-code option">defaultsOpen</em></td>
+                  <td>string</td>
+                  <td>""</td>
+                  <td><span class="code-badge">data-accordion-defaults-open</span></td>
+                  <td>처음부터 열려있는 아이템 설정</td>
+                </tr>
+                <tr>
+                  <td><em class="fs-code option">openClass</em></td>
+                  <td>string</td>
+                  <td>"open"</td>
+                  <td><span class="code-badge">data-accordion-open-class</span></td>
+                  <td>아코디언 오픈 시 붙일 클래스 명</td>
+                </tr>
+                <tr>
+                  <td><em class="fs-code option">toggle</em></td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td><span class="code-badge">data-accordion-toggle</span></td>
+                  <td>열림/닫힘 토글 여부</td>
+                </tr>
+                <tr>
+                  <td><em class="fs-code option">className.expand</em></td>
+                  <td>string</td>
+                  <td>"expand"</td>
+                  <td></td>
+                  <td>아코디언 상태 클래스 명 - 기본</td>
+                </tr>
+                <tr>
+                  <td><em class="fs-code option">className.expanding</em></td>
+                  <td>string</td>
+                  <td>"expanding"</td>
+                  <td></td>
+                  <td>아코디언 상태 클래스 명 - 변경 중</td>
+                </tr>
+                <tr>
+                  <td><em class="fs-code option">className.expanded</em></td>
+                  <td>string</td>
+                  <td>"expanded"</td>
+                  <td></td>
+                  <td>아코디언 상태 클래스 명 - 오픈 후</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="api-desc mt-5" style="font-weight: bold; color: #00264a">인스턴스 획득</p>
+
+          <div class="codebox-wrap active">
+            <button class="code-open" type="button" disabled>🔍</button>
+            <div class="code-box">
+              <div class="code-swap">
+                <div class="code-swap-buttons">
+                  <button type="button" class="code-swap-button">Vanilla Js</button>
+                  <button type="button" class="code-swap-button">jQuery</button>
+                </div>
+                <pre class="code-view code-swap-inner">
+								<code class="language-javascript">
+								var element = document.querySelector("@selector");
+								var accordion = HitaiUI.Accordion.get(element);
+								// 초기화되어 있지 않다면 null을 반환합니다.
+								</code>
+							</pre>
+                <pre class="code-view code-swap-inner">
+								<code class="language-javascript">
+								var accordion = HitaiUI.Accordion.get($("@selector"));
+								</code>
+							</pre>
+              </div>
+            </div>
+          </div>
+          <p class="api-desc-check" style="font-weight: bold; color: #00264a"><span>@selector </span><span class="code-badge">data-autoset="accordion"</span> 이 선언되어있는 엘리먼트 입니다.</p>
+
+          <h2 id="selector"><a href="#selector" class="anchor-title">#selector</a></h2>
+          <div class="api-box r-word">
+            <h3 class="api-title fs-code">data-autoset="accordion"</h3>
+            <p class="api-desc">속성이 선언된 엘리먼트는 아코디언 컴포넌트로 초기화됩니다.</p>
+          </div>
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메서드 목록] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="methods"><a href="#methods" class="anchor-title">#methods</a></h2>
+          <div class="api-box">
+            <h3 class="api-title fs-code">.init()</h3>
+            <p class="api-desc">아코디언을 초기화 합니다.</p>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">.open(target)</h3>
+            <p class="api-desc">아코디언을 오픈합니다. (타겟은 aria-controls 속성이 선언 된 헤더입니다.)</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <script type="text/plain" class="code-view language-html">
+                  <div class="accordion-wrap">
+                  	<!-- header -->
+                  	<button type="button" id="acc_header1" aria-expanded="false" aria-controls="acc_content1">item header1</button>
+                  	<button type="button" id="acc_header2" aria-expanded="false" aria-controls="acc_content2">item header2</button>
+                  	<button type="button" id="acc_header3" aria-expanded="false" aria-controls="acc_content3">item header2</button>
+                  	<!-- content -->
+                  	<div id="acc_content1" class="expand" aria-labelledby="acc_header1"></div>
+                  	<div id="acc_content2" class="expand" aria-labelledby="acc_header2"></div>
+                  	<div id="acc_content3" class="expand" aria-labelledby="acc_header3"></div>
+                  </div>
+                </script>
+                <pre class="code-view">
+								<code class="language-javascript">
+								// 타겟은 여러가지 타입으로 받을 수 있습니다.
+								.open(0); // 0번째
+								.open("#acc_header1");
+								.open(document.querySelector("#acc_header1"));
+								.open($("#acc_header1"));
+								</code>
+							</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">.close(target)</h3>
+            <p class="api-desc">아코디언을 닫습니다.(타겟은 open 메서드와 동일)</p>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">.getElement()</h3>
+            <p class="api-desc">아코디언 엘리먼트를 반환합니다.</p>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">.destroy()</h3>
+            <p class="api-desc">아코디언을 기능을 삭제합니다.</p>
+          </div>
+
+          <div class="api-box static">
+            <span class="static-badge">static</span>
+            <h3 class="api-title fs-code">HitaiUI.Accordion.redraw()</h3>
+            <p class="api-desc">초기화 되어있는 모든 아코디언을 새로그립니다.</p>
+          </div>
+
+          <div class="api-box static">
+            <span class="static-badge">static</span>
+            <h3 class="api-title fs-code">HitaiUI.Accordion.get(element)</h3>
+            <p class="api-desc">아코디언의 인스턴스를 반환합니다.</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <div class="code-swap mt-2">
+                  <div class="code-swap-buttons">
+                    <button type="button" class="code-swap-button">Vanilla Js</button>
+                    <button type="button" class="code-swap-button">jQuery</button>
+                  </div>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										var element = document.querySelector(".accordion-wrap");
+										var accordion = HitaiUI.Accordion.get(element);
+										// 아코디언이 초기화되어 있지 않다면 null을 반환합니다.
+									</code>
+								</pre>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										var accordion = HitaiUI.Accordion.get($(".accordion-wrap"));
+									</code>
+								</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="api-box static">
+            <span class="static-badge">static</span>
+            <h3 class="api-title fs-code">HitaiUI.Accordion.getInstances()</h3>
+            <p class="api-desc">현재 화면에 존재하는 아코디언의 모든 인스턴스를 반환합니다.</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <pre class="code-view">
+								<code class="language-javascript">
+								var instanceList = HitaiUI.Accordion.getInstances();
+								// output [] or [Accordion, Accordion, Accordion]
+								</code>
+							</pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [이벤트 목록] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="events"><a href="#events" class="anchor-title">#events</a></h2>
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Accordion.EVENT.OPEN</h3>
+            <p class="api-desc">아코디언이 열릴 때 트리거 됩니다.</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <div class="code-swap mt-2">
+                  <div class="code-swap-buttons">
+                    <button type="button" class="code-swap-button">Vanilla Js</button>
+                    <button type="button" class="code-swap-button">jQuery</button>
+                  </div>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										// event type string: "open.HitaiUI.accordion"
+										var element = document.querySelector(".accordion-wrap");
+										element.addEventListener(HitaiUI.Accordion.EVENT.OPEN, function(event) {
+											var component = event.component; //component instance
+											var current = event.current; //current item object
+											var eventType = event.eventType; //event type
+										});
+									</code>
+								</pre>
+                  <pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										// event type string: "open.HitaiUI.accordion"
+										$(".accordion-wrap").on(HitaiUI.Accordion.EVENT.OPEN, function(event) {
+											var component = event.component; //component instance
+											var current = event.current; //current item object
+											var eventType = event.eventType; //event type
+										});
+									</code>
+								</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Accordion.EVENT.OPENED</h3>
+            <p class="api-desc">아코디언이 열리고 난 후 트리거 됩니다.(애니메이션 종료 후 트리거)</p>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Accordion.EVENT.CLOSE</h3>
+            <p class="api-desc">아코디언이 열릴 때 트리거 됩니다.</p>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Accordion.EVENT.CLOSED</h3>
+            <p class="api-desc">아코디언이 닫히고 난 후 트리거 됩니다.(애니메이션 종료 후 트리거)</p>
+          </div>
+
+          <h2 id="examples"><a href="#examples" class="anchor-title">#examples</a></h2>
+
+          <div class="api-box example" id="basic">
+            <h3 class="api-ex-title">아코디언 기본</h3>
+            <p class="api-desc" style="margin-bottom: 20px"></p>
+
+            <div class="accordion accordion--type1" data-autoset="accordion" id="acc1">
+              <div class="accordion__list">
+                <div class="accordion__head">
+                  <button type="button" class="accordion__btn" id="acc-header1" aria-controls="acc-content1" aria-expanded="false"></button>
+                  <div class="accordion__title">
+                    <i class="icon icon--sch" aria-hidden="true"></i>
+                    <span class="accordion__text">7.25 (오늘)</span>
+                  </div>
+                </div>
+                <div class="accordion__content expand" id="acc-content1" aria-labelledby="acc-header1">
+                  <div class="label-group">
+                    <div class="label label--btn label--md">
+                      <label class="label--primary">
+                        <input type="radio" name="radio1_1" />
+                        <span>7:25 (오늘)</span>
+                      </label>
+                      <label class="label--primary">
+                        <input type="radio" name="radio1_1" />
+                        <span>7:26 (화)</span>
+                      </label>
+                      <label class="label--primary">
+                        <input type="radio" name="radio1_1" />
+                        <span>7:27 (수)</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__list">
+                <div class="accordion__head">
+                  <button type="button" class="accordion__btn" id="acc-header2" aria-controls="acc-content2" aria-expanded="false"></button>
+                  <div class="accordion__title">
+                    <i class="icon icon--time" aria-hidden="true"></i>
+                    <span class="accordion__text">오후 01:00</span>
+                  </div>
+                </div>
+                <div class="accordion__content expand" id="acc-content2" aria-labelledby="acc-header2">
+                  <div class="label-group">
+                    <div class="heading heading--subtitle">
+                      <em class="heading__copy">오전</em>
+                      <span class="heading__text">타임할인 진행중 (오후 1시 ~ 오후 5시)</span>
+                    </div>
+                    <fieldset>
+                      <legend>오전 선택</legend>
+                      <div class="label label--btn">
+                        <label class="label--dark">
+                          <input type="radio" name="radio1_2" disabled />
+                          <span>10:00</span>
+                        </label>
+                        <label class="label--dark">
+                          <input type="radio" name="radio1_2" />
+                          <span>10:30</span>
+                        </label>
+                        <label class="label--dark">
+                          <input type="radio" name="radio1_2" />
+                          <span>11:00</span>
+                        </label>
+                        <label class="label--dark">
+                          <input type="radio" name="radio1_2" />
+                          <span>11:30</span>
+                        </label>
+                      </div>
+                    </fieldset>
+
+                    <div class="heading heading--subtitle">
+                      <em class="heading__copy">오후</em>
+                    </div>
+
+                    <fieldset>
+                      <legend>오후 선택</legend>
+                      <div class="label label--btn">
+                        <label><input type="radio" name="radio3" checked /><span>12:00</span></label>
+                        <label><input type="radio" name="radio3" /><span>12:30</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>01:00</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>01:30</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>02:00</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>02:30</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>03:00</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>03:30</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>04:00</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>04:30</span></label>
+                        <label><input type="radio" name="radio3" /><span>05:00</span></label>
+                        <label><input type="radio" name="radio3" /><span>05:30</span></label>
+                        <label><input type="radio" name="radio3" /><span>06:00</span></label>
+                        <label><input type="radio" name="radio3" /><span>06:30</span></label>
+                        <label><input type="radio" name="radio3" /><span>07:00</span></label>
+                        <label><input type="radio" name="radio3" /><span>07:30</span></label>
+                        <label><input type="radio" name="radio3" disabled /><span>08:00</span></label>
+                        <label><input type="radio" name="radio3" disabled /><span>08:30</span></label>
+                        <label><input type="radio" name="radio3" disabled /><span>09:00</span></label>
+                        <label><input type="radio" name="radio3" disabled /><span>09:30</span></label>
+                        <label><input type="radio" name="radio3" /><span>10:00</span></label>
+                        <label><input type="radio" name="radio3" /><span>10:30</span></label>
+                        <label><input type="radio" name="radio3" /><span>11:00</span></label>
+                        <label><input type="radio" name="radio3" /><span>11:30</span></label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__list">
+                <div class="accordion__head">
+                  <button type="button" class="accordion__btn" id="acc-header3" aria-controls="acc-content3" aria-expanded="false"></button>
+                  <div class="accordion__title">
+                    <i class="icon icon--course" aria-hidden="true"></i>
+                    <span class="accordion__text">코스 선택</span>
+                  </div>
+                </div>
+                <div class="accordion__content expand" id="acc-content3" aria-labelledby="acc-header3">
+                  <div class="label-group">
+                    <div class="heading heading--subtitle">
+                      <span class="heading__text">선택한 일자 및 시간에 따라 <strong>요금이 다를 수 있습니다.</strong></span>
+                    </div>
+                    <div class="form-count">
+                      <div class="form-count__list">
+                        <div class="form-count__description">
+                          <em class="badges badges--lg badges--c5">타임할인 3천원 선착순</em>
+                          <div class="form-count__text">
+                            <strong class="text text--xsm">전산 타이 관리 - 60분</strong>
+                          </div>
+                          <div class="form-count__price">
+                            <span class="text text--sm text--unit text--lit">60,000<em>원</em></span>
+                            <span class="text text--sm text--unit text--lit">60,000<em>원</em></span>
+                            <strong class="text text--sm text-sub-100 text--unit">60,000<em>원</em></strong>
+                          </div>
+                        </div>
+                        <div class="form-count__btnarea">
+                          <div class="count">
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--minus" aria-hidden="true"></i>
+                            </button>
+                            <span class="count__number">0</span>
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--plus" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-count__list">
+                        <div class="form-count__description">
+                          <div class="form-count__text">
+                            <strong class="text text--xsm">타이 관리 - 90분</strong>
+                          </div>
+                          <div class="form-count__price">
+                            <span class="text text--sm text--unit text--lit">80,000<em>원</em></span>
+                            <strong class="text text--sm text--unit">40,000<em>원</em></strong>
+                          </div>
+                        </div>
+                        <div class="form-count__btnarea">
+                          <div class="count">
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--minus" aria-hidden="true"></i>
+                            </button>
+                            <span class="count__number is-focus">1</span>
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--plus" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 뎁스 형태 -->
+                      <div class="form-count__depth">
+                        <div class="form-count__list">
+                          <div class="form-count__description">
+                            <div class="form-count__text">
+                              <span class="text text--xsm text--path">손마사지 15분</span>
+                              <p class="text text--sm text--unit">
+                                <b>90,000<em>원</em></b>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="form-count__btnarea">
+                            <div class="count">
+                              <button type="button" class="btn btn--icon">
+                                <i class="icon icon--minus" aria-hidden="true"></i>
+                              </button>
+                              <span class="count__number is-focus">1</span>
+                              <button type="button" class="btn btn--icon">
+                                <i class="icon icon--plus" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-count__list">
+                          <div class="form-count__description">
+                            <div class="form-count__text">
+                              <span class="text text--xsm text--path">발마사지 15분</span>
+                              <p class="text text--sm text--unit">
+                                <b>90,000<em>원</em></b>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="form-count__btnarea">
+                            <div class="count">
+                              <button type="button" class="btn btn--icon">
+                                <i class="icon icon--minus" aria-hidden="true"></i>
+                              </button>
+                              <span class="count__number is-focus">1</span>
+                              <button type="button" class="btn btn--icon">
+                                <i class="icon icon--plus" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- // -->
+
+                      <div class="form-count__list">
+                        <div class="form-count__description">
+                          <div class="form-count__text">
+                            <strong class="text text--xsm">타이 관리 - 90분</strong>
+                          </div>
+                          <div class="form-count__price">
+                            <span class="text text--sm text--unit text--lit">80,000<em>원</em></span>
+                            <strong class="text text--sm text--unit">40,000<em>원</em></strong>
+                          </div>
+                        </div>
+                        <div class="form-count__btnarea">
+                          <div class="count">
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--minus" aria-hidden="true"></i>
+                            </button>
+                            <span class="count__number is-focus">1</span>
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--plus" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-count__list">
+                        <div class="form-count__description">
+                          <div class="form-count__text">
+                            <strong class="text text--xsm">타이 관리 - 90분</strong>
+                          </div>
+                          <div class="form-count__price">
+                            <span class="text text--sm text--unit text--lit">80,000<em>원</em></span>
+                            <strong class="text text--sm text--unit">40,000<em>원</em></strong>
+                          </div>
+                        </div>
+                        <div class="form-count__btnarea">
+                          <div class="count">
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--minus" aria-hidden="true"></i>
+                            </button>
+                            <span class="count__number is-focus">1</span>
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--plus" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__list">
+                <div class="accordion__head">
+                  <button type="button" class="accordion__btn" id="acc-header4" aria-controls="acc-content4" aria-expanded="false"></button>
+                  <div class="accordion__title">
+                    <i class="icon icon--reservation" aria-hidden="true"></i>
+                    <span class="accordion__text">예약자 정보</span>
+                  </div>
+                </div>
+                <div class="accordion__content expand" id="acc-content4" aria-labelledby="acc-header4">
+                  <div class="label-group">
+                    <div class="form">
+                      <div class="form-field">
+                        <label class="text text--xsm" for="field1">예약자명 (필수)</label>
+                        <input type="text" class="input" id="field1" title="예약자명 입력" placeholder="예약자명을 입력해 주세요." />
+                      </div>
+                      <div class="form-field">
+                        <label class="text text--xsm" for="field2">연락처 (필수)</label>
+                        <input type="text" class="input" id="field2" title="연락처 입력" placeholder="연락처를 입력해 주세요." />
+                      </div>
+                      <div class="form-field">
+                        <label class="text text--xsm" for="field3">요청사항</label>
+                        <div class="textarea-form">
+                          <textarea class="textarea" rows="6" placeholder="요청사항을 입력해 주세요."></textarea>
+                        </div>
+                      </div>
+                      <div class="form-field">
+                        <div class="label">
+                          <label><input type="checkbox" name="" id="" /><span class="text-dark-600">다음부터 자동으로 입력하겠습니다.</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <script type="text/plain" class="code-view language-html">
+                  <div class="accordion accordion--type1" data-autoset="accordion" id="acc1">
+                    <div class="accordion__list">
+                      <div class="accordion__head">
+                        <button type="button" class="accordion__btn" id="acc-header1" aria-controls="acc-content1" aria-expanded="false"></button>
+                        <div class="accordion__title">
+                          <i class="icon icon--sch" aria-hidden="true"></i>
+                          <span class="accordion__text">7.25 (오늘)</span>
+                        </div>
+                      </div>
+                      <div class="accordion__content expand" id="acc-content1" aria-labelledby="acc-header1">
+                        <div class="label-group">
+                          <div class="label label--btn label--md">
+                            <label class="label--primary">
+                              <input type="radio" name="radio1_1" />
+                              <span>7:25 (오늘)</span>
+                            </label>
+                            <label class="label--primary">
+                              <input type="radio" name="radio1_1" />
+                              <span>7:26 (화)</span>
+                            </label>
+                            <label class="label--primary">
+                              <input type="radio" name="radio1_1" />
+                              <span>7:27 (수)</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion__list">
+                      <div class="accordion__head">
+                        <button type="button" class="accordion__btn" id="acc-header2" aria-controls="acc-content2" aria-expanded="false"></button>
+                        <div class="accordion__title">
+                          <i class="icon icon--time" aria-hidden="true"></i>
+                          <span class="accordion__text">오후 01:00</span>
+                        </div>
+                      </div>
+                      <div class="accordion__content expand" id="acc-content2" aria-labelledby="acc-header2">
+                        <div class="label-group">
+                          <div class="heading heading--subtitle">
+                            <em class="heading__copy">오전</em>
+                            <span class="heading__text">타임할인 진행중 (오후 1시 ~ 오후 5시)</span>
+                          </div>
+                          <fieldset>
+                            <legend>오전 선택</legend>
+                            <div class="label label--btn">
+                              <label class="label--dark">
+                                <input type="radio" name="radio1_2" disabled />
+                                <span>10:00</span>
+                              </label>
+                              <label class="label--dark">
+                                <input type="radio" name="radio1_2" />
+                                <span>10:30</span>
+                              </label>
+                              <label class="label--dark">
+                                <input type="radio" name="radio1_2" />
+                                <span>11:00</span>
+                              </label>
+                              <label class="label--dark">
+                                <input type="radio" name="radio1_2" />
+                                <span>11:30</span>
+                              </label>
+                            </div>
+                          </fieldset>
+
+                          <div class="heading heading--subtitle">
+                            <em class="heading__copy">오후</em>
+                          </div>
+
+                          <fieldset>
+                            <legend>오후 선택</legend>
+                            <div class="label label--btn">
+                              <label><input type="radio" name="radio3" checked /><span>12:00</span></label>
+                              <label><input type="radio" name="radio3" /><span>12:30</span></label>
+                              <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>01:00</span></label>
+                              <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>01:30</span></label>
+                              <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>02:00</span></label>
+                              <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>02:30</span></label>
+                              <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>03:00</span></label>
+                              <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>03:30</span></label>
+                              <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>04:00</span></label>
+                              <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>04:30</span></label>
+                              <label><input type="radio" name="radio3" /><span>05:00</span></label>
+                              <label><input type="radio" name="radio3" /><span>05:30</span></label>
+                              <label><input type="radio" name="radio3" /><span>06:00</span></label>
+                              <label><input type="radio" name="radio3" /><span>06:30</span></label>
+                              <label><input type="radio" name="radio3" /><span>07:00</span></label>
+                              <label><input type="radio" name="radio3" /><span>07:30</span></label>
+                              <label><input type="radio" name="radio3" disabled /><span>08:00</span></label>
+                              <label><input type="radio" name="radio3" disabled /><span>08:30</span></label>
+                              <label><input type="radio" name="radio3" disabled /><span>09:00</span></label>
+                              <label><input type="radio" name="radio3" disabled /><span>09:30</span></label>
+                              <label><input type="radio" name="radio3" /><span>10:00</span></label>
+                              <label><input type="radio" name="radio3" /><span>10:30</span></label>
+                              <label><input type="radio" name="radio3" /><span>11:00</span></label>
+                              <label><input type="radio" name="radio3" /><span>11:30</span></label>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion__list">
+                      <div class="accordion__head">
+                        <button type="button" class="accordion__btn" id="acc-header3" aria-controls="acc-content3" aria-expanded="false"></button>
+                        <div class="accordion__title">
+                          <i class="icon icon--course" aria-hidden="true"></i>
+                          <span class="accordion__text">코스 선택</span>
+                        </div>
+                      </div>
+                      <div class="accordion__content expand" id="acc-content3" aria-labelledby="acc-header3">
+                        <div class="label-group">
+                          <div class="heading heading--subtitle">
+                            <span class="heading__text">선택한 일자 및 시간에 따라 <strong>요금이 다를 수 있습니다.</strong></span>
+                          </div>
+                          <div class="form-count">
+                            <div class="form-count__list">
+                              <div class="form-count__description">
+                                <em class="badges badges--lg badges--c5">타임할인 3천원 선착순</em>
+                                <div class="form-count__text">
+                                  <strong class="text text--xsm">전산 타이 관리 - 60분</strong>
+                                </div>
+                                <div class="form-count__price">
+                                  <span class="text text--sm text--unit text--lit">60,000<em>원</em></span>
+                                  <span class="text text--sm text--unit text--lit">60,000<em>원</em></span>
+                                  <strong class="text text--sm text-sub-100 text--unit">60,000<em>원</em></strong>
+                                </div>
+                              </div>
+                              <div class="form-count__btnarea">
+                                <div class="count">
+                                  <button type="button" class="btn btn--icon">
+                                    <i class="icon icon--minus" aria-hidden="true"></i>
+                                  </button>
+                                  <span class="count__number">0</span>
+                                  <button type="button" class="btn btn--icon">
+                                    <i class="icon icon--plus" aria-hidden="true"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-count__list">
+                              <div class="form-count__description">
+                                <div class="form-count__text">
+                                  <strong class="text text--xsm">타이 관리 - 90분</strong>
+                                </div>
+                                <div class="form-count__price">
+                                  <span class="text text--sm text--unit text--lit">80,000<em>원</em></span>
+                                  <strong class="text text--sm text--unit">40,000<em>원</em></strong>
+                                </div>
+                              </div>
+                              <div class="form-count__btnarea">
+                                <div class="count">
+                                  <button type="button" class="btn btn--icon">
+                                    <i class="icon icon--minus" aria-hidden="true"></i>
+                                  </button>
+                                  <span class="count__number is-focus">1</span>
+                                  <button type="button" class="btn btn--icon">
+                                    <i class="icon icon--plus" aria-hidden="true"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 뎁스 형태 -->
+                            <div class="form-count__depth">
+                              <div class="form-count__list">
+                                <div class="form-count__description">
+                                  <div class="form-count__text">
+                                    <span class="text text--xsm text--path">손마사지 15분</span>
+                                    <p class="text text--sm text--unit">
+                                      <b>90,000<em>원</em></b>
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="form-count__btnarea">
+                                  <div class="count">
+                                    <button type="button" class="btn btn--icon">
+                                      <i class="icon icon--minus" aria-hidden="true"></i>
+                                    </button>
+                                    <span class="count__number is-focus">1</span>
+                                    <button type="button" class="btn btn--icon">
+                                      <i class="icon icon--plus" aria-hidden="true"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-count__list">
+                                <div class="form-count__description">
+                                  <div class="form-count__text">
+                                    <span class="text text--xsm text--path">발마사지 15분</span>
+                                    <p class="text text--sm text--unit">
+                                      <b>90,000<em>원</em></b>
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="form-count__btnarea">
+                                  <div class="count">
+                                    <button type="button" class="btn btn--icon">
+                                      <i class="icon icon--minus" aria-hidden="true"></i>
+                                    </button>
+                                    <span class="count__number is-focus">1</span>
+                                    <button type="button" class="btn btn--icon">
+                                      <i class="icon icon--plus" aria-hidden="true"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- // -->
+
+                            <div class="form-count__list">
+                              <div class="form-count__description">
+                                <div class="form-count__text">
+                                  <strong class="text text--xsm">타이 관리 - 90분</strong>
+                                </div>
+                                <div class="form-count__price">
+                                  <span class="text text--sm text--unit text--lit">80,000<em>원</em></span>
+                                  <strong class="text text--sm text--unit">40,000<em>원</em></strong>
+                                </div>
+                              </div>
+                              <div class="form-count__btnarea">
+                                <div class="count">
+                                  <button type="button" class="btn btn--icon">
+                                    <i class="icon icon--minus" aria-hidden="true"></i>
+                                  </button>
+                                  <span class="count__number is-focus">1</span>
+                                  <button type="button" class="btn btn--icon">
+                                    <i class="icon icon--plus" aria-hidden="true"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-count__list">
+                              <div class="form-count__description">
+                                <div class="form-count__text">
+                                  <strong class="text text--xsm">타이 관리 - 90분</strong>
+                                </div>
+                                <div class="form-count__price">
+                                  <span class="text text--sm text--unit text--lit">80,000<em>원</em></span>
+                                  <strong class="text text--sm text--unit">40,000<em>원</em></strong>
+                                </div>
+                              </div>
+                              <div class="form-count__btnarea">
+                                <div class="count">
+                                  <button type="button" class="btn btn--icon">
+                                    <i class="icon icon--minus" aria-hidden="true"></i>
+                                  </button>
+                                  <span class="count__number is-focus">1</span>
+                                  <button type="button" class="btn btn--icon">
+                                    <i class="icon icon--plus" aria-hidden="true"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion__list">
+                      <div class="accordion__head">
+                        <button type="button" class="accordion__btn" id="acc-header4" aria-controls="acc-content4" aria-expanded="false"></button>
+                        <div class="accordion__title">
+                          <i class="icon icon--reservation" aria-hidden="true"></i>
+                          <span class="accordion__text">예약자 정보</span>
+                        </div>
+                      </div>
+                      <div class="accordion__content expand" id="acc-content4" aria-labelledby="acc-header4">
+                        <div class="label-group">
+                          <div class="form">
+                            <div class="form-field">
+                              <label class="text text--xsm" for="field1">예약자명 (필수)</label>
+                              <input type="text" class="input" id="field1" title="예약자명 입력" placeholder="예약자명을 입력해 주세요." />
+                            </div>
+                            <div class="form-field">
+                              <label class="text text--xsm" for="field2">연락처 (필수)</label>
+                              <input type="text" class="input" id="field2" title="연락처 입력" placeholder="연락처를 입력해 주세요." />
+                            </div>
+                            <div class="form-field">
+                              <label class="text text--xsm" for="field3">요청사항</label>
+                              <div class="textarea-form">
+                                <textarea class="textarea" rows="6" placeholder="요청사항을 입력해 주세요."></textarea>
+                              </div>
+                            </div>
+                            <div class="form-field">
+                              <div class="label">
+                                <label><input type="checkbox" name="" id="" /><span class="text-dark-600">다음부터 자동으로 입력하겠습니다.</span></label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </script>
+              </div>
+            </div>
+          </div>
+
+          <div class="api-box example" id="basic">
+            <h3 class="api-ex-title">아코디언 텍스트형</h3>
+            <p class="api-desc" style="margin-bottom: 20px"></p>
+            <!-- 총 결제금액  -->
+            <div class="text-info text-info--dark text-info--type3">
+              <div class="text-info__title">
+                <h2 class="text text--lg"><b>첫 결제할인</b></h2>
+                <strong class="text text--unit">84,000<em>원</em></strong>
+              </div>
+              <div class="text-info__description">
+                <div class="text-info__item">
+                  <ul>
+                    <li>
+                      <span class="text text--xsm">이용금액</span>
+                      <span class="text text--xsm text--unit">100,000<em>원</em></span>
+                    </li>
+                    <li>
+                      <div class="accordion accordion--type2" data-autoset="accordion">
+                        <div class="accordion__head">
+                          <button type="button" class="accordion__btn" id="acc-header5" aria-controls="acc-content5" aria-expanded="false"></button>
+                          <div class="accordion__title">
+                            <div class="accordion__info">
+                              <em class="text text--xsm">할인금액</em>
+                              <i class="icon icon--acc-arrow2" aria-hidden="true"></i>
+                            </div>
+                            <div class="accordion__price">
+                              <span class="text text--xsm text--unit text-red-100">-11,000<em>원</em></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion__content expand" id="acc-content5" aria-labelledby="acc-header5">
+                          <div class="text-info__item">
+                            <ul>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">첫 결제할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                              </li>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">타임할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                              </li>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">쿠폰할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="text text--xsm">포인트 사용</span>
+                      <span class="text text--xsm text--unit text-red-100">-5,000<em>P</em></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- // -->
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <script type="text/plain" class="code-view language-html">
+                  <div class="text-info text-info--dark text-info--type3">
+                    <div class="text-info__title">
+                      <h2 class="text text--lg"><b>첫 결제할인</b></h2>
+                      <strong class="text text--unit">84,000<em>원</em></strong>
+                    </div>
+                    <div class="text-info__description">
+                      <div class="text-info__item">
+                        <ul>
+                          <li>
+                            <span class="text text--xsm">이용금액</span>
+                            <span class="text text--xsm text--unit">100,000<em>원</em></span>
+                          </li>
+                          <li>
+                            <div class="accordion accordion--type2" data-autoset="accordion">
+                              <div class="accordion__head">
+                                <button type="button" class="accordion__btn" id="acc-header5" aria-controls="acc-content5" aria-expanded="false"></button>
+                                <div class="accordion__title">
+                                  <div class="accordion__info">
+                                    <em class="text text--xsm">할인금액</em>
+                                    <i class="icon icon--acc-arrow2" aria-hidden="true"></i>
+                                  </div>
+                                  <div class="accordion__price">
+                                    <span class="text text--xsm text--unit text-red-100">-11,000<em>원</em></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion__content expand" id="acc-content5" aria-labelledby="acc-header5">
+                                <div class="text-info__item">
+                                  <ul>
+                                    <li>
+                                      <span class="text text--sm text--path text-dark-900">첫 결제할인</span>
+                                      <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                                    </li>
+                                    <li>
+                                      <span class="text text--sm text--path text-dark-900">타임할인</span>
+                                      <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                                    </li>
+                                    <li>
+                                      <span class="text text--sm text--path text-dark-900">쿠폰할인</span>
+                                      <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <span class="text text--xsm">포인트 사용</span>
+                            <span class="text text--xsm text--unit text-red-100">-5,000<em>P</em></span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- # // # -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <footer id="footer">
+        <div></div>
+      </footer>
+      <!-- -------------------------------- -->
+    </div>
+  </body>
+</html>

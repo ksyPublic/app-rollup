@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>Tab - API</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script  type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script  type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script  type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script  type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- -------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- -------------------------------- -->
+      <main id="container">
+        <!-- # TITLE # -->
+        <header>
+          <h1 class="api-title">Tab</h1>
+        </header>
+
+        <!-- # CONTENT # -->
+        <div class="content api">
+          <h2 id="options"><a href="#options" class="anchor-title">#options</a></h2>
+          <div class="tbl-con2" data-more-view>
+            <table class="table table--type1">
+              <caption></caption>
+              <colgroup>
+                <col width="200" />
+                <col width="200" />
+                <col width="250" />
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">OPTION</th>
+                  <th scope="col">TYPE</th>
+                  <th scope="col">DEFAULT</th>
+                  <th scope="col">DESCRIPTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><em class="fs-code option">default</em></td>
+                  <td>number</td>
+                  <td>0</td>
+                  <td>기본적으로 선택될 탭</td>
+                </tr>
+                <tr>
+                  <td><em class="fs-code option">displayClass</em></td>
+                  <td>string</td>
+                  <td>"is-active"</td>
+                  <td>탭 컨텐츠 노출시킬 클래스 명</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          
+          <p class="api-desc mt-5" style="font-weight: bold; color: #00264a">인스턴스 획득</p>
+          <div class="codebox-wrap active">
+            <button class="code-open" type="button" disabled>🔍</button>
+            <div class="code-box">
+              <div class="code-swap">
+                <div class="code-swap-buttons">
+                  <button type="button" class="code-swap-button">Vanilla Js</button>
+                  <button type="button" class="code-swap-button">jQuery</button>
+                </div>
+                <pre class="code-view code-swap-inner">
+                  <code class="language-javascript">
+                  var element = document.querySelector("@selector");
+                  var tab = HitaiUI.Tab.get(element);
+                  // 초기화되어 있지 않다면 null을 반환합니다.
+                  </code>
+                </pre>
+                <pre class="code-view code-swap-inner">
+                  <code class="language-javascript">
+                  var tab = HitaiUI.Tab.get($("@selector"));
+                  </code>
+                </pre>
+              </div>
+            </div>
+            <p class="api-desc" style="font-weight: bold; color: #00264a">🟢 <span>@selector </span><span class="code-badge">data-autoset="tab"</span> 이 선언되어있는 엘리먼트 입니다.</p>
+          </div>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메서드 목록] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="methods"><a href="#methods" class="anchor-title">#methods</a></h2>
+          <div class="api-box">
+            <h3 class="api-title fs-code">.init()</h3>
+            <p class="api-desc">탭 초기화 합니다.</p>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">.getElement()</h3>
+            <p class="api-desc">탭 엘리먼트를 반환합니다.</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <pre class="code-view">
+                  <code class="language-javascript">
+                    var tab11 = $('#tab1');
+                    HitaiUI.Tab.get(tab11).getElement();
+                    // 해당 다이얼로그 엘리먼트 반환됨
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">.select(activeIndex)</h3>
+            <p class="api-desc">탭을 선택합니다. (타겟은 role="tab" 이 선언된 탭 버튼입니다.)</p>
+            <div class="tabs tabs--type1 my-2" data-autoset="tab" id="tab1">
+              <!-- TAB -->
+              <ul role="tablist" class="tabs__list">
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanel1" aria-selected="true">탭1</a>
+                </li>
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanel2">탭2</a>
+                </li>
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanel22">탭3</a>
+                </li>
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanel222">탭4</a>
+                </li>
+              </ul>
+              <!-- TABPANEL -->
+              <div role="tabpanel" id="uiTabPanel1" class="tabs__panel is-active">탭내용1</div>
+              <div role="tabpanel" id="uiTabPanel2" class="tabs__panel">탭내용2</div>
+              <div role="tabpanel" id="uiTabPanel22" class="tabs__panel">탭내용3</div>
+              <div role="tabpanel" id="uiTabPanel222" class="tabs__panel">탭내용4</div>
+            </div>
+
+            <script>
+              document.addEventListener('UILoaded', function () {
+                HitaiUI.Tab.get($('#tab1')).select(1);
+              });
+            </script>
+            <div class="codebox-wrap active">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <pre class="code-view">
+								<code class="language-javascript">
+                  document.addEventListener('UILoaded', function () {
+                    HitaiUI.Tab.get($('#tab1')).select(1);
+                  });
+								</code>
+							</pre>
+                <br />
+                <script type="text/plain" class="code-view language-html">
+                  <div class="tabs tabs--type1" data-autoset="tab" id="tab1">
+                    <!-- TAB -->
+                    <ul role="tablist" class="tabs__list">
+                      <li class="tabs__item">
+                        <a role="tab" href="#uiTabPanel1" aria-selected="true">탭1</a>
+                      </li>
+                      <li class="tabs__item">
+                        <a role="tab" href="#uiTabPanel2">탭2</a>
+                      </li>
+                    </ul>
+                    <!-- TABPANEL -->
+                    <div role="tabpanel" id="uiTabPanel1" class="tabs__panel is-active">탭내용1</div>
+                    <div role="tabpanel" id="uiTabPanel2" class="tabs__panel">탭내용2</div>
+                  </div>
+                </script>
+              </div>
+            </div>
+          </div>
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">.destroy()</h3>
+            <p class="api-desc">탭 기능을 삭제합니다.</p>
+          </div>
+
+          <div class="api-box static">
+            <span class="static-badge">static</span>
+            <h3 class="api-title fs-code">HitaiUI.Tab.get(element, initialize = false)</h3>
+            <p class="api-desc">탭의 인스턴스를 반환합니다.</p>
+            <p class="api-desc-check">initialize 값을 true로 호출하면 초기화되지 않은 대상을 초기화 후 인스턴스를 반환합니다.</p>
+          </div>
+          <div class="api-box static">
+            <span class="static-badge">static</span>
+            <h3 class="api-title fs-code">HitaiUI.Tab.getInstances()</h3>
+            <p class="api-desc">현재 화면에 존재하는 탭의 모든 인스턴스를 반환합니다.</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <pre class="code-view">
+								<code class="language-javascript">
+								var instanceList = HitaiUI.Tab.getInstances();
+								// output [] or [Tab, Tab, Tab]
+								</code>
+							</pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [이벤트 목록] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="events"><a href="#events" class="anchor-title">#events</a></h2>
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Tab.EVENT.CHANGED</h3>
+            <p class="api-desc">탭 선택이 변경될 때 트리거 됩니다.</p>
+            <div class="tabs tabs--type1" data-autoset="tab"  id="tab2">
+              <!-- TAB -->
+              <ul role="tablist" class="tabs__list">
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanel1" aria-selected="true">탭1</a>
+                </li>
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanel2">탭2</a>
+                </li>
+              </ul>
+              <!-- TABPANEL -->
+              <div role="tabpanel" id="uiTabPanel1" class="tabs__panel is-active">탭내용1</div>
+              <div role="tabpanel" id="uiTabPanel2" class="tabs__panel">탭내용2</div>
+            </div>
+            <script>
+              document.addEventListener('UILoaded', function () {
+                document.getElementById('tab2').addEventListener(HitaiUI.Tab.EVENT.CHANGED, function(){
+                  console.log('탭이 변경될때 처리')
+                })
+              });
+            </script>
+            <div class="codebox-wrap active">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <pre class="code-view">
+								<code class="language-javascript">
+                  document.addEventListener('UILoaded', function () {
+                    $('#tab2').addEventListener(HitaiUI.Tab.EVENT.CHANGED, function(){
+                      console.log('탭이 변경될때 처리')
+                    })
+                  });
+								</code>
+							</pre>
+                <br />
+                <script type="text/plain" class="code-view language-html">
+                  <div class="tabs tabs--type1" data-autoset="tab"  id="tab2">
+                    <!-- TAB -->
+                    <ul role="tablist" class="tabs__list">
+                      <li class="tabs__item">
+                        <a role="tab" href="#uiTabPanel1" aria-selected="true">탭1</a>
+                      </li>
+                      <li class="tabs__item">
+                        <a role="tab" href="#uiTabPanel2">탭2</a>
+                      </li>
+                    </ul>
+                    <!-- TABPANEL -->
+                    <div role="tabpanel" id="uiTabPanel1" class="tabs__panel is-active">탭내용1</div>
+                    <div role="tabpanel" id="uiTabPanel2" class="tabs__panel">탭내용2</div>
+                  </div>
+                </script>
+              </div>
+          </div>
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [여러가지 사용케이스] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="examples"><a href="#examples" class="anchor-title">#examples</a></h2>
+          <div class="api-box example">
+            <h3 class="api-ex-title">탭 기본 설정</h3>
+            <p class="api-desc" style="margin-bottom: 20px"></p>
+            <div class="tabs tabs--type1 tabs--small" data-autoset="tab">
+              <!-- TAB -->
+              <ul role="tablist" class="tabs__list">
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanels1" aria-selected="true">탭1</a>
+                </li>
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanels2">탭2</a>
+                </li>
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanels3">탭3</a>
+                </li>
+              </ul>
+              <!-- TABPANEL -->
+              <div role="tabpanel" id="uiTabPanels1" class="tabs__panel is-active">탭1</div>
+              <div role="tabpanel" id="uiTabPanels2" class="tabs__panel">탭2</div>
+              <div role="tabpanel" id="uiTabPanels3" class="tabs__panel">탭3</div>
+            </div>
+            <script type="text/plain" class="code-view language-html">
+            <div class="tabs tabs--type1 tabs--small" data-autoset="tab">
+              <!-- TAB -->
+              <ul role="tablist" class="tabs__list">
+                <li class="tabs__item">
+                  // 처음 보여지는 탭에 aria-selected="true" 추가한다.
+                  <a role="tab" href="#uiTabPanels1" aria-selected="true">탭1</a>
+                </li>
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanels2">탭2</a>
+                </li>
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanels3">탭3</a>
+                </li>
+              </ul>
+              <!-- TABPANEL -->
+              // 처음 보여지는 탭패널에 is-active를 추가한다.
+              <div role="tabpanel" id="uiTabPanels1" class="tabs__panel is-active">탭1</div>
+              <div role="tabpanel" id="uiTabPanels2" class="tabs__panel">탭2</div>
+              <div role="tabpanel" id="uiTabPanels3" class="tabs__panel">탭3</div>
+            </div>
+          </script>
+					</pre>
+          </div>
+        </div>
+        <!-- # // # -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <footer id="footer">
+        <div></div>
+      </footer>
+      <!-- -------------------------------- -->
+    </div>
+  </body>
+</html>

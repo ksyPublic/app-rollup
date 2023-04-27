@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>내 정보 | 마이페이지 조회 - hitai</title>
+    <include src="../_include/head.html"></include>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header bg-primary-100">
+        <!-- TITLE -->
+        <h1 class="header__title">내 정보</h1>
+
+        <!-- SIDE -->
+        <div class="header__side">
+          <button type="button" class="btn btn--icon">
+            <i class="icon icon--noti-black" aria-hidden="true"></i>
+            <em class="icon icon--new">new</em>
+          </button>
+
+          <button type="button" class="btn btn--icon">
+            <i class="icon icon--setting-black" aria-hidden="true"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <div class="content">
+          <div class="mypage">
+            <!-- 로그아웃 -->
+            <!-- <div class="mypage__info">
+              <a href="#none" class="mypage__link">
+                로그인 / 회원가입하기<br />
+                <span>회원가입시 1,000P 즉시 적립</span>
+              </a>
+            </div> -->
+            <!-- // -->
+
+            <!-- 로그인 -->
+            <div class="mypage__info">
+              <div class="mypage__profile">
+                <div class="mypage__img">
+                  <a class="mypage__anchor" href="#none" title="프로필">
+                    <img src="../../resources/images/temp/profile-img.png" />
+                    <i class="icon icon--kakao-sm" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <div class="mypage__user">
+                  <span class="mypage__nickname">호앙오앙호앙오앙호앙오앙</span>
+                  <em>님!<br />반갑습니다.</em>
+
+                  <a href="#none" class="mypage__link">카카오 계정 로그인</a>
+                </div>
+              </div>
+            </div>
+            <!-- // -->
+
+            <div class="mypage__record">
+              <div class="mypage__box mypage__point">
+                <p class="mypage__text">
+                  <i class="icon icon--point-primary-sm"></i>
+                  <span>내 포인트</span>
+                  <button class="btn btn--icon">
+                    <i class="icon icon--info-light-md" aria-hidden="true"></i>
+                  </button>
+                </p>
+                <span class="mypage__number">30,000</span>
+              </div>
+              <div class="mypage__box mypage__coupon">
+                <p class="mypage__text">
+                  <i class="icon icon--coupon-primary-sm"></i>
+                  <span>내 쿠폰</span>
+                </p>
+                <span class="mypage__number">3<em class="unit">장</em></span>
+              </div>
+            </div>
+          </div>
+          <div class="l-row">
+            <div class="mypage-menu">
+              <span class="hide">마이페이지 메뉴</span>
+              <ul class="list-group list-group--menu">
+                <li class="list-group__item">
+                  <a href="" class="list-group__anchor">
+                    <i class="icon icon--mypage-hipass" aria-hidden="true"></i>
+                    <span class="list-group__text">하이패스 (내 예약)</span>
+                    <em class="icon icon--new">new</em>
+                  </a>
+                </li>
+                <li class="list-group__item">
+                  <a href="" class="list-group__anchor">
+                    <i class="icon icon--mypage-event" aria-hidden="true"></i>
+                    <span class="list-group__text">이벤트</span>
+                  </a>
+                </li>
+                <li class="list-group__item">
+                  <a href="" class="list-group__anchor">
+                    <i class="icon icon--mypage-shop" aria-hidden="true"></i>
+                    <span class="list-group__text">내 제휴점</span>
+                  </a>
+                </li>
+                <li class="list-group__item">
+                  <a href="" class="list-group__anchor">
+                    <i class="icon icon--mypage-stamp" aria-hidden="true"></i>
+                    <span class="list-group__text">내 스탬프</span>
+                  </a>
+                </li>
+                <li class="list-group__item">
+                  <a href="" class="list-group__anchor">
+                    <i class="icon icon--mypage-review" aria-hidden="true"></i>
+                    <span class="list-group__text">나의 이용후기</span>
+                  </a>
+                </li>
+
+                <li class="list-group__item">
+                  <a href="" class="list-group__anchor">
+                    <i class="icon icon--mypage-friend" aria-hidden="true"></i>
+                    <span class="list-group__text">친구초대</span>
+                    <strong class="list-group__side text-primary-100">3,000원 쿠폰받기</strong>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="list-group list-group--menu">
+                <h3 class="list-group__title">소식/정보</h3>
+
+                <ul class="list-group">
+                  <li class="list-group__item">
+                    <a href="" class="list-group__anchor">
+                      <span class="list-group__text">공지사항</span>
+                    </a>
+                  </li>
+                  <li class="list-group__item">
+                    <a href="" class="list-group__anchor">
+                      <span class="list-group__text">태국마사지 용어 알아보기</span>
+                    </a>
+                  </li>
+                  <li class="list-group__item">
+                    <a href="" class="list-group__anchor">
+                      <span class="list-group__text">약관 및 정책</span>
+                    </a>
+                  </li>
+                  <li class="list-group__item">
+                    <a href="" class="list-group__anchor">
+                      <span class="list-group__text">제휴점 관리자 페이지</span>
+                    </a>
+                  </li>
+                  <li class="list-group__item">
+                    <a href="" class="list-group__anchor">
+                      <span class="list-group__text">버전정보 2.44</span>
+                      <div class="list-group__side">
+                        <button class="btn btn--primary btn--xsm btn--round">업데이트</button>
+                        <span class="text-primary-100">최신버전 사용중</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="list-group list-group--menu">
+                <h3 class="list-group__title">고객센터</h3>
+
+                <ul class="list-group">
+                  <li class="list-group__item">
+                    <a href="" class="list-group__anchor">
+                      <span class="list-group__text">이용안내 FAQ</span>
+                    </a>
+                  </li>
+                  <li class="list-group__item">
+                    <a href="" class="list-group__anchor">
+                      <span class="list-group__text">앱 평가하기</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="customer">
+              <strong class="customer__text">
+                <span>하이타이 고객센터<em>10:00 ~ 18:00</em></span>
+              </strong>
+              <ul class="text-list text-list--bullet1 text-list--horizontal">
+                <li class="text-list__item">주말, 공휴일 휴무</li>
+                <li class="text-list__item">점심시간 12:30 ~ 01:30</li>
+              </ul>
+
+              <button type="button" onclick="document.location.href='tel:16884522'" class="btn btn--with btn--bgn w-100">
+                <span class="text-dark-200"> <b>1688-4522</b> 전화 문의하기 </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # Nvaigation # -->
+      <!-- -------------------------------- -->
+      <nav id="navBar">
+        <ul class="nav-bar">
+          <li class="nav-bar__item">
+            <a href="#none" class="nav-bar__anchor">홈</a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="#none" class="nav-bar__anchor">지역</a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="#none" class="nav-bar__anchor">내주변</a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="#none" class="nav-bar__anchor">내예약<em class="icon icon--new">new</em> </a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="#none" class="nav-bar__anchor" aria-current="page">내정보<em class="icon icon--new">new</em> </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- -------------------------------- -->
+    </div>
+  </body>
+</html>

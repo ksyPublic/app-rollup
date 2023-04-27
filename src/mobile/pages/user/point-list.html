@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>내 정보 | 내 포인트 | 포인트 적립/사용 목록 조회 - hitai</title>
+    <include src="../_include/head.html"></include>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header">
+        <!-- BACK BUTTON -->
+        <button type="button" class="header__back btn btn--icon">
+          <span class="hide">뒤로가기</span>
+          <i class="icon icon--back" aria-hidden="true"></i>
+        </button>
+        <!-- TITLE -->
+        <h1 class="header__title">내 포인트</h1>
+      </header>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <div class="content">
+          <div class="l-row l-row--lg">
+            <div class="mypage-point">
+              <div class="heading heading--subtitle">
+                <em class="heading__copy">나의 하이타이 포인트</em>
+                <a href="#none" class="btn btn--text btn--text-sm">
+                  <em class="text-dark-900">포인트 정책</em>
+                  <i class="icon icon--info-light-md" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="mypage-point__description">
+                <div class="mypage-point__price">
+                  <i class="icon icon--point-primary-md" aria-hidden="true"></i>
+                  <span class="mypage-point__number">30,000</span>
+                </div>
+                <p class="mypage-point__info">
+                  소멸 예정:<span class="mypage-point__number">320<em class="unit">P</em><span class="mypage-point__date">(2022.12.31)</span></span>
+                </p>
+              </div>
+              <div class="mypage-point__btn">
+                <button class="btn btn--primary btn--xmd w-100">포인트 사용</button>
+              </div>
+            </div>
+
+            <div class="tabs tabs--type2" data-autoset="tab" data-tab-sticky>
+              <!-- TAB -->
+              <div class="tabs__head">
+                <ul role="tablist" class="tabs__list">
+                  <li class="tabs__item">
+                    <a role="tab" href="#uiTabPanel1" aria-selected="true">전체</a>
+                  </li>
+                  <li class="tabs__item">
+                    <a role="tab" href="#uiTabPanel2">적립</a>
+                  </li>
+                  <li class="tabs__item">
+                    <a role="tab" href="#uiTabPanel3">사용</a>
+                  </li>
+                </ul>
+                <button class="btn btn--icon">
+                  <i class="icon icon--filter" aria-hidden="true"></i>
+                </button>
+              </div>
+              <!-- TABPANEL -->
+              <div role="tabpanel" id="uiTabPanel1" class="tabs__panel is-active">
+                <div class="mypage-history">
+                  <h5 class="mypage-history__filter">최근 1개월</h5>
+                  <div class="mypage-history__content">
+                    <ul>
+                      <li class="mypage-history__item mypage-history--add">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">룰렛이벤트</span>
+                          <em class="mypage-history__date">2022.12.25</em>
+                        </div>
+                        <span class="mypage-history__number">100<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--add">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">친구추천</span>
+                          <em class="mypage-history__date">2022.12.24</em>
+                        </div>
+                        <span class="mypage-history__number">3,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--remove">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">하이패스 예약</span>
+                          <em class="mypage-history__date">2022.12.24</em>
+                        </div>
+                        <span class="mypage-history__number">5,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--remove">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">기프티콘 교환(버거킹 와퍼주니어 세트)</span>
+                          <em class="mypage-history__date">2022.12.24</em>
+                        </div>
+                        <span class="mypage-history__number">5,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--add">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">친구추천</span>
+                          <em class="mypage-history__date">2022.12.01</em>
+                        </div>
+                        <span class="mypage-history__number">3,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--remove">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">하이패스 예약</span>
+                          <em class="mypage-history__date">2022.12.24</em>
+                        </div>
+                        <span class="mypage-history__number">5,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--remove">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">기프티콘 교환(버거킹 와퍼주니어 세트)</span>
+                          <em class="mypage-history__date">2022.12.24</em>
+                        </div>
+                        <span class="mypage-history__number">5,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--add">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">친구추천</span>
+                          <em class="mypage-history__date">2022.12.01</em>
+                        </div>
+                        <span class="mypage-history__number">3,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--remove">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">하이패스 예약</span>
+                          <em class="mypage-history__date">2022.12.24</em>
+                        </div>
+                        <span class="mypage-history__number">5,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--remove">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">기프티콘 교환(버거킹 와퍼주니어 세트)</span>
+                          <em class="mypage-history__date">2022.12.24</em>
+                        </div>
+                        <span class="mypage-history__number">5,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--add">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">친구추천</span>
+                          <em class="mypage-history__date">2022.12.01</em>
+                        </div>
+                        <span class="mypage-history__number">3,000<em class="unit">P</em></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" id="uiTabPanel2" class="tabs__panel">
+                <div class="mypage-history">
+                  <h5 class="mypage-history__filter">최근 1개월</h5>
+                  <div class="mypage-history__content">
+                    <ul>
+                      <li class="mypage-history__item mypage-history--add">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">룰렛이벤트</span>
+                          <em class="mypage-history__date">2022.12.25</em>
+                        </div>
+                        <span class="mypage-history__number">100<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--add">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">친구추천</span>
+                          <em class="mypage-history__date">2022.12.24</em>
+                        </div>
+                        <span class="mypage-history__number">3,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--add">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">친구추천</span>
+                          <em class="mypage-history__date">2022.12.01</em>
+                        </div>
+                        <span class="mypage-history__number">3,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--add">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">친구추천</span>
+                          <em class="mypage-history__date">2022.12.01</em>
+                        </div>
+                        <span class="mypage-history__number">3,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--add">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">친구추천</span>
+                          <em class="mypage-history__date">2022.12.01</em>
+                        </div>
+                        <span class="mypage-history__number">3,000<em class="unit">P</em></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" id="uiTabPanel3" class="tabs__panel">
+                <div class="mypage-history">
+                  <h5 class="mypage-history__filter">최근 1개월</h5>
+                  <div class="mypage-history__content">
+                    <ul>
+                      <li class="mypage-history__item mypage-history--remove">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">하이패스 예약</span>
+                          <em class="mypage-history__date">2022.12.24</em>
+                        </div>
+                        <span class="mypage-history__number">5,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--remove">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">기프티콘 교환(버거킹 와퍼주니어 세트)</span>
+                          <em class="mypage-history__date">2022.12.24</em>
+                        </div>
+                        <span class="mypage-history__number">5,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--remove">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">하이패스 예약</span>
+                          <em class="mypage-history__date">2022.12.24</em>
+                        </div>
+                        <span class="mypage-history__number">5,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--remove">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">기프티콘 교환(버거킹 와퍼주니어 세트)</span>
+                          <em class="mypage-history__date">2022.12.24</em>
+                        </div>
+                        <span class="mypage-history__number">5,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--remove">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">하이패스 예약</span>
+                          <em class="mypage-history__date">2022.12.24</em>
+                        </div>
+                        <span class="mypage-history__number">5,000<em class="unit">P</em></span>
+                      </li>
+                      <li class="mypage-history__item mypage-history--remove">
+                        <div class="mypage-history__info">
+                          <span class="mypage-history__text">기프티콘 교환(버거킹 와퍼주니어 세트)</span>
+                          <em class="mypage-history__date">2022.12.24</em>
+                        </div>
+                        <span class="mypage-history__number">5,000<em class="unit">P</em></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- ---------------------------------------------------------- -->
+    </div>
+  </body>
+</html>

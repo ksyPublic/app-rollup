@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>이용후기 이벤트 | 제휴점 상세 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row">
+            <button type="button" class="btn btn--dark btn--md" data-dialog-trigger="#uiReviewEvent" aria-haspopup="dialog">이용후기 이벤트</button>
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w12 modal--event" id="uiReviewEvent">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <div class="review-event">
+                <div class="review-event__l">
+                  <span class="review-event__title"><strong>B</strong>est<br /><strong>R</strong>eview</span>
+                  <p class="review-event__sub1">정성스러운 이용 후기를 남겨주세요!</p>
+                  <p class="review-event__sub2">당첨되신 분께 <strong>타이 60분 1인 이용권</strong>을 드립니다.</p>
+                  <button type="button" class="btn btn--light btn--round btn--lg">이용 후기 쓰기</button>
+                </div>
+                <div class="review-event__r">
+                  <div class="review-event__list">
+                    <dl>
+                      <dt>이벤트 기간</dt>
+                      <dd>2023.01.01 ~ 2023.06.31</dd>
+                    </dl>
+                    <dl>
+                      <dt>이벤트 상품</dt>
+                      <dd>‘타이 60분 1인’ 이용권</dd>
+                    </dl>
+                    <dl>
+                      <dt>당첨자 발표</dt>
+                      <dd>이벤트 종료 후 1주일 이내<span>(당첨자 선정 후 쿠폰 자동 발행)</span></dd>
+                    </dl>
+                  </div>
+                  <dl class="text-list text-list--bullet1">
+                    <dt class="text-list__title">이벤트 이용안내</dt>
+                    <dd class="text-list__item">본 이벤트는 <strong>청담 타이마시지</strong>에서 직접 진행하는 이벤트이며 이벤트 상품 또한 청담 타이마시지에서 제공합니다.</dd>
+                    <dd class="text-list__item">당첨자 선정은 <strong>청담 타이마시지</strong>에서 직접 선정합니다.</dd>
+                    <dd class="text-list__item">이벤트 기간 중 참여자가 3명 미만일 경우, 본 이벤트는 자동 취소되며 당첨자가 미발표될수 있습니다.</dd>
+                    <dd class="text-list__item">이벤트 안내 및 당첨자 관련 문의는 <strong>청담 타이마시지</strong>에 직접 문의해 주시기 바랍니다.</dd>
+                    <dd class="text-list__item">본 이벤트는 <strong>청담 타이마시지</strong> 또는 당사의 사정에 따라 예고 없이 종료 될 수 있습니다.</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <!-- [//] -->
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+
+      <script>
+        document.addEventListener('UILoaded', function () {
+          var dialog = document.querySelector('#uiReviewEvent');
+          var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+          dialogInstance.open();
+        });
+      </script>
+    </div>
+  </body>
+</html>

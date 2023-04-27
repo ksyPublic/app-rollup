@@ -1,0 +1,546 @@
+/* --------------------------------------------------------------------------------
+      LAYOUT
+  --------------------------------------------------------------------------------- */
+body {
+  min-width: rem(1280);
+}
+#wrapper {
+  position: relative;
+  width: 100%;
+  min-width: rem(1280);
+}
+.nav-skip a {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  font-size: rem(1);
+  z-index: -1;
+  text-align: center;
+  color: transparent;
+}
+.nav-skip a:focus {
+  background: #093378;
+  z-index: 500;
+  font-size: rem(16);
+  line-height: rem(8);
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: rem(1280);
+  height: rem(150);
+  border-bottom: rem(1) solid #e5e5e5;
+  background: $white;
+  z-index: 55;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #eee;
+  }
+}
+
+.header {
+  &__wrap {
+    position: relative;
+    width: rem(1280);
+    margin: 0 auto;
+  }
+
+  &__util {
+    display: block;
+    height: rem(48);
+    padding: rem(12 0);
+    text-align: right;
+  }
+
+  &-link {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+
+    &--download {
+      position: absolute;
+      top: 12px;
+      left: 0;
+      width: rem(166);
+      text-align: left;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: rem(22);
+        font-size: 1px;
+        padding: rem(0 0 0 22);
+        overflow: hidden;
+      }
+      &::before {
+        left: rem(100);
+        background: url('../images/icon/icon-anroid.png') 3px 3px no-repeat;
+      }
+      &::after {
+        right: 0;
+        background: url('../images/icon/icon-ios.png') no-repeat;
+      }
+      .btn {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1.4rem;
+        color: #999;
+        line-height: rem(24);
+        height: rem(24);
+        border-radius: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &-link__item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: rem(14);
+    color: #999;
+    line-height: rem(24);
+    & + .header-link__item {
+      margin: rem(0 0 0 40);
+    }
+  }
+
+  &__main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    // padding: rem(28 0 0);
+    height: rem(102);
+  }
+
+  &__logo {
+    display: inline-block;
+    vertical-align: top;
+    height: 26px;
+  }
+
+  &__nav {
+    display: inline-block;
+    vertical-align: top;
+    margin: rem(0 0 0 56);
+    .gnb {
+      display: inline-block;
+    }
+    .gnb__item {
+      position: relative;
+      display: inline-block;
+      margin: rem(0 24);
+      a {
+        display: block;
+        height: rem(102);
+        padding: rem(28 8);
+        font-size: rem(20);
+        font-weight: 700;
+        color: color(dark, 100);
+        line-height: rem(46);
+        &[aria-current='page'] {
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: rem(4);
+            background: color(primary, 100);
+          }
+        }
+      }
+    }
+  }
+
+  &__form {
+    display: inline-block;
+    margin: rem(0 0 0 72);
+    width: 400px !important;
+  }
+
+  &__login {
+    flex: 1;
+    text-align: right;
+  }
+
+  &-user {
+    &__item {
+      display: inline-block;
+      & + .header-user__item {
+        margin: rem(0 0 0 40);
+      }
+    }
+    &__btn {
+      display: block;
+      line-height: rem(32);
+      color: color(dark, 100);
+      font-weight: 500;
+      position: relative;
+      .icon--new {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}
+
+#container {
+  padding: rem(150 0 180 0);
+  min-height: calc(100vh - #{rem(247)});
+  .content {
+    overflow: hidden;
+    // margin: 0 auto;
+  }
+}
+
+#footer {
+  position: relative;
+}
+
+.footer {
+  &__wrap {
+    position: relative;
+    width: rem(1280);
+    min-height: rem(247);
+    margin: 0 auto;
+    padding: rem(65 0);
+  }
+
+  &-info {
+    display: inline-block;
+    border-right: 1px solid #eee;
+    &__list {
+      width: rem(650);
+      li {
+        display: inline-block;
+        color: color(gray, 200);
+        margin: rem(0 16);
+        font-size: rem(14);
+      }
+      margin: rem(0 -16);
+    }
+    &__text {
+      margin: rem(20 0 0 0);
+      font-size: rem(12);
+      color: color(gray, 200);
+    }
+  }
+
+  &-link {
+    display: inline-block;
+    vertical-align: top;
+    margin: rem(0 0 0 48);
+
+    &__list {
+      width: rem(264);
+      @include clearfix;
+    }
+    &__item {
+      float: left;
+      width: rem(120);
+      &:nth-child(2n) {
+        width: rem(144);
+      }
+      a {
+        display: inline-block;
+        line-height: rem(35);
+        color: color(gray, 200);
+        font-size: rem(14);
+      }
+    }
+  }
+
+  &-util {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    display: block;
+    border: 1px solid color(gray, 400);
+
+    &__list {
+      position: relative;
+      width: rem(270);
+      padding: rem(0 23);
+      & + .footer-util__list {
+        border-top: 1px solid color(gray, 400);
+      }
+      // &:first-child {
+      //   &::before {
+      //     content: '';
+      //     display: block;
+      //     padding: rem(0 23);
+      //     line-height: rem(58);
+      //     font-size: rem(12);
+      //     color: #888;
+      //     font-weight: 700;
+      //   }
+      // }
+      > span {
+        display: block;
+        line-height: rem(58);
+        font-size: rem(12);
+        color: #888;
+        font-weight: 700;
+      }
+    }
+
+    &__item {
+      position: absolute;
+      top: 50%;
+      right: rem(23);
+      display: block;
+      transform: translateY(-50%);
+      overflow: hidden;
+      font-size: 1px;
+      color: transparent;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      &--android,
+      &--ios {
+        overflow: hidden;
+        position: absolute;
+        width: rem(26);
+        height: rem(26);
+        padding: rem(0 0 0 26);
+        font-size: 1px;
+        color: transparent;
+      }
+      &--android {
+        background: url('../images/icon/icon-android-lg.png') no-repeat 50% 50%;
+        top: rem(18);
+        transform: translateY(0);
+        right: rem(60);
+      }
+      &--ios {
+        background: url('../images/icon/icon-ios-lg.png') no-repeat 50% 50%;
+      }
+      &--blog {
+        width: rem(49);
+        height: rem(22);
+        padding: rem(0 0 0 49);
+        &::before {
+          background: url('../images/icon/icon-blog.png') no-repeat 50% 50%;
+        }
+      }
+    }
+  }
+}
+
+//하단 조회영역
+.inquery {
+  $root: inquery;
+  width: 100%;
+  overflow: hidden;
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    height: rem(180);
+    width: 100%;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 50%;
+      left: 0;
+      position: absolute;
+      height: 100%;
+      background-color: #f1754e;
+      top: 0;
+      z-index: -1;
+    }
+
+    &:after {
+      content: '';
+      width: 50%;
+      z-index: -1;
+      right: 0;
+      position: absolute;
+      height: 100%;
+      background-color: #333333;
+      top: 0;
+    }
+  }
+  &__box {
+    position: relative;
+    align-items: center;
+    width: 100%;
+
+    &--primary {
+      max-width: rem(640);
+      background-color: color(primary, 200);
+
+      .#{$root}__subtext {
+        color: color(gray, 600);
+      }
+      .#{$root}__anchor {
+        padding-right: rem(58);
+      }
+    }
+
+    &--dark {
+      max-width: rem(640);
+      background-color: color(dark, 300);
+
+      .#{$root}__subtext {
+        color: color(gray, 1000);
+      }
+
+      .#{$root}__anchor {
+        padding-left: rem(58);
+      }
+
+      .icon {
+        right: 0 !important;
+      }
+    }
+  }
+
+  .icon {
+    position: absolute;
+    right: rem(63);
+    top: calc(50% - #{rem(5.5)});
+  }
+
+  &__anchor {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: rem(60 0);
+  }
+
+  &__text {
+    font-size: rem(22);
+    font-weight: bold;
+    letter-spacing: rem(-0.73);
+    color: $white;
+  }
+
+  &__subtext {
+    font-size: rem(16);
+    letter-spacing: rem(-0.53);
+    margin-top: rem(8);
+  }
+}
+
+.l-row {
+  margin: 0 auto;
+  position: relative;
+  width: rem(1280);
+  &--before {
+    &:before {
+      content: '';
+      display: block;
+      height: rem(50);
+    }
+
+    //l-box가 첫번째 요소로 올때
+    .l-box:first-child {
+      margin-top: rem(20);
+    }
+  }
+
+  &--after {
+    &:after {
+      content: '';
+      display: block;
+      height: rem(180);
+    }
+  }
+
+  &--lg {
+    width: 100%;
+  }
+
+  &--sm {
+    width: rem(840);
+  }
+
+  &--xsm {
+    width: rem(420);
+  }
+}
+
+// 헤더 다운로드 메뉴
+.download-menu {
+  font-size: rem(16);
+  position: relative;
+  [data-menu='con'] {
+    position: absolute;
+    top: rem(36);
+    left: 0;
+    z-index: 55;
+    > div {
+      padding: rem(41 26 0);
+      width: rem(350);
+      height: rem(367);
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.05);
+    }
+  }
+  &__title {
+    display: block;
+    margin: rem(0 0 8);
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: 1;
+  }
+  &__sub {
+    font-size: rem(14);
+    color: color(dark, 50);
+  }
+  &__btn {
+    margin: rem(16 0 0);
+    a {
+      display: inline-block;
+      padding: rem(28 25 18);
+      border: 1px solid #eee;
+      border-radius: rem(10);
+      font-size: rem(14);
+      text-align: center;
+      span {
+        display: block;
+        margin: rem(8 0 0);
+      }
+      & + a {
+        margin: rem(0 0 0 10);
+      }
+    }
+  }
+  [data-menu-close] {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    width: calc(100% - 2px);
+    background: color(gray, 1100);
+    text-align: center;
+    border-radius: 0;
+    height: rem(56);
+    line-height: rem(56);
+    color: color(dark, 100);
+  }
+}

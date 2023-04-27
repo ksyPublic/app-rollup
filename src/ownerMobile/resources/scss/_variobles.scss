@@ -1,0 +1,160 @@
+// COMMONET:변수선언
+//default size
+$font-base: 10 !default;
+
+//colors
+$white: #fff;
+
+$colors: (
+  primary: (
+    10: #ff7b55,
+    50: #ff7c56,
+    100: #ff5b2c,
+    200: #f1754e,
+    300: #e34e23,
+  ),
+
+  // primary-100, sub-100 텍스트 강조컬러(pc와 동일하게 맞춤)
+  sub:
+    (
+      100: #5d2dfc,
+    ),
+
+  red: (
+    100: #ff0000,
+  ),
+
+  dark: (
+    50: #000,
+    100: #111,
+    200: #222,
+    300: #333,
+    400: #444,
+    500: #555,
+    600: #666,
+    900: #999,
+  ),
+
+  white: (
+    100: #f5f5f5,
+    200: #efefef,
+    300: #e8e8e8,
+    400: #d8d8d8,
+    500: #f8f8f8,
+  ),
+
+  green: (
+    100: #89dd00,
+    200: #a9f7ea,
+    300: #00ddb8,
+    400: #29c9d2,
+  ),
+
+  violet: (
+    100: #819eff,
+    200: #5f30fc,
+    300: #5d2dfc,
+    400: #e53aa9,
+  ),
+
+  yellow: (
+    100: #ffdf9f,
+    200: #f6de38,
+    300: #ffe403,
+  ),
+  brown: (
+    100: #faf6ec,
+    200: #f7f1ef,
+    300: #fae7dd,
+    400: #f1c8b9,
+    500: #ffcbba,
+    600: #ffd1c0,
+    800: #361f1e,
+    900: #3d2222,
+  ),
+  gray: (
+    100: #eee,
+    200: #e7e7e7,
+    300: #e2e2e2,
+    400: #dedede,
+    500: #d9d9d9,
+    600: #ddd,
+    700: #ccc,
+    800: #bebebe,
+    900: #bbb,
+    1000: #929292,
+  ),
+);
+
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .text-#{$color}-#{$shade} {
+      color: color($color, $shade) !important;
+    }
+
+    .bg-#{$color}-#{$shade} {
+      background-color: color($color, $shade) !important;
+    }
+  }
+}
+
+//icon
+$icon-url: '../images/icon/';
+$com-url: '../images/com/';
+
+// spacers
+$spacer: rem(4) !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 2,
+  2: $spacer * 4,
+  3: $spacer * 6,
+  4: $spacer * 8,
+  5: $spacer * 10,
+  6: $spacer * 12,
+  7: $spacer * 14,
+  8: $spacer * 16,
+  9: $spacer * 18,
+  10: $spacer * 20,
+) !default;
+
+$font-size: (
+  0: 0,
+  1: rem(12),
+  2: rem(14),
+  3: rem(16),
+  4: rem(18),
+  5: rem(20),
+  6: rem(22),
+  7: rem(24),
+  8: rem(26),
+  9: rem(28),
+  10: rem(30),
+) !default;
+
+$line-height: (
+  0: 0,
+  1: rem(12),
+  2: rem(14),
+  3: rem(16),
+  4: rem(18),
+  5: rem(20),
+  6: rem(22),
+  7: rem(24),
+  8: rem(26),
+  9: rem(28),
+  10: rem(30),
+) !default;
+
+// Options
+//
+// 선택적 기능을 활성화 또는 비활성화하여 전역 스타일을 빠르게 수정합니다.
+$enable-negative-margins: true !default;
+$enable-important-utilities: true !default;
+$enable-rounded: true !default;
+$enable-transitions: true !default;
+$enable-reduced-motion: true !default;
+$enable-gradients: false !default;
+$enable-shadows: false !default;
+
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;

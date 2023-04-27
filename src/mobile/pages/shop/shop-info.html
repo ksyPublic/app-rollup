@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>이용후기 작성 안내 화면 | 제휴점 상세 | 내주변 - hitai</title>
+    <include src="../_include/head.html"></include>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header">
+        <!-- BACK BUTTON -->
+        <button type="button" class="header__back">
+          <span class="hide">뒤로가기</span>
+          <i class="icon icon--back" aria-hidden="true"></i>
+        </button>
+        <!-- TITLE -->
+        <h1 class="header__title">청담타이마사지</h1>
+        <!-- SIDE -->
+        <div class="header__side">
+          <button type="button" class="btn btn--icon">
+            <span class="hide">공유하기</span>
+            <i class="icon icon--basic-share" aria-hidden="true"></i>
+          </button>
+          <div class="label label--like">
+            <label>
+              <input type="checkbox" />
+              <span>좋아요</span>
+            </label>
+          </div>
+        </div>
+      </header>
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <div class="content">
+          <div class="l-row l-row--lg">
+            <div class="tabs tabs--type1" data-autoset="tab" id="tab" data-tab-sticky>
+              <!-- TAB -->
+              <ul role="tablist" class="tabs__list">
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanel1" aria-selected="true">정보</a>
+                </li>
+                <li class="tabs__item">
+                  <a role="tab" href="#uiTabPanel2">후기<em>(30)</em><em class="icon icon--new">new</em></a>
+                </li>
+              </ul>
+              <!-- TABPANEL : 정보 -->
+              <div role="tabpanel" id="uiTabPanel1" class="tabs__panel is-active">
+                <div class="detail-store">
+                  <!-- 이미지 -->
+                  <div class="detail-store__thumb" id="detailSwiper">
+                    <ul class="thumb-list swiper-wrapper">
+                      <li class="thumb-list__slide swiper-slide">
+                        <img src="http://placehold.it/720x560" alt="상세이미지설명" />
+                      </li>
+                      <li class="thumb-list__slide swiper-slide">
+                        <img src="http://placehold.it/720x560" alt="상세이미지설명" />
+                      </li>
+                      <li class="thumb-list__slide swiper-slide">
+                        <img src="http://placehold.it/720x560" alt="상세이미지설명" />
+                      </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <div class="detail-store__con">
+                    <!-- 상세정보 -->
+                    <div class="detail-store__label">
+                      <em class="badges badges--sm badges--c1">타임할인</em>
+                      <em class="badges badges--sm badges--c2">스탬프</em>
+                      <em class="badges badges--sm badges--c3 badges--hipass"><span>하이패스</span></em>
+                      <em class="badges badges--sm badges--c4">이벤트</em>
+                    </div>
+                    <h2 class="detail-store__title">구로디지털 아레나 스파 & 프리미엄 스웨디시 깔깔거리점</h2>
+                    <div class="store-util">
+                      <span class="store-util__item"><span class="hide">평점</span><i class="icon icon--star" aria-hidden="true"></i><em class="store-util__text">9.3(30)</em></span>
+                      <span class="store-util__item"><span class="hide">좋아요</span><i class="icon icon--like" aria-hidden="true"></i><em class="store-util__text">3758</em></span>
+                      <span class="store-util__item"><span class="hide">거리</span><i class="icon icon--distance" aria-hidden="true"></i><em class="store-util__text">375m</em></span>
+                    </div>
+                    <div class="detail-store__address">서울 구로구 디지털로32길 디지털타워 2F <i class="icon icon--map-gray" aria-hidden="true"></i></div>
+                    <div class="detail-store__btn">
+                      <a href="" class="btn btn--c1">최대<strong class="text-primary-100">10,000원 할인쿠폰</strong> 받기<i class="icon icon--download" aria-hidden="true"></i></a>
+                      <a href="" class="btn btn--c2">베스트 이용후기 이벤트<i class="icon icon--arrow" aria-hidden="true"></i></a>
+                      <a href="" class="btn btn--c3">스탬프 적립 이벤트<i class="icon icon--arrow" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="detail-store__info">
+                      <dl class="text-list time">
+                        <dt class="text-list__title">영업시간</dt>
+                        <dd class="text-list__item">
+                          <p>주간 : 오후 12:00 ~ 오후 06:00</p>
+                          <p>야간 : 오후 06:00 ~ 익일 오전 04:00</p>
+                        </dd>
+                      </dl>
+                      <dl class="text-list text-list--bullet1">
+                        <dt class="text-list__title">매장 관리</dt>
+                        <dd class="text-list__item">매일 1회 자체 소독을 진행합니다.</dd>
+                        <dd class="text-list__item">타올 및 모든 비품 용폼은 재사용되지 않습니다.</dd>
+                        <dd class="text-list__item">야몽과 마사지 오일 및 크림과 같은 관리 제품은 정품만 사용하고 있습니다.</dd>
+                      </dl>
+                      <dl class="text-list text-list--bullet1">
+                        <dt class="text-list__title">고객 관리</dt>
+                        <dd class="text-list__item">공용 샤워장이 아닌 호텔식 개인 샤워룸입니다.</dd>
+                        <dd class="text-list__item">도도포인트를 통해 포인트를 적립해 드리고 있습니다.</dd>
+                      </dl>
+                    </div>
+
+                    <!-- 프로그램 -->
+                    <h3 class="heading heading--1">회원 할인가 및 관리 프로그램</h3>
+                    <div class="detail-program">
+                      <div class="detail-program__title">타이 관리</div>
+                      <ul class="detail-price">
+                        <!-- 타임세일 -->
+                        <li class="detail-price__item">
+                          <div class="detail-price__con">
+                            <strong class="detail-price__title">타이 관리 - 60분</strong>
+                            <span class="detail-price__sub">전신 타이 관리 및 야몽 관리</span>
+                            <div class="detail-price__label"><em class="badges badges--lg badges--c5">타임할인 3,000원</em></div>
+                          </div>
+                          <div class="detail-price__con">
+                            <span class="detail-price__text1"><span class="hide">기존가</span>000,000,000<span class="detail-price__unit">원</span></span>
+                            <span class="detail-price__text2"><span class="hide">할인가</span>000,000,000<span class="detail-price__unit">원</span></span>
+                            <span class="detail-price__text3">
+                              <span class="hide">할인가</span><em>55%</em>
+                              <strong class="text-sub-100">000,000,000<span class="detail-price__unit">원</span></strong>
+                            </span>
+                          </div>
+                        </li>
+                        <!-- // -->
+                        <li class="detail-price__item">
+                          <div class="detail-price__con">
+                            <strong class="detail-price__title">타이 관리 - 60분</strong>
+                            <span class="detail-price__sub">전신 타이 관리 및 야몽 관리</span>
+                            <div class="detail-price__label"></div>
+                          </div>
+                          <div class="detail-price__con">
+                            <span class="detail-price__text1"><span class="hide">기존가</span>000,000,000<span class="detail-price__unit">원</span></span>
+                            <strong class="detail-price__text3">
+                              <span class="hide">할인가</span><em>55%</em>
+                              <span>000,000,000<span class="detail-price__unit">원</span></span>
+                            </strong>
+                          </div>
+                        </li>
+                        <!-- // -->
+                        <li class="detail-price__item">
+                          <div class="detail-price__con">
+                            <strong class="detail-price__title">타이 관리 - 60분</strong>
+                            <span class="detail-price__sub">전신 타이 관리 및 야몽 관리</span>
+                            <div class="detail-price__label"><em class="badges badges--lg badges--c5">타임할인 3,000원</em></div>
+                          </div>
+                          <div class="detail-price__con">
+                            <div>
+                              <span class="detail-price__time">주간</span>
+                              <span class="detail-price__text1"><span class="hide">기존가</span>000,000,000<span class="detail-price__unit">원</span></span>
+                              <span class="detail-price__text2"><span class="hide">할인가</span>000,000,000<span class="detail-price__unit">원</span></span>
+                              <span class="detail-price__text3">
+                                <span class="hide">할인가</span><em>55%</em>
+                                <strong class="text-sub-100">000,000,000<span class="detail-price__unit">원</span></strong>
+                              </span>
+                            </div>
+                            <div>
+                              <span class="detail-price__time">야간</span>
+                              <span class="detail-price__text1"><span class="hide">기존가</span>000,000,000<span class="detail-price__unit">원</span></span>
+                              <span class="detail-price__text3">
+                                <span class="hide">할인가</span><em>55%</em>
+                                <strong>000,000,000<span class="detail-price__unit">원</span></strong>
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- // -->
+                      </ul>
+                    </div>
+                    <div class="detail-program">
+                      <div class="detail-program__title">아로마 관리</div>
+                      <ul class="detail-price">
+                        <!-- // -->
+                        <li class="detail-price__item">
+                          <div class="detail-price__con">
+                            <strong class="detail-price__title">아로마 관리 - 60분</strong>
+                            <span class="detail-price__sub">아로마 전신 타이 관리 및 야몽 관리</span>
+                            <div class="detail-price__label"></div>
+                          </div>
+                          <div class="detail-price__con">
+                            <span class="detail-price__text1"><span class="hide">기존가</span>000,000,000<span class="detail-price__unit">원</span></span>
+                            <span class="detail-price__text3">
+                              <span class="hide">할인가</span><em>55%</em>
+                              <strong>000,000,000<span class="detail-price__unit">원</span></strong>
+                            </span>
+                          </div>
+                        </li>
+                        <!-- // -->
+                        <li class="detail-price__item">
+                          <div class="detail-price__con">
+                            <strong class="detail-price__title">아로마 관리 - 60분</strong>
+                            <span class="detail-price__sub">아로마 전신 타이 관리 및 야몽 관리</span>
+                            <div class="detail-price__label"></div>
+                          </div>
+                          <div class="detail-price__con">
+                            <span class="detail-price__text1"><span class="hide">기존가</span>000,000,000<span class="detail-price__unit">원</span></span>
+                            <span class="detail-price__text3">
+                              <span class="hide">할인가</span><em>55%</em>
+                              <strong>000,000,000<span class="detail-price__unit">원</span></strong>
+                            </span>
+                          </div>
+                        </li>
+                        <!-- // -->
+                        <li class="detail-price__item">
+                          <div class="detail-price__con">
+                            <strong class="detail-price__title">아로마 관리 - 60분</strong>
+                            <span class="detail-price__sub">아로마 전신 타이 관리 및 야몽 관리</span>
+                            <div class="detail-price__label"></div>
+                          </div>
+                          <div class="detail-price__con">
+                            <span class="detail-price__text1"><span class="hide">기존가</span>000,000,000<span class="detail-price__unit">원</span></span>
+                            <span class="detail-price__text3">
+                              <span class="hide">할인가</span><em>55%</em>
+                              <strong>000,000,000<span class="detail-price__unit">원</span></strong>
+                            </span>
+                          </div>
+                        </li>
+                        <!-- // -->
+                      </ul>
+                    </div>
+
+                    <!-- 안내문구 -->
+                    <dl class="text-list text-list--bullet1">
+                      <dt class="text-list__title">꼭 알아두세요!</dt>
+                      <dd class="text-list__item"><strong class="text-primary-100">사전 예약 및 현금 결제</strong>시 적용되는 회원가입니다.</dd>
+                      <dd class="text-list__item">예약 시 하이타이 회원이라고 말씀해 주셔야 회원가가 적용됩니다.</dd>
+                      <dd class="text-list__item">아로마 코스 이상 예약 손님에 한하여 수면 가능합니다.</dd>
+                      <dd class="text-list__item">구로디지털단지역 1번 출구 도보 4분 거리에 위치해 있습니다.</dd>
+                      <dd class="text-list__item">궁금하신 사항이나 예약 문의 등 전화 주시면 상세히 설명해 드리겠습니다.</dd>
+                    </dl>
+                    <dl class="text-list text-list--bullet1">
+                      <dt class="text-list__title"><span class="text-sub-100">타임할인</span> 이용안내</dt>
+                      <dd class="text-list__item">방문 결제 및 비회원은 타임 할인 적용이 불가능합니다.</dd>
+                      <dd class="text-list__item"><strong class="text-dark-200">하이패스 예약</strong> 시 타임 할인이 적용됩니다.</dd>
+                      <dd class="text-list__item">예약 페이지에 오래 머물러 있는 동안 다른 사용자로부터 동시간 예약이 발생하면 예약 우선에 따라 타임 할 인 잔여 수량이 차감됩니다. 예약을 서둘러 주세요.</dd>
+                    </dl>
+
+                    <!-- 업체정보 -->
+                    <h3 class="heading heading--1 mt-6">업체정보</h3>
+                    <div class="detail-company">
+                      <div class="detail-company__address">
+                        <div>구로디지털단지역 1번 출구 5분 거리</div>
+                        <div>
+                          <p>서울 구로구 디지털로32길 30 디지털타워빌란드 1차 2F</p>
+                          <button type="button" class="btn btn--dark btn--sm btn--brn">주소복사</button>
+                        </div>
+                      </div>
+                      <div class="detail-company__map" style="background: #eee">지도영역</div>
+                      <div class="detail-company__con">
+                        <p class="detail-company__text1">구로디지털역 1번출구 3분거리에 위치한 감성 힐링공간</p>
+                        <div class="detail-company__text2">
+                          <p>서울의 디지털 문화 비지니스 중심지 구로디지털단지 지역에 위치한 청담타이마사지가 새롭게 오픈하였습니다.</p>
+                          <p>전문적인 관리사는 물론 청결한 내부 시설, 편안한 수면 공간, 최상의 서비스로 최고의 힐링을 느끼실 수 있도록 최적화 되어 있습니다.</p>
+                          <p>방문해 주시는 모든 고객분들께 감사 드리며 좋은 업체로 기억될 수 있도록 최선을 다하겠습니다.</p>
+                        </div>
+                        <ul class="detail-company__list">
+                          <li class="detail-company__icon icon1">24시영업</li>
+                          <li class="detail-company__icon icon2">무료 주차가능</li>
+                          <li class="detail-company__icon icon3">wifi 가능</li>
+                          <li class="detail-company__icon icon4">인기 업체</li>
+                          <li class="detail-company__icon icon5">수면 가능</li>
+                          <li class="detail-company__icon icon6">샤워 가능</li>
+                          <li class="detail-company__icon icon7">이벤트 중</li>
+                          <li class="detail-company__icon icon8">커플 할인</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TABPANEL : 후기 -->
+              <div role="tabpanel" id="uiTabPanel2" class="tabs__panel">
+                <!-- 이용후기 작성 안내 -->
+                <div>
+                  <div class="mes-result mes-result--confirm">
+                    <p>‘구로디지털 청담타이마사지’ 이용 내역을 <br />확인해 주세요.</p>
+                  </div>
+                  <p class="text text--sm text-dark-600">하이타이에서는 리얼 후기 등록을 원칙으로 하고 있습니다. 실제 이용하셨음에도 불구하고 이용 후기 작성에 제한이 있으시면 아래 내용을 확인해 주세요.</p>
+                  <ul class="text-list text-list--bullet1 text-list--sm mt-2">
+                    <li class="text-list__item">인증받으셨던 휴대전화 번호로 하이타이 앱을 통해<strong>업체와 5초 이상의 실제 통화 이력</strong>이 있어야 합니다.</li>
+                    <li class="text-list__item">하이패스 예약 이용 후 <strong>3일 이내</strong>또는 제휴점과 통화 후 <strong>1시간 이후, 3일 이내 등록이 가능</strong>합니다.</li>
+                    <li class="text-list__item">위 두 가지 경우가 모두 해당하는데도 이용후기 작성이 불가능하다면 고객센터(1668-4522)로 연락 주시면 확인 후 안내해 드리겠습니다.</li>
+                  </ul>
+                </div>
+                <!-- casee : 등록된 후기 없음 -->
+                <div class="review-top">
+                  <h2 class="heading heading--1 heading--review">이용후기 <span class="text text--sm">0개</span></h2>
+                  <button type="button" class="btn btn--dark btn--xsm btn-write">이용 후기 작성</button>
+                </div>
+                <div class="mes-result mes-result--nodata">
+                  <p>등록된 후기가 없습니다.</p>
+                </div>
+                <p class="text-gray-700 text text--sm">(주)앱튜브는 서비스 정보중개자로서, 서비스 제공의 당사자가 아니라는 사실을 고지하며, 서비스의 예약, 이용 및 환불 등과 관련된 의무와 책임은 각 서비스 제공자에게 있습니다.</p>
+
+                <!-- case : 기본 -->
+                <div class="review-top">
+                  <h2 class="heading heading--1 heading--review">이용후기 <span class="text text--sm">389개</span></h2>
+                  <button type="button" class="btn btn--dark btn--xsm btn-write">이용 후기 작성</button>
+                  <div class="review__eval">
+                    <span>전체 평점</span>
+                    <span class="review__num">
+                      <span style="width: 95.6%"></span>
+                      <em>9.56</em>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- 베스트후기 -->
+                <div class="review review--best">
+                  <h2 class="review__title">Best Review</h2>
+                  <p class="review__text">제휴점에서 선정한 베스트 리뷰입니다.</p>
+                  <!-- swiper -->
+                  <div class="review__area" id="reviewBestSwiper">
+                    <ul class="review__list swiper-wrapper">
+                      <!-- 목록하나 -->
+                      <li class="review__item swiper-slide">
+                        <div role="button" class="review__con" tabindex="0">
+                          <strong class="review__user"><i class="icon icon-user icon-user--user1"></i>아프로맨</strong>
+                          <div class="review__info">
+                            <span class="review__num"><span style="width: 100%"></span><em class="hide">별점 10</em></span>
+                            <span class="review__course">2022.12.28 / 타이관리 60분 코스</span>
+                          </div>
+                          <p>자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 가중 중요한 마사지 실력도 주변 마사지샵들보다 단연 최고네요. 마사지 끝나고 이것 저것 챙겨 주시는게 많아서 너무 좋았어요.</p>
+                        </div>
+                      </li>
+                      <!-- 목록하나 -->
+                      <li class="review__item swiper-slide">
+                        <div role="button" class="review__con" tabindex="0">
+                          <strong class="review__user"><i class="icon icon-user icon-user--user1"></i>아프로맨</strong>
+                          <div class="review__info">
+                            <span class="review__num"><span style="width: 100%"></span><em class="hide">별점 10</em></span>
+                            <span class="review__course">2022.12.28 / 타이관리 60분 코스</span>
+                          </div>
+                          <p>자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 가중 중요한 마사지 실력도 주변 마사지샵들보다 단연 최고네요. 마사지 끝나고 이것 저것 챙겨 주시는게 많아서 너무 좋았어요.</p>
+                        </div>
+                      </li>
+                      <!-- 목록하나 -->
+                      <li class="review__item swiper-slide">
+                        <div role="button" class="review__con" tabindex="0">
+                          <strong class="review__user"><i class="icon icon-user icon-user--user1"></i>아프로맨</strong>
+                          <div class="review__info">
+                            <span class="review__num"><span style="width: 100%"></span><em class="hide">별점 10</em></span>
+                            <span class="review__course">2022.12.28 / 타이관리 60분 코스</span>
+                          </div>
+                          <p>자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 가중 중요한 마사지 실력도 주변 마사지샵들보다 단연 최고네요. 마사지 끝나고 이것 저것 챙겨 주시는게 많아서 너무 좋았어요.</p>
+                        </div>
+                      </li>
+                      <!-- 목록하나 -->
+                      <li class="review__item swiper-slide">
+                        <div role="button" class="review__con" tabindex="0">
+                          <strong class="review__user"><i class="icon icon-user icon-user--user1"></i>아프로맨</strong>
+                          <div class="review__info">
+                            <span class="review__num"><span style="width: 100%"></span><em class="hide">별점 10</em></span>
+                            <span class="review__course">2022.12.28 / 타이관리 60분 코스</span>
+                          </div>
+                          <p>자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 가중 중요한 마사지 실력도 주변 마사지샵들보다 단연 최고네요. 마사지 끝나고 이것 저것 챙겨 주시는게 많아서 너무 좋았어요.</p>
+                        </div>
+                      </li>
+                      <!-- 목록하나 -->
+                      <li class="review__item swiper-slide">
+                        <div role="button" class="review__con" tabindex="0">
+                          <strong class="review__user"><i class="icon icon-user icon-user--user1"></i>아프로맨</strong>
+                          <div class="review__info">
+                            <span class="review__num"><span style="width: 100%"></span><em class="hide">별점 10</em></span>
+                            <span class="review__course">2022.12.28 / 타이관리 60분 코스</span>
+                          </div>
+                          <p>자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 가중 중요한 마사지 실력도 주변 마사지샵들보다 단연 최고네요. 마사지 끝나고 이것 저것 챙겨 주시는게 많아서 너무 좋았어요.</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                    <!-- // -->
+                  </div>
+                </div>
+
+                <!-- 후기 -->
+                <div class="review">
+                  <div class="select select--sort side" data-select="select" id="uiSort">
+                    <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn">
+                      <div>정렬</div>
+                      <div data-empty="정렬" data-select="text"></div>
+                    </div>
+                    <!-- // -->
+                    <div class="select__list" data-select="list">
+                      <div class="select__option" data-select="option">
+                        <button type="button" value="value1">최신순</button>
+                        <button type="button" value="value2">평점 높은순</button>
+                        <button type="button" value="value3">평점 낮은순</button>
+                      </div>
+                    </div>
+                    <input type="hidden" name="select1_1" data-select="value" />
+                  </div>
+
+                  <div class="review__list">
+                    <!-- 후기하나 -->
+                    <div class="review__item">
+                      <div class="review__con">
+                        <!-- .icon-user--user1 ~ .icon-user--user24 -->
+                        <strong class="review__user"><i class="icon icon-user icon-user--user1"></i>아프로맨</strong>
+                        <div class="review__info">
+                          <span class="review__num"><span style="width: 80%"></span><em class="hide">별점 8</em></span>
+                          <span class="review__course">2022.12.28 / 타이관리 60분 코스</span>
+                        </div>
+                        <p>자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 가중 중요한 마사지 실력도 주변 마사지샵들보다 단연 최고네요. 마사지 끝나고 이것 저것 챙겨 주시는게 많아서 너무 좋았어요.</p>
+                      </div>
+                      <div class="review__con review__con--reply">
+                        <strong class="review__user">제휴점 답변</strong>
+                        <p>안녕하세요. 안프로맨님. 고객님의 소중한 리뷰 너무 감사드립니다.만족스런 이용이 되신것 같아 저희가 더 뿌듯 하네요.좋으셨던 부분은 더욱 신경쓰고, 부족한 부분은 꾸준히 개선하여 최고의 청담타이마사지가 되겠습니다.</p>
+                      </div>
+                      <!-- 메뉴 -->
+                      <div data-autoset="menu" class="review__menu">
+                        <button type="button" class="btn btn--menu" data-menu="btn"><span>메뉴열기</span></button>
+                        <div data-menu="con">
+                          <div>
+                            <button type="button" data-menu-close>신고하기</button>
+                            <button type="button" data-menu-close>작성자 차단</button>
+                            <button type="button" data-menu-close>삭제하기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 후기하나 -->
+                    <div class="review__item">
+                      <div class="review__con">
+                        <strong class="review__user"><i class="icon icon-user icon-user--user1"></i>아프로맨</strong>
+                        <div class="review__info">
+                          <span class="review__num"><span style="width: 100%"></span><em class="hide">별점 10</em></span>
+                          <span class="review__course">2022.12.28 / 타이관리 60분 코스</span>
+                        </div>
+                        <p>
+                          자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및
+                          관리사님도 무척 친절합니다. 자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 자주 방문 하는 업체입니다.
+                          깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 가중 중요한 마사지 실력도 주변 마사지샵들보다 단연 최고네요. 마사지 끝나고 이것 저것 챙겨 주시는게 많아서 너무 좋았어요.
+                        </p>
+                      </div>
+                      <div class="review__con review__con--reply">
+                        <strong class="review__user">제휴점 답변</strong>
+                        <p>안녕하세요. 안프로맨님. 고객님의 소중한 리뷰 너무 감사드립니다.만족스런 이용이 되신것 같아 저희가 더 뿌듯 하네요.좋으셨던 부분은 더욱 신경쓰고, 부족한 부분은 꾸준히 개선하여 최고의 청담타이마사지가 되겠습니다.</p>
+                      </div>
+                      <!-- 메뉴 -->
+                      <div data-autoset="menu" class="review__menu">
+                        <button type="button" class="btn btn--menu" data-menu="btn"><span>메뉴열기</span></button>
+                        <div data-menu="con">
+                          <div>
+                            <button type="button" data-menu-close>신고하기</button>
+                            <button type="button" data-menu-close>작성자 차단</button>
+                            <button type="button" data-menu-close>삭제하기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 후기하나 -->
+                    <div class="review__item">
+                      <div class="review__con">
+                        <strong class="review__user"><i class="icon icon-user icon-user--user2"></i>아프로맨</strong>
+                        <div class="review__info">
+                          <span class="review__num"><span style="width: 90%"></span><em class="hide">별점 9</em></span>
+                          <span class="review__course">2022.12.28 / 타이관리 60분 코스</span>
+                        </div>
+                        <p>자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 가중 중요한 마사지 실력도 주변 마사지샵들보다 단연 최고네요. 마사지 끝나고 이것 저것 챙겨 주시는게 많아서 너무 좋았어요.</p>
+                      </div>
+                      <div class="review__con review__con--reply">
+                        <strong class="review__user">제휴점 답변</strong>
+                        <p>안녕하세요. 안프로맨님. 고객님의 소중한 리뷰 너무 감사드립니다.만족스런 이용이 되신것 같아 저희가 더 뿌듯 하네요.좋으셨던 부분은 더욱 신경쓰고, 부족한 부분은 꾸준히 개선하여 최고의 청담타이마사지가 되겠습니다.</p>
+                      </div>
+                      <!-- 메뉴 -->
+                      <div data-autoset="menu" class="review__menu">
+                        <button type="button" class="btn btn--menu" data-menu="btn"><span>메뉴열기</span></button>
+                        <div data-menu="con">
+                          <div>
+                            <button type="button" data-menu-close>신고하기</button>
+                            <button type="button" data-menu-close>작성자 차단</button>
+                            <button type="button" data-menu-close>삭제하기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 후기하나 -->
+                    <div class="review__item">
+                      <div class="review__con">
+                        <strong class="review__user"><i class="icon icon-user icon-user--user3"></i>아프로맨</strong>
+                        <div class="review__info">
+                          <span class="review__num"><span style="width: 90%"></span><em class="hide">별점 9</em></span>
+                          <span class="review__course">2022.12.28 / 타이관리 60분 코스</span>
+                        </div>
+                        <p>자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및 관리사님도 무척 친절합니다. 가중 중요한 마사지 실력도 주변 마사지샵들보다 단연 최고네요. 마사지 끝나고 이것 저것 챙겨 주시는게 많아서 너무 좋았어요.</p>
+                      </div>
+                      <div class="review__con review__con--reply">
+                        <strong class="review__user">제휴점 답변</strong>
+                        <p>안녕하세요. 안프로맨님. 고객님의 소중한 리뷰 너무 감사드립니다.만족스런 이용이 되신것 같아 저희가 더 뿌듯 하네요.좋으셨던 부분은 더욱 신경쓰고, 부족한 부분은 꾸준히 개선하여 최고의 청담타이마사지가 되겠습니다.</p>
+                      </div>
+                      <!-- 메뉴 -->
+                      <div data-autoset="menu" class="review__menu">
+                        <button type="button" class="btn btn--menu" data-menu="btn"><span>메뉴열기</span></button>
+                        <div data-menu="con">
+                          <div>
+                            <button type="button" data-menu-close>신고하기</button>
+                            <button type="button" data-menu-close>작성자 차단</button>
+                            <button type="button" data-menu-close>삭제하기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 후기하나 -->
+                    <div class="review__item">
+                      <div class="review__con">
+                        <strong class="review__user"><i class="icon icon-user icon-user--user4"></i>아프로맨</strong>
+                        <div class="review__info">
+                          <span class="review__num"><span style="width: 90%"></span><em class="hide">별점 9</em></span>
+                          <span class="review__course">2022.12.28 / 타이관리 60분 코스</span>
+                        </div>
+                        <p>
+                          자주 방문 하는 업체입니다. 깨끗하고 시설도 좋고 직원분들 및깨끗하고 시설도 좋고 직원분들 및깨끗하고 시설도 좋고 직원분들 및깨끗하고 시설도 좋고 직원분들 및깨끗하고 시설도 좋고 직원분들 및깨끗하고 시설도 좋고 직원분들 및깨끗하고 시설도 좋고 직원분들 및깨끗하고 시설도 좋고 직원분들 및깨끗하고 시설도 좋고 직원분들 및깨끗하고
+                        </p>
+                      </div>
+                      <div class="review__con review__con--reply">
+                        <strong class="review__user">제휴점 답변</strong>
+                        <p>안녕하세요. 안프로맨님. 고객님의 소중한 리뷰 너무 감사드립니다.만족스런 이용이 되신것 같아 저희가 더 뿌듯 하네요.좋으셨던 부분은 더욱 신경쓰고, 부족한 부분은 꾸준히 개선하여 최고의 청담타이마사지가 되겠습니다.</p>
+                      </div>
+                      <!-- 메뉴 -->
+                      <div data-autoset="menu" class="review__menu">
+                        <button type="button" class="btn btn--menu" data-menu="btn"><span>메뉴열기</span></button>
+                        <div data-menu="con">
+                          <div>
+                            <button type="button" data-menu-close>신고하기</button>
+                            <button type="button" data-menu-close>작성자 차단</button>
+                            <button type="button" data-menu-close>삭제하기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- // -->
+                  </div>
+
+                  <div class="review__btn-area">
+                    <button type="button" class="btn btn--dark btn--md btn--round w-100">이용 후기 (389) 모두 보기</button>
+                  </div>
+                  <p class="text-gray-700 text text--sm">(주)앱튜브는 서비스 정보중개자로서, 서비스 제공의 당사자가 아니라는 사실을 고지하며, 서비스의 예약, 이용 및 환불 등과 관련된 의무와 책임은 각 서비스 제공자에게 있습니다.</p>
+                </div>
+              </div>
+              <!-- // -->
+            </div>
+          </div>
+
+          <!-- # 예약바 # -->
+          <div class="ly-reserv btn-area" data-btn-fixed>
+            <!-- case1 -->
+            <button type="button" class="btn btn--icon">
+              <i class="icon icon--basic-map" aria-hidden="true"></i>
+            </button>
+            <div class="reserv-con">
+              <button type="button" class="btn btn--with btn--xmd btn--primary">
+                <i class="icon icon--hipass" aria-hidden="true"></i>
+                <span>예약</span>
+              </button>
+              <button type="button" class="btn btn--xmd btn--primary">전화걸기</button>
+            </div>
+
+            <!-- case2 -->
+            <!-- <button type="button" class="btn btn--icon">
+              <i class="icon icon--basic-map" aria-hidden="true"></i>
+            </button>
+            <div class="reserv-con">
+              <div class="reserv-con__mes bg-primary-100">지금은 영업시간이 아닙니다. 하이패스로 미리 예약해보세요.</div>
+              <button type="button" class="btn btn--xmd btn--primary" disabled>전화걸기</button>
+            </div> -->
+
+            <!-- case3 -->
+            <!-- <button type="button" class="btn btn--icon">
+              <i class="icon icon--basic-map" aria-hidden="true"></i>
+            </button>
+            <div class="reserv-con">
+              <button type="button" class="btn btn--xmd btn--primary">전화걸기</button>
+            </div> -->
+
+            <!-- case4 -->
+            <!-- <button type="button" class="btn btn--icon">
+              <i class="icon icon--basic-map" aria-hidden="true"></i>
+            </button>
+            <div class="reserv-con">
+              <div class="reserv-con__mes">지금은 영업시간이 아닙니다.</div>
+              <button type="button" class="btn btn--xmd btn--primary" disabled>전화걸기</button>
+            </div> -->
+          </div>
+          <!-- # // # -->
+        </div>
+      </main>
+      <!-- ---------------------------------------------------------- -->
+    </div>
+    <script>
+      document.addEventListener('UILoaded', function () {
+        // swiper 상단 비주얼
+        HitaiUI.SwiperA11y('#detailSwiper', {
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+          },
+          observer: true,
+          observeParents: true,
+        }); // swiper 베스트 이용후기
+        HitaiUI.SwiperA11y('#reviewBestSwiper', {
+          slidesPerView: 'auto',
+          spaceBetween: 10,
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          observer: true,
+          observeParents: true,
+        });
+      });
+    </script>
+  </body>
+</html>

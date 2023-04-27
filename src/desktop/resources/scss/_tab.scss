@@ -1,0 +1,209 @@
+.tabs {
+  $root: tabs;
+  &--type1 {
+    margin: rem(50 0 0);
+    > .tabs__list {
+      &:after {
+        content: '';
+        height: rem(2);
+        background-color: color(dark, 100);
+        display: block;
+      }
+    }
+    .tabs__head > .tabs__list,
+    > .tabs__list {
+      > .tabs__item {
+        float: left;
+        width: rem(427);
+        a {
+          display: block;
+          font-size: rem(18);
+          padding: rem(16);
+          border: 1px solid color(gray, 400);
+          border-bottom: 0;
+          text-align: center;
+          color: color(gray, 200);
+          &[aria-selected='true'] {
+            border-color: color(dark, 100);
+            color: $white;
+            background: color(dark, 100);
+            font-weight: 500;
+          }
+        }
+        & + .tabs__item {
+          margin-left: -1px;
+        }
+      }
+    }
+
+    &.tabs--small {
+      .tabs__head > .tabs__list > .tabs__item,
+      > .tabs__list > .tabs__item {
+        width: auto !important;
+        a {
+          padding: rem(14 40 13 40);
+          font-size: rem(16);
+        }
+      }
+    }
+
+    &.tabs--flex {
+      .tabs__list {
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: rem(2);
+          background: color(dark, 100);
+        }
+      }
+    }
+  }
+
+  &--type2 {
+    margin: rem(70 0 0);
+    > .tabs__list {
+      margin: rem(0 0 96);
+      > .tabs__item {
+        float: left;
+        a {
+          display: block;
+          font-size: rem(20);
+          padding: rem(18 45);
+          text-align: center;
+          color: color(gray, 200);
+          background: #eee;
+          &[aria-selected='true'] {
+            border-color: color(dark, 100);
+            color: $white;
+            background: color(dark, 100);
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  &--flex {
+    .tabs__list {
+      display: flex;
+      width: 100%;
+    }
+    .tabs__item {
+      flex: 1;
+      float: none;
+    }
+  }
+
+  &__list {
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .#{$root}__btn .btn {
+      font-size: rem(15);
+      color: color(gray, 100);
+    }
+  }
+}
+
+[role='tabpanel'] {
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}
+
+.step {
+  $root: step;
+  width: 100%;
+  margin: 0 auto;
+
+  &:first-child {
+    margin-top: rem(90);
+  }
+
+  &--md {
+    max-width: rem(768);
+    &:first-child {
+      margin-top: rem(140);
+      margin-bottom: rem(100);
+    }
+    .step__item {
+      width: rem(256);
+      font-size: rem(16);
+    }
+  }
+
+  &--basic {
+    text-align: center;
+    line-height: 1;
+    .#{$root}__list {
+      width: rem(80);
+    }
+  }
+  &__list {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    &::before {
+      content: '';
+      position: absolute;
+      top: rem(4);
+      left: 0;
+      right: 0;
+      height: rem(1);
+      background: color(dark, 100);
+    }
+  }
+  &__item {
+    display: inline-block;
+    position: relative;
+    width: rem(40);
+    height: rem(9);
+    &:last-child {
+      width: 0;
+    }
+    em {
+      position: absolute;
+      top: rem(20);
+      left: rem(-30);
+      width: rem(60);
+      text-align: center;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: -3px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: rem(7);
+      height: rem(7);
+      border-radius: 50%;
+      border: 1px solid color(dark, 100);
+      background: $white;
+    }
+    &[aria-current='step'] {
+      &::after {
+        background: color(primary, 100);
+      }
+
+      em {
+        color: color(primary, 100);
+        font-weight: bold;
+      }
+    }
+  }
+}

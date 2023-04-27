@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>하이패스 | 하이패스 예약 - hitai</title>
+    <include src="../_include/head.html"></include>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header">
+        <!-- BACK BUTTON -->
+        <button type="button" class="header__back">
+          <span class="hide">뒤로가기</span>
+          <i class="icon icon--back" aria-hidden="true"></i>
+        </button>
+        <!-- TITLE -->
+        <h1 class="header__title">예약 / 결제</h1>
+      </header>
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <div class="content">
+          <div class="l-row l-row--lg">
+            <div class="heading heading--reservation">
+              <em class="heading__copy">제휴점</em>
+              <span class="heading__text">구로디지털 하이타이마사지</span>
+            </div>
+
+            <div class="accordion accordion--type1" data-autoset="accordion" id="acc1">
+              <div class="accordion__list">
+                <div class="accordion__head">
+                  <button type="button" class="accordion__btn" id="acc-header1" aria-controls="acc-content1" aria-expanded="false"></button>
+                  <div class="accordion__title">
+                    <i class="icon icon--sch" aria-hidden="true"></i>
+                    <span class="accordion__text">7.25 (오늘)</span>
+                  </div>
+                </div>
+                <div class="accordion__content expand" id="acc-content1" aria-labelledby="acc-header1">
+                  <div class="label-group">
+                    <div class="label label--btn label--md">
+                      <label class="label--primary">
+                        <input type="radio" name="radio1_1" />
+                        <span>7:25 (오늘)</span>
+                      </label>
+                      <label class="label--primary">
+                        <input type="radio" name="radio1_1" />
+                        <span>7:26 (화)</span>
+                      </label>
+                      <label class="label--primary">
+                        <input type="radio" name="radio1_1" />
+                        <span>7:27 (수)</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__list">
+                <div class="accordion__head">
+                  <button type="button" class="accordion__btn" id="acc-header2" aria-controls="acc-content2" aria-expanded="false"></button>
+                  <div class="accordion__title">
+                    <i class="icon icon--time" aria-hidden="true"></i>
+                    <span class="accordion__text">오후 01:00</span>
+                  </div>
+                </div>
+                <div class="accordion__content expand" id="acc-content2" aria-labelledby="acc-header2">
+                  <div class="label-group">
+                    <div class="heading heading--subtitle">
+                      <em class="heading__copy">오전</em>
+                      <span class="heading__text">타임할인 진행중 (오후 1시 ~ 오후 5시)</span>
+                    </div>
+                    <fieldset>
+                      <legend>오전 선택</legend>
+                      <div class="label label--btn">
+                        <label class="label--dark">
+                          <input type="radio" name="radio1_2" disabled />
+                          <span>10:00</span>
+                        </label>
+                        <label class="label--dark">
+                          <input type="radio" name="radio1_2" />
+                          <span>10:30</span>
+                        </label>
+                        <label class="label--dark">
+                          <input type="radio" name="radio1_2" />
+                          <span>11:00</span>
+                        </label>
+                        <label class="label--dark">
+                          <input type="radio" name="radio1_2" />
+                          <span>11:30</span>
+                        </label>
+                      </div>
+                    </fieldset>
+
+                    <div class="heading heading--subtitle">
+                      <em class="heading__copy">오후</em>
+                    </div>
+
+                    <fieldset>
+                      <legend>오후 선택</legend>
+                      <div class="label label--btn">
+                        <label><input type="radio" name="radio3" checked /><span>12:00</span></label>
+                        <label><input type="radio" name="radio3" /><span>12:30</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>01:00</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>01:30</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>02:00</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>02:30</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>03:00</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>03:30</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>04:00</span></label>
+                        <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>04:30</span></label>
+                        <label><input type="radio" name="radio3" /><span>05:00</span></label>
+                        <label><input type="radio" name="radio3" /><span>05:30</span></label>
+                        <label><input type="radio" name="radio3" /><span>06:00</span></label>
+                        <label><input type="radio" name="radio3" /><span>06:30</span></label>
+                        <label><input type="radio" name="radio3" /><span>07:00</span></label>
+                        <label><input type="radio" name="radio3" /><span>07:30</span></label>
+                        <label><input type="radio" name="radio3" disabled /><span>08:00</span></label>
+                        <label><input type="radio" name="radio3" disabled /><span>08:30</span></label>
+                        <label><input type="radio" name="radio3" disabled /><span>09:00</span></label>
+                        <label><input type="radio" name="radio3" disabled /><span>09:30</span></label>
+                        <label><input type="radio" name="radio3" /><span>10:00</span></label>
+                        <label><input type="radio" name="radio3" /><span>10:30</span></label>
+                        <label><input type="radio" name="radio3" /><span>11:00</span></label>
+                        <label><input type="radio" name="radio3" /><span>11:30</span></label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__list">
+                <div class="accordion__head">
+                  <button type="button" class="accordion__btn" id="acc-header3" aria-controls="acc-content3" aria-expanded="false"></button>
+                  <div class="accordion__title">
+                    <i class="icon icon--course" aria-hidden="true"></i>
+                    <span class="accordion__text">코스 선택</span>
+                  </div>
+                </div>
+                <div class="accordion__content expand" id="acc-content3" aria-labelledby="acc-header3">
+                  <div class="label-group">
+                    <div class="heading heading--subtitle">
+                      <span class="heading__text">선택한 일자 및 시간에 따라 <strong>요금이 다를 수 있습니다.</strong></span>
+                    </div>
+                    <div class="form-count">
+                      <div class="form-count__list">
+                        <div class="form-count__description">
+                          <em class="badges badges--lg badges--c5">타임할인 3천원 선착순</em>
+                          <div class="form-count__text">
+                            <strong class="text text--xsm">전산 타이 관리 - 60분</strong>
+                          </div>
+                          <div class="form-count__price">
+                            <span class="text text--sm text--unit text--lit">60,000<em>원</em></span>
+                            <span class="text text--sm text--unit text--lit">60,000<em>원</em></span>
+                            <strong class="text text--sm text-sub-100 text--unit">60,000<em>원</em></strong>
+                          </div>
+                        </div>
+                        <div class="form-count__btnarea">
+                          <div class="count">
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--minus" aria-hidden="true"></i>
+                            </button>
+                            <span class="count__number">0</span>
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--plus" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-count__list">
+                        <div class="form-count__description">
+                          <div class="form-count__text">
+                            <strong class="text text--xsm">타이 관리 - 90분</strong>
+                          </div>
+                          <div class="form-count__price">
+                            <span class="text text--sm text--unit text--lit">80,000<em>원</em></span>
+                            <strong class="text text--sm text--unit">40,000<em>원</em></strong>
+                          </div>
+                        </div>
+                        <div class="form-count__btnarea">
+                          <div class="count">
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--minus" aria-hidden="true"></i>
+                            </button>
+                            <span class="count__number is-focus">1</span>
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--plus" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 뎁스 형태 -->
+                      <div class="form-count__depth">
+                        <div class="form-count__list">
+                          <div class="form-count__description">
+                            <div class="form-count__text">
+                              <span class="text text--xsm text--path">손마사지 15분</span>
+                              <p class="text text--sm text--unit">
+                                <b>90,000<em>원</em></b>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="form-count__btnarea">
+                            <div class="count">
+                              <button type="button" class="btn btn--icon">
+                                <i class="icon icon--minus" aria-hidden="true"></i>
+                              </button>
+                              <span class="count__number is-focus">1</span>
+                              <button type="button" class="btn btn--icon">
+                                <i class="icon icon--plus" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-count__list">
+                          <div class="form-count__description">
+                            <div class="form-count__text">
+                              <span class="text text--xsm text--path">발마사지 15분</span>
+                              <p class="text text--sm text--unit">
+                                <b>90,000<em>원</em></b>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="form-count__btnarea">
+                            <div class="count">
+                              <button type="button" class="btn btn--icon">
+                                <i class="icon icon--minus" aria-hidden="true"></i>
+                              </button>
+                              <span class="count__number is-focus">1</span>
+                              <button type="button" class="btn btn--icon">
+                                <i class="icon icon--plus" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- // -->
+
+                      <div class="form-count__list">
+                        <div class="form-count__description">
+                          <div class="form-count__text">
+                            <strong class="text text--xsm">타이 관리 - 90분</strong>
+                          </div>
+                          <div class="form-count__price">
+                            <span class="text text--sm text--unit text--lit">80,000<em>원</em></span>
+                            <strong class="text text--sm text--unit">40,000<em>원</em></strong>
+                          </div>
+                        </div>
+                        <div class="form-count__btnarea">
+                          <div class="count">
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--minus" aria-hidden="true"></i>
+                            </button>
+                            <span class="count__number is-focus">1</span>
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--plus" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-count__list">
+                        <div class="form-count__description">
+                          <div class="form-count__text">
+                            <strong class="text text--xsm">타이 관리 - 90분</strong>
+                          </div>
+                          <div class="form-count__price">
+                            <span class="text text--sm text--unit text--lit">80,000<em>원</em></span>
+                            <strong class="text text--sm text--unit">40,000<em>원</em></strong>
+                          </div>
+                        </div>
+                        <div class="form-count__btnarea">
+                          <div class="count">
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--minus" aria-hidden="true"></i>
+                            </button>
+                            <span class="count__number is-focus">1</span>
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--plus" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__list">
+                <div class="accordion__head">
+                  <button type="button" class="accordion__btn" id="acc-header4" aria-controls="acc-content4" aria-expanded="false"></button>
+                  <div class="accordion__title">
+                    <i class="icon icon--reservation" aria-hidden="true"></i>
+                    <span class="accordion__text">예약자 정보</span>
+                  </div>
+                </div>
+                <div class="accordion__content expand" id="acc-content4" aria-labelledby="acc-header4">
+                  <div class="label-group">
+                    <div class="form">
+                      <div class="form-field">
+                        <label class="text text--xsm" for="field1">예약자명 (필수)</label>
+                        <input type="text" class="input" id="field1" title="예약자명 입력" placeholder="예약자명을 입력해 주세요." />
+                      </div>
+                      <div class="form-field">
+                        <label class="text text--xsm" for="field2">연락처 (필수)</label>
+                        <input type="text" class="input" id="field2" title="연락처 입력" placeholder="연락처를 입력해 주세요." />
+                      </div>
+                      <div class="form-field">
+                        <label class="text text--xsm" for="field3">요청사항</label>
+                        <div class="textarea-form">
+                          <textarea class="textarea" rows="6" placeholder="요청사항을 입력해 주세요."></textarea>
+                        </div>
+                      </div>
+                      <div class="form-field">
+                        <div class="label">
+                          <label><input type="checkbox" name="" id="" /><span class="text-dark-600">다음부터 자동으로 입력하겠습니다.</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn-area btn-col2 btn-area--type2" data-btn-fixed>
+              <div class="btn-area__text w-30">
+                <strong class="text text--md"> 2022. 7.26 (화)<br />오후 01:00</strong>
+              </div>
+              <button type="button" class="btn btn--xmd btn--primary w-70">예약하기</button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- ---------------------------------------------------------- -->
+    </div>
+  </body>
+</html>

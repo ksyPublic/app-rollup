@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>내 예약 | 하이패스 예약 상세 조회 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # SKIP # -->
+      <!-- ---------------------------------------------------------- -->
+      <div class="nav-skip"><a href="#container">본문바로가기</a></div>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row">
+            <!-- ## STEP ## -->
+            <div class="step step--md">
+              <ol class="step__list">
+                <li class="step__item" aria-current="step">
+                  <span class="hide">1단계 예약신청</span>
+                  <em>예약신청</em>
+                </li>
+                <li class="step__item">
+                  <span class="hide">2단계 예약확정</span>
+                  <em>예약확정</em>
+                </li>
+                <li class="step__item">
+                  <span class="hide">3단계 관리중</span>
+                  <em>관리중</em>
+                </li>
+                <li class="step__item">
+                  <span class="hide">4단계 이용완료</span>
+                  <em>이용완료</em>
+                </li>
+              </ol>
+            </div>
+            <!-- ## 예약상세 ## -->
+            <div class="reserv-past">
+              <h4 class="heading heading--4">예약 상세</h4>
+              <table class="table table--type1 table--bd-none">
+                <colgroup>
+                  <col width="60%" />
+                  <col width="25%" />
+                  <col width="15%" />
+                </colgroup>
+                <caption>
+                  예약 상세 정보
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">예약제휴점/예약코스</th>
+                    <th scope="col">예약시간</th>
+                    <th scope="col">결제금액</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="pay">
+                    <td class="pay__com">
+                      <div class="pay__com-thumnail">
+                        <img src="http://placehold.it/220x150" />
+                      </div>
+                      <div class="pay__com-info">
+                        <em class="badges badges--lg badges--c6">예약신청</em>
+                        <p class="pay__com-name"><b>구로디지털 청담타이마사지</b></p>
+                        <p class="pay__com-text">서울 구로구 디지털로32길 디지털타워빌란드 1차 2F</p>
+                        <div class="pay__com-btn">
+                          <button type="button" class="btn btn--dark btn--sm">제휴점 상세</button>
+                          <button type="button" class="btn btn--dark btn--sm">제휴점 위치</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="text-5">2023.07.26(화) 오후 01:00</span>
+                    </td>
+                    <td>
+                      <b class="text-5">27,000<em class="unit">원</em></b>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h4 class="heading heading--4">예약자</h4>
+              <table class="table table--type1 text-left">
+                <colgroup>
+                  <col width="170" />
+                  <col />
+                  <col width="170" />
+                  <col />
+                </colgroup>
+                <caption>
+                  예약자 정보
+                </caption>
+                <tbody>
+                  <tr>
+                    <th scope="col">예약자명</th>
+                    <td>홍길동</td>
+                    <th scope="col">연락처</th>
+                    <td>010-****-1234</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">요청사항</th>
+                    <td colspan="3">압이 강하면 아픕니다. 압이 적당하신 관리사님으로 부탁드려요.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h4 class="heading heading--4">결제금액</h4>
+              <div class="grid grid--bx">
+                <span class="hide">결제금액 정보</span>
+                <div class="grid-col">
+                  <div class="grid-head">
+                    <span>
+                      <b>이용금액</b>
+                    </span>
+                    <span class="text-5">
+                      <b>40,000<em class="unit">원</em></b>
+                    </span>
+                  </div>
+                  <div class="grid-con">
+                    <div class="list-wrap">
+                      <div class="list-wrap__item">
+                        <span class="list-wrap__tt">아로마 전신 타이관리 60분 / 1명</span>
+                        <span class="list-wrap__ts">30,000<em class="unit">원</em> </span>
+                      </div>
+                      <div class="list-wrap__item">
+                        <span class="list-wrap__tt">관리사 지정</span>
+                        <span class="list-wrap__ts">10,000<em class="unit">원</em></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-col">
+                  <div class="grid-head">
+                    <span>
+                      <b>할인금액</b>
+                    </span>
+                    <span class="text-5 text-primary-100">
+                      <b>-7,000<em class="unit">원</em></b>
+                    </span>
+                  </div>
+                  <div class="grid-con">
+                    <div class="list-wrap">
+                      <div class="list-wrap__item">
+                        <span class="list-wrap__tt">하이타이 할인</span>
+                        <span class="list-wrap__ts">-1,000<em class="unit">원</em> </span>
+                      </div>
+                      <div class="list-wrap__item">
+                        <span class="list-wrap__tt">타임할인</span>
+                        <span class="list-wrap__ts">-1,000<em class="unit">원</em></span>
+                      </div>
+                      <div class="list-wrap__item">
+                        <span class="list-wrap__tt">쿠폰할인</span>
+                        <span class="list-wrap__ts">-3,000<em class="unit">원</em> </span>
+                      </div>
+                      <div class="list-wrap__item">
+                        <span class="list-wrap__tt">포인트할인</span>
+                        <span class="list-wrap__ts">-5,000<em class="unit">P</em></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-col">
+                  <div class="grid-head">
+                    <span>
+                      <b>이용금액</b>
+                    </span>
+                    <span class="text-9">
+                      <b>27,000<em class="unit">원</em></b>
+                    </span>
+                  </div>
+                  <div class="grid-con">
+                    <div class="list-wrap">
+                      <div class="list-wrap__item">
+                        <span class="list-wrap__tt">
+                          비씨카드<br />
+                          <em class="text-gray-200">2023-03-02 오후 3:21:42</em>
+                        </span>
+                        <span class="list-wrap__ts">27,000<em class="unit">원</em> </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pay__submit pay__submit--md">
+                <button type="button" class="btn btn--gray btn--lg">목록</button>
+                <button type="button" class="btn btn--primary btn--lg">예약취소</button>
+              </div>
+            </div>
+            <!-- ## // ## -->
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/inquery.html"></include>
+      <!-- -------------------------------- -->
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+    </div>
+  </body>
+</html>

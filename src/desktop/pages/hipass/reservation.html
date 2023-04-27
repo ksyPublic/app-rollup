@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>하이패스 | 하이패스 예약 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # SKIP # -->
+      <!-- ---------------------------------------------------------- -->
+      <div class="nav-skip"><a href="#container">본문바로가기</a></div>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row">
+            <div class="heading-wrap">
+              <h2 class="heading heading--2">
+                <i class="icon icon--hipass" aria-hidden="true"></i>
+                <em>예약&nbsp;/&nbsp;결제</em>
+              </h2>
+            </div>
+            <!-- ## // ## -->
+            <div class="l-box l-box--flex">
+              <!-- # 예약 -->
+              <div class="l-box__group l-box__group-lt">
+                <span class="hide">하이패스 예약</span>
+                <!-- # FORM 시작 -->
+                <div class="reserv reserv--line">
+                  <!-- # 날짜&요일 -->
+                  <div class="c-title">
+                    <i class="icon icon--sch" aria-hidden="true"></i>
+                    <em>2.25(오늘)</em>
+                  </div>
+                  <div class="reserv__box">
+                    <div class="label label--btn label--md">
+                      <label><input type="radio" name="radio1" checked /><span>2.25&nbsp;(오늘)</span></label>
+                      <label><input type="radio" name="radio1" /><span>2.25&nbsp;(일)</span></label>
+                      <label><input type="radio" name="radio1" /><span>2.25&nbsp;(월)</span></label>
+                    </div>
+                  </div>
+
+                  <!-- # 시간 -->
+                  <div class="c-title">
+                    <i class="icon icon--time" aria-hidden="true"></i>
+                    <em>오후&nbsp;12:30</em>
+                  </div>
+                  <div class="reserv__box">
+                    <div class="c-title c-title-sub jc-between">
+                      <em>오전</em>
+                      <em class="ft-500 text-sub-100 text-2">타임할인 진행중 (오후 1시 ~ 오후 5시)</em>
+                    </div>
+
+                    <div class="label label--group label--btn">
+                      <label><input type="radio" name="radio2" checked /><span>10:00</span></label>
+                      <label><input type="radio" name="radio2" /><span>10:30</span></label>
+                      <label><input type="radio" name="radio2" /><span>11:00</span></label>
+                      <label><input type="radio" name="radio2" /><span>11:30</span></label>
+                    </div>
+
+                    <div class="c-title c-title-sub">
+                      <em>오후</em>
+                    </div>
+
+                    <div class="label label--group label--btn">
+                      <label><input type="radio" name="radio3" checked /><span>12:00</span></label>
+                      <label><input type="radio" name="radio3" /><span>12:30</span></label>
+                      <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>01:00</span></label>
+                      <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>01:30</span></label>
+                      <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>02:00</span></label>
+                      <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>02:30</span></label>
+                      <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>03:00</span></label>
+                      <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>03:30</span></label>
+                      <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>04:00</span></label>
+                      <label class="label--ti label--sub1"><input type="radio" name="radio3" /><span>04:30</span></label>
+                      <label><input type="radio" name="radio3" /><span>05:00</span></label>
+                      <label><input type="radio" name="radio3" /><span>05:30</span></label>
+                      <label><input type="radio" name="radio3" /><span>06:00</span></label>
+                      <label><input type="radio" name="radio3" /><span>06:30</span></label>
+                      <label><input type="radio" name="radio3" /><span>07:00</span></label>
+                      <label><input type="radio" name="radio3" /><span>07:30</span></label>
+                      <label><input type="radio" name="radio3" disabled /><span>08:00</span></label>
+                      <label><input type="radio" name="radio3" disabled /><span>08:30</span></label>
+                      <label><input type="radio" name="radio3" disabled /><span>09:00</span></label>
+                      <label><input type="radio" name="radio3" disabled /><span>09:30</span></label>
+                      <label><input type="radio" name="radio3" /><span>10:00</span></label>
+                      <label><input type="radio" name="radio3" /><span>10:30</span></label>
+                      <label><input type="radio" name="radio3" /><span>11:00</span></label>
+                      <label><input type="radio" name="radio3" /><span>11:30</span></label>
+                    </div>
+                  </div>
+
+                  <!-- # 코스선택 -->
+                  <div class="c-title">
+                    <i class="icon icon--course" aria-hidden="true"></i>
+                    <em>코스&nbsp;선택</em>
+                  </div>
+                  <div class="reserv__box">
+                    <p class="text text--sm">선택한 일자 및 시간에 따라 <b>요금이 다를 수 있습니다.</b></p>
+                    <div class="reserv__box reserv__box-round">
+                      <div class="reserv__row">
+                        <div class="reserv__column">
+                          <em class="badges badges--sm badges--c5">타임할인 3천원 선착순</em>
+                          <strong class="info-m__title">전신 타이 관리 - 60분</strong>
+                          <div class="info-m__con">
+                            <span class="hide">기존가</span>
+                            <span class="info-m__price info-m--line">
+                              <span>60,000<span class="info-m__unit">원</span></span>
+                            </span>
+                            <span class="hide">할인가</span>
+                            <span class="info-m__price info-m--line info-m__price--sale">
+                              <span>30,000<span class="info-m__unit">원</span></span>
+                            </span>
+                            <span class="hide">타임할인가</span>
+                            <strong class="info-m__price info-m__price--sale text-sub-100">
+                              <span>27,000<span class="info-m__unit">원</span></span>
+                            </strong>
+                          </div>
+                        </div>
+                        <div class="reserv__column">
+                          <div class="count">
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--minus" aria-hidden="true"></i>
+                            </button>
+                            <span class="count__number">0</span>
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--plus" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="reserv__row">
+                        <div class="reserv__column">
+                          <strong class="info-m__title">타이 관리 - 60분</strong>
+                          <div class="info-m__con">
+                            <span class="hide">기존가</span>
+                            <span class="info-m__price info-m--line">
+                              <span>60,000<span class="info-m__unit">원</span></span>
+                            </span>
+                            <span class="hide">할인가</span>
+                            <strong class="info-m__price info-m__price--sale">
+                              <span>30,000<span class="info-m__unit">원</span></span>
+                            </strong>
+                          </div>
+                        </div>
+                        <div class="reserv__column">
+                          <div class="count">
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--minus" aria-hidden="true"></i>
+                            </button>
+                            <span class="count__number is-focus">1</span>
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--plus" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- # depth -->
+                      <div class="reserv__group">
+                        <div class="reserv__row">
+                          <div class="reserv__column">
+                            <strong class="info-m__title">손마사지 15분</strong>
+                            <div class="info-m__con">
+                              <span class="hide">할인가</span>
+                              <strong class="info-m__price info-m__price--sale">
+                                <span>30,000<span class="info-m__unit">원</span></span>
+                              </strong>
+                            </div>
+                          </div>
+                          <div class="reserv__column">
+                            <div class="count">
+                              <button type="button" class="btn btn--icon">
+                                <i class="icon icon--minus" aria-hidden="true"></i>
+                              </button>
+                              <span class="count__number">1</span>
+                              <button type="button" class="btn btn--icon">
+                                <i class="icon icon--plus" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="reserv__row">
+                          <div class="reserv__column">
+                            <strong class="info-m__title">발마사지 15분</strong>
+                            <div class="info-m__con">
+                              <span class="hide">할인가</span>
+                              <strong class="info-m__price info-m__price--sale">
+                                <span>30,000<span class="info-m__unit">원</span></span>
+                              </strong>
+                            </div>
+                          </div>
+                          <div class="reserv__column">
+                            <div class="count">
+                              <button type="button" class="btn btn--icon">
+                                <i class="icon icon--minus" aria-hidden="true"></i>
+                              </button>
+                              <span class="count__number">1</span>
+                              <button type="button" class="btn btn--icon">
+                                <i class="icon icon--plus" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- // -->
+
+                      <div class="reserv__row">
+                        <div class="reserv__column">
+                          <strong class="info-m__title">아로마 관리 - 60분</strong>
+                          <div class="info-m__con">
+                            <span class="hide">기존가</span>
+                            <span class="info-m__price info-m--line">
+                              <span>60,000<span class="info-m__unit">원</span></span>
+                            </span>
+                            <span class="hide">할인가</span>
+                            <strong class="info-m__price info-m__price--sale">
+                              <span>30,000<span class="info-m__unit">원</span></span>
+                            </strong>
+                          </div>
+                        </div>
+                        <div class="reserv__column">
+                          <div class="count">
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--minus" aria-hidden="true"></i>
+                            </button>
+                            <span class="count__number">1</span>
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--plus" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="reserv__row">
+                        <div class="reserv__column">
+                          <strong class="info-m__title">아로마 관리 - 90분</strong>
+                          <div class="info-m__con">
+                            <span class="hide">기존가</span>
+                            <span class="info-m__price info-m--line">
+                              <span>60,000<span class="info-m__unit">원</span></span>
+                            </span>
+                            <span class="hide">할인가</span>
+                            <strong class="info-m__price info-m__price--sale">
+                              <span>40,000<span class="info-m__unit">원</span></span>
+                            </strong>
+                          </div>
+                        </div>
+                        <div class="reserv__column">
+                          <div class="count">
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--minus" aria-hidden="true"></i>
+                            </button>
+                            <span class="count__number">0</span>
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--plus" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="reserv__row">
+                        <div class="reserv__column">
+                          <strong class="info-m__title">전신 오일 관리 - 90분</strong>
+                          <div class="info-m__con">
+                            <span class="hide">기존가</span>
+                            <span class="info-m__price info-m--line">
+                              <span>60,000<span class="info-m__unit">원</span></span>
+                            </span>
+                            <span class="hide">할인가</span>
+                            <strong class="info-m__price info-m__price--sale">
+                              <span>90,000<span class="info-m__unit">원</span></span>
+                            </strong>
+                          </div>
+                        </div>
+                        <div class="reserv__column">
+                          <div class="count">
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--minus" aria-hidden="true"></i>
+                            </button>
+                            <span class="count__number">0</span>
+                            <button type="button" class="btn btn--icon">
+                              <i class="icon icon--plus" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- // -->
+              </div>
+              <!-- // -->
+
+              <!-- # 예약정보 -->
+              <div class="l-box__group l-box__group-rt">
+                <span class="hide">예약정보</span>
+
+                <div class="product">
+                  <!-- product -->
+                  <div class="product__viewer">
+                    <span class="hide">제휴점</span>
+                    <div class="product__img">
+                      <img src="http://placehold.it/411x260" />
+                    </div>
+                    <div class="product__info">
+                      <div class="product__info-row">
+                        <p class="product__info-hd">제휴점</p>
+                        <strong class="product__info-ct">구로디지털 아레나 스파 & 프리미엄 스웨디시 깔깔 거리점</strong>
+                      </div>
+                      <hr class="divider" />
+                      <div class="product__info-row">
+                        <p class="product__info-hd">예약일시</p>
+                        <strong class="product__info-ct">2023. 07. 26 (화) 오후 01:00</strong>
+                      </div>
+                      <hr class="divider" />
+
+                      <div class="product__info-row">
+                        <p class="product__info-hd">이용코스</p>
+                        <div class="product__info-col">
+                          <span class="product__info-tt">타이관리-60분(1건)</span>
+                          <span class="product__info-price">30,000<span class="product__info-unit">원</span></span>
+                        </div>
+                        <div class="product__info-col">
+                          <span class="product__info-tt product__info--path">손마사지 15분</span>
+                          <span class="product__info-price">10,000<span class="product__info-unit">원</span></span>
+                        </div>
+                        <div class="product__info-col">
+                          <span class="product__info-tt">아로마 관리-60분 (1건)</span>
+                          <span class="product__info-price">30,000<span class="product__info-unit">원</span></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product__total">
+                      <strong class="product__total-tt">총 이용요금</strong>
+                      <strong class="product__total-price">70,000<span class="product__total-unit">원</span></strong>
+                    </div>
+                  </div>
+
+                  <div class="product__reserv">
+                    <div class="c-title">
+                      <i class="icon icon--user" aria-hidden="true"></i>
+                      <em>예약자&nbsp;정보</em>
+                    </div>
+
+                    <fieldset class="form">
+                      <legend>예약자정보입력</legend>
+                      <div class="form-box border-2">
+                        <div class="form-field">
+                          <label for="field1" class="form-field__label">예약자명(필수)</label>
+                          <input type="text" id="field1" class="input input--sm input--gray" value="홍길동" title="예약자 성함 입력" placeholder="예약자명을 입력해 주세요." />
+                        </div>
+                        <div class="form-field">
+                          <label for="field2" class="form-field__label">연락처(필수)</label>
+                          <input type="text" id="field2" class="input input--sm input--gray" value="010-1234-1234" title="예약자 연락처 입력" placeholder="연락처를 입력해 주세요." />
+                        </div>
+                        <div class="form-field">
+                          <label for="field3" class="form-field__label">요청사항</label>
+                          <textarea class="textarea textarea--sm textarea--gray" id="field3" title="예약자 요청사항 입력" placeholder="요청사항을 입력해 주세요."></textarea>
+                        </div>
+                        <div class="form-field">
+                          <div class="label">
+                            <label>
+                              <input type="checkbox" aria-label="자동입력여부" />
+                              <span class="text-gray-100">다음부터 자동으로 입력하겠습니다.</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-submit">
+                        <button type="button" class="btn btn--primary btn--lg w-100" disabled>예약하기</button>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ## // ## -->
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/inquery.html"></include>
+      <!-- -------------------------------- -->
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+    </div>
+  </body>
+</html>

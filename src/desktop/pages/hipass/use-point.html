@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>하이패스 | 포인트 사용하기 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # SKIP # -->
+      <!-- ---------------------------------------------------------- -->
+      <div class="nav-skip"><a href="#container">본문바로가기</a></div>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <div class="content">
+          <div class="l-row">
+            <br />
+            <div class="pay__info-col">
+              <a role="button" class="text text--link" title="포인트 사용하기" data-dialog-trigger="#uiPointSale" aria-haspopup="dialog">
+                <em>포인트 할인</em>
+                <i class="icon icon--link" aria-hidden="true"></i>
+              </a>
+              <span class="pay__info-price">30,000<span class="pay__info-unit text-4">P</span></span>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w7 animate" id="uiPointSale">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <h1 class="modal__title">포인트 사용</h1>
+              <button type="button" class="modal__btn-close" data-dialog-close="">팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <div class="use-point">
+                <div class="use-point__head">
+                  <span class="use-point__number">
+                    <em class="use-point__name">보유 포인트 :</em>
+                    <b class="use-point__price">30,000</b>
+                    <span class="use-point__unit">Point</span>
+                  </span>
+                </div>
+                <div class="use-point__content">
+                  <div class="point-form">
+                    <div class="point-area">
+                      <i class="icon icon--point" aria-hidden="true"></i>
+                      <input type="text" class="input" />
+                    </div>
+                    <button type="button" class="btn btn--xmd btn--primary">전액 사용</button>
+                  </div>
+
+                  <ul class="text-list text-list--bullet1">
+                    <li class="text-list__item">포인트는 최초 적립 5,000P 이상일 경우 사용할 수 있습니다.</li>
+                    <li class="text-list__item">결제시 포인트 사용은 1,000P 단위로 사용 가능합니다.</li>
+                    <li class="text-list__item">예약 취소시 사용 포인트는 환원됩니다.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--lg btn--primary">
+                <i class="icon icon--point-white" aria-hidden="true"></i>
+                <span class="text-5"><em>5,000</em> 사용하기</span>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/inquery.html"></include>
+      <!-- -------------------------------- -->
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+    </div>
+
+    <script>
+      document.addEventListener('UILoaded', function () {
+        var dialog = document.querySelector('#uiPointSale');
+        var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+        dialogInstance.open();
+      });
+    </script>
+  </body>
+</html>

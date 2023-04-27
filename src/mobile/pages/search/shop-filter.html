@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>필터 검색 - hitai</title>
+    <include src="../_include/head.html"></include>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header">
+        <!-- BACK BUTTON -->
+        <button type="button" class="header__back btn btn--icon">
+          <span class="hide">뒤로가기</span>
+          <i class="icon icon--back" aria-hidden="true"></i>
+        </button>
+        <!-- TITLE -->
+        <h1 class="header__title">필터</h1>
+      </header>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- CONTENT -->
+        <div class="content">
+          <div class="l-row">
+            <br /><br /><br />
+            <button type="button" class="btn btn--icon btn--filter is-active" data-dialog-trigger="#uiFilterSearch" aria-haspopup="dialog">
+              <i class="icon icon--filter" aria-hidden="true"></i>
+              <span class="num">14</span>
+            </button>
+          </div>
+        </div>
+        <!-- // -->
+      </main>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- ---------------------------------------------------------- -->
+      <div role="dialog" class="modal modal--full" id="uiFilterSearch">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <h1 class="modal__title">필터검색</h1>
+              <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <fieldset>
+                <legend>필터검색</legend>
+                <h2 class="heading heading--4 mt-0">운영구분</h2>
+                <div class="label label--round">
+                  <label><input type="checkbox" /><span>하이패스</span></label>
+                  <label><input type="checkbox" checked /><span>영업준비중 제외</span></label>
+                </div>
+                <!-- // -->
+                <h2 class="heading heading--4">할인/적립/이벤트</h2>
+                <div class="label label--round">
+                  <label><input type="checkbox" /><span>타임할인</span></label>
+                  <label><input type="checkbox" checked /><span>할인쿠폰</span></label>
+                  <label><input type="checkbox" /><span>스탬프</span></label>
+                  <label><input type="checkbox" /><span>이벤트</span></label>
+                  <label><input type="checkbox" /><span>포인트추가적립</span></label>
+                </div>
+                <!-- // -->
+                <h2 class="heading heading--4">마사지 구분</h2>
+                <div class="label label--round">
+                  <label><input type="checkbox" /><span>태국</span></label>
+                  <label><input type="checkbox" checked /><span>중국</span></label>
+                  <label><input type="checkbox" /><span>베트남</span></label>
+                  <label><input type="checkbox" /><span>한국</span></label>
+                  <label><input type="checkbox" /><span>아로마</span></label>
+                  <label><input type="checkbox" /><span>스웨디시</span></label>
+                  <label><input type="checkbox" /><span>로미로미</span></label>
+                  <label><input type="checkbox" /><span>스포츠</span></label>
+                  <label><input type="checkbox" /><span>발</span></label>
+                  <label><input type="checkbox" /><span>로션테라피</span></label>
+                  <label><input type="checkbox" /><span>건식관리</span></label>
+                </div>
+                <!-- // -->
+                <h2 class="heading heading--4">편의시설</h2>
+                <div class="label label--round">
+                  <label><input type="checkbox" /><span>24시영업</span></label>
+                  <label><input type="checkbox" checked /><span>무료주차</span></label>
+                  <label><input type="checkbox" /><span>수면가능</span></label>
+                  <label><input type="checkbox" /><span>샤워가능</span></label>
+                  <label><input type="checkbox" /><span>커플할인</span></label>
+                  <label><input type="checkbox" /><span>wifi</span></label>
+                  <label><input type="checkbox" /><span>단체가능</span></label>
+                </div>
+              </fieldset>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--xmd btn--gray">초기화</button>
+              <button type="button" class="btn btn--xmd btn--primary">필터적용</button>
+            </div>
+            <!-- [//] -->
+          </section>
+        </div>
+      </div>
+      <!-- ---------------------------------------------------------- -->
+    </div>
+    <script>
+      document.addEventListener('UILoaded', function () {
+        var dialog = document.querySelector('#uiFilterSearch');
+        var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+        dialogInstance.open();
+      });
+    </script>
+  </body>
+</html>

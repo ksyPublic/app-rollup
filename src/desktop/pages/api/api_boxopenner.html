@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>BoxOpenner - API</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- -------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- -------------------------------- -->
+      <main id="container">
+        <!-- # TITLE # -->
+        <header>
+          <h1 class="api-title">BoxOpenner</h1>
+          <p>접힘메뉴 컨텐츠를 구성합니다.</p>
+        </header>
+
+        <!-- # CONTENT # -->
+        <div class="content api">
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [옵션] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="options"><a href="#options" class="anchor-title">#options</a></h2>
+          <div class="tbl-con2 mt-2" data-more-view>
+            <table class="table table--type1">
+              <caption></caption>
+              <colgroup>
+                <col width="200" />
+                <col width="200" />
+                <col width="250" />
+                <col width="250" />
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">OPTION</th>
+                  <th scope="col">TYPE</th>
+                  <th scope="col">DEFAULT</th>
+                  <th scope="col">DATA ATTRIBUTE</th>
+                  <th scope="col">DESCRIPTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><em class="fs-code option">setupSelector</em></td>
+                  <td>function</td>
+                  <td>null</td>
+                  <td></td>
+                  <td>각 엘리먼트를 셀렉트하는 함수를 선언</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="api-desc mt-5" style="font-weight: bold; color: #00264a">인스턴스 획득</p>
+          <div class="codebox-wrap active">
+            <button class="code-open" type="button" disabled>🔍</button>
+            <div class="code-box">
+              <div class="code-swap">
+                <div class="code-swap-buttons">
+                  <button type="button" class="code-swap-button">Vanilla Js</button>
+                  <button type="button" class="code-swap-button">jQuery</button>
+                </div>
+                <pre class="code-view code-swap-inner">
+								<code class="language-javascript">
+								var element = document.querySelector("@selector");
+								var dropdown = HitaiUI.BoxOpenner.get(element);
+								// 초기화되어 있지 않다면 null을 반환합니다.
+								</code>
+							</pre>
+                <pre class="code-view code-swap-inner">
+								<code class="language-javascript">
+								var dropdown = HitaiUI.BoxOpenner.get($("@selector"));
+								</code>
+							</pre>
+              </div>
+            </div>
+          </div>
+          <p class="api-desc" style="font-weight: bold; color: #00264a">🟢 <span>@selector </span><span class="code-badge">data-autoset="openner"</span> 이 선언되어있는 엘리먼트 입니다.</p>
+
+          <h2 id="selector"><a href="#selector" class="anchor-title">#selector</a></h2>
+          <div class="api-box r-word">
+            <h3 class="api-title fs-code">data-autoset="openner"</h3>
+            <p class="api-desc">속성이 선언된 엘리먼트는 박스오프너 메뉴 컴포넌트로 초기화됩니다.</p>
+          </div>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메서드 목록] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="methods"><a href="#methods" class="anchor-title">#methods</a></h2>
+          <div class="api-box">
+            <h3 class="api-title fs-code">.init()</h3>
+            <p class="api-desc">셀렉트박스를 초기화 합니다.</p>
+          </div>
+          <!--
+				<div class="api-box">
+					<h3 class="api-title fs-code">.open()</h3>
+					<p class="api-desc">메뉴를 컨텐츠를 오픈합니다.</p>
+				</div>
+
+				<div class="api-box">
+					<h3 class="api-title fs-code">.close()</h3>
+					<p class="api-desc">메뉴 컨텐츠를 닫습니다.</p>
+				</div> -->
+
+          <div class="api-box">
+            <h3 class="api-title fs-code">.updateOption(options)</h3>
+            <p class="api-desc">박스오프너의 옵션을 업데이트합니다.</p>
+          </div>
+
+          <div class="api-box static">
+            <span class="static-badge">static</span>
+            <h3 class="api-title fs-code">DropDown.updateOption(options)</h3>
+            <p class="api-desc">초기화 되어있는 모든 박스오프너의 옵션을 업데이트합니다.</p>
+          </div>
+
+          <div class="api-box static">
+            <span class="static-badge">static</span>
+            <h3 class="api-title fs-code">HitaiUI.BoxOpenner.get(element, initialize = false)</h3>
+            <p class="api-desc">박스오프너의 인스턴스를 반환합니다.</p>
+            <p class="api-desc-check">initialize 값을 true로 호출하면 초기화되지 않은 대상을 초기화 후 인스턴스를 반환합니다.</p>
+          </div>
+
+          <div class="api-box static">
+            <span class="static-badge">static</span>
+            <h3 class="api-title fs-code">HitaiUI.BoxOpenner.getInstances()</h3>
+            <p class="api-desc">현재 화면에 존재하는 박스오프너의 모든 인스턴스를 반환합니다.</p>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <pre class="code-view">
+								<code class="language-javascript">
+								var instanceList = HitaiUI.BoxOpenner.getInstances();
+								// output [] or [DropDown, DropDown, DropDown]
+								</code>
+							</pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [이벤트 목록] -->
+          <!-- ------------------------------------------------------------------ -->
+          <!-- <h2 id="events"><a href="#events" class="anchor-title">#events</a></h2>
+				<div class="api-box">
+					<h3 class="api-title fs-code">FoldMenu.EVENT.OPEN</h3>
+					<p class="api-desc">메뉴 컨텐츠가 오픈될 때 트리거 됩니다.</p>
+					<div class="codebox-wrap">
+						<button class="code-open" type="button">🔍</button>
+						<div class="code-box">
+							<div class="code-swap mt-2">
+								<div class="code-swap-buttons">
+									<button type="button" class="code-swap-button">Vanilla Js</button>
+									<button type="button" class="code-swap-button">jQuery</button>
+								</div>
+								<pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										var element = document.querySelector("@selector");
+										var foldmenu = FoldMenu.get(element);
+										element.addEventListener(FoldMenu.EVENT.OPEN, function() {
+											// open
+										});
+									</code>
+								</pre>
+								<pre class="code-view code-swap-inner">
+									<code class="language-javascript">
+										$("@selector").on(FoldMenu.EVENT.OPEN, function() {
+											// open
+										})
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="api-box">
+					<h3 class="api-title fs-code">FoldMenu.EVENT.CLOSE</h3>
+					<p class="api-desc">메뉴 컨텐츠가 오픈될 때 트리거 됩니다.</p>
+				</div> -->
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [여러가지 사용케이스] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="examples"><a href="#examples" class="anchor-title">#examples</a></h2>
+          <div class="api-box example">
+            <h3 class="api-ex-title">박스오프너 기본</h3>
+            <p class="api-desc" style="margin-bottom: 20px">탭 형태에 적용 된 샘플입니다.</p>
+
+            <div class="dropdown" data-autoset="openner" id="dropdown1">
+              <button type="button" class="btn btn--tab" data-menu="btn">지역별</button>
+
+              <div class="dropdown__wrap expand" data-menu="con">
+                <div class="dropdown__list">
+                  <button type="button" class="dropdown__btn" aria-controls="dropdown_list1"><em>서울</em></button>
+                  <button type="button" class="dropdown__btn" aria-controls="dropdown_list2"><em>경기</em></button>
+                  <button type="button" class="dropdown__btn" aria-controls="dropdown_list3"><em>부산</em></button>
+                </div>
+
+                <div class="dropdown__item" id="dropdown_list1">
+                  <div class="dropdown__title">
+                    <i class="icon icon--favor" aria-hidden="true"></i>
+                    <strong><em class="text-primary-100" data-value="title">서울</em> 추천 제휴점</strong>
+                  </div>
+                  <div class="dropdown__group" data-item="btn">
+                    <button type="button" class="dropdown__btn"><em>강남·서초</em></button>
+                    <button type="button" class="dropdown__btn"><em>송파·강동</em></button>
+                    <button type="button" class="dropdown__btn"><em>관악·동작</em></button>
+                    <button type="button" class="dropdown__btn"><em>영등포·구로·금천</em></button>
+                    <button type="button" class="dropdown__btn"><em>강서·양천</em></button>
+                    <button type="button" class="dropdown__btn"><em>서대문·마포·은평</em></button>
+                    <button type="button" class="dropdown__btn"><em>강북·도봉·노원·성북</em></button>
+                    <button type="button" class="dropdown__btn"><em>광진·성동·중랑·동대문</em></button>
+                    <button type="button" class="dropdown__btn"><em>종로·종구·용산</em></button>
+                  </div>
+                </div>
+
+                <div class="dropdown__item" id="dropdown_list2">
+                  <div class="dropdown__title">
+                    <i class="icon icon--favor" aria-hidden="true"></i>
+                    <strong><em class="text-primary-100" data-value="title">경기</em> 추천 제휴점</strong>
+                  </div>
+                  <div class="dropdown__group" data-item="btn">
+                    <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                    <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                    <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                    <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                    <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                    <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                    <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                    <button type="button" class="dropdown__btn"><em>경기도</em></button>
+                  </div>
+                </div>
+
+                <div class="dropdown__item" id="dropdown_list3">
+                  <div class="dropdown__title">
+                    <i class="icon icon--favor" aria-hidden="true"></i>
+                    <strong><em class="text-primary-100" data-value="title">부산</em> 추천 제휴점</strong>
+                  </div>
+                  <div class="dropdown__group" data-item="btn">
+                    <button type="button" class="dropdown__btn"><em>북구</em></button>
+                    <button type="button" class="dropdown__btn"><em>사하구</em></button>
+                    <button type="button" class="dropdown__btn"><em>부산진구</em></button>
+                    <button type="button" class="dropdown__btn"><em>해운대구</em></button>
+                    <button type="button" class="dropdown__btn"><em>수영구</em></button>
+                    <button type="button" class="dropdown__btn"><em>남구</em></button>
+                    <button type="button" class="dropdown__btn"><em>동구</em></button>
+                    <button type="button" class="dropdown__btn"><em>서구</em></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <button type="button" class="btn btn--primary btn--md" id="openBtn">열기</button>
+          </div>
+        </div>
+        <!-- # // # -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <footer id="footer">
+        <div></div>
+      </footer>
+      <!-- -------------------------------- -->
+    </div>
+
+    <script>
+      document.addEventListener('UILoaded', function () {
+        var element = document.querySelector('#dropdown1');
+        openBtn.addEventListener('click', function () {
+          HitaiUI.BoxOpenner.get(element).open();
+        });
+      });
+    </script>
+  </body>
+</html>

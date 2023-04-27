@@ -1,0 +1,238 @@
+/* --------------------------------------------------------------------------------
+      LAYOUT
+  --------------------------------------------------------------------------------- */
+body {
+  min-width: rem($max-width);
+}
+#wrapper {
+  position: relative;
+  width: 100%;
+  min-width: rem($max-width);
+}
+.nav-skip a {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  font-size: rem(1);
+  z-index: -1;
+  text-align: center;
+  color: transparent;
+}
+.nav-skip a:focus {
+  background: #093378;
+  z-index: 500;
+  font-size: rem(16);
+  line-height: rem(8);
+}
+
+#header {
+  position: relative;
+}
+
+.header {
+  &__logo {
+    width: rem(207);
+  }
+}
+
+#container {
+  width: 100%;
+  min-height: calc(100vh - #{rem($footer-height)});
+  .content {
+    // width: rem(780);
+    overflow: hidden;
+  }
+}
+
+.container-wrapper {
+  display: flex;
+  align-items: stretch;
+  max-width: rem(1180);
+  margin: 0 auto;
+}
+
+#gnb {
+  position: relative;
+}
+
+.gnb {
+  width: rem(340);
+  border-left: rem(1) solid color(gray, 200);
+}
+
+#footer {
+  position: relative;
+  background-color: color(white, 100);
+}
+
+.footer {
+  &__logo {
+    width: rem(170);
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__wrap {
+    position: relative;
+    width: rem($max-width);
+    min-height: rem($footer-height);
+    margin: 0 auto;
+    padding: rem(52 0 44);
+  }
+
+  &-info {
+    max-width: rem(580);
+    margin-top: rem(25);
+    display: inline-block;
+    &__list {
+      //   width: rem(650);
+      li {
+        display: inline-block;
+        color: color(dark, 600);
+        margin: rem(0 8);
+        font-size: rem(14);
+      }
+      margin: rem(0 -8);
+    }
+    &__text {
+      margin: rem(20 0 0 0);
+      font-size: rem(12);
+      color: color(dark, 600);
+    }
+  }
+
+  &-link {
+    display: block;
+    margin-top: rem(26);
+    max-width: rem(800);
+    &__list {
+      @include clearfix;
+      margin-right: rem(-24);
+    }
+    &__item {
+      float: left;
+      margin-right: rem(24);
+      &:last-child {
+        margin-left: 0;
+      }
+      a {
+        display: inline-block;
+        line-height: rem(20);
+        color: color(dark, 600);
+        font-size: rem(16);
+      }
+    }
+  }
+
+  &-util {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    display: block;
+    border: 1px solid color(gray, 400);
+
+    &__list {
+      position: relative;
+      width: rem(280);
+      padding: rem(0 23);
+      & + .footer-util__list {
+        border-top: 1px solid color(gray, 400);
+      }
+
+      > span {
+        display: block;
+        line-height: rem(58);
+        font-size: rem(12);
+        color: #888;
+        font-weight: 700;
+      }
+    }
+
+    &__item {
+      position: absolute;
+      top: 50%;
+      right: rem(23);
+      display: block;
+      transform: translateY(-50%);
+      overflow: hidden;
+      font-size: 1px;
+      color: transparent;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      &--android,
+      &--ios {
+        overflow: hidden;
+        position: absolute;
+        width: rem(26);
+        height: rem(26);
+        padding: rem(0 0 0 26);
+        font-size: 1px;
+        color: transparent;
+      }
+      &--android {
+        background: url('#{$icon-url}icon-android-lg.png') no-repeat 50% 50%;
+        top: rem(18);
+        transform: translateY(0);
+        right: rem(60);
+      }
+      &--ios {
+        background: url('#{$icon-url}icon-ios-lg.png') no-repeat 50% 50%;
+      }
+      &--blog {
+        width: rem(49);
+        height: rem(22);
+        padding: rem(0 0 0 49);
+        &::before {
+          background: url('#{$icon-url}icon-blog.png') no-repeat 50% 50%;
+        }
+      }
+    }
+  }
+}
+
+.l-row {
+  margin: 0 auto;
+  position: relative;
+  width: rem($max-width);
+  //   &--before {
+  //     &:before {
+  //       content: '';
+  //       display: block;
+  //       height: rem(50);
+  //     }
+
+  //     //l-box가 첫번째 요소로 올때
+  //     .l-box:first-child {
+  //       margin-top: rem(20);
+  //     }
+  //   }
+
+  //   &--after {
+  //     &:after {
+  //       content: '';
+  //       display: block;
+  //       height: rem(180);
+  //     }
+  //   }
+
+  &--lg {
+    width: 100%;
+  }
+
+  //   &--sm {
+  //     width: rem(840);
+  //   }
+
+  //   &--xsm {
+  //     width: rem(420);
+  //   }
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>가이드 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+      <main id="container">
+        <header class="hide">
+          <h1>MARKUP GUIDE | ICON</h1>
+        </header>
+        <!-- # CONTENT # -->
+        <div class="content">
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [메뉴이동] -->
+          <!-- ------------------------------------------------------------------ -->
+          <include src="./_include/nav.html"></include>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [일반아이콘] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 class="tit-guide1">컨텐츠</h2>
+
+          <!-- [유형1] -->
+          <h3 class="tit-guide2">유형1</h3>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">.coupon-form</legend>
+            <div class="coupon-form">
+              <div class="label">
+                <label class="coupon__label" for="coupon1">
+                  <input type="radio" id="coupon1" name="coupon1" />
+                  <span aria-hidden="true"></span>
+                  <div class="coupon__item">
+                    <div class="coupon__description">
+                      <div class="coupon__amount">
+                        <span class="hide">할인가</span>
+                        <span class="coupon__price">10,000</span>
+                        <span class="coupon__unit">원<em>할인</em></span>
+                      </div>
+                      <div class="coupon__text">
+                        <div class="coupon__title">신규가입 할인 쿠폰 (10만원 이상 결제 시 사용 가능)</div>
+                        <div class="coupon__detail">사용처: 할인쿠폰 사용 가능 제휴점</div>
+                      </div>
+                    </div>
+                    <div class="coupon__bottom">
+                      <div class="coupon__foot">
+                        <div class="coupon__validity">
+                          <span class="hide">유효기간</span>
+                          <span class="coupon__validity-date">22.12.25 ~ 23.01.31</span>
+                          (사용기한이 22일 남았습니다.)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <label class="coupon__label" for="coupon2">
+                  <input type="radio" id="coupon2" name="coupon1" />
+                  <span aria-hidden="true"></span>
+                  <div class="coupon__item">
+                    <div class="coupon__description">
+                      <div class="coupon__amount">
+                        <span class="hide">할인가</span>
+                        <span class="coupon__price">10,000</span>
+                        <span class="coupon__unit">원<em>할인</em></span>
+                      </div>
+                      <div class="coupon__text">
+                        <div class="coupon__title">신규가입 할인 쿠폰 (10만원 이상 결제 시 사용 가능)</div>
+                        <div class="coupon__detail">사용처: 할인쿠폰 사용 가능 제휴점</div>
+                      </div>
+                    </div>
+                    <div class="coupon__bottom">
+                      <div class="coupon__foot">
+                        <div class="coupon__validity">
+                          <span class="hide">유효기간</span>
+                          <span class="coupon__validity-date">22.12.25 ~ 23.01.31</span>
+                          (사용기한이 22일 남았습니다.)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="coupon__label coupon--none" for="coupon3">
+                  <input type="radio" id="coupon3" name="coupon1" />
+                  <span>적용안함</span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- [유형2] -->
+          <h3 class="tit-guide2">유형2</h3>
+
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">.coupon-item</legend>
+            <div class="coupon__item">
+              <div class="coupon__description d-flex jc-between">
+                <div class="coupon__info">
+                  <div class="coupon__amount">
+                    <span class="hide">할인가</span>
+                    <span class="coupon__price">10,000</span>
+                    <span class="coupon__unit">원<em>할인</em> </span>
+                  </div>
+                  <div class="coupon__text">
+                    <div class="coupon__title">신규가입 할인 쿠폰 (10만원 이상 결제 시 사용 가능)</div>
+                  </div>
+                </div>
+                <button class="btn btn--icon">
+                  <i class="icon icon--download-gray" aria-hidden="true"></i>
+                  <em>쿠폰받기</em>
+                </button>
+              </div>
+              <div class="coupon__bottom">
+                <div class="coupon__foot">
+                  <div class="coupon__validity">
+                    <span class="hide">유효기간</span>
+                    <span class="coupon__validity-date">2022.12.25 ~ 2023.01.31</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="coupon__item">
+              <div class="coupon__description d-flex jc-between">
+                <div class="coupon__info">
+                  <div class="coupon__amount">
+                    <span class="hide">할인가</span>
+                    <span class="coupon__price">5,000</span>
+                    <span class="coupon__unit">원<em>할인</em> </span>
+                  </div>
+                  <div class="coupon__text">
+                    <div class="coupon__title">신규가입 할인 쿠폰 (5만원 이상 결제 시 사용 가능)</div>
+                  </div>
+                </div>
+                <button class="btn btn--icon" disabled="">
+                  <i class="icon icon--success" aria-hidden="true"></i>
+                  <em>사용가능</em>
+                </button>
+              </div>
+              <div class="coupon__bottom">
+                <div class="coupon__foot">
+                  <div class="coupon__validity">
+                    <span class="hide">유효기간</span>
+                    <span class="coupon__validity-date">2022.12.25 ~ 2023.01.31</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="coupon__item">
+              <div class="coupon__description d-flex jc-between">
+                <div class="coupon__info">
+                  <div class="coupon__amount">
+                    <span class="hide">할인가</span>
+                    <span class="coupon__price">3,000</span>
+                    <span class="coupon__unit">원<em>할인</em> </span>
+                  </div>
+                  <div class="coupon__text">
+                    <div class="coupon__title">신규가입 할인 쿠폰 (5만원 이상 결제 시 사용 가능)</div>
+                  </div>
+                </div>
+                <button class="btn btn--icon">
+                  <i class="icon icon--download-gray" aria-hidden="true"></i>
+                  <em>쿠폰받기</em>
+                </button>
+              </div>
+              <div class="coupon__bottom">
+                <div class="coupon__foot">
+                  <div class="coupon__validity">
+                    <span class="hide">유효기간</span>
+                    <span class="coupon__validity-date">22.12.25 ~ 23.01.31</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="coupon__item coupon__item--disabled">
+              <div class="coupon__description d-flex jc-between">
+                <div class="coupon__info">
+                  <div class="coupon__amount">
+                    <span class="hide">할인가</span>
+                    <span class="coupon__price">3,000</span>
+                    <span class="coupon__unit">원<em>할인</em> </span>
+                  </div>
+                  <div class="coupon__text">
+                    <div class="coupon__title">신규가입 할인 쿠폰 (5만원 이상 결제 시 사용 가능)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="coupon__bottom">
+                <div class="coupon__foot">
+                  <div class="coupon__validity">
+                    <span class="hide">유효기간</span>
+                    <span class="coupon__validity-date">기간종료</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <h2 class="tit-guide1">스탬프</h2>
+          <fieldset class="guide" data-autocode>
+            <legend class="lagend">유형1 : .stamp</legend>
+            <div class="stamp">
+              <div class="stamp__info">
+                <em class="stamp__sub">구로디지털 청담타이마사지</em>
+                <span class="stamp__date">발행일 2023.01.01</span>
+              </div>
+              <div class="stamp__box">
+                <div class="stamp__mark"><span>1</span><em class="stamp__complete">적립완료</em></div>
+                <div class="stamp__mark"><span>2</span></div>
+                <div class="stamp__mark"><span>3</span></div>
+                <div class="stamp__mark"><span>4</span></div>
+                <div class="stamp__mark"><span>5</span></div>
+                <div class="stamp__mark"><span>6</span></div>
+                <div class="stamp__mark"><span>7</span></div>
+                <div class="stamp__mark"><span>8</span></div>
+                <div class="stamp__mark"><span>9</span></div>
+                <div class="stamp__mark"><span>무료이용권</span></div>
+              </div>
+            </div>
+          </fieldset>
+          <!-- ------------------------------------------------------------------ -->
+        </div>
+        <!-- # // # -->
+      </main>
+    </div>
+  </body>
+</html>

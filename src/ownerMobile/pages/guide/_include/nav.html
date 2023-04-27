@@ -1,0 +1,29 @@
+<nav class="tab">
+  <ul>
+    <li><a href="text.html">TEXT</a></li>
+    <li><a href="list.html">LIST</a></li>
+    <!-- <li><a href="grid.html">GRID</a></li> -->
+    <li><a href="button.html">BUTTON</a></li>
+    <li><a href="icon.html">ICON</a></li>
+    <li><a href="form.html">FORM ELEMENT</a></li>
+    <li><a href="tab.html">TAB</a></li>
+    <!-- <li><a href="table.html">TABLE</a></li> -->
+    <li><a href="contents.html">CONTENTS</a></li>
+  </ul>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var currentUrl = window.location.href;
+    var fileName = currentUrl.split('/').pop().replace('.html', '');
+    var navLinks = document.querySelectorAll('nav.tab a');
+    for (var i = 0; i < navLinks.length; i++) {
+      var href = navLinks[i].getAttribute('href');
+      href = href.replace('.html', '');
+
+      if (fileName === href) {
+        navLinks[i].setAttribute('aria-current', 'page');
+      }
+    }
+  });
+</script>

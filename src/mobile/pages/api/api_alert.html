@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>Alert/Confirm - API</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <link rel="stylesheet" href="../../resources/scss/ui.publish.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper" class="docs">
+      <header class="header">
+        <div>
+          <h1>
+            <strong><img src="../../resources/images/com/img-logo.png" alt="Hitai" /></strong> PUBLISHING
+          </h1>
+          <ul class="gnb">
+            <li><a href="../../pages/index.html">LIST</a></li>
+            <li><a href="../../pages/guide.html" aria-current="location">GUIDE</a></li>
+            <li><a href="../../pages/rule.html">RULE</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- -------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- -------------------------------- -->
+      <main id="container">
+        <!-- # TITLE # -->
+        <header>
+          <h1 class="api-title">Alert, Confirm</h1>
+          <p>Dialog 컴포넌트를 래핑 하여 제작된 컴포넌트입니다.</p>
+        </header>
+
+        <!-- # CONTENT # -->
+        <div class="content api">
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [이벤트 목록] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="events"><a href="#events" class="anchor-title">#events</a></h2>
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Dialog.EVENT.OPEN</h3>
+            <p class="api-desc">다이얼로그가 열릴 때 트리거 됩니다.</p>
+          </div>
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Dialog.EVENT.OPENED</h3>
+            <p class="api-desc">다이얼로그가 열린 후 트리거 됩니다.(애니메이션 종료 후 트리거)</p>
+          </div>
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Dialog.EVENT.CLOSE</h3>
+            <p class="api-desc">다이얼로그가 닫힐 때 트리거 됩니다.</p>
+          </div>
+          <div class="api-box">
+            <h3 class="api-title fs-code">HitaiUI.Dialog.EVENT.CLOSED</h3>
+            <p class="api-desc">다이얼로그가 닫힌 후 트리거 됩니다.(애니메이션 종료 후 트리거).</p>
+          </div>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [이벤트 사용] -->
+          <!-- ------------------------------------------------------------------ -->
+          <div class="api-box example">
+            <h4 class="api-ex-title-sub">이벤트 사용</h4>
+            <p class="api-desc" style="margin-bottom: 20px"><a href="./api_dialog.html" target="_blank" style="text-decoration: underline">Dialog Component</a> 와 동일한 이벤트를 사용합니다.</p>
+            <button type="button" class="btn btn--dark btn--lg" id="uiAlert1">Alert</button>
+            <script>
+              document.addEventListener('UILoaded', function () {
+                document.querySelector('#uiAlert1').addEventListener('click', function () {
+                  HitaiUI.Alert('Alert 입니다.', {
+                    'ui.dialog.open': function () {
+                      console.log('ui.dialog.open');
+                    },
+                    'ui.dialog.opened': function () {
+                      console.log('ui.dialog.opened');
+                    },
+                    'ui.dialog.close': function () {
+                      console.log('ui.dialog.close');
+                    },
+                    'ui.dialog.closed': function () {
+                      console.log('ui.dialog.closed');
+                    },
+                  });
+                });
+              });
+            </script>
+            <div class="codebox-wrap">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <pre class="code-view">
+									<code class="language-javascript">
+										var EventType = UI.Dialog.EVENT;
+										UI.Alert('Alert 입니다.', {
+											// "open.ui.dialog"
+											"open.ui.dialog": function() {
+												console.log(EventType.OPEN);
+											},
+
+											// "opened.ui.dialog"
+											"opened.ui.dialog": function() {
+												console.log(EventType.OPENED);
+											},
+
+											// "close.ui.dialog"
+											"close.ui.dialog": function() {
+												console.log(EventType.CLOSE);
+											},
+
+											// "closed.ui.dialog"
+											"closed.ui.dialog": function() {
+												console.log(EventType.CLOSED);
+											}
+										});
+									</code>
+								</pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- ------------------------------------------------------------------ -->
+          <!-- [여러가지 사용케이스] -->
+          <!-- ------------------------------------------------------------------ -->
+          <h2 id="examples"><a href="#examples" class="anchor-title">#examples</a></h2>
+          <div class="api-box example">
+            <h3 class="api-ex-title">기본</h3>
+            <button type="button" id="uiAlert2" class="btn btn--dark btn--lg">Alert</button>
+            <button type="button" id="uiConfirm" class="btn btn--dark btn--lg">Confirm(확인버튼 이벤트처리)</button>
+            <script>
+              document.addEventListener('UILoaded', function () {
+                let message1 = '';
+                message1 += '선택하신 예약 시간이 1시간 이내입니다.<br />예약확정 후 예약 취소 시<br />';
+                message1 += '<p><strong class="text-primary-100">100% 환불 수수료가 발생</strong>합니다.</p>';
+                message1 += '선택하신 시간으로 예약을 진행하시겠습니까?';
+                let message2 = '';
+                message2 += '예약을 취소하겠습니다.<br />';
+                message2 += '취소하면 모든 선택 사항들이 초기화됩니다.';
+
+                // Confirm
+                document.querySelector('#uiConfirm').addEventListener('click', function () {
+                  const uiConfirm = new HitaiUI.Confirm(
+                    // message1,
+                    //'결제 정책에 동의하셔야 합니다.',
+                    '예약 시간을 선택해 주세요.',
+                    function () {
+                      // "확인 버튼"을 클릭했을 때 이 함수가 실행됩니다.
+                      // 필요한 프로세스 처리 후
+                      // 아래 close 함수를 실행하여 창을 닫습니다.
+                      console.log(this);
+                      this.close();
+                    },
+                  );
+                });
+
+                // Alert
+                document.querySelector('#uiAlert2').addEventListener('click', function () {
+                  const uiAlert = new HitaiUI.Alert('결제 정책에 동의하셔야 합니다.');
+                });
+              });
+            </script>
+
+            <div class="codebox-wrap" style="margin-top: 20px">
+              <button class="code-open" type="button">🔍</button>
+              <div class="code-box">
+                <script type="text/plain" class="code-view language-html">
+                  <button type="button" id="uiAlert" class="btn btn--dark btn--lg">Alert</button>
+                  <button type="button" id="uiConfirm" class="btn btn--dark btn--lg">Confirm</button>
+                </script>
+                <br />
+                <script type="text/plain" class="code-view language-js">
+                  document.addEventListener('UILoaded', function () {
+                    let message1 = '';
+                    message1 += '선택하신 예약 시간이 1시간 이내입니다.<br />예약확정 후 예약 취소 시<br />';
+                    message1 += '<p><strong class="text-primary-100">100% 환불 수수료가 발생</strong>합니다.</p>';
+                    message1 += '선택하신 시간으로 예약을 진행하시겠습니까?';
+                    let message2 = '';
+                    message2 += '예약을 취소하겠습니다.<br />';
+                    message2 += '취소하면 모든 선택 사항들이 초기화됩니다.';
+
+                    // Confirm
+                    document.querySelector('#uiConfirm').addEventListener('click', function () {
+                      const uiConfirm = new HitaiUI.Confirm(
+                        // message1,
+                        //'결제 정책에 동의하셔야 합니다.',
+                        '예약 시간을 선택해 주세요.',
+                        function () {
+                          // 확인 버튼을 클릭했을 때 이 함수가 실행됩니다.
+                          // 필요한 프로세스 처리 후
+                          // 아래 close 함수를 실행하여 창을 닫습니다.
+                          console.log(this);
+                          this.close();
+                        },
+                      );
+                    });
+
+                    // Alert
+                    document.querySelector('#uiAlert').addEventListener('click', function () {
+                      const uiAlert = new HitaiUI.Alert('결제 정책에 동의하셔야 합니다.');
+                    });
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- # // # -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <footer id="footer">
+        <div></div>
+      </footer>
+      <!-- -------------------------------- -->
+    </div>
+  </body>
+</html>

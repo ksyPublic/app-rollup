@@ -1,0 +1,201 @@
+// List
+.list {
+  &-group {
+    $root: list-group;
+    &__anchor {
+      position: relative;
+      display: block;
+      font-size: rem(13);
+      font-weight: 500;
+      color: color(dark, 200);
+      padding: rem(12 0);
+      line-height: 1;
+      em {
+        color: color(primary, 100);
+      }
+      .list-group__info {
+        color: color(primary, 100);
+        font-weight: 700;
+        display: inline-block;
+        padding: rem(0 0 0 20);
+        &::before {
+          content: '';
+          position: absolute;
+          top: rem(10);
+          left: 0;
+          width: rem(16);
+          height: rem(16);
+          background: url('../images/icon/icon-alliance.svg') no-repeat 0 0;
+          background-size: 100% auto;
+        }
+      }
+      &--arrow {
+        .list-group__sub1 {
+          margin-top: rem(8);
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: rem(20);
+          width: rem(24);
+          height: rem(24);
+          transform: translateY(-50%);
+          background: url('../images/icon/icon-text-arrow.png') no-repeat 0 0;
+          background-size: 100% auto;
+        }
+      }
+    }
+    &__item {
+      position: relative;
+      border-bottom: 1px solid #eee;
+      align-items: center;
+      .list-group__anchor {
+        flex: 1;
+      }
+    }
+    &__title {
+      display: block;
+      font-size: rem(13);
+      font-weight: 500;
+      line-height: rem(16);
+    }
+    &__sub1 {
+      display: block;
+      margin: rem(5 0 0 0);
+      font-weight: normal;
+      font-size: rem(12);
+      line-height: rem(16);
+      color: color(dark, 600);
+    }
+    &__sub2 {
+      display: block;
+      margin: rem(10 0 0 0);
+      font-size: rem(10);
+      color: color(dark, 900);
+    }
+    &__text {
+      display: inline-block;
+      font-size: rem(15);
+      font-weight: 500;
+      line-height: rem(24);
+    }
+    &--border-less {
+      .list-group__item {
+        margin: rem(24 0);
+        border: 0;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      .list-group__anchor {
+        padding: rem(4 30 4 0);
+        line-height: rem(16);
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: rem(24);
+          height: rem(24);
+          transform: translateY(-50%);
+          background: url('../images/icon/icon-text-arrow.png') no-repeat 0 0;
+          background-size: 100% auto;
+        }
+      }
+    }
+    &--box {
+      border-top: rem(1) solid #ddd;
+      .list-group__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: rem(16 20);
+        min-height: rem(60);
+        > .list-group__anchor {
+          margin: rem(-16 -20);
+          padding: rem(16 20);
+          flex: 1;
+          &--arrow {
+            padding-right: rem(60);
+          }
+        }
+        .icon + .list-group__text {
+          margin: rem(0 0 0 8);
+        }
+      }
+      .list-group__anchor {
+        padding: 0;
+      }
+      .list-group__side {
+        position: relative;
+        margin-left: rem(20);
+      }
+      .btn {
+        position: relative;
+      }
+    }
+    &--menu {
+      + .#{$root}--menu {
+        margin-top: rem(40);
+      }
+      // padding: rem(0 20);
+
+      .#{$root}__title {
+        font-size: rem(12);
+        line-height: rem(25);
+        font-weight: bold;
+        color: color(gray, 700);
+        padding-bottom: rem(8);
+        border-bottom: rem(1) solid color(gray, 600);
+
+        + .#{$root} {
+          padding-bottom: rem(20);
+          border-bottom: rem(1) solid color(gray, 600);
+          .#{$root}__item {
+            padding: rem(0);
+            border-bottom: 0;
+          }
+
+          .#{$root}__anchor {
+            height: rem(40);
+            display: flex;
+            padding: rem(14 0 0);
+            align-items: flex-end;
+            padding: rem(0);
+            width: 100%;
+            justify-content: space-between;
+          }
+
+          .#{$root}__side {
+            position: relative;
+            top: 0;
+            right: 0;
+            transform: none;
+
+            > .btn--xsm + span {
+              font-size: rem(11);
+              min-width: rem(85);
+              text-align: right;
+              display: inline-block;
+            }
+          }
+        }
+      }
+      .#{$root}__anchor {
+        padding: rem(18 0);
+      }
+
+      .icon + .#{$root}__text {
+        margin-left: rem(9);
+      }
+
+      .#{$root}__side {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

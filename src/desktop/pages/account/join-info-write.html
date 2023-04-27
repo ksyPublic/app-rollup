@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>회원정보입력 | 회원가입 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # SKIP # -->
+      <!-- ---------------------------------------------------------- -->
+      <div class="nav-skip"><a href="#container">본문바로가기</a></div>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row l-row--xsm">
+            <div class="account">
+              <!-- STEP -->
+              <div class="step step--basic">
+                <ol class="step__list">
+                  <li class="step__item"><span class="hide">1단계 약관동의</span></li>
+                  <li class="step__item"><span class="hide">2단계 휴대폰 인증</span></li>
+                  <li class="step__item" aria-current="step"><span class="hide">3단계 회원정보 입력</span></li>
+                </ol>
+              </div>
+              <!-- TITLE -->
+              <div class="account__title">
+                <h2 class="heading heading--4">회원정보 입력</h2>
+                <p>아래 정보를 입력해 주세요.</p>
+              </div>
+              <!-- FORM -->
+              <fieldset class="form form--type2">
+                <legend>회원정보입력</legend>
+                <!-- // -->
+                <div class="form-field">
+                  <label for="field1" class="form-field__label">아이디(이메일)</label>
+                  <input type="text" id="field1" class="input" placeholder="hitai@example.com" />
+                  <span class="text-validation">이메일 주소를 입력해 주세요.</span>
+                </div>
+                <!-- // -->
+                <div class="form-field">
+                  <label for="field2" class="form-field__label">비밀번호</label>
+                  <div class="input-wrap input-wrap--password">
+                    <input type="password" id="field2" class="input" placeholder="비밀번호(최소 8자 이상)" />
+                    <button type="button" class="icon icon--eye" data-toggle-btn>비밀번호보기</button>
+                  </div>
+                  <span class="text-validation">비밀번호는 8자리 이상 20자리 이하로 영문/숫자/특수문자를 조합해서 설정해 주세요.</span>
+                </div>
+                <!-- // -->
+                <div class="form-field">
+                  <label for="field3" class="form-field__label">비밀번호 확인</label>
+                  <div class="input-wrap input-wrap--password">
+                    <input type="password" id="field3" class="input" placeholder="비밀번호 다시 입력" />
+                    <button type="button" class="icon icon--eye" data-toggle-btn>비밀번호보기</button>
+                  </div>
+                  <span class="text-validation">비밀번호가 일치하지 않습니다.</span>
+                </div>
+                <!-- // -->
+                <div class="form-field">
+                  <label for="field4" class="form-field__label">닉네임</label>
+                  <input type="text" id="field4" class="input" placeholder="2자리 이상 20자리 이하 입력" />
+                  <span class="text-validation">동일한 닉네임이 존재합니다.</span>
+                </div>
+                <!-- // -->
+              </fieldset>
+
+              <!-- BUTTON -->
+              <div class="account__btn mt-5">
+                <button type="button" class="btn btn--primary btn--lg">회원가입</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ### // ###-->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # 공지사항/자주묻는질문 # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/inquery.html"></include>
+      <!-- -------------------------------- -->
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+    </div>
+  </body>
+</html>

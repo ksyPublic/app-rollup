@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>하이패스 | 하이패스 결제 결과 확인 - hitai</title>
+    <include src="../_include/head.html"></include>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header">
+        <!-- BACK BUTTON -->
+        <button type="button" class="header__back">
+          <span class="hide">뒤로가기</span>
+          <i class="icon icon--back" aria-hidden="true"></i>
+        </button>
+        <!-- TITLE -->
+        <h1 class="header__title">예약 / 결제</h1>
+      </header>
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <div class="content">
+          <div class="l-row">
+            <!-- 예약 신청 완료 메시지 -->
+            <div class="mes-result mes-result--complete">
+              <p>예약 신청이 완료되었습니다.</p>
+              <p>제휴점에서 예약이 확정되면 앱 알림으로 <br />알려 드립니다.</p>
+            </div>
+            <!-- // -->
+
+            <!-- 예약 정보 -->
+            <div class="text-info text-info--type2">
+              <div class="text-info__title">예약 정보</div>
+              <div class="text-info__description">
+                <div class="text-info__item">
+                  <ul>
+                    <li>
+                      <span class="text text--xsm text-dark-900">제휴점</span>
+                      <span class="text text--xsm">구로디지털 청담타이마사지</span>
+                    </li>
+                    <li>
+                      <span class="text text--xsm text-dark-900">예약일시</span>
+                      <span class="text text--xsm">2023. 07. 26(화) 오후 01:00</span>
+                    </li>
+                    <li>
+                      <span class="text text--xsm text-dark-900">이용코스</span>
+                      <span class="text text--xsm">
+                        타이관리 - 60분(1건)<br />
+                        타이관리 - 90분(1건)<br />
+                        아로마 관리 - 60분(1건)
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- // -->
+
+            <!-- 예약 정보 -->
+            <div class="text-info text-info--type2">
+              <div class="text-info__title">예약자 정보</div>
+              <div class="text-info__description">
+                <div class="text-info__item">
+                  <ul>
+                    <li>
+                      <span class="text text--xsm text-dark-900">예약자명</span>
+                      <span class="text text--xsm">홍길동</span>
+                    </li>
+                    <li>
+                      <span class="text text--xsm text-dark-900">연락처</span>
+                      <span class="text text--xsm">010-1234-1234</span>
+                    </li>
+                    <li>
+                      <span class="text text--xsm text-dark-900">요청사항</span>
+                      <span class="text text--xsm"> 어깨가 많이 뭉쳐있어요. 어깨를 중점적으로 관리 받았스면 좋겠구요. 압이 약한것 보다 아플 정도로 쎈걸 좋아합니다. 할 수 있는한 최대치로 부탁드립니다. </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- // -->
+
+            <!-- 총 결제금액  -->
+            <div class="text-info text-info--type3">
+              <div class="text-info__title">
+                <h2 class="text text--lg"><b>첫 결제할인</b></h2>
+                <strong class="text text--unit">84,000<em>원</em></strong>
+              </div>
+              <div class="text-info__description">
+                <div class="text-info__item">
+                  <ul>
+                    <li>
+                      <span class="text text--xsm">이용금액</span>
+                      <span class="text text--xsm text--unit">100,000<em>원</em></span>
+                    </li>
+                    <li>
+                      <div class="accordion accordion--type2" data-autoset="accordion">
+                        <div class="accordion__head">
+                          <button type="button" class="accordion__btn" id="acc-header2" aria-controls="acc-content2" aria-expanded="false"></button>
+                          <div class="accordion__title">
+                            <div class="accordion__info">
+                              <em class="text text--xsm">할인금액</em>
+                              <i class="icon icon--acc-arrow2" aria-hidden="true"></i>
+                            </div>
+                            <div class="accordion__price">
+                              <span class="text text--xsm text--unit text-red-100">-11,000<em>원</em></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion__content expand" id="acc-content2" aria-labelledby="acc-header2">
+                          <div class="text-info__item">
+                            <ul>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">첫 결제할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                              </li>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">타임할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                              </li>
+                              <li>
+                                <span class="text text--sm text--path text-dark-900">쿠폰할인</span>
+                                <span class="text text--sm text--unit text-dark-900">-5,000<em>원</em></span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="text text--xsm">포인트 사용</span>
+                      <span class="text text--xsm text--unit text-red-100">-5,000<em>P</em></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- // -->
+
+            <div class="form-info">
+              <div class="form-info-field">
+                <ul class="text-list text-list--sm text-list--bullet1">
+                  <li class="text-list__item">제휴점에서 <b class="text-primary-100">10분 동안 확인하지 않을 경우 예약이 자동 취소</b>됩니다.</li>
+                  <li class="text-list__item">
+                    제휴점에서 예약이 확정된 후 <b class="text-primary-100">예약자가 취소할 경우</b> 취소 시간에<br />
+                    따라 <b class="text-primary-100">취소 수수료가 적용</b>될 수 있습니다.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="btn-area btn-col2 btn-area--type1" data-btn-fixed>
+              <button type="button" class="btn btn--xmd btn--dark">제휴점 상세</button>
+              <button type="button" class="btn btn--xmd btn--primary">예약내역 확인</button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- ---------------------------------------------------------- -->
+    </div>
+  </body>
+</html>

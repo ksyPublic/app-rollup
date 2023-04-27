@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>이용후기 등록 | 제휴점 상세 | 내주변 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.publish.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header">
+        <!-- BACK BUTTON -->
+        <button type="button" class="header__back btn btn--icon">
+          <span class="hide">뒤로가기</span>
+          <i class="icon icon--back" aria-hidden="true"></i>
+        </button>
+        <!-- TITLE -->
+        <h1 class="header__title">이용후기 작성</h1>
+      </header>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- CONTENT -->
+        <div class="content">
+          <div class="l-row">
+            <br /><br /><br />
+            <button type="button" class="btn btn--gray btn--lg" data-dialog-trigger="#uiReviewWrite" aria-haspopup="dialog">이용후기작성</button>
+          </div>
+        </div>
+        <!-- // -->
+      </main>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- ---------------------------------------------------------- -->
+      <div role="dialog" class="modal modal--full" id="uiReviewWrite">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <h1 class="modal__title">이용후기 작성</h1>
+              <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <!-- // -->
+              <fieldset class="form form--review">
+                <legend>이용후기작성</legend>
+                <div class="form-field form-field--row">
+                  <div class="text text--ssm"><b>평점</b></div>
+                  <div class="review__eval review__eval--type2" data-review>
+                    <span class="review__num">
+                      <span data-review="bar" style="width: 80%"></span>
+                      <em data-review="value">8</em>
+                    </span>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <div class="text text--ssm"><b>관리받은 이용 코스</b></div>
+                  <div class="select select--basic" data-select="select" id="uiSelectCourse">
+                    <div role="button" tabindex="0" class="select__btn" aria-expanded="false" data-select="btn">
+                      <div>코스 선택</div>
+                      <div data-empty="코스 선택" data-select="text"></div>
+                    </div>
+                    <!-- // -->
+                    <div class="select__list" data-select="list">
+                      <div class="select__option" data-select="option">
+                        <button type="button" value="value1">코스 선택1</button>
+                        <button type="button" value="value2">코스 선택2</button>
+                        <button type="button" value="value3">코스 선택3</button>
+                        <button type="button" value="value4">코스 선택4</button>
+                      </div>
+                    </div>
+                    <input type="hidden" name="select1_1" data-select="value" />
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label for="field2" class="text text--ssm"><b>내용</b></label>
+                  <div class="textarea-form">
+                    <span class="textarea__side">0/2,000자</span>
+                    <textarea rows="13" id="field2" class="textarea" title="" placeholder="내용을 입력해 주세요(필수 – 30자 이상)" style="height: 290px"></textarea>
+                  </div>
+                </div>
+              </fieldset>
+              <!-- // -->
+              <div class="label label--simple mb-0">
+                <label>
+                  <input type="checkbox" />
+                  <span>후기 정책을 확인했습니다.</span>
+                </label>
+                <a href="#none" class="label__link">후기 정책을 확인했습니다.</a>
+                <i class="icon icon--text-arrow" aria-hidden="true"></i>
+              </div>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--xmd btn--primary w-100">이용후기 작성</button>
+            </div>
+            <!-- [//] -->
+          </section>
+        </div>
+      </div>
+      <!-- ---------------------------------------------------------- -->
+    </div>
+    <script>
+      document.addEventListener('UILoaded', function () {
+        var dialog = document.querySelector('#uiReviewWrite');
+        var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+        dialogInstance.open();
+      });
+    </script>
+  </body>
+</html>

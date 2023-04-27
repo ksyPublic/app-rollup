@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>A2A9DFC9-8EA5-4D53-AE7A-16E9BDA9A512</title>
+    <defs>
+        <polygon id="path-1" points="0 0 24 0 24 24 0 24"></polygon>
+    </defs>
+    <g id="MYPAGE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MYPAGE/like_shop" transform="translate(-652.000000, -298.000000)">
+            <g id="icon_close" transform="translate(652.000000, 298.000000)">
+                <rect id="Rectangle" x="0" y="0" width="48" height="48"></rect>
+                <g id="Group-3" transform="translate(24.000000, 24.000000) rotate(-315.000000) translate(-24.000000, -24.000000) translate(12.000000, 12.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M22.9420263,10.8650112 L13.0711281,10.8650112 L13.0711281,1.05797368 C13.0711281,0.473708373 12.5974947,0 12.0132294,0 C11.4288891,0 10.9552557,0.473708373 10.9552557,1.05797368 L10.9552557,10.8650112 L1.05797368,10.8650112 C0.473708373,10.8650112 0,11.3387196 0,11.9229849 C0,12.5073252 0.473708373,12.9809586 1.05797368,12.9809586 L10.9552557,12.9809586 L10.9552557,22.9420263 C10.9552557,23.5262916 11.4288891,24 12.0132294,24 C12.5974947,24 13.0711281,23.5262916 13.0711281,22.9420263 L13.0711281,12.9809586 L22.9420263,12.9809586 C23.5263666,12.9809586 24,12.5073252 24,11.9229849 C24,11.3387196 23.5263666,10.8650112 22.9420263,10.8650112" id="Fill-1" fill="#999999" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

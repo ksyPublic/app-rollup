@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>제휴점 이용후기 작성 안내 | 제휴점 상세 - hitai</title>
+    <link rel="stylesheet" href="../../resources/scss/ui.common.css" />
+    <script type="text/javascript" src="../../resources/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/ui.plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui.common.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <include src="../_include/header.html"></include>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- ### CONTENT ### -->
+        <div class="content">
+          <div class="l-row">
+            <button type="button" class="btn btn--dark btn--md" data-dialog-trigger="#uiReviewGuide" aria-haspopup="dialog">이용 후기 작성</button>
+          </div>
+        </div>
+        <!-- ### // ### -->
+      </main>
+
+      <!-- -------------------------------- -->
+      <!-- # POPUP # -->
+      <!-- -------------------------------- -->
+      <div role="dialog" class="modal modal--w4" id="uiReviewGuide">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <section>
+            <!-- [HEADER] -->
+            <header class="modal__header">
+              <h1 class="modal__title">확인해 주세요</h1>
+              <button type="button" class="modal__btn-close" data-dialog-close>팝업 닫기</button>
+            </header>
+            <!-- [CONTENT] -->
+            <div class="modal__body">
+              <div class="mes-result mes-result--confirm">
+                <p>
+                  ‘구로디지털 청담타이마사지’<br />
+                  이용 내역을 확인해 주세요.
+                </p>
+              </div>
+              <p class="text text--md">하이타이에서는 리얼 후기 등록을 원칙으로 하고 있습니다. 실제 이용하셨음에도 불구하고 이용 후기 작성에 제한이 있으시면 아래 내용을 확인해 주세요.</p>
+              <ul class="text-list text-list--bullet1 text-list--md mt-5">
+                <li class="text-list__item">인증받으셨던 휴대전화 번호로 하이타이 앱을 통해 <strong>업체와 5초 이상의 실제 통화 이력</strong>이 있어야 합니다.</li>
+                <li class="text-list__item">하이패스 예약 이용 후 <strong>3일 이내</strong> 또는 제휴점과 통화 후 <strong>1시간 이후, 3일 이내 등록이 가능</strong>합니다.</li>
+                <li class="text-list__item">위 두 가지 경우가 모두 해당하는데도 이용후기 작성이 불가능하다면 고객센터(1668-4522)로 연락 주시면 확인 후 안내해 드리겠습니다.</li>
+              </ul>
+            </div>
+            <!-- [BTN] -->
+            <div class="modal__footer">
+              <button type="button" class="btn btn--lg btn--dark" data-dialog-close>닫기</button>
+            </div>
+            <!-- [//] -->
+          </section>
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+      <!-- # FOOTER # -->
+      <!-- -------------------------------- -->
+      <include src="../_include/footer.html"></include>
+      <!-- -------------------------------- -->
+
+      <script>
+        document.addEventListener('UILoaded', function () {
+          var dialog = document.querySelector('#uiReviewGuide');
+          var dialogInstance = HitaiUI.Dialog.get(dialog, true);
+          dialogInstance.open();
+        });
+      </script>
+    </div>
+  </body>
+</html>

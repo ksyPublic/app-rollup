@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>하이패스 | 할인쿠폰 사용 - hitai</title>
+    <include src="../_include/head.html"></include>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header">
+        <!-- BACK BUTTON -->
+        <button type="button" class="header__back">
+          <span class="hide">뒤로가기</span>
+          <i class="icon icon--back" aria-hidden="true"></i>
+        </button>
+        <!-- TITLE -->
+        <h1 class="header__title">쿠폰 할인</h1>
+      </header>
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <div class="content">
+          <div class="l-row">
+            <div class="coupon-form">
+              <div class="input-wrap input-wrap--type1">
+                <strong class="text text--xmd">사용 가능한 <em class="text-primary-100">2</em>개의 쿠폰</strong>
+                <button type="button" class="btn btn--xsm btn--dark">쿠폰 받기</button>
+              </div>
+              <fieldset>
+                <legend>쿠폰 선택</legend>
+                <div class="label">
+                  <label class="coupon__label" for="coupon1">
+                    <input type="radio" id="coupon1" name="coupon1" />
+                    <span aria-hidden="true"></span>
+                    <div class="coupon__item">
+                      <div class="coupon__description">
+                        <div class="coupon__amount">
+                          <span class="hide">할인가</span>
+                          <span class="coupon__price">10,000</span>
+                          <span class="coupon__unit">원<em>할인</em></span>
+                        </div>
+                        <div class="coupon__text">
+                          <div class="coupon__title">신규가입 할인 쿠폰 (10만원 이상 결제 시 사용 가능)</div>
+                          <div class="coupon__detail">사용처: 할인쿠폰 사용 가능 제휴점</div>
+                        </div>
+                      </div>
+                      <div class="coupon__bottom">
+                        <div class="coupon__foot">
+                          <div class="coupon__validity">
+                            <span class="hide">유효기간</span>
+                            <span class="coupon__validity-date">22.12.25 ~ 23.01.31</span>
+                            (사용기한이 22일 남았습니다.)
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                  <label class="coupon__label" for="coupon2">
+                    <input type="radio" id="coupon2" name="coupon1" />
+                    <span aria-hidden="true"></span>
+                    <div class="coupon__item">
+                      <div class="coupon__description">
+                        <div class="coupon__amount">
+                          <span class="hide">할인가</span>
+                          <span class="coupon__price">10,000</span>
+                          <span class="coupon__unit">원<em>할인</em></span>
+                        </div>
+                        <div class="coupon__text">
+                          <div class="coupon__title">신규가입 할인 쿠폰 (10만원 이상 결제 시 사용 가능)</div>
+                          <div class="coupon__detail">사용처: 할인쿠폰 사용 가능 제휴점</div>
+                        </div>
+                      </div>
+                      <div class="coupon__bottom">
+                        <div class="coupon__foot">
+                          <div class="coupon__validity">
+                            <span class="hide">유효기간</span>
+                            <span class="coupon__validity-date">22.12.25 ~ 23.01.31</span>
+                            (사용기한이 22일 남았습니다.)
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+
+                  <label class="coupon__label coupon--none" for="coupon3">
+                    <input type="radio" id="coupon3" name="coupon1" />
+                    <span>적용안함</span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <dl class="text-list text-list--bullet1">
+              <dt class="text-list__title">쿠폰 사용 안내</dt>
+              <dd class="text-list__item">사용 가능한 할인 쿠폰만 보여집니다.</dd>
+              <dd class="text-list__item">할인 쿠폰은 중복 사용할 수 없습니다.</dd>
+              <dd class="text-list__item">내정보 > 내 쿠폰 에서 보유한 모든 쿠폰을 확인 할 수 있습니다.</dd>
+            </dl>
+            <div class="btn-area btn-area--type1" data-btn-fixed>
+              <button type="button" class="btn btn--with btn--primary w-100">5,000 사용하기</button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- ---------------------------------------------------------- -->
+    </div>
+  </body>
+</html>

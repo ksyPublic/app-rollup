@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>회원가입 완료 안내 - hitai</title>
+    <include src="../_include/head.html"></include>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- ---------------------------------------------------------- -->
+      <!-- # HEADER # -->
+      <!-- ---------------------------------------------------------- -->
+      <header id="header" class="header">
+        <!-- SIDE -->
+        <div class="header__side">
+          <button type="button" class="btn btn--icon">
+            <i class="icon icon--home" aria-hidden="true"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- ---------------------------------------------------------- -->
+      <!-- # CONTAINER # -->
+      <!-- ---------------------------------------------------------- -->
+      <main id="container">
+        <!-- CONTENT -->
+        <div class="content">
+          <div class="l-row">
+            <div class="account account--complete">
+              <!-- TITLE -->
+              <div class="account__title">
+                <strong>호앙오앙 님!<br />회원가입이 완료되었습니다.</strong>
+                <p>하이타이만의 혜택을 알려드립니다.</p>
+              </div>
+              <!-- EVENT -->
+              <div class="account__event">
+                <h2 class="heading heading--5">하이타이 회원가입 혜택</h2>
+                <!-- 쿠폰 -->
+                <div class="event-coupon">
+                  <a href="">
+                    <img src="../../resources/images/temp/img-coupon1.png" alt="회원가입 1,000 포인트 즉시 적립" />
+                  </a>
+                  <a href="">
+                    <img src="../../resources/images/temp/img-coupon2.png" alt="친구 초대 3,000원 쿠폰 증정" />
+                  </a>
+                </div>
+                <!-- 이달의혜택 -->
+                <h2 class="heading heading--5">이 달의 혜택</h2>
+                <div class="event-month" id="eventSwiper">
+                  <div class="swiper-wrapper">
+                    <a href="" class="swiper-slide">
+                      <img src="../../resources/images/temp/event-visual01.png" alt="CHEER UP! 곧 출시될 하이패스 서비스를 응원해주세요. 응원해주신 모든 분께 5만원 할인 쿠폰 증정(2022.12.08 ~ 하이패스 런칭시까지)" />
+                    </a>
+                    <a href="" class="swiper-slide">
+                      <img src="../../resources/images/temp/event-visual01.png" alt="CHEER UP! 곧 출시될 하이패스 서비스를 응원해주세요. 응원해주신 모든 분께 5만원 할인 쿠폰 증정(2022.12.08 ~ 하이패스 런칭시까지)" />
+                    </a>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="account__btn">
+                  <button type="button" class="btn btn--light btn--lg">이벤트 확인하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // -->
+      </main>
+      <!-- ---------------------------------------------------------- -->
+    </div>
+    <script>
+      document.addEventListener('UILoaded', function () {
+        // 이벤트
+        HitaiUI.SwiperA11y('#eventSwiper', {
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          observer: true,
+          observeParents: true,
+        });
+      });
+    </script>
+  </body>
+</html>

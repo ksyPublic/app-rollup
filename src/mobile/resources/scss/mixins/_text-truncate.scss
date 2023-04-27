@@ -1,0 +1,14 @@
+// Text truncate
+// Requires inline-block or block for proper styling
+
+@mixin text-truncate($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if ($line ==1) {
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}

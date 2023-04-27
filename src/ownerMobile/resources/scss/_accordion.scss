@@ -1,0 +1,139 @@
+[data-autoset='accordion'] {
+  .expand:not(.expanded) {
+    display: none;
+  }
+  .expanding {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  [data-toggle='con'].expanded {
+    display: block;
+  }
+  // 삭제하지마세요!! // data-motion 속성에 영향받지 않고 애니메이션은 없는 컨텐츠
+}
+
+.accordion {
+  $root: accordion;
+
+  //default styled
+  &__head {
+    position: relative;
+  }
+
+  &__list {
+    //
+  }
+
+  &__content {
+    //
+  }
+
+  &__title {
+    //
+  }
+
+  //accordion--type1 styled
+  &.#{$root}--type1 {
+    .#{$root}__list:first-child .label-group {
+      padding: rem(20);
+    }
+
+    .#{$root}__list:last-child .label-group {
+      border-bottom: rem(1) solid color(gray, 600);
+    }
+
+    .#{$root}__head {
+      display: flex;
+      align-items: center;
+      padding: rem(19 60 20 20);
+      border-bottom: rem(1) solid color(gray, 100);
+    }
+
+    .#{$root}__title {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      > .icon {
+        position: relative;
+      }
+    }
+
+    .#{$root}__text {
+      font-weight: bold;
+      margin-left: rem(9);
+      font-size: rem(15);
+    }
+
+    .#{$root}__btn {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      &:after {
+        content: '';
+        position: absolute;
+        right: rem(20);
+        top: calc(50% - #{rem(8)});
+        width: rem(16);
+        height: rem(16);
+        background: url(#{$icon-url}icon-acc-arrow.png) no-repeat;
+        background-size: 100% auto;
+        transition: all 0.2s ease;
+        transform: rotate(-180deg);
+      }
+
+      &[aria-expanded='true'] {
+        &:after {
+          content: '';
+          transform: rotate(0deg);
+          background: url(#{$icon-url}icon-acc-arrow.png) no-repeat;
+          background-size: 100% auto;
+        }
+      }
+    }
+
+    .#{$root}__content {
+      background-color: color(white, 500);
+    }
+  }
+
+  //accordion--type2 styled
+  &.#{$root}--type2 {
+    width: 100%;
+    .#{$root}__title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .#{$root}__info {
+      display: flex;
+      align-items: center;
+      .icon--acc-arrow2 {
+        margin-left: rem(4);
+      }
+    }
+
+    .#{$root}__btn {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    .text-info__item {
+      margin-top: rem(4);
+      ul {
+        li {
+          margin-top: rem(0);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<svg width="34" height="35" viewBox="0 0 34 35" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <path d="m21.193 3.136 7.997 5.98a7 7 0 0 1 2.483 7.714l-3.136 9.935a7 7 0 0 1-6.676 4.893H12.14a7 7 0 0 1-6.676-4.893L2.327 16.83A7 7 0 0 1 4.81 9.117l7.997-5.981a7 7 0 0 1 8.386 0z" fill="#FFF"/>
+        <text font-family="Montserrat-Bold, Montserrat" font-size="20" font-weight="bold" fill="#FF5B2C">
+                        <tspan x="10.085" y="25">P</tspan>
+                    </text>
+    </g>
+</svg>

@@ -1,0 +1,573 @@
+.icon {
+  $root: icon;
+  display: inline-block;
+  vertical-align: top;
+
+  &--kakao {
+    width: rem(20);
+    height: rem(20);
+    background: url(#{$icon-url}icon-kakao.svg) no-repeat;
+    background-size: 100% auto;
+
+    &-sm {
+      width: rem(18);
+      height: rem(18);
+      background: url(#{$icon-url}icon-kakao-sm.svg) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  &--mail {
+    width: rem(20);
+    height: rem(20);
+    background: url(#{$icon-url}icon-mail.svg) no-repeat;
+    background-size: 100% auto;
+
+    &-sm {
+      width: rem(18);
+      height: rem(18);
+      background: url(#{$icon-url}icon-mail-sm.svg) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  &--apple {
+    width: rem(20);
+    height: rem(20);
+    background: url(#{$icon-url}icon-apple.svg) no-repeat;
+    background-size: 100% auto;
+
+    &-sm {
+      width: rem(18);
+      height: rem(18);
+      background: url(#{$icon-url}icon-apple-sm.svg) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  &--google {
+    width: rem(20);
+    height: rem(20);
+    background: url(#{$icon-url}icon-google.svg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--message {
+    width: rem(20);
+    height: rem(20);
+    background: url(#{$icon-url}icon-message.svg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--noti {
+    width: rem(24);
+    height: rem(24);
+    background: url(#{$icon-url}icon-noti.svg) no-repeat;
+    background-size: 100% auto;
+
+    + .icon--new:before {
+      background-color: $white;
+    }
+
+    &-black {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-noti-black.svg) no-repeat;
+      background-size: 100% auto;
+      position: relative;
+      top: rem(1);
+
+      + .icon--new:before {
+        background-color: $white;
+      }
+    }
+
+    &-primary {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-noti-primary.svg) no-repeat;
+      background-size: 100% auto;
+
+      + .icon--new:before {
+        background-color: color(primary, 100);
+      }
+    }
+  }
+
+  &--play {
+    width: rem(8);
+    height: rem(8);
+    background: url(#{$icon-url}icon-play.png) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--stop {
+    width: rem(8);
+    height: rem(8);
+    background: url(#{$icon-url}icon-stop.png) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--more {
+    width: rem(12);
+    height: rem(12);
+    background: url(#{$icon-url}icon-more.png) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--info {
+    &-gray {
+      width: rem(7);
+      height: rem(7);
+      background: url(#{$icon-url}icon-info-gray.png) no-repeat;
+      background-size: 100% auto;
+    }
+
+    &-light {
+      width: rem(7);
+      height: rem(7);
+      background: url(#{$icon-url}icon-info-light.png) no-repeat;
+      background-size: 100% auto;
+
+      &-md {
+        width: rem(12);
+        height: rem(12);
+        background: url(#{$icon-url}icon-info-light-md.png) no-repeat;
+        background-size: 100% auto;
+      }
+    }
+  }
+
+  &--map {
+    &-gray {
+      width: rem(12);
+      height: rem(12);
+      background: url(#{$icon-url}icon-map-gray.png) no-repeat;
+      background-size: 100% auto;
+    }
+
+    &-white {
+      width: rem(18);
+      height: rem(18);
+      background: url(#{$icon-url}icon-map-white.svg) no-repeat;
+      background-size: 100% auto;
+    }
+
+    &-black {
+      width: rem(22);
+      height: rem(22);
+      background: url(#{$icon-url}icon-map-black.svg) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  &--location {
+    width: rem(22);
+    height: rem(22);
+    background: url(#{$icon-url}icon-location.svg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--shop {
+    width: rem(21);
+    height: rem(21);
+    background: url(#{$icon-url}icon-shop.svg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--pin {
+    width: rem(21);
+    height: rem(21);
+    background: url(#{$icon-url}icon-pin.svg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--subway {
+    width: rem(21);
+    height: rem(21);
+    background: url(#{$icon-url}icon-subway.svg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--remove {
+    width: rem(24);
+    height: rem(24);
+    background: url(#{$icon-url}icon-remove.png) no-repeat;
+    background-size: 100% auto;
+    &-gray {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-remove-gray.svg) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  &--basic-map {
+    width: rem(36);
+    height: rem(36);
+    background: url(#{$icon-url}icon-basic-map.png) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--hipass {
+    width: rem(45);
+    height: rem(11);
+    background: url(#{$com-url}img-logo-hipass.png) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--basic {
+    &-like {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-basic-like.svg) no-repeat;
+      background-size: 100% auto;
+    }
+
+    &-share {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-basic-share.png) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  &--text-arrow {
+    width: rem(14);
+    height: rem(14);
+    background: url(#{$icon-url}icon-text-arrow.png) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--arrow {
+    width: rem(16);
+    height: rem(16);
+    background: url(#{$icon-url}icon-arrow.svg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--point {
+    &-white {
+      width: rem(17);
+      height: rem(17);
+      background: url(#{$icon-url}icon-point-white.png) no-repeat;
+      background-size: 100% auto;
+    }
+
+    &-primary {
+      width: rem(17);
+      height: rem(18);
+      background: url(#{$icon-url}icon-point-primary.png) no-repeat;
+      background-size: 100% auto;
+
+      &-sm {
+        width: rem(16);
+        height: rem(16);
+        background: url(#{$icon-url}icon-point-primary.png) no-repeat;
+        background-size: 100% auto;
+      }
+
+      &-ssm {
+        width: rem(13);
+        height: rem(14);
+        background: url(#{$icon-url}icon-point-primary.png) no-repeat;
+        background-size: 100% auto;
+      }
+
+      &-md {
+        width: rem(20);
+        height: rem(20);
+        background: url(#{$icon-url}icon-point-primary.png) no-repeat;
+        background-size: 100% auto;
+      }
+    }
+  }
+
+  &--coupon {
+    &-primary {
+      &-sm {
+        width: rem(16);
+        height: rem(16);
+        background: url(#{$icon-url}icon-coupon.png) no-repeat;
+        background-size: 100% auto;
+      }
+    }
+  }
+
+  &--download {
+    width: rem(16);
+    height: rem(16);
+    background: url(#{$icon-url}icon-download.svg) no-repeat;
+    background-size: 100% auto;
+
+    &-gray {
+      width: rem(23);
+      height: rem(23);
+      background: url(#{$icon-url}icon-download-gray.svg) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  &--success {
+    width: rem(23);
+    height: rem(23);
+    background: url(#{$icon-url}icon-success.svg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--search {
+    width: rem(24);
+    height: rem(24);
+    background: url(#{$icon-url}icon-search.svg) no-repeat;
+    background-size: 100% auto;
+
+    &-primary {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-input-search-primary.svg) no-repeat;
+      background-size: 100% auto;
+    }
+
+    &-white {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-input-search-white.svg) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  &--input-search {
+    width: rem(18);
+    height: rem(18);
+    background: url(#{$icon-url}icon-input-search.svg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--filter {
+    width: rem(24);
+    height: rem(24);
+    background: url(#{$icon-url}icon-filter.svg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--setting {
+    &-black {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-setting-black.svg) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  &--delete {
+    &-black {
+      width: rem(28);
+      height: rem(28);
+      background: url(#{$icon-url}icon-delete-black.svg) no-repeat;
+      background-size: 100% auto;
+    }
+
+    &-gray {
+      width: rem(28);
+      height: rem(28);
+      background: url(#{$icon-url}icon-delete-gray.svg) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  &--mypage {
+    &-hipass {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-mypage-hipass.svg) no-repeat;
+      background-size: 100% auto;
+    }
+
+    &-review {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-mypage-review.svg) no-repeat;
+      background-size: 100% auto;
+    }
+
+    &-shop {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-mypage-shop.svg) no-repeat;
+      background-size: 100% auto;
+    }
+
+    &-stamp {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-mypage-stamp.svg) no-repeat;
+      background-size: 100% auto;
+    }
+
+    &-event {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-mypage-event.svg) no-repeat;
+      background-size: 100% auto;
+    }
+
+    &-friend {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-mypage-friend.svg) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  &--back {
+    width: rem(24);
+    height: rem(24);
+    background: url(#{$icon-url}icon-back.png) no-repeat 0 0;
+    background-size: 100% auto;
+  }
+
+  &--share {
+    width: rem(24);
+    height: rem(24);
+    background: url(#{$icon-url}icon-share.png) no-repeat 0 0;
+    background-size: 100% auto;
+  }
+
+  &--home {
+    width: rem(18);
+    height: rem(19);
+    background: url(#{$icon-url}icon-home.svg) no-repeat 0 0;
+    background-size: 100% auto;
+  }
+
+  &--new {
+    position: relative;
+    overflow: hidden;
+    width: rem(4);
+    height: rem(4);
+    display: inline-block;
+    padding: rem(0 0 0 4);
+    margin: rem(0 0 0 2);
+    font-size: rem(1) !important;
+    color: transparent;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: rem(4);
+      height: rem(4);
+      border-radius: 50%;
+      background-color: color(primary, 100);
+      // color: transparent;
+    }
+  }
+
+  &--plus {
+    width: rem(34);
+    height: rem(34);
+    background: url(#{$icon-url}icon-plus.png) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--minus {
+    width: rem(34);
+    height: rem(34);
+    background: url(#{$icon-url}icon-minus.png) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--course {
+    width: rem(21);
+    height: rem(21);
+    background: url(#{$icon-url}icon-course.png) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--reservation {
+    width: rem(21);
+    height: rem(21);
+    background: url(#{$icon-url}icon-reservation.png) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--time {
+    width: rem(21);
+    height: rem(21);
+    background: url(#{$icon-url}icon-time.png) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--sch {
+    width: rem(21);
+    height: rem(21);
+    background: url(#{$icon-url}icon-sch.png) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--acc-arrow2 {
+    width: rem(14);
+    height: rem(14);
+    background: url(#{$icon-url}icon-acc-arrow2.png) no-repeat;
+    background-size: 100% auto;
+  }
+  &--near {
+    width: rem(18);
+    height: rem(18);
+    background: url(#{$icon-url}icon-near.svg) no-repeat;
+    background-size: 100% auto;
+  }
+  &--star {
+    width: rem(8);
+    height: rem(8);
+    background: url(#{$icon-url}icon-star.svg) no-repeat;
+    background-size: 100% auto;
+  }
+  &--like {
+    width: rem(8);
+    height: rem(8);
+    background: url(#{$icon-url}icon-like.svg) no-repeat;
+    background-size: 100% auto;
+  }
+  &--distance {
+    width: rem(8);
+    height: rem(8);
+    background: url(#{$icon-url}icon-distance.svg) no-repeat;
+    background-size: 100% auto;
+  }
+  &--list {
+    width: rem(18);
+    height: rem(18);
+    background: url(#{$icon-url}icon-list.svg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--edit {
+    width: rem(20);
+    height: rem(20);
+    background: url(#{$icon-url}icon-edit.svg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  &--coupon-arrow {
+    width: rem(24);
+    height: rem(24);
+    background: url(#{$icon-url}icon-basic-arrow.svg) no-repeat;
+    background-size: 100% auto;
+
+    &-disabled {
+      width: rem(24);
+      height: rem(24);
+      background: url(#{$icon-url}icon-basic-arrow-disabled.svg) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  &--stamp {
+    width: rem(19);
+    height: rem(19);
+    background: url(#{$icon-url}icon-stamp.png) no-repeat;
+    background-size: 100% auto;
+  }
+}

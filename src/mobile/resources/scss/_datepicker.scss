@@ -1,0 +1,82 @@
+.hasDatepicker {
+  padding: rem(0 60 0 20);
+  background: url('../images/icon/icon-calendar.svg') no-repeat 0 0;
+  background-position: right rem(16) top 50%;
+  background-size: rem(24) rem(24);
+}
+
+.ui-datepicker {
+  position: absolute;
+  right: rem(20) !important;
+  left: auto !important;
+  top: 100%;
+  width: rem(265);
+  background-color: $white;
+  z-index: 10 !important;
+  border: rem(1) solid color(dark, 200);
+  display: none;
+
+  &-prev,
+  &-next {
+    display: none;
+  }
+
+  &-year,
+  &-month {
+    border: 0;
+    border-bottom: rem(1) solid color(gray, 1200);
+    border-right: rem(1) solid color(gray, 1200);
+    width: 50%;
+    height: rem(55);
+    font-size: rem(18);
+    padding: rem(0 36 0 18);
+    font-weight: bold;
+
+    background: url('../images/icon/icon-calendar-arrow.svg') no-repeat 0 0;
+    background-size: rem(23) rem(23);
+    background-position: right rem(8) top 50%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    option {
+      font-size: rem(16);
+      padding: 0;
+    }
+  }
+
+  &-month {
+    border-right: 0;
+  }
+
+  &-calendar {
+    margin: rem(20 15 8);
+    width: calc(100% - 30px);
+    thead {
+      th {
+        height: rem(35);
+        font-size: rem(10);
+        font-weight: 500;
+        color: color(gray, 200);
+      }
+    }
+    tbody {
+      tr td {
+        font-size: rem(12);
+        text-align: center;
+        height: rem(35);
+      }
+    }
+  }
+}
+
+.ui-state-active {
+  border-radius: 50%;
+  height: rem(35);
+  width: rem(35);
+  background-color: color(dark, 100);
+  color: $white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
